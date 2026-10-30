@@ -21,17 +21,21 @@ Prioritize **principles and trade-offs** over chasing every new framework releas
 - AWS: Generative AI or ML specialty (check current catalog)
 - Azure: AI Engineer or equivalent (check current catalog)
 
-## Five flagship reference projects
+## Running use-case: Acme Support Platform
 
-| # | Project | Target split |
-|---|---------|--------------|
-| 1 | Agentic customer support | End Q1 → `agentic-customer-support-reference` |
-| 2 | Multi-agent enterprise architecture | End Q2 → `multi-agent-enterprise-reference` |
-| 3 | Agentic finance workflow | End Q3 → `agentic-finance-workflow-reference` |
-| 4 | Agentic ERP reference architecture | Q4 |
-| 5 | Agent governance prototype | Q4 → `agent-governance-registry` |
+One fictional system grows all year in [projects/acme-support/](../../projects/acme-support/). Weekly patterns add a small **Acme stage**; quarterly **releases** replace the old separate flagships for support, multi-agent, finance, and ERP layers.
 
-Each flagship: GitHub (hub first, then split), diagrams, article, LinkedIn posts, ADRs, synthetic data only.
+| Release | Weeks | Split / tag |
+|---------|-------|-------------|
+| Acme v1 — single-agent support | w01–w13 | End Q1 → `acme-agentic-support` @ `v1` |
+| Acme v2 — multi-agent desk | w15–w26 | `@v2` |
+| Acme v3 — production hardening | w28–w39 | `@v3` |
+| Acme v4 — ERP / back-office | w41–w46 | `@v4` |
+| F5 — agent governance (separate lifecycle) | w47–w52 | `agent-governance-registry` |
+
+Details: [07-running-use-case.md](07-running-use-case.md). Reader levels: Foundation → Practitioner → Production → Architect (see [content/ai-architect-skills-map.md](../../content/ai-architect-skills-map.md)).
+
+Each release: GitHub (hub first, then split), diagrams, article, LinkedIn posts, ADRs, synthetic data only.
 
 ## Content targets
 
@@ -52,10 +56,10 @@ Each flagship: GitHub (hub first, then split), diagrams, article, LinkedIn posts
 
 See [content/calendar.md](../../content/calendar.md).
 
-- **Q1:** Single-agent foundations + Flagship 1
-- **Q2:** Multi-agent orchestration + Flagship 2
-- **Q3:** Production readiness (managed AWS/Azure services) + Flagship 3
-- **Q4:** Agentic ERP niche + governance + Flagships 4–5
+- **Q1:** Single-agent foundations + Acme v1
+- **Q2:** Multi-agent orchestration + Acme v2
+- **Q3:** Production readiness (managed AWS/Azure services) + Acme v3
+- **Q4:** Agentic ERP niche + governance + Acme v4 + F5
 
 ## Time budget (~8 h/week)
 

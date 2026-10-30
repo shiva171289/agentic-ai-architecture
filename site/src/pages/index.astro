@@ -11,6 +11,7 @@ const posts = (await getCollection("blog")).sort(
   <h1>Agentic AI Architecture</h1>
   <p class="lede">
     Weekly patterns, ADRs, and runnable samples. Cloud-agnostic first, then AWS and Azure mappings.
+    Follow the <a href={`${import.meta.env.BASE_URL}start-here/`}>Acme Support Platform</a> from FAQ bot to governed multi-agent architecture.
   </p>
   <p class="disclaimer">
     Views and examples are my own, for learning purposes, and do not represent my employer.
@@ -26,8 +27,10 @@ const posts = (await getCollection("blog")).sort(
   </ul>
   <h2>Resources</h2>
   <ul>
+    <li><a href={`${import.meta.env.BASE_URL}start-here/`}>Start Here</a></li>
+    <li><a href={`${import.meta.env.BASE_URL}ai-architect-skills-map/`}>AI Architect skills map</a></li>
     <li><a href={`${import.meta.env.BASE_URL}production-readiness-checklist/`}>Production readiness checklist</a></li>
-    <li><a href="https://github.com/shiva171289/agentic-ai-architecture">GitHub repository</a></li>
+    <li><a href="https://github.com/shiva171289/agentic-ai-architecture">GitHub repository</a> (includes <code>projects/acme-support/</code>)</li>
   </ul>
   <form class="newsletter" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_USERNAME" method="post">
     <label for="bd-email">Newsletter (Buttondown — replace YOUR_USERNAME)</label>

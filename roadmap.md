@@ -24,7 +24,7 @@ Agentic AI Architecture → Audience & IP → (optional) Consulting → Training
 
 | Phase | Period | Focus |
 |-------|--------|--------|
-| **Year 1** | Oct 2026 – Oct 2027 | Learning in public: ~48 patterns, 5 flagships, framework v1, certifications |
+| **Year 1** | Oct 2026 – Oct 2027 | Learning in public: ~48 patterns, Acme Support spine + F5 governance, framework v1, certifications |
 | **Year 2** | Oct 2027 – Oct 2028 | Optional: productized architecture reviews & workshops |
 | **Year 3** | Oct 2028 – Oct 2029 | Optional: course + digital products |
 | **Year 4** | Oct 2029 – Oct 2030 | Optional: small delivery network + validated product idea |
@@ -44,11 +44,12 @@ Income targets and service pricing live only in the optional monetization doc.
 | Doc | Contents |
 |-----|----------|
 | [00-ground-rules.md](docs/roadmap/00-ground-rules.md) | Learning in public, licensing, disclaimer |
-| [01-year1-learning-plan.md](docs/roadmap/01-year1-learning-plan.md) | Quarters, flagships, milestones, day-job link |
+| [01-year1-learning-plan.md](docs/roadmap/01-year1-learning-plan.md) | Quarters, Acme releases, milestones, day-job link |
 | [02-content-strategy.md](docs/roadmap/02-content-strategy.md) | Cadence, LinkedIn, blog, KPIs |
 | [03-multi-cloud-aws-azure.md](docs/roadmap/03-multi-cloud-aws-azure.md) | Service map, sandboxes, IaC |
 | [04-agent-operations.md](docs/roadmap/04-agent-operations.md) | Hermes, Telegram, models, budget |
 | [05-repo-strategy.md](docs/roadmap/05-repo-strategy.md) | Hub repo + when to split repos |
+| [07-running-use-case.md](docs/roadmap/07-running-use-case.md) | Acme Support Platform spine (52-week storyline) |
 | [06-future-monetization.md](docs/roadmap/06-future-monetization.md) | Years 2–5 optional business track |
 | [week0-accounts-checklist.md](docs/setup/week0-accounts-checklist.md) | Accounts & budgets |
 

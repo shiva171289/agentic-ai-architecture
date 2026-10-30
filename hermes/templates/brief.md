@@ -9,6 +9,8 @@
 
 ## Sources
 
+Prefer entries from `content/source-corpus/latest.md` and official doc roots in `hermes/sources/verified-sources.json`.
+
 | Title | URL | Date accessed |
 |-------|-----|---------------|
 | | | |

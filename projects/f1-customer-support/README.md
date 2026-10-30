@@ -1,14 +1,5 @@
-# F1 — Agentic customer support (hub placeholder)
+# Superseded by Acme Support Platform
 
-Flagship reference architecture for **fictional Acme Manufacturing** customer support agents.
+The year-long running use-case now lives in **[../acme-support/README.md](../acme-support/README.md)**.
 
-**Split target:** end of Q1 → `agentic-customer-support-reference`
-
-## Scope (draft)
-
-- Tier-1 agent with RAG over public product docs (synthetic)
-- Human escalation for billing disputes
-- AWS: Bedrock + Knowledge Bases stub
-- Azure: AI Search + Foundry Agent stub
-
-Artifacts accumulate under `patterns/w01`–`w13` and this folder until split.
+Split target at W13: `acme-agentic-support` (Acme v1). See [docs/roadmap/07-running-use-case.md](../../docs/roadmap/07-running-use-case.md).

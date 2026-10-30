@@ -9,7 +9,8 @@ Apply `_shared/ground-rules.md` strictly.
 
 ## Checks
 
-- [ ] Claims match `brief.md` sources and vendor docs
+- [ ] Claims match `brief.md` sources, [content/source-corpus/latest.md](../../../content/source-corpus/latest.md), and official doc roots in [verified-sources.json](../../sources/verified-sources.json)
+- [ ] No vendor blog URLs outside the allowlist (reject or require SourceHarvester re-run)
 - [ ] No employer/customer-specific content
 - [ ] No hype phrases from voice guide ban list
 - [ ] Code matches blog claims; tests mentioned if present

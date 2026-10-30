@@ -4,7 +4,7 @@
 
 **`git@github.com-personal:shiva171289/agentic-ai-architecture.git`**
 
-Contains roadmap, content calendar, weekly patterns (small samples), framework, Hermes skills, blog site, shared IaC templates.
+Contains roadmap, content calendar, weekly patterns (small samples), **Acme Support Platform** (`projects/acme-support/`), framework, Hermes skills, blog site, shared IaC templates.
 
 ## Private repo
 
@@ -24,13 +24,15 @@ Weekly pattern samples **stay in hub** until split criteria met.
 
 | When | Repository | Notes |
 |------|------------|-------|
-| End Q1 (W13) | `agentic-customer-support-reference` | Flagship 1 |
+| End Q1 (W13) | `acme-agentic-support` | Acme v1 — evolving year-long use-case ([07-running-use-case.md](07-running-use-case.md)) |
 | ~Month 3 | `hermes-content-factory` | Skills + setup; blog post topic |
-| End Q2 (W26) | `multi-agent-enterprise-reference` | Flagship 2 |
-| End Q3 (W39) | `agentic-finance-workflow-reference` | Flagship 3 |
-| Q4 | `agentic-erp-reference-architecture` | Flagship 4 |
-| Q4 | `agent-governance-registry` | Flagship 5 |
+| End Q2 (W26) | *(same)* `acme-agentic-support` | Tag `v2` — multi-agent desk |
+| End Q3 (W39) | *(same)* `acme-agentic-support` | Tag `v3` — production hardening |
+| End Q4 (W46) | *(same)* `acme-agentic-support` | Tag `v4` — ERP / back-office |
+| Q4 (W52) | `agent-governance-registry` | F5 — fleet governance (separate lifecycle from Acme app) |
 | Optional 20+ patterns | `agentic-patterns-python` | Pip-installable catalog |
+
+Git tags on Acme repo: `stage-wNN` weekly, `v1`–`v4` at release weeks. Changelog: `projects/acme-support/STAGES.md`.
 
 ## Flagship repo template
 
@@ -44,7 +46,7 @@ Weekly pattern samples **stay in hub** until split criteria met.
 ## Split procedure (checklist)
 
 1. Create empty repo under `shiva171289`
-2. Copy flagship code from `patterns/` or `projects/`
+2. Copy flagship code from `projects/acme-support/` (or F5 from `patterns/`)
 3. Add CI, README, infra destroy docs
 4. Hub README + pattern page link to new repo
 5. Archive heavy code in hub (replace with submodule link or pointer)

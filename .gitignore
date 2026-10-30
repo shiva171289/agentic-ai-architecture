@@ -1,4 +1,3 @@
-.cursor/
 .venv/
 site/src/content/blog/*.md
 site/src/content/pages/*.md

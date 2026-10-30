@@ -13,23 +13,24 @@ Enforce `_shared/ground-rules.md` across subagents.
 
 ## Workflow
 
-1. **ResearchScout** if `brief.md` missing or stale (>7 days).
-2. **PatternArchitect** → pause until human approves ADR on Telegram.
-3. Parallel:
+1. **SourceHarvester** if `content/source-corpus/latest.md` missing or older than 7 days (or `sources refresh` on Telegram).
+2. **ResearchScout** if `brief.md` missing or stale (>7 days).
+3. **PatternArchitect** → pause until human approves ADR on Telegram.
+4. Parallel:
    - **CloudMapper**
-   - **CodeBuilder**
+   - **CodeBuilder** (pattern sample + Acme stage in `projects/acme-support/`)
    - **DiagramAgent**
-4. **BlogWriter** (after 3 completes)
-5. **LinkedInEditor**
-6. **ReviewerCritic** → fix loop once
-7. Git:
+5. **BlogWriter** (after step 4 completes)
+6. **LinkedInEditor**
+7. **ReviewerCritic** → fix loop once
+8. Git:
    - `git checkout -B drafts/wNN`
-   - Commit all files under `patterns/wNN-slug/`
+   - Commit all files under `patterns/wNN-slug/` **and** changes under `projects/acme-support/` (if any)
    - `git push -u origin drafts/wNN`
-8. Telegram checklist with branch link and file list
+9. Telegram checklist with branch link and file list
 
 ## Model policy
 
-Scout, Diagram, Blog draft, LinkedIn: Tier 0. Architect, CloudMapper, Critic: Tier 1.
+SourceHarvester script: no LLM. Scout, Diagram, Blog draft, LinkedIn: Tier 0. Architect, CloudMapper, Critic: Tier 1.
 
 Never commit secrets. Never push to `main`.

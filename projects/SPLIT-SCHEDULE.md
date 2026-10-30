@@ -1,20 +1,19 @@
 # Flagship split schedule
 
-Track when hub code moves to standalone repositories. See [docs/roadmap/05-repo-strategy.md](../docs/roadmap/05-repo-strategy.md).
+Track when hub code moves to standalone repositories. See [docs/roadmap/05-repo-strategy.md](../docs/roadmap/05-repo-strategy.md) and [07-running-use-case.md](../docs/roadmap/07-running-use-case.md).
 
 | Target date | Repository | Source in hub | Status |
 |-------------|------------|---------------|--------|
-| End Q1 (W13) | `agentic-customer-support-reference` | patterns + F1 notes | planned |
+| End Q1 (W13) | `acme-agentic-support` | `projects/acme-support/` tag `v1` | planned |
 | ~Month 3 | `hermes-content-factory` | `hermes/skills/`, setup docs | planned |
-| End Q2 (W26) | `multi-agent-enterprise-reference` | F2 patterns | planned |
-| End Q3 (W39) | `agentic-finance-workflow-reference` | F3 patterns | planned |
-| Q4 | `agentic-erp-reference-architecture` | F4 patterns | planned |
-| Q4 | `agent-governance-registry` | F5 patterns | planned |
+| End Q2 (W26) | `acme-agentic-support` | same repo, tag `v2` | planned |
+| End Q3 (W39) | `acme-agentic-support` | same repo, tag `v3` | planned |
+| End Q4 (W46) | `acme-agentic-support` | same repo, tag `v4` | planned |
+| Q4 (W52) | `agent-governance-registry` | F5 patterns + governance code | planned |
 
-## Placeholder directories (hub)
+## Hub directory
 
-- `projects/f1-customer-support/` — notes until split
-- `projects/f2-multi-agent/` — notes until split
-- (add f3–f5 as quarters progress)
+- **`projects/acme-support/`** — running use-case (all Acme v1–v4 stages)
+- `projects/f1-customer-support/` — pointer only (superseded by Acme spine)
 
 Split checklist: create repo → copy code → CI + destroy docs → link from hub README → trim hub copy to pointer.

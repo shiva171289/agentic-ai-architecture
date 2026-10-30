@@ -13,6 +13,7 @@ Built by [Shivashanmugam Mohan](https://www.linkedin.com/in/shivashanmugam-mohan
 | Framework v0.1 | [framework/README.md](framework/README.md) |
 | Production checklist | [framework/production-readiness-checklist.md](framework/production-readiness-checklist.md) |
 | Hermes agent skills | [hermes/skills/](hermes/skills/) |
+| Vendor source corpus | [content/source-corpus/](content/source-corpus/) · [allowlist](hermes/sources/verified-sources.json) |
 | Blog (source) | [site/](site/) · GitHub Pages after Actions deploy |
 | Week 0 setup | [docs/setup/week0-accounts-checklist.md](docs/setup/week0-accounts-checklist.md) |
 

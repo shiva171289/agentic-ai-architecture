@@ -3,9 +3,15 @@ title: "Augmented LLM: the pattern most teams should ship first"
 description: "Cloud-agnostic augmented LLM with retrieval and guarded tools, mapped to AWS Bedrock and Azure AI Foundry."
 pubDate: 2026-10-30
 patternWeek: w01
+level: Foundation
+acmeStage: w01
 ---
 
 Most enterprise “agent” projects should start as an **augmented LLM**: retrieval plus a structured prompt plus optional tools—not a open-ended autonomous loop.
+
+## Prerequisites
+
+None — start here, or read [Start Here](/start-here/) for vocabulary and the Acme storyline.
 
 ## Context
 
@@ -30,9 +36,34 @@ Skip augmentation-as-product when:
 
 In those cases, fix data/process first—or choose workflow engines, not bigger prompts.
 
+## Apply it to Acme
+
+**Stage w01** in [`projects/acme-support/`](../../projects/acme-support/): load synthetic policies from `data/policies.json`, run naive keyword retrieval, and answer FAQs with a fixed system prompt. Ticket creation stays blocked until a later week enables tools.
+
+Checkout tag `stage-w01` (when published) or run:
+
+```bash
+cd projects/acme-support && uv sync --extra dev && uv run pytest
+```
+
+See [STAGES.md](../../projects/acme-support/STAGES.md) for the running changelog.
+
+## Architect's notebook
+
+| Field | Notes |
+|-------|--------|
+| Decision | Ship augmented LLM before any agent loop for Acme tier-1 FAQs |
+| Rejected alternative | Full ReAct agent on day one — harder to test and observe |
+| Top failure mode | Stale or wrong retrieval sends confident wrong answers |
+| Cost hint | ~$0.50–$2 per 1k FAQ turns (single small model call + search) |
+| NFRs | Latency (p95 &lt; 3s), accuracy on policy quotes, audit of retrieved snippet |
+
 ## Reference implementation
 
-See [`patterns/w01-augmented-llm/code/`](https://github.com/shiva171289/agentic-ai-architecture/tree/main/patterns/w01-augmented-llm/code): a mock LLM orchestrator with in-memory retrieval and a tool policy flag. Tests run without cloud credentials.
+- **Pattern sample:** [`patterns/w01-augmented-llm/code/`](https://github.com/shiva171289/agentic-ai-architecture/tree/main/patterns/w01-augmented-llm/code) — minimal isolated demo
+- **Acme spine:** `projects/acme-support/` — same pattern with JSON policy corpus
+
+Tests run without cloud credentials.
 
 ## AWS mapping
 

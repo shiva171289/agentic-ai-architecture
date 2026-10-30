@@ -1,0 +1,13 @@
+[project]
+name = "acme-agentic-support"
+version = "0.1.0"
+description = "Acme Manufacturing support platform — year-long learning spine"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

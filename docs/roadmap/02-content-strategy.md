@@ -14,7 +14,7 @@ For each week `wNN-slug` under `patterns/`:
 
 | Asset | Purpose |
 |-------|---------|
-| `brief.md` | Research + sources (agent) |
+| `brief.md` | Research + sources (ResearchScout, grounded in source corpus) |
 | `adr.md` | Architecture decision + when NOT to use |
 | `cloud-mapping.md` | AWS vs Azure services + cost notes |
 | `diagram.mmd` | Logical + deployment views |
@@ -30,13 +30,34 @@ For each week `wNN-slug` under `patterns/`:
 
 Agents draft; **you** edit voice and post manually.
 
+## Grounding (anti-hallucination)
+
+**SourceHarvester** (Thursday cron) pulls allowlisted vendor RSS and selected official HTML index pages (AWS, Azure, Microsoft DevBlogs/Foundry, OpenAI, Anthropic News, LangChain) into `content/source-corpus/latest.md`. ResearchScout and ReviewerCritic treat that file plus official doc roots as the vendor fact base. See [hermes/sources/README.md](../../hermes/sources/README.md).
+
 ## Content themes
 
 - Architecture patterns and anti-patterns
+- **Acme Support Platform** spine — one system, weekly increments ([07-running-use-case.md](07-running-use-case.md))
 - Security, identity, least-privilege tools
 - AWS and Azure managed agent runtimes
 - Enterprise integration and ERP angles (Q4)
 - Production readiness: evals, observability, cost
+
+## Reader progression
+
+- **Start Here** on the blog: primer + Acme storyline + level ladder (`/start-here/`)
+- **Level tags** on every post: Foundation (Q1), Practitioner (Q2), Production (Q3), Architect (Q4)
+- **Prerequisites** link to earlier weeks
+- **Architect's notebook** in every blog: decision, rejected alternative, top failure mode, indicative cost per 1k runs, NFRs touched
+- **AI Architect skills map:** [content/ai-architect-skills-map.md](../../content/ai-architect-skills-map.md) (newsletter companion)
+
+## Pattern Radar (monthly)
+
+First Friday each month: ResearchScout drafts `content/radar/YYYY-MM.md` — what's new in the corpus and where it plugs into Acme. Short public post; evergreen weekly spine unchanged.
+
+## Quarterly design challenges
+
+Buffer weeks (w14, w27, w40, w52): post an Acme scenario, collect reader answers, publish your reference answer in the retrospective.
 
 ## Audience funnel (Year 1 = reach, not sales)
 

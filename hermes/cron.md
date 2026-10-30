@@ -6,6 +6,9 @@ Add via `crontab -e` as user `hermes`. Adjust paths.
 # Pull latest skills and templates (daily 6:00)
 0 6 * * * cd ~/work/agentic-ai-architecture && git pull --ff-only origin main >> ~/logs/git-pull.log 2>&1
 
+# SourceHarvester — Thursday 6:30 (RSS corpus before scout)
+30 6 * * 4 cd ~/work/agentic-ai-architecture && python3 hermes/tools/harvest_sources.py --days 14 >> ~/logs/harvest.log 2>&1
+
 # ResearchScout — Friday 7:00 (next week brief)
 0 7 * * 5 cd ~/work/agentic-ai-architecture && hermes run skill research-scout --week auto >> ~/logs/scout.log 2>&1
 

@@ -11,6 +11,7 @@ Apply `_shared/ground-rules.md`.
 
 - Approved `adr.md`
 - [docs/roadmap/03-multi-cloud-aws-azure.md](../../../docs/roadmap/03-multi-cloud-aws-azure.md)
+- [content/source-corpus/latest.md](../../../content/source-corpus/latest.md) and [verified-sources.json](../../sources/verified-sources.json) doc roots for current service names
 
 ## Tasks
 

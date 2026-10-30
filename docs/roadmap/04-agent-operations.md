@@ -8,7 +8,7 @@ Hermes Agent runs on a **Hostinger Ubuntu VPS**. You interact via **Telegram**. 
 
 | Tier | Use | Examples |
 |------|-----|----------|
-| 0 Free | Scout, drafts, LinkedIn variants | DeepSeek/Qwen/GLM `:free` models (refresh monthly) |
+| 0 Free | SourceHarvester digest, Scout, drafts, LinkedIn variants | DeepSeek/Qwen/GLM `:free` models (refresh monthly) |
 | 1 Cheap paid | ADR, CloudMapper, Critic, tool calling | DeepSeek V3, Qwen3, Gemini Flash |
 | 2 Cursor | Final code, diagrams, ADR review | Your Cursor plan |
 
@@ -28,7 +28,8 @@ Log spend weekly in private `metrics.md`; use Telegram `cost` when wired.
 
 | Command | Action |
 |---------|--------|
-| `brief w05 orchestrator-workers` | ResearchScout → summary |
+| `sources refresh` / `sources w05` | SourceHarvester → `content/source-corpus/latest.md` |
+| `brief w05 orchestrator-workers` | SourceHarvester if stale → ResearchScout → summary |
 | `pack w05` | Full weekly pack → `drafts/w05` branch |
 | `adr w05 approve` / `adr w05 revise: …` | Gate before code/blog |
 | `post w05 A` | LinkedIn Post A text |

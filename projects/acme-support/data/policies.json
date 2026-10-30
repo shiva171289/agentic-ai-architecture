@@ -1,0 +1,22 @@
+[
+  {
+    "id": "reset",
+    "keywords": ["reset", "power", "restart", "frozen"],
+    "text": "Hold the power button for 10 seconds to reset the Acme Widget. Release when the LED blinks blue."
+  },
+  {
+    "id": "warranty",
+    "keywords": ["warranty", "guarantee", "coverage"],
+    "text": "Acme Widget includes a 12-month limited warranty from the date of purchase. Keep your receipt."
+  },
+  {
+    "id": "returns",
+    "keywords": ["return", "refund", "exchange"],
+    "text": "Unopened items may be returned within 30 days. Opened items require manager review for refund eligibility."
+  },
+  {
+    "id": "shipping",
+    "keywords": ["shipping", "delivery", "track"],
+    "text": "Standard shipping is 3–5 business days. Tracking links are emailed when the order ships."
+  }
+]

@@ -18,7 +18,15 @@ Review polished reference pack:
 
 This is the **target quality** after Cursor polish. Agents produce first drafts; you merge improvements.
 
-### 2. Telegram — scout
+### 2. Harvest vendor sources (VPS or laptop)
+
+```bash
+python3 hermes/tools/harvest_sources.py --days 30 --keywords "llm,augmented,bedrock"
+```
+
+Confirm `content/source-corpus/latest.md` exists and is recent.
+
+### 3. Telegram — scout
 
 ```text
 brief w01 augmented-llm
@@ -26,7 +34,7 @@ brief w01 augmented-llm
 
 Expect: summary + 3 angles in reply or branch note.
 
-### 3. Telegram — full pack
+### 4. Telegram — full pack
 
 ```text
 pack w01
@@ -34,7 +42,7 @@ pack w01
 
 Expect: branch `drafts/w01` pushed with brief, adr, cloud-mapping, code skeleton, blog, linkedin, diagram.
 
-### 4. Laptop — polish
+### 5. Laptop — polish
 
 ```powershell
 cd d:\projects\agentic-ai-architecture
@@ -48,7 +56,7 @@ In Cursor:
 - Improve code, diagrams, ADR
 - Compare to reference files on `main`
 
-### 5. Merge
+### 6. Merge
 
 ```powershell
 git checkout main

@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "updated": "2026-10-30",
+  "notes": "RSS URLs change occasionally. Re-verify monthly. Agents must not cite URLs outside this allowlist unless fetched same-session from an official doc link listed under doc_roots.",
+  "allowed_link_hosts": [
+    "aws.amazon.com",
+    "docs.aws.amazon.com",
+    "azure.microsoft.com",
+    "learn.microsoft.com",
+    "devblogs.microsoft.com",
+    "anthropic.com",
+    "docs.anthropic.com",
+    "openai.com",
+    "platform.openai.com",
+    "cloud.google.com",
+    "ai.google.dev",
+    "langchain.com",
+    "blog.langchain.dev",
+    "python.langchain.com",
+    "huggingface.co",
+    "arxiv.org",
+    "github.com",
+    "nousresearch.com",
+    "microsoft.github.io"
+  ],
+  "feeds": [
+    {
+      "id": "aws-ml-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/"
+    },
+    {
+      "id": "aws-main-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/aws/feed/"
+    },
+    {
+      "id": "azure-blog",
+      "publisher": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/en-us/blog/feed/"
+    },
+    {
+      "id": "microsoft-devblogs",
+      "publisher": "Microsoft",
+      "url": "https://devblogs.microsoft.com/feed/"
+    },
+    {
+      "id": "openai-blog",
+      "publisher": "OpenAI",
+      "url": "https://openai.com/blog/rss.xml"
+    },
+    {
+      "id": "langchain-blog",
+      "publisher": "LangChain",
+      "url": "https://blog.langchain.dev/rss.xml"
+    },
+    {
+      "id": "microsoft-foundry-devblog",
+      "publisher": "Microsoft",
+      "url": "https://devblogs.microsoft.com/foundry/feed/"
+    }
+  ],
+  "html_list_pages": [
+    {
+      "id": "anthropic-news",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/news",
+      "link_path_prefix": "/news/"
+    }
+  ],
+  "doc_roots": [
+    {
+      "id": "aws-bedrock-docs",
+      "publisher": "AWS",
+      "url": "https://docs.aws.amazon.com/bedrock/"
+    },
+    {
+      "id": "azure-ai-foundry-docs",
+      "publisher": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "id": "azure-openai-docs",
+      "publisher": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
+    },
+    {
+      "id": "openai-platform-docs",
+      "publisher": "OpenAI",
+      "url": "https://platform.openai.com/docs"
+    },
+    {
+      "id": "anthropic-docs",
+      "publisher": "Anthropic",
+      "url": "https://docs.anthropic.com/"
+    }
+  ]
+}

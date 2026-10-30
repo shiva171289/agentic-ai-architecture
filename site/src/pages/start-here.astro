@@ -1,0 +1,14 @@
+---
+import { getEntry, render } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const page = await getEntry("pages", "start-here");
+if (!page) throw new Error("Start Here page missing — add site/src/content/pages/start-here.md");
+const { Content } = await render(page);
+---
+
+<Base title={page.data.title} description={page.data.description}>
+  <article>
+    <Content />
+  </article>
+</Base>
