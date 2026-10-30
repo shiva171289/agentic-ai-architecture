@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Base title="Agentic AI Architecture" description="Learning in public — weekly patterns for enterprise agentic systems on AWS and Azure.">
+  <h1>Agentic AI Architecture</h1>
+  <p class="lede">
+    Weekly patterns, ADRs, and runnable samples. Cloud-agnostic first, then AWS and Azure mappings.
+  </p>
+  <p class="disclaimer">
+    Views and examples are my own, for learning purposes, and do not represent my employer.
+  </p>
+  <h2>Latest patterns</h2>
+  <ul class="posts">
+    {posts.map((post) => (
+      <li>
+        <a href={`${import.meta.env.BASE_URL}blog/${post.id}/`}>{post.data.title}</a>
+        <span class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</span>
+      </li>
+    ))}
+  </ul>
+  <h2>Resources</h2>
+  <ul>
+    <li><a href={`${import.meta.env.BASE_URL}production-readiness-checklist/`}>Production readiness checklist</a></li>
+    <li><a href="https://github.com/shiva171289/agentic-ai-architecture">GitHub repository</a></li>
+  </ul>
+  <form class="newsletter" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_USERNAME" method="post">
+    <label for="bd-email">Newsletter (Buttondown — replace YOUR_USERNAME)</label>
+    <input type="email" name="email" id="bd-email" required />
+    <input type="hidden" value="1" name="embed" />
+    <button type="submit">Subscribe</button>
+  </form>
+</Base>

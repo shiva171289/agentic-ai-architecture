@@ -1,0 +1,18 @@
+flowchart TB
+  user[User]
+  orch[Orchestrator]
+  rag[Retrieval]
+  llm[LLM]
+  tools[Tools]
+  user --> orch
+  orch --> rag
+  rag --> orch
+  orch --> llm
+  llm --> orch
+  orch --> tools
+
+%% AWS deployment (conceptual)
+%% APIGW -> Lambda orch -> Bedrock KB + Bedrock model -> Lambda tools
+
+%% Azure deployment (conceptual)
+%% APIM -> Functions orch -> AI Search + Azure OpenAI -> Functions tools

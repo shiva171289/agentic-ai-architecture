@@ -1,0 +1,15 @@
+{
+  "name": "agentic-ai-architecture-site",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "sync": "node ../scripts/sync-patterns-to-site.mjs",
+    "dev": "npm run sync && astro dev",
+    "build": "npm run sync && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.12",
+    "astro": "^5.7.10"
+  }
+}
