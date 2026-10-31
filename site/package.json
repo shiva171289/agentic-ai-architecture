@@ -6,7 +6,8 @@
     "sync": "node ../scripts/sync-patterns-to-site.mjs",
     "dev": "npm run sync && astro dev",
     "build": "npm run sync && astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "validate-links": "node ../scripts/validate-site-links.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",

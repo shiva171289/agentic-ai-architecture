@@ -1,6 +1,8 @@
 # Agentic AI production readiness checklist
 
-Use before calling any agent workflow "production". Fictional examples only.
+Use this list before you point real users at an agent workflow. It is written for **fictional Acme-style examples** in this repo—not for copying employer systems into public posts.
+
+Think of it as a pre-flight checklist for a plane: most items are obvious until one is missing and something breaks in production.
 
 ## Use case & design
 
@@ -60,6 +62,6 @@ Use before calling any agent workflow "production". Fictional examples only.
 
 ---
 
-**Newsletter:** offer this checklist as a PDF/email signup on the blog.
+**Newsletter:** this checklist is also offered via email signup on the site (Buttondown).
 
 **License:** CC BY 4.0 (see LICENSE-content)
