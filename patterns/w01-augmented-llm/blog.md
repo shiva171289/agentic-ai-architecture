@@ -42,6 +42,8 @@ Fix data and process first—or use a workflow engine instead of a bigger prompt
 
 **Stage w01** in the [Acme Support project](https://github.com/shiva171289/agentic-ai-architecture/tree/main/projects/acme-support): load synthetic policies from `data/policies.json`, run simple keyword retrieval, and answer FAQs with a fixed system prompt. Ticket creation stays disabled until a later week.
 
+Check out the frozen week snapshot: `git fetch --tags && git checkout stage-w01`.
+
 To run tests locally:
 
 ```bash

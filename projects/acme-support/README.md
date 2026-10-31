@@ -3,7 +3,8 @@
 Fictional **Acme Manufacturing** customer support system. One increment per weekly pattern; tags `stage-wNN`, releases `v1`–`v4`.
 
 - Storyline: [docs/roadmap/07-running-use-case.md](../../docs/roadmap/07-running-use-case.md)
-- Stage log: [STAGES.md](STAGES.md)
+- Stage log and tag list: [STAGES.md](STAGES.md)
+- **Week 1 snapshot:** `git fetch --tags && git checkout stage-w01`
 - Split at W13 → `acme-agentic-support` @ `v1`
 
 ## Run tests
