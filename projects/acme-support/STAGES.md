@@ -16,7 +16,7 @@ Return to latest work: `git checkout main`.
 
 | Tag | Week | Pattern | Summary |
 |-----|------|---------|---------|
-| `stage-w01` | w01 | augmented-llm | Keyword retrieval over synthetic policy docs; FAQ answers with a fixed prompt contract (mock LLM, no API keys) |
+| [`stage-w01`](https://github.com/shiva171289/agentic-ai-architecture/releases/tag/stage-w01) | w01 | augmented-llm | Keyword retrieval over synthetic policy docs; FAQ answers with a fixed prompt contract (mock LLM, no API keys) |
 
 Future rows append here as each `stage-wNN` is tagged.
 

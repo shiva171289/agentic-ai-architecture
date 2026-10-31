@@ -1,0 +1,41 @@
+name: Publish stage release
+
+on:
+  push:
+    tags:
+      - "stage-w*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing git tag (e.g. stage-w01)
+        required: true
+        default: stage-w01
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve tag name
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "name=${{ inputs.tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Verify release notes exist
+        run: test -f ".github/release-notes/${{ steps.tag.outputs.name }}.md"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.name }}
+          name: Acme Support ${{ steps.tag.outputs.name }}
+          body_path: .github/release-notes/${{ steps.tag.outputs.name }}.md
+          generate_release_notes: false
