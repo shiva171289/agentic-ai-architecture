@@ -32,6 +32,10 @@ Senior solutions architect explaining **trade-offs**, not hype. Practitioner ton
 - 2 contrasts (AWS vs Azure or single vs multi-agent)
 - Invite discussion question
 
+## Procedures (ASD-STE100)
+
+Runbooks, setup steps, and “how to” sections in blogs must follow [hermes/CONSTITUTION.md](../hermes/CONSTITUTION.md) § ASD-STE100: short imperative sentences, numbered steps, no idioms. Narrative intros and LinkedIn opinion posts use this voice guide instead.
+
 ## Blog structure
 
 1. Context & constraints

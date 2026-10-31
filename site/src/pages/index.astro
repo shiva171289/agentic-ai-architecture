@@ -1,41 +1,76 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
+import { buttondownUsername, siteTagline, githubRepo } from "../site-config";
 
+const base = import.meta.env.BASE_URL;
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const newsletterAction =
+  buttondownUsername && !buttondownUsername.startsWith("YOUR_")
+    ? `https://buttondown.com/api/emails/embed-subscribe/${buttondownUsername}`
+    : null;
 ---
 
-<Base title="Agentic AI Architecture" description="Learning in public — weekly patterns for enterprise agentic systems on AWS and Azure.">
-  <h1>Agentic AI Architecture</h1>
-  <p class="lede">
-    Weekly patterns, ADRs, and runnable samples. Cloud-agnostic first, then AWS and Azure mappings.
-    Follow the <a href={`${import.meta.env.BASE_URL}start-here/`}>Acme Support Platform</a> from FAQ bot to governed multi-agent architecture.
-  </p>
+<Base title="Agentic AI Architecture" description={siteTagline}>
+  <section class="hero">
+    <h1>Agentic AI Architecture</h1>
+    <p class="hero__lede">{siteTagline}</p>
+    <p class="hero__lede">
+      Follow the <strong>Acme Support Platform</strong> from FAQ bot to governed multi-agent architecture — one runnable storyline across 52 weeks.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href={`${base}start-here/`}>Start Here</a>
+      <a class="btn btn--secondary" href={`${base}blog/w01-augmented-llm/`}>Week 1 pattern</a>
+      <a class="btn btn--secondary" href={githubRepo}>GitHub</a>
+    </div>
+  </section>
+
   <p class="disclaimer">
     Views and examples are my own, for learning purposes, and do not represent my employer.
   </p>
+
   <h2>Latest patterns</h2>
-  <ul class="posts">
+  <ul class="card-grid">
     {posts.map((post) => (
-      <li>
-        <a href={`${import.meta.env.BASE_URL}blog/${post.id}/`}>{post.data.title}</a>
-        <span class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</span>
+      <li class="card">
+        <a href={`${base}blog/${post.id}/`}>
+          <p class="card__title">{post.data.title}</p>
+          <div class="card__meta">
+            {post.data.patternWeek && <span class="badge">{post.data.patternWeek}</span>}
+            {post.data.level && <span class="badge badge--muted">{post.data.level}</span>}
+            <span class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</span>
+          </div>
+        </a>
       </li>
     ))}
   </ul>
+
   <h2>Resources</h2>
-  <ul>
-    <li><a href={`${import.meta.env.BASE_URL}start-here/`}>Start Here</a></li>
-    <li><a href={`${import.meta.env.BASE_URL}ai-architect-skills-map/`}>AI Architect skills map</a></li>
-    <li><a href={`${import.meta.env.BASE_URL}production-readiness-checklist/`}>Production readiness checklist</a></li>
-    <li><a href="https://github.com/shiva171289/agentic-ai-architecture">GitHub repository</a> (includes <code>projects/acme-support/</code>)</li>
+  <ul class="resource-grid">
+    <li><a href={`${base}start-here/`}>Start Here</a> — primer and Acme storyline</li>
+    <li><a href={`${base}ai-architect-skills-map/`}>AI Architect skills map</a></li>
+    <li><a href={`${base}production-readiness-checklist/`}>Production readiness checklist</a></li>
+    <li><a href={githubRepo}>Hub repository</a> — includes <code>projects/acme-support/</code></li>
   </ul>
-  <form class="newsletter" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_USERNAME" method="post">
-    <label for="bd-email">Newsletter (Buttondown — replace YOUR_USERNAME)</label>
-    <input type="email" name="email" id="bd-email" required />
-    <input type="hidden" value="1" name="embed" />
-    <button type="submit">Subscribe</button>
-  </form>
+
+  {newsletterAction ? (
+    <form class="newsletter" action={newsletterAction} method="post">
+      <label for="bd-email">Newsletter</label>
+      <p class="meta">Pattern-of-the-week and checklist updates via Buttondown.</p>
+      <div class="newsletter-row">
+        <input type="email" name="email" id="bd-email" required placeholder="you@example.com" />
+        <input type="hidden" value="1" name="embed" />
+        <button type="submit">Subscribe</button>
+      </div>
+    </form>
+  ) : (
+    <div class="newsletter">
+      <label>Newsletter</label>
+      <p class="newsletter-hint">
+        Set <code>buttondownUsername</code> in <code>site/src/site-config.ts</code> after you create a Buttondown account (see Week 0 checklist).
+      </p>
+    </div>
+  )}
 </Base>

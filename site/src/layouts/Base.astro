@@ -1,40 +1,82 @@
 ---
+import "../styles/global.css";
+import { siteTitle } from "../site-config";
+
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
+  narrow?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, ogImage, narrow = false } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const site = import.meta.env.SITE;
+const canonicalPath = Astro.url.pathname;
+const canonicalUrl = new URL(canonicalPath, site).href;
+const defaultOg = new URL(`${base}og-default.svg`, site).href;
+const og = ogImage ? new URL(ogImage, site).href : defaultOg;
+const fullTitle = title === "Agentic AI Architecture" ? title : `${title} · Agentic AI Architecture`;
+const desc =
+  description ??
+  "Learning in public — weekly patterns for enterprise agentic systems on AWS and Azure.";
+
+const nav = [
+  { href: `${base}`, label: "Home" },
+  { href: `${base}start-here/`, label: "Start Here", primary: true },
+  { href: `${base}ai-architect-skills-map/`, label: "Skills map" },
+  { href: `${base}production-readiness-checklist/`, label: "Checklist" },
+  { href: `${base}about/`, label: "About" },
+  { href: `${base}rss.xml`, label: "RSS" },
+];
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description ?? ""} />
-    <title>{title}</title>
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
-    <style is:global>
-      :root { font-family: system-ui, sans-serif; line-height: 1.6; color: #1a1a1a; }
-      body { max-width: 42rem; margin: 0 auto; padding: 1.5rem; }
-      a { color: #0b5fff; }
-      .meta { color: #666; font-size: 0.9rem; }
-      .disclaimer { background: #f4f4f5; padding: 0.75rem 1rem; border-radius: 6px; font-size: 0.95rem; }
-      .lede { font-size: 1.15rem; }
-      nav { margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-      .newsletter { margin-top: 2rem; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
-      .newsletter input { margin-right: 0.5rem; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={desc} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={og} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:image" content={og} />
+    <title>{fullTitle}</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href={`${base}rss.xml`} />
   </head>
   <body>
-    <nav>
-      <a href={`${base}`}>Home</a>
-      <a href={`${base}about/`}>About</a>
-      <a href={`${base}production-readiness-checklist/`}>Checklist</a>
-      <a href={`${base}rss.xml`}>RSS</a>
-    </nav>
-    <slot />
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href={`${base}`}>{siteTitle}<span>.</span></a>
+        <nav class="site-nav" aria-label="Primary">
+          {nav.map((item) => (
+            <a href={item.href} class:list={{ "is-primary": item.primary }}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+    <main id="main" class:list={{ narrow }}>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span>© {new Date().getFullYear()} Shivashanmugam Mohan · MIT code · CC BY 4.0 content</span>
+        <span>
+          <a href="https://github.com/shiva171289/agentic-ai-architecture">GitHub</a>
+          ·
+          <a href={`${base}about/`}>Disclaimer</a>
+        </span>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,14 @@
+---
+description: Hub agent constitution — grounding, ASD-STE100 procedures, git safety
+globs: "**/*"
+alwaysApply: true
+---
+
+Read and follow [hermes/CONSTITUTION.md](../../hermes/CONSTITUTION.md) for all work in this repository.
+
+- No employer or confidential material; use Acme and synthetic data only.
+- Ground vendor claims in `content/source-corpus/latest.md` and `hermes/sources/verified-sources.json`.
+- Write runbooks, checklists, setup steps, and Telegram digests in **ASD-STE100** style (short imperative sentences, numbered steps).
+- Narrative blog and LinkedIn copy may follow [content/voice-guide.md](../../content/voice-guide.md); procedure blocks inside articles still use ASD-STE100.
+- Hermes pushes `drafts/*` only; do not commit secrets.
+- See [AGENTS.md](../../AGENTS.md) for the full stack map.

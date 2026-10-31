@@ -12,7 +12,7 @@ Complete these before running Hermes on the VPS. Store secrets only on the VPS (
 | AWS | Free tier account; **Budget $5** with email alert | ☐ |
 | Azure | Free account; **Cost Management budget $5** with alert | ☐ |
 | Hostinger VPS | Ubuntu 24.04 KVM (see `hermes/setup/01-hostinger-vps.md`) | ☐ |
-| Newsletter | Buttondown free tier (embed on blog) | ☐ |
+| Newsletter | Buttondown free tier; set username in `site/src/site-config.ts` | ☐ |
 
 ## Git on your laptop (personal identity)
 

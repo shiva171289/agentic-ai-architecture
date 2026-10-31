@@ -5,6 +5,9 @@ pubDate: {{YYYY-MM-DD}}
 patternWeek: wNN
 level: Foundation | Practitioner | Production | Architect
 acmeStage: wNN
+# Optional syndication (fill when published)
+# canonicalUrl: https://shiva171289.github.io/agentic-ai-architecture/blog/wNN-slug/
+# mediumRepublishDate: YYYY-MM-DD
 ---
 
 # {{title}}

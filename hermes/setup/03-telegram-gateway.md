@@ -40,7 +40,7 @@ brief - Research brief for a pattern week
 pack - Generate full weekly draft pack
 status - Agent and repo health
 cost - OpenRouter spend summary
-post - Get LinkedIn post text
+news - Daily AI brief (today)
 digest - Latest scout digest
 ```
 

@@ -13,7 +13,10 @@ Add via `crontab -e` as user `hermes`. Adjust paths.
 0 7 * * 5 cd ~/work/agentic-ai-architecture && hermes run skill research-scout --week auto >> ~/logs/scout.log 2>&1
 
 # GrowthAnalyst — Monday 8:00
-0 8 * * 1 hermes run skill growth-analyst >> ~/logs/growth.log 2>&1
+0 8 * * 1 cd ~/work/agentic-ai-architecture && hermes run skill growth-analyst >> ~/logs/growth.log 2>&1
+
+# DailyAIBrief — every day 7:00 (after short harvest)
+0 7 * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/harvest_sources.py --days 2 >> ~/logs/harvest-daily.log 2>&1 && hermes run skill daily-ai-brief >> ~/logs/daily-brief.log 2>&1
 ```
 
 Exact `hermes run` syntax depends on Hermes version — replace with documented CLI or Telegram-triggered jobs if cron integration differs.

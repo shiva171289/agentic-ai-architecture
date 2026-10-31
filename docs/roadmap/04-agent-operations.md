@@ -23,6 +23,12 @@ Log spend weekly in private `metrics.md`; use Telegram `cost` when wired.
 3. [hermes/setup/03-telegram-gateway.md](../../hermes/setup/03-telegram-gateway.md)
 4. [hermes/cron.md](../../hermes/cron.md) — scheduled jobs
 5. [hermes/PILOT-RUNBOOK.md](../../hermes/PILOT-RUNBOOK.md) — Week 1 validation
+6. [docs/setup/week1-operating-guide.md](../setup/week1-operating-guide.md) — day-by-day first week
+7. [docs/setup/agent-stack.md](../setup/agent-stack.md) — constitution and skills map
+
+## Constitution
+
+All skills follow [hermes/CONSTITUTION.md](../../hermes/CONSTITUTION.md) (ASD-STE100 for procedures, grounding rules).
 
 ## Telegram commands (intended)
 
@@ -35,6 +41,16 @@ Log spend weekly in private `metrics.md`; use Telegram `cost` when wired.
 | `post w05 A` | LinkedIn Post A text |
 | `cost` | OpenRouter spend |
 | `status` | Health check |
+| `news today` | Daily AI brief → Telegram + `content/daily-brief/YYYY-MM-DD.md` |
+| `news karpathy` | Karpathy watch block only (last 7 days) |
+
+## Daily AI brief
+
+Separate from **weekly-pack**. Skill: [hermes/skills/daily-ai-brief/SKILL.md](../../hermes/skills/daily-ai-brief/SKILL.md).
+
+- Cron: daily 07:00 IST (see [hermes/cron.md](../../hermes/cron.md))
+- Enable cron **after** Week 1 pilot spend is under ~$3/week
+- You pick 1–2 items for LinkedIn; Hermes does not auto-post
 
 ## Git workflow on VPS
 
@@ -48,6 +64,8 @@ Log spend weekly in private `metrics.md`; use Telegram `cost` when wired.
 Repo: `hermes/skills/*/SKILL.md` → symlink to `~/.hermes/skills/` on VPS.
 
 Orchestrator: `hermes/skills/weekly-pack/SKILL.md`.
+
+Daily news: `hermes/skills/daily-ai-brief/SKILL.md`.
 
 ## Budget upgrade path
 

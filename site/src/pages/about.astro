@@ -1,8 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
+import { githubRepo } from "../site-config";
 ---
 
-<Base title="About" description="Learning in public — agentic architecture">
+<Base title="About" description="Learning in public — enterprise agentic architecture" narrow>
   <h1>About</h1>
   <p>
     I am a solutions architect documenting <strong>enterprise agentic AI architecture</strong> patterns
@@ -15,6 +16,6 @@ import Base from "../layouts/Base.astro";
     No real customer or employer use cases appear here—only fictional companies (e.g. Acme Manufacturing) and synthetic data.
   </p>
   <p>
-    <a href="https://github.com/shiva171289/agentic-ai-architecture">Source on GitHub</a>
+    <a href={githubRepo}>Source on GitHub</a>
   </p>
 </Base>

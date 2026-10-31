@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="80" y="280" fill="#f8fafc" font-family="Segoe UI, system-ui, sans-serif" font-size="56" font-weight="700">Agentic AI Architecture</text>
+  <text x="80" y="360" fill="#94a3b8" font-family="Segoe UI, system-ui, sans-serif" font-size="32">Enterprise patterns · AWS &amp; Azure · Learning in public</text>
+  <rect x="80" y="420" width="120" height="6" rx="3" fill="#60a5fa"/>
+</svg>

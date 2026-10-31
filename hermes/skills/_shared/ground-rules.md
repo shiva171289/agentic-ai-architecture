@@ -5,6 +5,8 @@ description: Include in every skill system prompt
 
 ## Ground rules (mandatory)
 
+Read [hermes/CONSTITUTION.md](../../../CONSTITUTION.md). Apply **ASD-STE100** to all procedural output (steps, runbooks, digests).
+
 - No employer material: no real company names, internal tools, or "at my company".
 - Use fictional companies (e.g. Acme Manufacturing) and synthetic/public data only.
 - Generic architecture patterns and public vendor docs only.

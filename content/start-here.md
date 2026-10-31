@@ -27,6 +27,8 @@ Each weekly post adds one pattern. Runnable samples live under `patterns/wNN-slu
 
 Start with [Week 1 — Augmented LLM](/blog/w01-augmented-llm/) and the mock runnable code in `projects/acme-support/` (no cloud API keys required for tests).
 
+**Deploy agents:** [Week 1 operating guide](https://github.com/shiva171289/agentic-ai-architecture/blob/main/docs/setup/week1-operating-guide.md) and [agent stack](https://github.com/shiva171289/agentic-ai-architecture/blob/main/docs/setup/agent-stack.md) on GitHub.
+
 ## Level ladder
 
 Posts are tagged by reader level:

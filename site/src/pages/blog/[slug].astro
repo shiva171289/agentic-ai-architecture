@@ -12,12 +12,22 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const desc = post.data.description ?? post.data.title;
 ---
 
-<Base title={post.data.title} description={post.data.description}>
+<Base title={post.data.title} description={desc} narrow>
   <article>
-    <h1>{post.data.title}</h1>
-    <p class="meta">{post.data.pubDate.toISOString().slice(0, 10)} · {post.data.patternWeek}</p>
+    <header class="post-header">
+      <h1>{post.data.title}</h1>
+      <p class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</p>
+      <div class="post-badges">
+        {post.data.patternWeek && <span class="badge">{post.data.patternWeek}</span>}
+        {post.data.level && <span class="badge badge--muted">{post.data.level}</span>}
+        {post.data.acmeStage && (
+          <span class="badge badge--muted">Acme {post.data.acmeStage}</span>
+        )}
+      </div>
+    </header>
     <Content />
   </article>
 </Base>

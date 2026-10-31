@@ -78,6 +78,20 @@ Monthly:
 
 Cut the worst-performing post format each month.
 
+## Syndication (Medium)
+
+Republish **excerpts** on [Medium](https://medium.com) for reach. Treat **GitHub Pages as canonical**.
+
+| Rule | Action |
+|------|--------|
+| License | CC BY 4.0 allows reuse with attribution |
+| Canonical URL | Set Medium canonical link to `https://shiva171289.github.io/agentic-ai-architecture/blog/<slug>/` |
+| Timing | Publish on Medium **7–14 days after** the Sunday blog merge |
+| Length | Prefer **800–1200 words** (Post A depth) plus CTA to full pattern, code, and cloud mapping on the site |
+| Partner Program | Optional; Year 1 goal is audience, not payout ([06-future-monetization.md](06-future-monetization.md)) |
+
+Record optional `mediumRepublishDate` in blog front matter when you cross-post.
+
 ## Voice
 
 See [content/voice-guide.md](../../content/voice-guide.md).

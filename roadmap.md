@@ -52,6 +52,9 @@ Income targets and service pricing live only in the optional monetization doc.
 | [07-running-use-case.md](docs/roadmap/07-running-use-case.md) | Acme Support Platform spine (52-week storyline) |
 | [06-future-monetization.md](docs/roadmap/06-future-monetization.md) | Years 2–5 optional business track |
 | [week0-accounts-checklist.md](docs/setup/week0-accounts-checklist.md) | Accounts & budgets |
+| [week1-operating-guide.md](docs/setup/week1-operating-guide.md) | Week 1: VPS, Hermes, Telegram, pilot |
+| [agent-stack.md](docs/setup/agent-stack.md) | Constitution, skills, Cursor rules |
+| [AGENTS.md](AGENTS.md) | Agent map (human + IDE) |
 
 ## Hub repository
 
