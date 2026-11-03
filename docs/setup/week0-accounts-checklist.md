@@ -11,7 +11,7 @@ Complete these before running Hermes on the VPS. Store secrets only on the VPS (
 | Telegram | Create bot via @BotFather; get user ID from @userinfobot | ☐ |
 | AWS | Free tier account; **Budget $5** with email alert | ☐ |
 | Azure | Free account; **Cost Management budget $5** with alert | ☐ |
-| Hostinger VPS | Ubuntu 24.04 KVM (see `hermes/setup/01-hostinger-vps.md`) | ☐ |
+| Hostinger VPS | **Plain OS** Ubuntu 24.04 KVM (see `hermes/setup/01-hostinger-vps.md`) | ☐ |
 | Newsletter | Buttondown free tier; set username in `site/src/site-config.ts` | ☐ |
 
 ## Git on your laptop (personal identity)

@@ -46,7 +46,7 @@ Run a hardened Ubuntu VPS with a non-root `hermes` user.
 
 ### Steps
 
-1. Provision Hostinger KVM with **Ubuntu 24.04**. Add your SSH public key in hPanel.
+1. Provision Hostinger KVM. At checkout or first activation, choose **Plain OS → Ubuntu 24.04** (not Application, Control Panel, or Hermes Agent Docker template). Add your SSH public key in hPanel.
 2. Log in as `root` over SSH.
 3. Create user `hermes`. Copy root `~/.ssh` to `/home/hermes/.ssh`.
 4. Install updates, `ufw`, `fail2ban`, and `git`.

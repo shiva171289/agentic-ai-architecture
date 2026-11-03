@@ -1,5 +1,7 @@
 # Hermes Agent install (VPS)
 
+Complete [01-hostinger-vps.md](01-hostinger-vps.md) on a **Plain OS** Ubuntu 24.04 VPS first. Do not use Hostinger’s **Hermes Agent** application template for this guide; install Hermes with the script below as user `hermes`.
+
 Confirm commands against [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) README before running.
 
 ## 1. Install (as `hermes`)
