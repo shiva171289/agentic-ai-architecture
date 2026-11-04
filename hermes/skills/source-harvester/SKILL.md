@@ -44,6 +44,14 @@ Never fetch or cite URLs outside `allowed_link_hosts` and `doc_roots` unless the
 
 3. If a feed fails, log the error, **do not substitute** random web search results. Update `verified-sources.json` in a human-reviewed commit if RSS URLs moved.
 
+   Known-good Karpathy sources (verified 2026-11-04):
+   - Blog RSS: `https://karpathy.github.io/feed.xml` (Jekyll, low cadence).
+   - YouTube: `https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ`.
+   - A wrong channel ID returns HTTP 404 with an empty body. Confirm `200` and a non-empty `<title>` before you trust a feed.
+   - X/Twitter (`@karpathy`) has **no official RSS feed**. Do not scrape X in v1. Use the X API only if a human approves credentials.
+
+   The harvest script rewrites `latest.md` on **every** run, including `--out` runs. To probe a wide window without clobbering the shared corpus, pass `--days N --out` to a scratch path first, then re-run the intended window to restore `latest.md`.
+
 4. Optional (Tier 0 LLM): append a **10-line digest** at the bottom of today's corpus file — only bullet summaries of entries already in the file, with the same URLs.
 
 ## Outputs

@@ -1,6 +1,6 @@
 # Vendor source corpus
 
-**Generated (UTC):** 2026-11-04 11:45
+**Generated (UTC):** 2026-11-04 12:12
 **Window:** last 14 days
 **Keyword filter:** (none — all items in window)
 
@@ -344,7 +344,7 @@ Detect vocabulary collisions &amp; nearest rival skills (e.g. 0.69 overlap)\r\nr
 overlap ./skills\r\n\r\n# 3. Run cross-harness routing probes and auto-tune weak
 descriptions\r\nreach eval ./skills/cloud-run --runs 3\r\nreach optimize ./skills/cloud-
 run --apply&#x27;), (&#x27;language&#x27;, &#x27;&#x27;), (&#x27;caption&#x27;,
-&lt;wagtail.rich_text.RichText object at 0x7f4acb54c790&gt;)])]&gt; Pair skill-reach
+&lt;wagtail.rich_text.RichText object at 0x7fae06988f10&gt;)])]&gt; Pair skill-reach
 with NVIDIA's SkillSpector (Tier 1 and Tier 2 of SkillEvaluator ). As the Nemotron Labs
 team details in their Evaluating Agent Skills deep dive , standard code linters miss
 agent-native risks buried in markdown prose: prompt injection, silent data exfiltration,
@@ -688,7 +688,7 @@ left in the allocated file\r\n CAST((size - FILEPROPERTY(name, &#x27;SpaceUsed&#
 is used\r\n CAST((FILEPROPERTY(name, &#x27;SpaceUsed&#x27;) * 100.0) / size AS
 DECIMAL(18, 2)) AS [SpaceUsed_Percent]\r\nFROM sys.database_files;&quot;),
 (&#x27;language&#x27;, &#x27;&#x27;), (&#x27;caption&#x27;,
-&lt;wagtail.rich_text.RichText object at 0x7f4acb557350&gt;)])]&gt; You can monitor the
+&lt;wagtail.rich_text.RichText object at 0x7fae05f0aa10&gt;)])]&gt; You can monitor the
 following key Cloud SQL metrics in Cloud Monitoring to identify whether your provisioned
 disk quota significantly exceeds actual disk usage, indicating an opportunity for disk
 shrinki
@@ -1238,7 +1238,7 @@ They looked like this: Application logs — pods across multiple namespaces code
 (&#x27;1.2.3.4&#x27;, 443)\r\ndial tcp 1.2.3.4:443: i/o timeout\r\n\r\n# 1.2.3.4 is the
 cluster&#x27;s internal VIP for the kube-apiserver,\r\n# routed through Private Service
 Connect&quot;), (&#x27;language&#x27;, &#x27;&#x27;), (&#x27;caption&#x27;,
-&lt;wagtail.rich_text.RichText object at 0x7f4acb6ea810&gt;)])]&gt; Initially the errors
+&lt;wagtail.rich_text.RichText object at 0x7fae06c35250&gt;)])]&gt; Initially the errors
 were intermittent — spikes in the logs, not a hard outage. The customer suspected their
 own code. Their team had recently deployed a custom operator built with the kopf
 framework, and it was the first thing they looked at. But the logs showed the errors had
@@ -1518,7 +1518,18 @@ reasoning and tool use with multimodal understanding. This post explores its
 architecture and use cases, then shows how to deploy it on Amazon EKS, EKS Auto Mode,
 and Amazon SageMaker HyperPod EKS with NVIDIA Dynamo and vLLM.
 
-### 90. Grounding agents in one context graph connecting semantic models you already trust
+### 90. Azure Cloud HSM Hardware Audit Logging: Verifiable audit trails for security and compliance
+
+- **Publisher:** Microsoft Azure (`azure-blog`)
+- **URL:** https://azure.microsoft.com/en-us/blog/azure-cloud-hsm-hardware-audit-logging-verifiable-audit-trails-for-security-and-compliance/
+- **Published:** 2026-10-29
+
+Security, compliance, and operations teams can use this hardware-originated evidence for
+monitoring, compliance reporting, and forensic investigations. The post Azure Cloud HSM
+Hardware Audit Logging: Verifiable audit trails for security and compliance appeared
+first on Microsoft Azure Blog .
+
+### 91. Grounding agents in one context graph connecting semantic models you already trust
 
 - **Publisher:** Google Cloud (`google-cloud-blog`)
 - **URL:** https://cloud.google.com/blog/products/data-analytics/expanded-semantic-model-support-in-knowledge-catalog/
@@ -1572,7 +1583,7 @@ joins mined from real query history, and the join paths declared in your semanti
 are the edges. Ingested semantics land in that same graph, next to pre-existing
 governance and usage signals, so an agent moves from business con
 
-### 91. Querying Databricks Apache Iceberg Tables with the borderless Lakehouse
+### 92. Querying Databricks Apache Iceberg Tables with the borderless Lakehouse
 
 - **Publisher:** Google Cloud (`google-cloud-blog`)
 - **URL:** https://cloud.google.com/blog/products/data-analytics/querying-databricks-iceberg-tables-with-google-clouds-lakehouse/
@@ -1626,7 +1637,7 @@ partition columns with literal values so pruning can apply. These manifests main
 detailed column-level statistical bounds, enabling BigQuery to bypass irrelevant
 manifest records and unneeded Parquet files immediately. Consequentl
 
-### 92. Cloud CISO Perspectives: Introducing new $250,000 tier for Google Cloud VRP (Q&A)
+### 93. Cloud CISO Perspectives: Introducing new $250,000 tier for Google Cloud VRP (Q&A)
 
 - **Publisher:** Google Cloud (`google-cloud-blog`)
 - **URL:** https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-introducing-new-tier-for-google-cloud-vrp/
@@ -1639,7 +1650,7 @@ Perspectives, the contents of this newsletter are posted to the Google Cloud blo
 you’re reading this on the website and you’d like to receive the email version, you can
 subscribe here . aside_block &lt;ListValue: [StructValue([(&#x27;title&#x27;, &#x27;Get
 vital board insights with Google Cloud&#x27;), (&#x27;body&#x27;,
-&lt;wagtail.rich_text.RichText object at 0x7f4acb6bfc90&gt;), (&#x27;btn_text&#x27;,
+&lt;wagtail.rich_text.RichText object at 0x7fae14056050&gt;), (&#x27;btn_text&#x27;,
 &#x27;Visit the hub&#x27;), (&#x27;href&#x27;,
 &#x27;https://cloud.google.com/solutions/security/board-of-directors?utm_source=cgc-
 site&amp;utm_medium=et&amp;utm_campaign=FY26-Q2-GLOBAL-GCP39634-email-dl-dgcsm-CISOP-
@@ -1681,7 +1692,7 @@ $250,000 Root-in-Cloud tier for our VRP. Why introduce this tier now, and what k
 research are you hoping to spark? Michael Cote : This is a recognition of how the field
 of security research has changed over t
 
-### 93. What’s new with Google Data Cloud
+### 94. What’s new with Google Data Cloud
 
 - **Publisher:** Google Cloud (`google-cloud-blog`)
 - **URL:** https://cloud.google.com/blog/products/data-analytics/whats-new-with-google-data-cloud/
@@ -1735,7 +1746,7 @@ prompt-driven applications inside Looker. Read the guide on the Google Developer
 Community . October 12 - October 16 Looker Data Apps are now in Preview to build and
 host interactive, agent-generated applications natively inside Looker Generated using
 
-### 94. Smarter cost controls for serverless
+### 95. Smarter cost controls for serverless
 
 - **Publisher:** Databricks (`databricks-blog`)
 - **URL:** https://www.databricks.com/blog/smarter-cost-controls-serverless
@@ -1743,7 +1754,7 @@ host interactive, agent-generated applications natively inside Looker Generated 
 
 At Databricks, our serverless compute usage has grown more than 3x in the past year,...
 
-### 95. Granite Switch 4.1.1 — Update models like you update software
+### 96. Granite Switch 4.1.1 — Update models like you update software
 
 - **Publisher:** Hugging Face (`huggingface-blog`)
 - **URL:** https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1
@@ -1751,7 +1762,7 @@ At Databricks, our serverless compute usage has grown more than 3x in the past y
 
 (no summary in feed)
 
-### 96. How We Built Our Design Agent
+### 97. How We Built Our Design Agent
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/design-agent
@@ -1760,7 +1771,7 @@ At Databricks, our serverless compute usage has grown more than 3x in the past y
 How LangChain built Content Studio, an open-source design agent in Slack that makes on-
 brand videos, graphics and decks, and the harness that powers it.
 
-### 97. How We Built LangChain’s Paid Media Agent
+### 98. How We Built LangChain’s Paid Media Agent
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/paid-media-agent
@@ -1769,7 +1780,7 @@ brand videos, graphics and decks, and the harness that powers it.
 How LangChain built a paid media agent to analyze campaign performance, optimize ads,
 propose changes, and turn marketing data into action.
 
-### 98. The Art of Loop Engineering
+### 99. The Art of Loop Engineering
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/the-art-of-loop-engineering
@@ -1780,7 +1791,7 @@ model, it requires a carefully designed harness built for specific tasks. This p
 explores the core agent loop, how stacking and extending loops builds more effective
 agents, and how to instrument each level with LangChain primitives.
 
-### 99. How we detect frontier model misalignment
+### 100. How we detect frontier model misalignment
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/how-we-detect-frontier-model-misalignment
@@ -1789,7 +1800,7 @@ agents, and how to instrument each level with LangChain primitives.
 OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized
 agent behavior so responders can intervene before incidents escalate.
 
-### 100. How Ropes & Gray is developing AI for transactional diligence
+### 101. How Ropes & Gray is developing AI for transactional diligence
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/ropes-gray-ai-diligence
@@ -1798,7 +1809,7 @@ agent behavior so responders can intervene before incidents escalate.
 Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review
 grouped documents, summaries, and reports before advising clients.
 
-### 101. How Procore is powering construction analytics with OpenSharing
+### 102. How Procore is powering construction analytics with OpenSharing
 
 - **Publisher:** Databricks (`databricks-blog`)
 - **URL:** https://www.databricks.com/blog/how-procore-powering-construction-analytics-opensharing
@@ -1807,7 +1818,7 @@ grouped documents, summaries, and reports before advising clients.
 Connecting an industry built on disconnected dataConstruction runs on data that rarely
 sits in one place...
 
-### 102. Unlocking Tensor Core Performance for Machine Learning Interatomic Potentials
+### 103. Unlocking Tensor Core Performance for Machine Learning Interatomic Potentials
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/unlocking-tensor-core-performance-for-machine-learning-interatomic-potentials/
@@ -1816,7 +1827,7 @@ sits in one place...
 Atomistic simulations help researchers understand how molecules and materials behave,
 from chemical reactions and phase transitions to mechanical failure. These...
 
-### 103. Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot
+### 104. Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/credit-saison
@@ -1825,7 +1836,7 @@ from chemical reactions and phase transitions to mechanical failure. These...
 Credit Saison’s ChatGPT Enterprise pilot delivered 954% ROI. See how leaders and
 employees helped turn the results into companywide adoption.
 
-### 104. Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready
+### 105. Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready
 
 - **Publisher:** Hugging Face (`huggingface-blog`)
 - **URL:** https://huggingface.co/blog/announcing-project-protostar
@@ -1833,7 +1844,7 @@ employees helped turn the results into companywide adoption.
 
 (no summary in feed)
 
-### 105. Welcome Le Chonk: Mistral Large 4 on Hugging Face
+### 106. Welcome Le Chonk: Mistral Large 4 on Hugging Face
 
 - **Publisher:** Hugging Face (`huggingface-blog`)
 - **URL:** https://huggingface.co/blog/mistral-large4
@@ -1841,7 +1852,7 @@ employees helped turn the results into companywide adoption.
 
 (no summary in feed)
 
-### 106. Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms
+### 107. Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms
 
 - **Publisher:** Hugging Face (`huggingface-blog`)
 - **URL:** https://huggingface.co/blog/anydecisionmodel
@@ -1849,7 +1860,7 @@ employees helped turn the results into companywide adoption.
 
 (no summary in feed)
 
-### 107. Support New AI Frameworks Faster Using NVIDIA Workload Map
+### 108. Support New AI Frameworks Faster Using NVIDIA Workload Map
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/support-new-ai-frameworks-faster-using-nvidia-workload-map/
@@ -1858,7 +1869,7 @@ employees helped turn the results into companywide adoption.
 NVIDIA DSX AI Factory Platform brings together technologies to help the ecosystem
 design, build, and operate more efficient AI factories, including open source,...
 
-### 108. NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning
+### 109. NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/
@@ -1867,7 +1878,7 @@ design, build, and operate more efficient AI factories, including open source,..
 Always-on agents are taking on longer, more complex enterprise workflows. A single
 request can involve reading a document, checking information across sources,...
 
-### 109. Evernote turns AI-driven discovery into paid subscriptions
+### 110. Evernote turns AI-driven discovery into paid subscriptions
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/ads/customers/evernote
@@ -1876,7 +1887,7 @@ request can involve reading a document, checking information across sources,...
 Evernote used ChatGPT Ads to introduce its note-taking app to people working with AI.
 The team tracked how often free trials led to paid subscriptions.
 
-### 110. Context Engineering with Deep Agents: How To Remember Without Keeping Everything In Context
+### 111. Context Engineering with Deep Agents: How To Remember Without Keeping Everything In Context
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/context-engineering-deep-agents-remember
@@ -1885,7 +1896,7 @@ The team tracked how often free trials led to paid subscriptions.
 Long-running agents degrade as context piles up. Learn how offloading, summarization,
 skills, subagents, and memory keep your agent's context window focused.
 
-### 111. Fine-Tuning NVIDIA Nemotron to Know Local Rules, Not Just Local Languages
+### 112. Fine-Tuning NVIDIA Nemotron to Know Local Rules, Not Just Local Languages
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/fine-tuning-nvidia-nemotron-to-know-local-rules-not-just-local-languages/
@@ -1894,7 +1905,17 @@ skills, subagents, and memory keep your agent's context window focused.
 As AI adoption expands globally, people across languages and cultures are using it in
 more aspects of their daily lives. General-purpose language models serve...
 
-### 112. How to Build Proactive, Always-On Agents with the Schedules SDK in Managed Deep Agents
+### 113. Introducing the Microsoft Copilot harness in Foundry Agent Service
+
+- **Publisher:** Microsoft Azure (`azure-blog`)
+- **URL:** https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/
+- **Published:** 2026-10-28
+
+Today, we’re introducing the Microsoft Copilot harness in Foundry Agent Service in
+public preview. The post Introducing the Microsoft Copilot harness in Foundry Agent
+Service appeared first on Microsoft Azure Blog .
+
+### 114. How to Build Proactive, Always-On Agents with the Schedules SDK in Managed Deep Agents
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/proactive-agents
@@ -1903,7 +1924,7 @@ more aspects of their daily lives. General-purpose language models serve...
 Most proactive agents run on a simple cron. Learn what scheduled runs unlock, from
 memory to smart triage, and how to add them to Managed Deep Agents.
 
-### 113. How to build evidence-grounded agent memory with OpenWiki and Graphs
+### 115. How to build evidence-grounded agent memory with OpenWiki and Graphs
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/building-agent-memory-openwiki-graphs
@@ -1913,7 +1934,7 @@ LangChain used OpenWiki, its open-source wiki compiler, and an evidence graph to
 persistent memory layer that preserves knowledge for agents to reuse across tasks. Learn
 how.
 
-### 114. Gemini 4 Carbon: Our next frontier model
+### 116. Gemini 4 Carbon: Our next frontier model
 
 - **Publisher:** Google DeepMind (`google-deepmind-blog`)
 - **URL:** https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/
@@ -1921,7 +1942,7 @@ how.
 
 (no summary in feed)
 
-### 115. Publish Visual Studio Marketplace extensions securely with Trusted Publishing
+### 117. Publish Visual Studio Marketplace extensions securely with Trusted Publishing
 
 - **Publisher:** Microsoft (`microsoft-devblogs`)
 - **URL:** https://devblogs.microsoft.com/blog/trusted-publishing-visual-studio-marketplace/
@@ -1932,7 +1953,7 @@ Pipelines without storing a long-lived personal access token. The post Publish V
 Studio Marketplace extensions securely with Trusted Publishing appeared first on
 Microsoft for Developers .
 
-### 116. Introducing the Microsoft Copilot harness in Foundry Agent Service
+### 118. Introducing the Microsoft Copilot harness in Foundry Agent Service
 
 - **Publisher:** Microsoft (`microsoft-foundry-devblog`)
 - **URL:** https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/
@@ -1945,7 +1966,7 @@ agent experiences while preserving customer choice. In Microsoft Foundry, that m
 can choose a supported [&#8230;] The post Introducing the Microsoft Copilot harness in
 Foundry Agent Service appeared first on Microsoft Foundry Blog .
 
-### 117. Near-zero downtime upgrades: Announcing Cloud SQL for MySQL blue-green deployments
+### 119. Near-zero downtime upgrades: Announcing Cloud SQL for MySQL blue-green deployments
 
 - **Publisher:** Google Cloud (`google-cloud-blog`)
 - **URL:** https://cloud.google.com/blog/products/databases/cloud-sql-blue-green-deployments/
@@ -1999,7 +2020,7 @@ Safe, real-data testing: You can run real application traffic and queries agains
 upgraded green environment to verify performance before going live. If you spot an
 issue, simply delete the deployment before switchover without touchin
 
-### 118. NVIDIA RTX Spark Powers Neural Rendering and AI Characters in Games
+### 120. NVIDIA RTX Spark Powers Neural Rendering and AI Characters in Games
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/nvidia-rtx-spark-powers-neural-rendering-and-ai-characters-in-games/
@@ -2008,7 +2029,7 @@ issue, simply delete the deployment before switchover without touchin
 NVIDIA RTX Spark is a new Windows PC platform for AI development, creation, and gaming
 in slim laptops and compact desktops. Powered by an NVIDIA Blackwell RTX...
 
-### 119. OpenAI and ServiceNow expand partnership across enterprise workflows
+### 121. OpenAI and ServiceNow expand partnership across enterprise workflows
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/openai-servicenow-partnership-expansion
@@ -2017,7 +2038,7 @@ in slim laptops and compact desktops. Powered by an NVIDIA Blackwell RTX...
 OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into
 ServiceNow and ServiceNow workflows into ChatGPT and Codex.
 
-### 120. The future of the firm
+### 122. The future of the firm
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/the-future-of-the-firm
@@ -2025,7 +2046,7 @@ ServiceNow and ServiceNow workflows into ChatGPT and Codex.
 
 How AI might enter the org chart—beneath, beside, and between us.
 
-### 121. Legora is building the agentic operating system for legal work
+### 123. Legora is building the agentic operating system for legal work
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/legora
@@ -2034,7 +2055,7 @@ How AI might enter the org chart—beneath, beside, and between us.
 See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows,
 expand contract analysis, and free lawyers to focus on higher-value work.
 
-### 122. Memory-Enforced GPU Sharing in Kubernetes with NVIDIA CUDA 13.4
+### 124. Memory-Enforced GPU Sharing in Kubernetes with NVIDIA CUDA 13.4
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/memory-enforced-gpu-sharing-in-kubernetes-with-nvidia-cuda-13-4/
@@ -2043,7 +2064,7 @@ expand contract analysis, and free lawyers to focus on higher-value work.
 Many AI workloads need only a fraction of a GPU. Giving each one an entire device can
 leave capacity idle; sharing GPUs lets platform teams serve more workloads...
 
-### 123. The sleep framework: A new way for LLMs to retain knowledge in continual learning
+### 125. The sleep framework: A new way for LLMs to retain knowledge in continual learning
 
 - **Publisher:** Google Research (`google-research-blog`)
 - **URL:** https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/
@@ -2051,7 +2072,7 @@ leave capacity idle; sharing GPUs lets platform teams serve more workloads...
 
 Education Innovation
 
-### 124. Build specialized multimodal models with LFM3
+### 126. Build specialized multimodal models with LFM3
 
 - **Publisher:** Hugging Face (`huggingface-blog`)
 - **URL:** https://huggingface.co/blog/LiquidAI/lfm3
@@ -2059,7 +2080,7 @@ Education Innovation
 
 (no summary in feed)
 
-### 125. Genie 4: A new generation of world simulation
+### 127. Genie 4: A new generation of world simulation
 
 - **Publisher:** Google DeepMind (`google-deepmind-blog`)
 - **URL:** https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/
@@ -2067,7 +2088,7 @@ Education Innovation
 
 Genie 4: our new world model unlocking unprecedented realism in real-time simulation.
 
-### 126. Retell uses OpenAI models to help power 100M monthly calls
+### 128. Retell uses OpenAI models to help power 100M monthly calls
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/retell-ai
@@ -2076,7 +2097,7 @@ Genie 4: our new world model unlocking unprecedented realism in real-time simula
 GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M
 annual revenue run rate per employee.
 
-### 127. OpenAI expands partnership with Oracle to bring its apps to ChatGPT
+### 129. OpenAI expands partnership with Oracle to bring its apps to ChatGPT
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/oracle-apps-in-chatgpt
@@ -2085,7 +2106,7 @@ annual revenue run rate per employee.
 OpenAI and Oracle are expanding their partnership to bring business applications and AI
 agents into ChatGPT and power new Oracle offerings.
 
-### 128. How Check Point accelerates vulnerability research with Daybreak
+### 130. How Check Point accelerates vulnerability research with Daybreak
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/check-point-daybreak
@@ -2095,7 +2116,7 @@ With OpenAI Daybreak, Check Point speeds up the research behind new security
 protections, enabling its analysts to turn vulnerability intelligence into customer
 defenses faster.
 
-### 129. Greptile takes bug detection beyond code review with GPT-6 Astra
+### 131. Greptile takes bug detection beyond code review with GPT-6 Astra
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/greptile-code-review-codex-astra
@@ -2104,7 +2125,7 @@ defenses faster.
 How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security,
 and Codex to reduce rework.
 
-### 130. Introducing GPT-6.1 Terra
+### 132. Introducing GPT-6.1 Terra
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/introducing-gpt-6-1-terra
@@ -2112,7 +2133,7 @@ and Codex to reduce rework.
 
 Delivering fast and capable computer use at scale
 
-### 131. Announcing Azure AI Speech LLM 09-2026: Broader locale support
+### 133. Announcing Azure AI Speech LLM 09-2026: Broader locale support
 
 - **Publisher:** Microsoft (`microsoft-foundry-devblog`)
 - **URL:** https://devblogs.microsoft.com/foundry/announcing-azure-ai-speech-llm-09-2026/
@@ -2122,7 +2143,18 @@ Learn how Azure AI Speech LLM 09-2026 improves multilingual language and locale 
 with improved quality and latency. The post Announcing Azure AI Speech LLM 09-2026:
 Broader locale support appeared first on Microsoft Foundry Blog .
 
-### 132. The five components of building a "company harness"
+### 134. Scale reservoir uncertainty analysis with agile reservoir modeling
+
+- **Publisher:** Microsoft Azure (`azure-blog`)
+- **URL:** https://azure.microsoft.com/en-us/blog/scale-reservoir-uncertainty-analysis-with-agile-reservoir-modeling/
+- **Published:** 2026-10-26
+
+As subsurface data grows in scale and complexity, teams need a faster, more connected
+way to transform uncertainty into actionable decisions. The post Scale reservoir
+uncertainty analysis with agile reservoir modeling appeared first on Microsoft Azure
+Blog .
+
+### 135. The five components of building a "company harness"
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/components-building-company-harness
@@ -2131,7 +2163,7 @@ Broader locale support appeared first on Microsoft Foundry Blog .
 Learn how LangChain built internal agents across marketing, sales, and engineering, and
 how they have completely changed how those teams work.
 
-### 133. Context Engineering (Agent Memory) for AI Agents Starts with Retrieval
+### 136. Context Engineering (Agent Memory) for AI Agents Starts with Retrieval
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/context-engineering-starts-with-retrieval
@@ -2141,7 +2173,7 @@ Agents waste time and context on clumsy searches, oversized results and stale da
 Learn the retrieval techniques LangChain's Deep Agents harness uses to get the right
 context in.
 
-### 134. PostgreSQL Like A Pro: Build, query, and troubleshoot without leaving VS Code
+### 137. PostgreSQL Like A Pro: Build, query, and troubleshoot without leaving VS Code
 
 - **Publisher:** Microsoft (`microsoft-devblogs`)
 - **URL:** https://devblogs.microsoft.com/blog/postgresql-like-a-pro-vscode/
@@ -2151,7 +2183,7 @@ Build, query, and troubleshoot without leaving VS Code. The post PostgreSQL Like
 Build, query, and troubleshoot without leaving VS Code appeared first on Microsoft for
 Developers .
 
-### 135. AWS Weekly Roundup: Amazon Polly Generative engine, TorchNeuron for Trainium, and more (October 26, 2026)
+### 138. AWS Weekly Roundup: Amazon Polly Generative engine, TorchNeuron for Trainium, and more (October 26, 2026)
 
 - **Publisher:** AWS (`aws-main-blog`)
 - **URL:** https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-polly-generative-engine-torchneuron-for-trainium-and-more-october-26-2026/
@@ -2162,7 +2194,7 @@ Brazilian agribusiness at the AWS office in São Paulo. My talk ran through wher
 generative AI fits across the different stages of an agribusiness operation, and the
 point I kept returning to is that the markets we call traditional […]
 
-### 136. Working with academic communities to build scientific understanding
+### 139. Working with academic communities to build scientific understanding
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/building-scientific-understanding-with-academic-communities
@@ -2171,7 +2203,7 @@ point I kept returning to is that the markets we call traditional […]
 OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and
 quantum chromodynamics—and how researchers can verify and build on them.
 
-### 137. GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases
+### 140. GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/gpt-6-1-sol-coderabbit-code-security
@@ -2180,7 +2212,7 @@ quantum chromodynamics—and how researchers can verify and build on them.
 CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its
 security agent helps developers review findings and proposed fixes.
 
-### 138. Import AI 478: Math for alignment; ProgramBench; and Mirendil shows what RSI means
+### 141. Import AI 478: Math for alignment; ProgramBench; and Mirendil shows what RSI means
 
 - **Publisher:** Import AI (Substack) (`import-ai`)
 - **URL:** https://importai.substack.com/p/import-ai-478-math-for-alignment
@@ -2188,7 +2220,7 @@ security agent helps developers review findings and proposed fixes.
 
 What is &#8220;night&#8221; to a machine?
 
-### 139. ChatGPT’s expanding world of work
+### 142. ChatGPT’s expanding world of work
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/chatgpt-expanding-world-of-work
@@ -2197,7 +2229,7 @@ What is &#8220;night&#8221; to a machine?
 Explore OpenAI Signals data on 165 work activities across nearly 100 countries,
 revealing how people use ChatGPT for work and how usage changes over time.
 
-### 140. How Fanatics and OpenAI streamline the fan experience
+### 143. How Fanatics and OpenAI streamline the fan experience
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/fanatics-streamline-fan-experience
@@ -2206,7 +2238,7 @@ revealing how people use ChatGPT for work and how usage changes over time.
 Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look.
 Testing across roughly 30,000 MLB products showed 10% higher engagement.
 
-### 141. How Ultrafast cut incident investigation from hours to minutes at OpenAI
+### 144. How Ultrafast cut incident investigation from hours to minutes at OpenAI
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/openai-cut-incident-investigation
@@ -2215,7 +2247,7 @@ Testing across roughly 30,000 MLB products showed 10% higher engagement.
 See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes.
 Explore faster security analysis, code refactoring, and daily workflows.
 
-### 142. How NVIDIA Mission Control 2.5 Brings Autonomous Recovery to Kubernetes
+### 145. How NVIDIA Mission Control 2.5 Brings Autonomous Recovery to Kubernetes
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/how-nvidia-mission-control-2-5-brings-autonomous-recovery-to-kubernetes/
@@ -2224,7 +2256,7 @@ Explore faster security analysis, code refactoring, and daily workflows.
 Training large-scale AI models on thousands of GPUs is a high-stakes operation where
 monitoring and automation must be built-in to optimize cluster resiliency...
 
-### 143. Bringing foundational models to the front lines of TB screening
+### 146. Bringing foundational models to the front lines of TB screening
 
 - **Publisher:** Google Research (`google-research-blog`)
 - **URL:** https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/
@@ -2232,7 +2264,7 @@ monitoring and automation must be built-in to optimize cluster resiliency...
 
 Generative AI
 
-### 144. How NVIDIA Minerva Turns Telemetry Chaos Into Peak GPU Yield
+### 147. How NVIDIA Minerva Turns Telemetry Chaos Into Peak GPU Yield
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/how-nvidia-minerva-turns-telemetry-chaos-into-peak-gpu-yield/
@@ -2241,7 +2273,7 @@ Generative AI
 AI Factories are some of the most technologically complex operational environments ever
 created. Hundreds of thousands of GPUs, NVIDIA Spectrum-X Ethernet...
 
-### 145. Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 2
+### 148. Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 2
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2/
@@ -2250,7 +2282,7 @@ created. Hundreds of thousands of GPUs, NVIDIA Spectrum-X Ethernet...
 The Global Performance Tuner is a feature for automatic performance tuning released in
 NVIDIA TensorRT 11.1. It provides automatic, accuracy-aware and...
 
-### 146. Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 1
+### 149. Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 1
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-1/
@@ -2259,7 +2291,7 @@ NVIDIA TensorRT 11.1. It provides automatic, accuracy-aware and...
 Deploying a trained neural network involves more than translating each operator into a
 GPU kernel. It is a compilation problem with many legitimate answers. For...
 
-### 147. Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)
+### 150. Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/scaling-storage-one-billion-users-part-two
@@ -2268,7 +2300,7 @@ GPU kernel. It is a compilation problem with many legitimate answers. For...
 Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure
 Cosmos DB to deliver 12× faster reads for ChatGPT.
 
-### 148. Using AI Agents to Teach Robots Like Microduck to Walk in Simulation
+### 151. Using AI Agents to Teach Robots Like Microduck to Walk in Simulation
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation/
@@ -2277,7 +2309,7 @@ Cosmos DB to deliver 12× faster reads for ChatGPT.
 Teaching a robot to navigate an obstacle course requires more than a walking policy. It
 must perceive its surroundings, maintain balance, and adjust its actions...
 
-### 149. Securing our frontier model training environment
+### 152. Securing our frontier model training environment
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/securing-our-frontier-model-training-environment
@@ -2286,7 +2318,7 @@ must perceive its surroundings, maintain balance, and adjust its actions...
 OpenAI explains how we strengthened containment for frontier model training and
 evaluation, including offline environments and high-compute red-teaming.
 
-### 150. Anima helps clinics cut call waits by 75% with GPT-6 and GPT-Live
+### 153. Anima helps clinics cut call waits by 75% with GPT-6 and GPT-Live
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/anima
@@ -2295,7 +2327,7 @@ evaluation, including offline environments and high-compute red-teaming.
 Anima expands what care teams can do with OpenAI models, giving them more capacity to
 respond to patients.
 
-### 151. OpenAI and Poland’s NASK partner to advance AI safety and security
+### 154. OpenAI and Poland’s NASK partner to advance AI safety and security
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/openai-nask-ai-safety-security-partnership
@@ -2304,7 +2336,7 @@ respond to patients.
 OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research
 to strengthen safeguards and support a more resilient digital ecosystem.
 
-### 152. Does Your Model Run on AWS Trainium? Look It Up
+### 155. Does Your Model Run on AWS Trainium? Look It Up
 
 - **Publisher:** Hugging Face (`huggingface-blog`)
 - **URL:** https://huggingface.co/blog/torch-neuronx-model-support
@@ -2312,7 +2344,7 @@ to strengthen safeguards and support a more resilient digital ecosystem.
 
 (no summary in feed)
 
-### 153. Scaling Decision Optimization to 100 Million Variables and Beyond with mPDLP in NVIDIA cuOpt
+### 156. Scaling Decision Optimization to 100 Million Variables and Beyond with mPDLP in NVIDIA cuOpt
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/scaling-decision-optimization-to-100-million-variables-and-beyond-with-mpdlp-in-nvidia-cuopt/
@@ -2321,7 +2353,7 @@ to strengthen safeguards and support a more resilient digital ecosystem.
 Supply chain problems are expanding across more SKUs, lanes, and constraints than ever
 before, while energy grids are balancing more distributed sources in real...
 
-### 154. Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox
+### 157. Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox
 
 - **Publisher:** Hugging Face (`huggingface-blog`)
 - **URL:** https://huggingface.co/blog/microsoft/thinkingbox-training
@@ -2329,7 +2361,7 @@ before, while energy grids are balancing more distributed sources in real...
 
 (no summary in feed)
 
-### 155. AWS Continuum for code vulnerabilities is now generally available
+### 158. AWS Continuum for code vulnerabilities is now generally available
 
 - **Publisher:** AWS (`aws-main-blog`)
 - **URL:** https://aws.amazon.com/blogs/aws/aws-continuum-for-code-vulnerabilities-is-now-generally-available/
@@ -2340,7 +2372,7 @@ automatically find, validate, and prioritize code vulnerabilities in your enviro
 then delivers ready-to-review fixes as pull requests replacing what previously took
 hours of manual investigation and days of cross-team coordination.
 
-### 156. Build more responsive apps with the Decisions API
+### 159. Build more responsive apps with the Decisions API
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/decisions-api
@@ -2348,7 +2380,7 @@ hours of manual investigation and days of cross-team coordination.
 
 Fast, focused, low-cost decisions for any application.
 
-### 157. How to Read Data into GPU Memory in Python with NVIDIA GPUDirect Storage
+### 160. How to Read Data into GPU Memory in Python with NVIDIA GPUDirect Storage
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/how-to-read-data-into-gpu-memory-in-python-with-nvidia-gpudirect-storage/
@@ -2357,7 +2389,7 @@ Fast, focused, low-cost decisions for any application.
 GPU applications are processing ever-growing datasets with increasingly powerful
 accelerators. According to the 2025 Stanford AI Index, compute for notable AI...
 
-### 158. Beyond tree cover: mapping the world’s forest types
+### 161. Beyond tree cover: mapping the world’s forest types
 
 - **Publisher:** Google DeepMind (`google-deepmind-blog`)
 - **URL:** https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/
@@ -2366,7 +2398,7 @@ accelerators. According to the 2025 Stanford AI Index, compute for notable AI...
 A global map categorizing every 10-meter patch of land on Earth into distinct forest
 types.
 
-### 159. LangSmith LLM Gateway: Runtime Controls for Agents
+### 162. LangSmith LLM Gateway: Runtime Controls for Agents
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/langsmith-llm-gateway-runtime-controls-for-production-agents
@@ -2375,7 +2407,7 @@ types.
 LangSmith LLM Gateway is in public beta: spend caps, rate limits, model fallbacks and
 PII redaction for production agents, without provider lock-in.
 
-### 160. What FDE means at OpenAI
+### 163. What FDE means at OpenAI
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/forward-deployed-engineering-means
@@ -2383,7 +2415,15 @@ PII redaction for production agents, without provider lock-in.
 
 What forward deployed engineering means at OpenAI
 
-### 161. Uber brings ChatGPT Work to all employees with OpenAI
+### 164. How I use LLMs
+
+- **Publisher:** Andrej Karpathy (YouTube) (`karpathy-youtube`)
+- **URL:** https://www.youtube.com/watch?v=EWvNQjAaOHw
+- **Published:** 2026-10-22
+
+(no summary in feed)
+
+### 165. Uber brings ChatGPT Work to all employees with OpenAI
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/uber-chatgpt-work-rollout
@@ -2392,7 +2432,7 @@ What forward deployed engineering means at OpenAI
 Uber is rolling out ChatGPT Work to more than 30,000 employees, helping teams research,
 analyze data, create presentations, and complete complex workflows.
 
-### 162. Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules
+### 166. Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/giga-scale-ai-ethernet-evolution-spectrum-x-ethernet-rewrites-rules/
@@ -2401,7 +2441,7 @@ analyze data, create presentations, and complete complex workflows.
 The massive growth of generative AI has fundamentally altered data center design. As
 distributed model training scales to span hundreds of thousands of GPUs,...
 
-### 163. Broad access through consistent standards
+### 167. Broad access through consistent standards
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/broad-access-through-consistent-standards
@@ -2410,7 +2450,7 @@ distributed model training scales to span hundreds of thousands of GPUs,...
 How OpenAI works with distribution partners to uphold consistent safeguards, support
 responsible access, and clarify expectations in our Usage Policies.
 
-### 164. Developing an AI Factory Digital Twin with an Agent-Assisted Workflow
+### 168. Developing an AI Factory Digital Twin with an Agent-Assisted Workflow
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/developing-an-ai-factory-digital-twin-with-an-agent-assisted-workflow/
@@ -2419,7 +2459,7 @@ responsible access, and clarify expectations in our Usage Policies.
 Building an AI factory digital twin requires developers to bring site plans, equipment
 assets, and engineering requirements into a consistent model that teams...
 
-### 165. How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications
+### 169. How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications
 
 - **Publisher:** Hugging Face (`huggingface-blog`)
 - **URL:** https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization
@@ -2427,7 +2467,7 @@ assets, and engineering requirements into a consistent model that teams...
 
 (no summary in feed)
 
-### 166. How AT&T is rethinking in-house legal work with OpenAI
+### 170. How AT&T is rethinking in-house legal work with OpenAI
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/att-legal
@@ -2436,7 +2476,7 @@ assets, and engineering requirements into a consistent model that teams...
 AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its
 LegalEdge team is rethinking intake and scaling legal judgment.
 
-### 167. Empowering frontline maternal care with AI-assisted ultrasound
+### 171. Empowering frontline maternal care with AI-assisted ultrasound
 
 - **Publisher:** Google Research (`google-research-blog`)
 - **URL:** https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/
@@ -2444,7 +2484,7 @@ LegalEdge team is rethinking intake and scaling legal judgment.
 
 Health & Bioscience
 
-### 168. Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.
+### 172. Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.
 
 - **Publisher:** Hugging Face (`huggingface-blog`)
 - **URL:** https://huggingface.co/blog/amazon/profiling-torchneuron-part-1
@@ -2452,7 +2492,7 @@ Health & Bioscience
 
 (no summary in feed)
 
-### 169. ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform
+### 173. ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform
 
 - **Publisher:** OpenAI (`openai-blog`)
 - **URL:** https://openai.com/index/chatgpt-ads-expands-26-new-countries
@@ -2461,7 +2501,7 @@ Health & Bioscience
 From local businesses to global brands, more advertisers can now reach people as they
 explore, compare and decide what to buy in ChatGPT.
 
-### 170. Design Proteins with RFD4-Proteina Using Reward-Guided Inference-Time Search
+### 174. Design Proteins with RFD4-Proteina Using Reward-Guided Inference-Time Search
 
 - **Publisher:** NVIDIA (`nvidia-developer-blog`)
 - **URL:** https://developer.nvidia.com/blog/design-proteins-with-rfd4-proteina-using-reward-guided-inference-time-search/
@@ -2470,16 +2510,7 @@ explore, compare and decide what to buy in ChatGPT.
 Protein design is a search problem. Choose amino acids for an eight-residue protein
 sequence and more than 25 billion combinations are possible. Choose amino...
 
-### 171. OpenAI models are coming to Google Cloud
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/openai-models-google-cloud
-- **Published:** 2026-10-21
-
-OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s
-Model Garden, available through Google Cloud Marketplace.
-
-### 172. Cost per task: Using cheap classifiers to route across Gemini models and thinking levels
+### 175. Cost per task: Using cheap classifiers to route across Gemini models and thinking levels
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/
@@ -2488,7 +2519,7 @@ Model Garden, available through Google Cloud Marketplace.
 Per-token API prices keep falling, yet engineering bills for autonomous coding agents
 keep climbing....
 
-### 173. DevFest is back!
+### 176. DevFest is back!
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/devfest-is-back/
@@ -2502,7 +2533,7 @@ MCP—through live workshops and codelabs. The conference focuses on enabling de
 to prototype rapidly, ensure secure and private deployments, and leverage production-
 ready infrastructure.
 
-### 174. Build Generative UI Apps with A2UI & CopilotKit Agents
+### 177. Build Generative UI Apps with A2UI & CopilotKit Agents
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/
@@ -2511,7 +2542,7 @@ ready infrastructure.
 See Google A2Ui in action! Learn how to natively render agentic UIs across Langchain,
 AWS Strands, Microsoft agents, and Google ADK using CopilotKit SDKs for A2UI.
 
-### 175. Smaller apps and faster GPU inference with LiteRT in Google Play services
+### 178. Smaller apps and faster GPU inference with LiteRT in Google Play services
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/smaller-apps-and-faster-gpu-inference-with-litert-in-google-play-services/
@@ -2524,7 +2555,7 @@ automatic runtime updates across billions of devices. Developers can easily adop
 updates by updating their dependencies and utilizing the new Android Studio LiteRT skill
 for automated migration.
 
-### 176. Hill-Climbing Agent Quality with Agents CLI Evaluation
+### 179. Hill-Climbing Agent Quality with Agents CLI Evaluation
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/
@@ -2536,7 +2567,7 @@ prompt regressions, evaluate model backend swaps using side-by-side trace compar
 and automate evaluation passes. Developers will also learn how to integrate nightly
 scheduled runs with threshold-based alerting to track quality over time.
 
-### 177. Building Conversational Commerce with Multi-Agent Swarms on GCP: A Working Prototype
+### 180. Building Conversational Commerce with Multi-Agent Swarms on GCP: A Working Prototype
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/building-conversational-commerce-with-multi-agent-swarms-on-gcp-a-working-prototype/
@@ -2549,7 +2580,7 @@ publishing technical content through Google Developer Studio. The framework help
 engineers organize their guides and solutions to effectively share AI-driven
 conversational interface designs with the developer community.
 
-### 178. Fast, reliable A2UI, with swappable inference formats
+### 181. Fast, reliable A2UI, with swappable inference formats
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/fast-reliable-a2ui/
@@ -2563,7 +2594,7 @@ models stream text. These updates require no changes to frontend renderers or co
 catalogs, offering flexible performance levers for generative UI development across
 Python, TypeScript, and Dart.
 
-### 179. Preview, edit, and collaborate on markdown (.md) files natively in Google Docs and Drive
+### 182. Preview, edit, and collaborate on markdown (.md) files natively in Google Docs and Drive
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/preview-edit-and-collaborate-on-markdown-md-files-natively-in-google-docs-and-drive/
@@ -2575,7 +2606,7 @@ manual file conversions. This integration preserves native file fidelity for use
 Git repositories and developer tools while unlocking standard Docs features like line-
 level commenting, rendered Drive previews, and tracked version history.
 
-### 180. Architecting Governed, Self-Evolving AI Agents on Google Cloud
+### 183. Architecting Governed, Self-Evolving AI Agents on Google Cloud
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/
@@ -2586,7 +2617,7 @@ Agent Development Kit (ADK), BigQuery, and a four-gate defense-in-depth security
 (Model Armor, Cloud KMS, Binary Authorization, and OPA) to build governed, self-evolving
 AI agents that remediate live production outages in 1.8 seconds.
 
-### 181. Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec
+### 184. Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/
@@ -2600,7 +2631,7 @@ consistent authentication, rate limiting, and observability. Additionally, gatew
 feature deterministic default hostnames, simplifying environment provisioning and
 infrastructure-as-code management.
 
-### 182. Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond
+### 185. Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/
@@ -2613,7 +2644,7 @@ and deploys agents without requiring the Agent Development Kit (ADK). Additional
 demonstrates how platform teams can author custom extensions to enforce policies such as
 automated software bill of materials (SBOM) scans during deployment.
 
-### 183. Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon
+### 186. Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/
@@ -2628,7 +2659,7 @@ assembly. Developers can now prototype and deploy these multimodal edge applicat
 using new hardware options like the Synaptics Astra SR200 MCU series and globally
 available Coralboard devkits.12
 
-### 184. Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer
+### 187. Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer/
@@ -2641,7 +2672,7 @@ trace overlays to catch export regressions and verify hardware delegation. These
 enable engineering teams to transparently debug execution graphs and pinpoint cycle-
 level latency bottlenecks locally.
 
-### 185. Announcing New vLLM and SGLang Inference Engines on TPU
+### 188. Announcing New vLLM and SGLang Inference Engines on TPU
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/
@@ -2655,7 +2686,7 @@ with TPU Sync, and disaggregated serving. Public benchmarks demonstrate state-of
 performance and industry-leading cost efficiency on Ironwood TPU across long-context and
 agentic workloads.
 
-### 186. Integrating TorchTPU into TorchTitan and Optimizing Models for TPU
+### 189. Integrating TorchTPU into TorchTitan and Optimizing Models for TPU
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/
@@ -2669,7 +2700,7 @@ Utilization (MFU) across dense and MoE architectures. Developers can leverage th
 battle-tested optimization playbooks, recipes, and the Hugging Face modeling backend to
 efficiently scale their own workloads on TPU infrastructure.
 
-### 187. Step by Step guide: Build a Voice Agent That Never Goes Silent using ADK
+### 190. Step by Step guide: Build a Voice Agent That Never Goes Silent using ADK
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/
@@ -2682,7 +2713,7 @@ keep conversations fluid during long-running backend queries. Additionally, conf
 response scheduling behaviors such as WHEN_IDLE, INTERRUPT, or SILENT gives developers
 precise control over when and how tool results are delivered into the conversation.
 
-### 188. Native Model Authoring for Edge with LiteRT Tensor API
+### 191. Native Model Authoring for Edge with LiteRT Tensor API
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/
@@ -2691,7 +2722,7 @@ precise control over when and how tool results are delivered into the conversati
 Meet the LiteRT Tensor API: giving developers native C++ control over the model graph to
 unify end-to-end ML computations on heterogeneous edge hardware.
 
-### 189. Three layers, one repo: a tour of google/adk-recipes
+### 192. Three layers, one repo: a tour of google/adk-recipes
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/three-layers-one-repo-a-tour-of-googleadk-recipes/
@@ -2705,7 +2736,7 @@ their coding assistants, and deploy production-ready services across multiple la
 This cohesive structure streamlines the entire workflow from initial scaffolding to full
 deployment on Google Cloud infrastructure.
 
-### 190. Evaluating AI agents: moving past the vibe check
+### 193. Evaluating AI agents: moving past the vibe check
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/
@@ -2715,7 +2746,7 @@ A practical engineering guide and reference architecture for establishing contin
 evaluation pipelines for multi-turn AI agents using Gemini Enterprise Agent Platform,
 Google ADK, and OpenInference standards.
 
-### 191. Announcing DPoP Support for Google OAuth: Securing Refresh Tokens
+### 194. Announcing DPoP Support for Google OAuth: Securing Refresh Tokens
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/announcing-dpop-support-for-google-oauth-securing-refresh-tokens/
@@ -2729,7 +2760,7 @@ security without incurring high-QPS API performance overhead. Additionally, deve
 integrating multi-agent or Model Context Protocol (MCP) workloads can use Google Cloud
 Secure Token Service (STS) to handle secure token delegation across agent chains.
 
-### 192. Announcements
+### 195. Announcements
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/announcements
@@ -2737,7 +2768,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 193. Public Benefit Fund
+### 196. Public Benefit Fund
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/public-benefit-fund
@@ -2745,7 +2776,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 194. S1 Sec
+### 197. S1 Sec
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/s1-sec
@@ -2753,7 +2784,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 195. Features
+### 198. Features
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/features
@@ -2761,7 +2792,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 196. Ai For Science Expands Foundations Research Institutions
+### 199. Ai For Science Expands Foundations Research Institutions
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions
@@ -2769,7 +2800,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 197. Expanding Partnership Gsa
+### 200. Expanding Partnership Gsa
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/expanding-partnership-gsa
@@ -2777,7 +2808,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 198. Partnerships
+### 201. Partnerships
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/partnerships
@@ -2785,7 +2816,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 199. Donating Agent Skills To The Agentic Ai Foundation
+### 202. Donating Agent Skills To The Agentic Ai Foundation
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation
@@ -2793,7 +2824,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 200. Product
+### 203. Product
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/product
@@ -2801,7 +2832,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 201. Open Call Guest Investigators Life Sciences
+### 204. Open Call Guest Investigators Life Sciences
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/open-call-guest-investigators-life-sciences
@@ -2809,7 +2840,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 202. Christopher Stubbs Joins Long Term Benefit Trust
+### 205. Christopher Stubbs Joins Long Term Benefit Trust
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust
@@ -2817,7 +2848,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 203. An Update On Independent Evaluators
+### 206. An Update On Independent Evaluators
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/an-update-on-independent-evaluators
@@ -2825,7 +2856,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 204. Policy
+### 207. Policy
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/policy
@@ -2833,7 +2864,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 205. 2026 Us Midterms
+### 208. 2026 Us Midterms
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/2026-us-midterms
@@ -2841,7 +2872,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 206. Safeguards
+### 209. Safeguards
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/safeguards
@@ -2849,7 +2880,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 207. Singapore Office Opening
+### 210. Singapore Office Opening
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/singapore-office-opening
@@ -2857,7 +2888,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 208. Distillation Defenses
+### 211. Distillation Defenses
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/distillation-defenses
@@ -2865,7 +2896,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 209. Anthropic Cyber Mission
+### 212. Anthropic Cyber Mission
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/anthropic-cyber-mission
@@ -2873,7 +2904,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 210. Security
+### 213. Security
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/security
@@ -2881,7 +2912,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 211. 2026 Usage Policy Update
+### 214. 2026 Usage Policy Update
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/2026-usage-policy-update
@@ -2889,7 +2920,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 212. Genesis Mission Commitment
+### 215. Genesis Mission Commitment
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/genesis-mission-commitment
@@ -2897,7 +2928,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 213. Cyber Verification Program
+### 216. Cyber Verification Program
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/cyber-verification-program
@@ -2905,7 +2936,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 214. Claude Frontier Academy
+### 217. Claude Frontier Academy
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/claude-frontier-academy
@@ -2913,7 +2944,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 215. Barclays Scales Claude
+### 218. Barclays Scales Claude
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/barclays-scales-claude
@@ -2921,7 +2952,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 216. Accenture Embedded Evaluation
+### 219. Accenture Embedded Evaluation
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/accenture-embedded-evaluation
@@ -2929,7 +2960,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 217. Life Sciences Verification Program
+### 220. Life Sciences Verification Program
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/life-sciences-verification-program
@@ -2937,7 +2968,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 218. Rss
+### 221. Rss
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/rss
@@ -2945,7 +2976,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 219. Mistral Large 4 Oss
+### 222. Mistral Large 4 Oss
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-large-4-oss/
@@ -2953,7 +2984,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 220. Mistral Nvidia Ai For Industrial Engineering
+### 223. Mistral Nvidia Ai For Industrial Engineering
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/
@@ -2961,7 +2992,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 221. Voxtral 3
+### 224. Voxtral 3
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/voxtral-3/
@@ -2969,7 +3000,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 222. Timestral
+### 225. Timestral
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/timestral/
@@ -2977,7 +3008,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 223. Mistral Large 4
+### 226. Mistral Large 4
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-large-4/
@@ -2985,7 +3016,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 224. Hallo Deutschland
+### 227. Hallo Deutschland
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/hallo-deutschland/
@@ -2993,7 +3024,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 225. Mistral X Mozilla
+### 228. Mistral X Mozilla
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-x-mozilla/
@@ -3001,7 +3032,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 226. Mistral X Cloudera
+### 229. Mistral X Cloudera
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-x-cloudera/
@@ -3009,7 +3040,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 227. Legacy Code Modernization
+### 230. Legacy Code Modernization
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/legacy-code-modernization/
@@ -3017,7 +3048,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 228. Mistral Makes Sovereign Open Weight Ai To Frontier
+### 231. Mistral Makes Sovereign Open Weight Ai To Frontier
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/
@@ -3025,7 +3056,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 229. Mistral X Humain
+### 232. Mistral X Humain
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-x-humain/
@@ -3033,7 +3064,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 230. Agentic Search
+### 233. Agentic Search
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/agentic-search/
@@ -3041,7 +3072,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 231. Regional Inference Open Models New Compute
+### 234. Regional Inference Open Models New Compute
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/regional-inference-open-models-new-compute/
@@ -3049,7 +3080,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 232. Shieldstral
+### 235. Shieldstral
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/shieldstral/
@@ -3057,7 +3088,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 233. Manage Prompts And Skills In Studio
+### 236. Manage Prompts And Skills In Studio
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/manage-prompts-and-skills-in-studio/
@@ -3065,7 +3096,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 234. Robostral Navigate
+### 237. Robostral Navigate
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/robostral-navigate/
@@ -3073,7 +3104,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 235. Leanstral 1 5
+### 238. Leanstral 1 5
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/leanstral-1-5/
@@ -3081,7 +3112,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 236. More Control Over Connectors
+### 239. More Control Over Connectors
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/more-control-over-connectors/
@@ -3089,7 +3120,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 237. Ocr 4
+### 240. Ocr 4
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/ocr-4/
@@ -3097,7 +3128,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 238. Ai Now Summit 2026
+### 241. Ai Now Summit 2026
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/ai-now-summit-2026/
@@ -3105,7 +3136,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 239. Vibe Agent
+### 242. Vibe Agent
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/vibe-agent/
@@ -3113,7 +3144,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 240. Search Toolkit
+### 243. Search Toolkit
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/search-toolkit/
@@ -3121,7 +3152,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 241. Introducing Physics Ai At Mistral
+### 244. Introducing Physics Ai At Mistral
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/introducing-physics-ai-at-mistral/
@@ -3129,7 +3160,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 242. Physics Ai Research
+### 245. Physics Ai Research
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/physics-ai-research/
@@ -3137,7 +3168,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 243. Accelerate Ai Native Industry
+### 246. Accelerate Ai Native Industry
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/accelerate-ai-native-industry/
@@ -3145,7 +3176,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 244. Vibe Remote Agents Mistral Medium 3 5
+### 247. Vibe Remote Agents Mistral Medium 3 5
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/
@@ -3153,7 +3184,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 245. Connectors
+### 248. Connectors
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/connectors/
@@ -3161,7 +3192,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 246. Workflows
+### 249. Workflows
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/workflows/
@@ -3169,7 +3200,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 247. Spaces
+### 250. Spaces
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/spaces/
@@ -3177,7 +3208,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 248. Voxtral Tts
+### 251. Voxtral Tts
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/voxtral-tts/
@@ -3185,7 +3216,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 249. Forge
+### 252. Forge
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/forge/
@@ -3193,7 +3224,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 250. Mistral Small 4
+### 253. Mistral Small 4
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-small-4/
@@ -3201,7 +3232,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 251. Mistral Ai And Nvidia Partner To Accelerate Open Frontier Models
+### 254. Mistral Ai And Nvidia Partner To Accelerate Open Frontier Models
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-ai-and-nvidia-partner-to-accelerate-open-frontier-models/
@@ -3209,7 +3240,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 252. Leanstral
+### 255. Leanstral
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/leanstral/
@@ -3217,7 +3248,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 253. Rails Testing On Autopilot Building An Agent That Writes What Developers Wont
+### 256. Rails Testing On Autopilot Building An Agent That Writes What Developers Wont
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/rails-testing-on-autopilot-building-an-agent-that-writes-what-developers-wont/
@@ -3225,7 +3256,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 254. Voxtral Transcribe 2
+### 257. Voxtral Transcribe 2
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/voxtral-transcribe-2/
@@ -3233,7 +3264,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 255. Mistral Vibe 2 0
+### 258. Mistral Vibe 2 0
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-vibe-2-0/
@@ -3241,7 +3272,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 256. Debugging Memory Leak In Vllm
+### 259. Debugging Memory Leak In Vllm
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/debugging-memory-leak-in-vllm/
@@ -3249,7 +3280,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 257. Mistral Ocr 3
+### 260. Mistral Ocr 3
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-ocr-3/
@@ -3257,4 +3288,4 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-_Total entries: 257_
+_Total entries: 260_
