@@ -43,20 +43,24 @@ All skills follow [hermes/CONSTITUTION.md](../../hermes/CONSTITUTION.md) (ASD-ST
 | `status` | Health check |
 | `news today` | Daily AI brief → Telegram + `content/daily-brief/YYYY-MM-DD.md` |
 | `news karpathy` | Karpathy watch block only (last 7 days) |
-| `approve publish wNN` | Dispatch Actions merge `drafts/wNN` → `main` (GitHub Pages deploy) |
+| `approve publish wNN` | Test `drafts/wNN` in CI, then merge it to `main` through a pull request (GitHub Pages deploy) |
 | `publish status wNN` | Draft branch + CI summary before approve |
 
 ## Publish gate (GitHub Pages)
 
 Skill: [hermes/skills/publish-gate/SKILL.md](../../hermes/skills/publish-gate/SKILL.md).
 
-1. On VPS, set `GITHUB_PAT` in `~/.hermes/.env` (Actions + Contents write).
+1. On VPS, set `GITHUB_PAT` in `~/.hermes/.env` (Actions + Contents + Pull requests, read and write). The key name must be exactly `GITHUB_PAT` or `GH_TOKEN`.
 2. Symlink `publish-gate` skill after `git pull`.
 3. Telegram: `approve publish w01` after reviewing the checklist.
-4. Workflow: [.github/workflows/publish-approved-week.yml](../../.github/workflows/publish-approved-week.yml).
-5. Helper: `python3 hermes/tools/trigger_publish.py w01 w01-augmented-llm`.
+4. Workflow: [.github/workflows/publish-approved-week.yml](../../.github/workflows/publish-approved-week.yml). It **only tests** the draft branch.
+5. Helper: `python3 hermes/tools/trigger_publish.py w01 w01-augmented-llm`. The helper runs the CI gate, then opens and merges the pull request.
 
-If branch protection blocks the default `GITHUB_TOKEN`, add repo secret `PUBLISH_PAT` and update the workflow push step to use it.
+The `main` ruleset requires changes to arrive through a pull request, so a direct
+push from Actions is always rejected with
+`GH013: Repository rule violations found for refs/heads/main`. Do not add a
+ruleset bypass actor to work around it — merge through a pull request instead,
+which is what the helper does.
 
 ## Daily AI brief
 

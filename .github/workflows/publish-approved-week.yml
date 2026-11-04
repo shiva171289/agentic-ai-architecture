@@ -1,7 +1,17 @@
-name: Publish approved week to main
+name: Test approved week (publish gate)
 
-# Merge an approved drafts/wNN branch to main after tests pass.
-# Trigger from VPS: hermes/tools/trigger_publish.py (workflow_dispatch).
+# CI gate for an approved drafts/wNN branch.
+#
+# This workflow only TESTS the draft branch. It must not merge to main: the
+# `main` ruleset requires changes to arrive through a pull request, so a direct
+# push from Actions is always rejected with
+#   remote: error: GH013: Repository rule violations found for refs/heads/main.
+#   remote: - Changes must be made through a pull request.
+#
+# The merge is done over the pull-request API by
+# hermes/tools/trigger_publish.py, which runs on the ops host with GITHUB_PAT
+# and acts only after this run reports success.
+# See hermes/skills/publish-gate/SKILL.md.
 
 on:
   workflow_dispatch:
@@ -20,14 +30,14 @@ on:
         type: string
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: publish-main
+  group: publish-gate
   cancel-in-progress: false
 
 jobs:
-  test-and-merge:
+  test-draft:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -46,10 +56,3 @@ jobs:
           cd "patterns/${{ inputs.pattern_dir }}/code"
           uv sync --extra dev
           uv run pytest
-
-      - name: Merge draft into main and push
-        run: |
-          git checkout main
-          git pull origin main
-          git merge "origin/${{ inputs.draft_branch }}" -m "Publish ${{ inputs.week }} after Telegram approval"
-          git push origin main
