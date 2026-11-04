@@ -55,6 +55,7 @@ Skill: [hermes/skills/publish-gate/SKILL.md](../../hermes/skills/publish-gate/SK
 3. Telegram: `approve publish w01` after reviewing the checklist.
 4. Workflow: [.github/workflows/publish-approved-week.yml](../../.github/workflows/publish-approved-week.yml). It **only tests** the draft branch.
 5. Helper: `python3 hermes/tools/trigger_publish.py w01 w01-augmented-llm`. The helper runs the CI gate, then opens and merges the pull request.
+6. Verify before you report success: `GET /repos/<owner>/<repo>/commits/main` shows the merge, and `https://shiva171289.github.io/agentic-ai-architecture/blog/wNN-slug/` returns HTTP 200.
 
 The `main` ruleset requires changes to arrive through a pull request, so a direct
 push from Actions is always rejected with
