@@ -78,6 +78,14 @@ for d in ~/work/agentic-ai-architecture/hermes/skills/*/; do
 done
 ```
 
+The destination is always `~/.hermes/skills/`. If you run the loop with the destination set to the repo path, each skill gets a link to itself (`hermes/skills/blog-writer/blog-writer`), which recurses and pollutes `git status`. Detect that with:
+
+```bash
+find ~/work/agentic-ai-architecture/hermes/skills -type l
+```
+
+A correct tree prints nothing. Delete any link it reports; never commit one.
+
 After `git pull`, symlinks pick up skill edits automatically.
 
 ---
