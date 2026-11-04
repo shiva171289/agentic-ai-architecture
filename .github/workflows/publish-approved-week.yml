@@ -1,0 +1,55 @@
+name: Publish approved week to main
+
+# Merge an approved drafts/wNN branch to main after tests pass.
+# Trigger from VPS: hermes/tools/trigger_publish.py (workflow_dispatch).
+
+on:
+  workflow_dispatch:
+    inputs:
+      draft_branch:
+        description: "Draft branch (e.g. drafts/w01)"
+        required: true
+        type: string
+      week:
+        description: "Week id (e.g. w01)"
+        required: true
+        type: string
+      pattern_dir:
+        description: "Pattern folder under patterns/ (e.g. w01-augmented-llm)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-main
+  cancel-in-progress: false
+
+jobs:
+  test-and-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Fetch draft branch
+        run: git fetch origin "${{ inputs.draft_branch }}"
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Test pattern code on draft
+        run: |
+          git checkout "origin/${{ inputs.draft_branch }}"
+          cd "patterns/${{ inputs.pattern_dir }}/code"
+          uv sync --extra dev
+          uv run pytest
+
+      - name: Merge draft into main and push
+        run: |
+          git checkout main
+          git pull origin main
+          git merge "origin/${{ inputs.draft_branch }}" -m "Publish ${{ inputs.week }} after Telegram approval"
+          git push origin main

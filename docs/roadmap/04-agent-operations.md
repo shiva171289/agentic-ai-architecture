@@ -43,6 +43,20 @@ All skills follow [hermes/CONSTITUTION.md](../../hermes/CONSTITUTION.md) (ASD-ST
 | `status` | Health check |
 | `news today` | Daily AI brief → Telegram + `content/daily-brief/YYYY-MM-DD.md` |
 | `news karpathy` | Karpathy watch block only (last 7 days) |
+| `approve publish wNN` | Dispatch Actions merge `drafts/wNN` → `main` (GitHub Pages deploy) |
+| `publish status wNN` | Draft branch + CI summary before approve |
+
+## Publish gate (GitHub Pages)
+
+Skill: [hermes/skills/publish-gate/SKILL.md](../../hermes/skills/publish-gate/SKILL.md).
+
+1. On VPS, set `GITHUB_PAT` in `~/.hermes/.env` (Actions + Contents write).
+2. Symlink `publish-gate` skill after `git pull`.
+3. Telegram: `approve publish w01` after reviewing the checklist.
+4. Workflow: [.github/workflows/publish-approved-week.yml](../../.github/workflows/publish-approved-week.yml).
+5. Helper: `python3 hermes/tools/trigger_publish.py w01 w01-augmented-llm`.
+
+If branch protection blocks the default `GITHUB_TOKEN`, add repo secret `PUBLISH_PAT` and update the workflow push step to use it.
 
 ## Daily AI brief
 

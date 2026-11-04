@@ -68,6 +68,7 @@ flowchart LR
 | GrowthAnalyst | `growth-analyst` | Weekly metrics (private repo) |
 | Weekly pack | `weekly-pack` | `pack wNN` |
 | Daily AI brief | `daily-ai-brief` | Cron daily; `news today` |
+| Publish gate | `publish-gate` | `approve publish wNN` |
 
 Install skills on the VPS:
 
@@ -120,3 +121,5 @@ Protect `main` in GitHub. Require pull request or merge locally after review.
 4. [hermes/setup/03-telegram-gateway.md](../../hermes/setup/03-telegram-gateway.md)
 5. [hermes/PILOT-RUNBOOK.md](../../hermes/PILOT-RUNBOOK.md)
 6. [hermes/cron.md](../../hermes/cron.md)
+7. [docs/setup/cron-enable.md](cron-enable.md)
+8. [docs/setup/syndication.md](syndication.md)

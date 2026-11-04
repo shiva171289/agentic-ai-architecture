@@ -23,4 +23,6 @@ Exact `hermes run` syntax depends on Hermes version — replace with documented 
 
 Create log dir: `mkdir -p ~/logs`
 
+Enable cron after Week 1 pilot spend check: [docs/setup/cron-enable.md](../docs/setup/cron-enable.md).
+
 Telegram should receive scout digest and Monday nudge when skills are wired.

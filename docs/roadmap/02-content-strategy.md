@@ -32,7 +32,7 @@ Agents draft; **you** edit voice and post manually.
 
 ## Grounding (anti-hallucination)
 
-**SourceHarvester** (Thursday cron) pulls allowlisted vendor RSS and selected official HTML index pages (AWS, Azure, Microsoft DevBlogs/Foundry, OpenAI, Anthropic News, LangChain) into `content/source-corpus/latest.md`. ResearchScout and ReviewerCritic treat that file plus official doc roots as the vendor fact base. See [hermes/sources/README.md](../../hermes/sources/README.md).
+**SourceHarvester** (Thursday cron) pulls allowlisted vendor RSS and selected official HTML index pages (AWS, Azure, Microsoft DevBlogs/Foundry, OpenAI, Anthropic News, LangChain, Google Developers/Cloud/DeepMind/Research, Palantir, NVIDIA, Cohere, Databricks, Mistral, MCP blog, and others) into `content/source-corpus/latest.md`. ResearchScout and ReviewerCritic treat that file plus official doc roots as the vendor fact base. See [hermes/sources/README.md](../../hermes/sources/README.md).
 
 ## Content themes
 
@@ -77,6 +77,10 @@ Monthly:
 - Patterns shipped vs calendar
 
 Cut the worst-performing post format each month.
+
+Optional syndication runbook: [docs/setup/syndication.md](../setup/syndication.md).
+
+LinkedIn pillars (Pattern / Opinion / NewsLens): [content/linkedin-pillars.md](../../content/linkedin-pillars.md).
 
 ## Syndication (Medium)
 
