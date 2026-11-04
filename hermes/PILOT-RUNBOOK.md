@@ -20,9 +20,14 @@ This is the **target quality** after Cursor polish. Agents produce first drafts;
 
 ### 2. Harvest vendor sources (VPS or laptop)
 
+Pull latest `verified-sources.json`, then harvest:
+
 ```bash
+cd ~/work/agentic-ai-architecture && git pull --ff-only origin main
 python3 hermes/tools/harvest_sources.py --days 30 --keywords "llm,augmented,bedrock"
 ```
+
+VPS remainder: [docs/setup/week1-vps-pilot-remainder.md](../docs/setup/week1-vps-pilot-remainder.md).
 
 Confirm `content/source-corpus/latest.md` exists and is recent.
 

@@ -18,6 +18,9 @@ Read `_shared/ground-rules.md` and [hermes/CONSTITUTION.md](../../CONSTITUTION.m
 1. Run or confirm fresh harvest (`python3 hermes/tools/harvest_sources.py --days 2`).
 2. Scan corpus and Karpathy feeds for new items in the window.
 3. Select **5–10** items relevant to enterprise agentic AI (models, agents, RAG, tools, cloud AI, safety). Prefer corpus-backed vendor releases.
+   - **Enterprise agentic lens:** Prefer feeds tagged `agents`, `enterprise`, `mcp`, or `cloud` in [verified-sources.json](../../sources/verified-sources.json).
+   - **Publisher cap:** Include at most **two** items from the same publisher in one digest.
+   - **Down-rank:** Deprioritize `aws-main-blog` unless the title clearly mentions LLM, agent, Bedrock, or RAG.
 4. Write **Karpathy watch** section:
    - If new Karpathy blog or video exists, one ASD-STE100 item with primary URL.
    - If none, state: **No new Karpathy post in window.** Do not invent posts.

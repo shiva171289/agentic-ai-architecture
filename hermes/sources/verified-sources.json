@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updated": "2026-10-31",
+  "version": 2,
+  "updated": "2026-11-04",
   "notes": "RSS URLs change occasionally. Re-verify monthly. Agents must not cite URLs outside this allowlist unless fetched same-session from an official doc link listed under doc_roots.",
   "allowed_link_hosts": [
     "aws.amazon.com",
@@ -14,6 +14,10 @@
     "platform.openai.com",
     "cloud.google.com",
     "ai.google.dev",
+    "developers.googleblog.com",
+    "cloudblog.withgoogle.com",
+    "deepmind.google",
+    "research.google",
     "langchain.com",
     "blog.langchain.dev",
     "python.langchain.com",
@@ -25,53 +29,72 @@
     "karpathy.github.io",
     "importai.substack.com",
     "www.youtube.com",
-    "youtube.com"
+    "youtube.com",
+    "blog.palantir.com",
+    "medium.com",
+    "developer.nvidia.com",
+    "mistral.ai",
+    "cohere.com",
+    "txt.cohere.com",
+    "modelcontextprotocol.io",
+    "blog.modelcontextprotocol.io",
+    "databricks.com",
+    "research.facebook.com"
   ],
   "feeds": [
     {
       "id": "aws-ml-blog",
       "publisher": "AWS",
-      "url": "https://aws.amazon.com/blogs/machine-learning/feed/"
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "tags": ["cloud", "enterprise"]
     },
     {
       "id": "aws-main-blog",
       "publisher": "AWS",
-      "url": "https://aws.amazon.com/blogs/aws/feed/"
+      "url": "https://aws.amazon.com/blogs/aws/feed/",
+      "tags": ["cloud"]
     },
     {
       "id": "azure-blog",
       "publisher": "Microsoft Azure",
-      "url": "https://azure.microsoft.com/en-us/blog/feed/"
+      "url": "https://azure.microsoft.com/en-us/blog/feed/",
+      "tags": ["cloud", "enterprise"]
     },
     {
       "id": "microsoft-devblogs",
       "publisher": "Microsoft",
-      "url": "https://devblogs.microsoft.com/feed/"
+      "url": "https://devblogs.microsoft.com/feed/",
+      "tags": ["cloud", "agents"]
     },
     {
       "id": "openai-blog",
       "publisher": "OpenAI",
-      "url": "https://openai.com/blog/rss.xml"
+      "url": "https://openai.com/news/rss.xml",
+      "tags": ["models", "openai", "agents"]
     },
     {
       "id": "langchain-blog",
       "publisher": "LangChain",
-      "url": "https://blog.langchain.dev/rss.xml"
+      "url": "https://blog.langchain.dev/rss.xml",
+      "tags": ["agents"]
     },
     {
       "id": "microsoft-foundry-devblog",
       "publisher": "Microsoft",
-      "url": "https://devblogs.microsoft.com/foundry/feed/"
+      "url": "https://devblogs.microsoft.com/foundry/feed/",
+      "tags": ["agents", "cloud", "enterprise"]
     },
     {
       "id": "huggingface-blog",
       "publisher": "Hugging Face",
-      "url": "https://huggingface.co/blog/feed.xml"
+      "url": "https://huggingface.co/blog/feed.xml",
+      "tags": ["models", "open-source"]
     },
     {
       "id": "import-ai",
       "publisher": "Import AI (Substack)",
-      "url": "https://importai.substack.com/feed"
+      "url": "https://importai.substack.com/feed",
+      "tags": ["research"]
     },
     {
       "id": "karpathy-blog",
@@ -84,6 +107,60 @@
       "publisher": "Andrej Karpathy (YouTube)",
       "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCX9YvSBIPlYCsDOZD2O6hA",
       "tags": ["karpathy"]
+    },
+    {
+      "id": "palantir-blog",
+      "publisher": "Palantir",
+      "url": "https://blog.palantir.com/feed",
+      "tags": ["enterprise", "agents"]
+    },
+    {
+      "id": "google-developers-blog",
+      "publisher": "Google Developers",
+      "url": "https://developers.googleblog.com/feeds/posts/default?alt=rss",
+      "tags": ["agents", "google"]
+    },
+    {
+      "id": "google-cloud-blog",
+      "publisher": "Google Cloud",
+      "url": "https://cloudblog.withgoogle.com/rss/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "google-deepmind-blog",
+      "publisher": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "tags": ["research", "models"]
+    },
+    {
+      "id": "google-research-blog",
+      "publisher": "Google Research",
+      "url": "https://research.google/blog/rss/",
+      "tags": ["research"]
+    },
+    {
+      "id": "nvidia-developer-blog",
+      "publisher": "NVIDIA",
+      "url": "https://developer.nvidia.com/blog/feed/",
+      "tags": ["agents", "inference"]
+    },
+    {
+      "id": "meta-ai-research",
+      "publisher": "Meta AI Research",
+      "url": "https://research.facebook.com/feed/",
+      "tags": ["research", "open-models"]
+    },
+    {
+      "id": "cohere-blog",
+      "publisher": "Cohere",
+      "url": "https://txt.cohere.com/rss/",
+      "tags": ["enterprise", "rag"]
+    },
+    {
+      "id": "databricks-blog",
+      "publisher": "Databricks",
+      "url": "https://www.databricks.com/blog/feed.xml",
+      "tags": ["enterprise", "ml-platform"]
     }
   ],
   "html_list_pages": [
@@ -91,7 +168,22 @@
       "id": "anthropic-news",
       "publisher": "Anthropic",
       "url": "https://www.anthropic.com/news",
-      "link_path_prefix": "/news/"
+      "link_path_prefix": "/news/",
+      "tags": ["models", "enterprise"]
+    },
+    {
+      "id": "mistral-news",
+      "publisher": "Mistral",
+      "url": "https://mistral.ai/news",
+      "link_path_prefix": "/news/",
+      "tags": ["models", "europe"]
+    },
+    {
+      "id": "mcp-blog",
+      "publisher": "Model Context Protocol",
+      "url": "https://blog.modelcontextprotocol.io/",
+      "link_path_prefix": "/posts/",
+      "tags": ["agents", "mcp"]
     }
   ],
   "doc_roots": [
@@ -119,6 +211,11 @@
       "id": "anthropic-docs",
       "publisher": "Anthropic",
       "url": "https://docs.anthropic.com/"
+    },
+    {
+      "id": "google-ai-dev-docs",
+      "publisher": "Google",
+      "url": "https://ai.google.dev/"
     }
   ]
 }

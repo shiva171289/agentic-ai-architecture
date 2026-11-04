@@ -198,8 +198,8 @@ Publish the first LinkedIn posts, log spend, and schedule recurring jobs.
 4. Post **Post A** on Tuesday and **Post B** on Thursday per [content strategy](../roadmap/02-content-strategy.md).
 5. Put the blog link in the first comment on Post B.
 6. Update LinkedIn Featured using [linkedin-featured-checklist.md](linkedin-featured-checklist.md).
-7. On the VPS, edit crontab as `hermes`. Add jobs from [hermes/cron.md](../../hermes/cron.md) **only after** pilot cost is acceptable.
-8. Schedule Thursday harvest and Friday scout first. Add daily news cron after the second week if stable.
+7. Optional syndication: [syndication.md](syndication.md). LinkedIn templates: [content/linkedin-pillars.md](../../content/linkedin-pillars.md).
+8. On the VPS, edit crontab as `hermes`. Add jobs from [hermes/cron.md](../../hermes/cron.md) **only after** pilot cost is acceptable. See [cron-enable.md](cron-enable.md).
 
 ### Done when
 

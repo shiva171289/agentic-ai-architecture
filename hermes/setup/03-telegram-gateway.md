@@ -42,6 +42,7 @@ status - Agent and repo health
 cost - OpenRouter spend summary
 news - Daily AI brief (today)
 digest - Latest scout digest
+approve - Publish approved draft to main (Pages)
 ```
 
 ## 6. Test

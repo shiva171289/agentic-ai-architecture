@@ -7,26 +7,58 @@ Hermes agents **must not invent** vendor features, pricing, or service names. Th
 
 ## Feed coverage
 
-- **RSS:** AWS (main + ML), Azure blog, Microsoft DevBlogs (broad + Foundry), OpenAI blog, LangChain blog
-- **HTML index (link-only summaries):** Anthropic News (`/news/` paths)
-- **Doc roots (on-demand fetch):** AWS Bedrock, Azure AI Foundry, Azure OpenAI, OpenAI Platform, Anthropic docs
+### RSS (harvested)
 
-Google Cloud blog has no stable public RSS in this config; use `ai.google.dev` doc roots if you add them later.
+| Publisher | Feed id | Tags (optional) |
+|-----------|---------|-----------------|
+| AWS | `aws-ml-blog`, `aws-main-blog` | cloud, enterprise |
+| Microsoft Azure | `azure-blog` | cloud, enterprise |
+| Microsoft | `microsoft-devblogs`, `microsoft-foundry-devblog` | agents, cloud |
+| OpenAI | `openai-blog` → `openai.com/news/rss.xml` | models, openai, agents |
+| LangChain | `langchain-blog` | agents |
+| Hugging Face | `huggingface-blog` | models |
+| Import AI | `import-ai` | research |
+| Karpathy | `karpathy-blog`, `karpathy-youtube` | karpathy |
+| Palantir | `palantir-blog` | enterprise, agents |
+| Google | `google-developers-blog`, `google-cloud-blog`, `google-deepmind-blog`, `google-research-blog` | google, cloud, research |
+| NVIDIA | `nvidia-developer-blog` | agents, inference |
+| Meta | `meta-ai-research` | research, open-models |
+| Cohere | `cohere-blog` (`txt.cohere.com`) | enterprise, rag |
+| Databricks | `databricks-blog` | enterprise, ml-platform |
+
+### HTML index (link-only summaries)
+
+| Publisher | Page id | Path prefix |
+|-----------|---------|-------------|
+| Anthropic | `anthropic-news` | `/news/` |
+| Mistral | `mistral-news` | `/news/` |
+| MCP | `mcp-blog` | `/posts/` |
+
+### Doc roots (on-demand fetch)
+
+AWS Bedrock, Azure AI Foundry, Azure OpenAI, OpenAI Platform, Anthropic docs, **Google AI (`ai.google.dev`)**.
+
+## Daily brief selection
+
+**SourceHarvester** writes all feeds into the corpus. **DailyAIBrief** should prefer entries whose feed tags include `agents`, `enterprise`, `mcp`, or `cloud`. Cap at **two items per publisher** in the 5–10 item digest. Down-rank `aws-main-blog` unless the title matches agent/LLM keywords.
 
 ## Allowlist maintenance
 
 - Edit `verified-sources.json` when adding a feed or doc root.
 - Run harvest locally or on the VPS after changes.
-- If a feed 404s, check the vendor’s blog page for a new RSS URL and update `updated`.
+- Re-verify RSS URLs monthly; update `updated` when URLs change.
+- If Microsoft Research RSS returns 403 from the VPS, skip that feed until a working official URL exists.
 
 ## What is excluded on purpose
 
-- Random Medium posts, unverified mirrors, and SEO scraper sites.
+- Random Medium posts, unverified mirrors, and SEO scraper sites (Palantir’s **official** Medium publication is allowlisted via `blog.palantir.com/feed`).
+- Third-party RSS aggregators (Olshansk, RSS.app, Alan Turing scraped feeds).
 - Employer or customer-specific blogs.
 - Paywalled content beyond RSS summaries (do not bypass paywalls).
 
 ## Related skills
 
 - [`../skills/source-harvester/SKILL.md`](../skills/source-harvester/SKILL.md)
+- [`../skills/daily-ai-brief/SKILL.md`](../skills/daily-ai-brief/SKILL.md)
 - [`../skills/research-scout/SKILL.md`](../skills/research-scout/SKILL.md)
 - [`../skills/reviewer-critic/SKILL.md`](../skills/reviewer-critic/SKILL.md)
