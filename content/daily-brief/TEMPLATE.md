@@ -1,27 +1,5 @@
-# Daily AI brief — YYYY-MM-DD
+# Daily AI brief — DEPRECATED
 
-ASD-STE100 digest. Sources: allowlist + [source-corpus](../source-corpus/latest.md).
+This template is **no longer used**. News goes out as hourly **Inshorts** cards via `hermes/tools/news_pulse_send.py`.
 
-## Karpathy watch
-
-| Status | Headline | Source |
-|--------|----------|--------|
-| | | |
-
-## Items
-
-### 1. Headline (12 words max)
-
-Body (50 words max).
-
-- **Source:** https://
-- **LinkedIn angle:**
-
-### 2. …
-
-(up to 10 items)
-
-## Omitted
-
-| Item | Reason |
-|------|--------|
+See [hermes/skills/news-inshorts/SKILL.md](../../hermes/skills/news-inshorts/SKILL.md).

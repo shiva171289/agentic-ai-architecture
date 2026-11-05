@@ -65,4 +65,4 @@ Cap NewsLens at **two posts per week**.
 
 - [content/voice-guide.md](voice-guide.md)
 - [docs/roadmap/02-content-strategy.md](../docs/roadmap/02-content-strategy.md)
-- [hermes/skills/daily-ai-brief/SKILL.md](../hermes/skills/daily-ai-brief/SKILL.md)
+- [hermes/skills/news-inshorts/SKILL.md](../hermes/skills/news-inshorts/SKILL.md)

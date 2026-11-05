@@ -45,7 +45,7 @@ Apply these rules to all **procedural** and **instructional** output (runbooks, 
 | Implementation | `code-builder`, `diagram-agent`, `cloud-mapper` | Drafts on `drafts/wNN` |
 | Publishing | `blog-writer`, `linkedin-editor` | Voice + constitution |
 | Growth | `growth-analyst` | Private metrics only |
-| Daily news | `daily-ai-brief` | Separate from weekly-pack |
+| Daily news | `news-inshorts` | Hourly Inshorts; separate from weekly-pack |
 
 Model tiers: see [docs/roadmap/04-agent-operations.md](../docs/roadmap/04-agent-operations.md). Prefer Tier 0 for summarization; Tier 1 for tool calling and ADR.
 

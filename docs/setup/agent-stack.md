@@ -67,7 +67,7 @@ flowchart LR
 | LinkedInEditor | `linkedin-editor` | Post A/B |
 | GrowthAnalyst | `growth-analyst` | Weekly metrics (private repo) |
 | Weekly pack | `weekly-pack` | `pack wNN` |
-| Daily AI brief | `daily-ai-brief` | Cron daily; `news today` |
+| News Inshorts | `news-inshorts` | Cron hourly; `news today` |
 | Publish gate | `publish-gate` | `approve publish wNN` |
 
 Install skills on the VPS:

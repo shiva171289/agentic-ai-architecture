@@ -8,12 +8,14 @@ Usage:
   python3 hermes/tools/harvest_sources.py
   python3 hermes/tools/harvest_sources.py --days 30 --out content/source-corpus/2026-10-30.md
   python3 hermes/tools/harvest_sources.py --keywords "agent,bedrock,rag"
+  python3 hermes/tools/harvest_sources.py --days 3 --json-out ~/.hermes/news-queue/harvest-latest.json
 """
 
 from __future__ import annotations
 
 import argparse
 import email.utils
+import hashlib
 import json
 import re
 import sys
@@ -42,6 +44,13 @@ class FeedItem:
     link: str
     published: datetime | None
     summary: str
+    image_url: str | None = None
+    tags: tuple[str, ...] = ()
+
+
+def item_id_from_link(link: str) -> str:
+    normalized = link.strip().rstrip("/").lower()
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
 
 
 def load_config(path: Path) -> dict:
@@ -66,7 +75,29 @@ def strip_html(text: str) -> str:
     return text
 
 
-def parse_rss(xml_bytes: bytes, feed_id: str, publisher: str) -> list[FeedItem]:
+def first_image_url(
+    raw_html: str, page_link: str, allowed_hosts: Iterable[str]
+) -> str | None:
+    for match in re.finditer(r"""<img[^>]+src=["']([^"']+)["']""", raw_html or "", re.I):
+        src = match.group(1).strip()
+        if src.startswith("//"):
+            src = "https:" + src
+        elif src.startswith("/"):
+            src = urljoin(page_link, src)
+        elif not src.startswith(("http://", "https://")):
+            src = urljoin(page_link, src)
+        if host_allowed(src, allowed_hosts):
+            return src
+    return None
+
+
+def parse_rss(
+    xml_bytes: bytes,
+    feed_id: str,
+    publisher: str,
+    allowed_hosts: Iterable[str],
+    tags: tuple[str, ...] = (),
+) -> list[FeedItem]:
     root = ET.fromstring(xml_bytes)
     items: list[FeedItem] = []
 
@@ -85,17 +116,30 @@ def parse_rss(xml_bytes: bytes, feed_id: str, publisher: str) -> list[FeedItem]:
                 published = None
         desc = item.findtext("description") or ""
         enc = item.findtext("{http://purl.org/rss/1/modules/content/}encoded") or ""
-        summary = strip_html(enc or desc)
+        raw = enc or desc
+        summary = strip_html(raw)
+        image_url = first_image_url(raw, link, allowed_hosts)
         if title and link:
             items.append(
-                FeedItem(feed_id, publisher, title, link, published, summary[:4000])
+                FeedItem(
+                    feed_id,
+                    publisher,
+                    title,
+                    link,
+                    published,
+                    summary[:4000],
+                    image_url,
+                    tags,
+                )
             )
 
     # Atom
     ns = {"atom": "http://www.w3.org/2005/Atom"}
     for entry in root.findall(".//atom:entry", ns):
         title = (entry.findtext("atom:title", default="", namespaces=ns) or "").strip()
-        link_el = entry.find("atom:link[@rel='alternate']", ns) or entry.find("atom:link", ns)
+        link_el = entry.find("atom:link[@rel='alternate']", ns)
+        if link_el is None:
+            link_el = entry.find("atom:link", ns)
         link = (link_el.get("href") if link_el is not None else "") or ""
         updated = entry.findtext("atom:updated", default="", namespaces=ns) or entry.findtext(
             "atom:published", default="", namespaces=ns
@@ -106,13 +150,25 @@ def parse_rss(xml_bytes: bytes, feed_id: str, publisher: str) -> list[FeedItem]:
                 published = datetime.fromisoformat(updated.replace("Z", "+00:00"))
             except ValueError:
                 published = None
-        summary = strip_html(
+        raw = (
             entry.findtext("atom:summary", default="", namespaces=ns)
             or entry.findtext("atom:content", default="", namespaces=ns)
+            or ""
         )
+        summary = strip_html(raw)
+        image_url = first_image_url(raw, link, allowed_hosts)
         if title and link:
             items.append(
-                FeedItem(feed_id, publisher, title, link, published, summary[:4000])
+                FeedItem(
+                    feed_id,
+                    publisher,
+                    title,
+                    link,
+                    published,
+                    summary[:4000],
+                    image_url,
+                    tags,
+                )
             )
 
     return items
@@ -148,6 +204,8 @@ def parse_html_list_page(
                 link=link,
                 published=None,
                 summary="(HTML index entry — open URL for full text; do not invent body content.)",
+                image_url=None,
+                tags=(),
             )
         )
     return items[:40]
@@ -207,6 +265,30 @@ def write_corpus(
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
+def write_harvest_json(path: Path, items: list[FeedItem], days: int) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    now = datetime.now(timezone.utc)
+    payload = {
+        "generated_at": now.isoformat(),
+        "window_days": days,
+        "items": [
+            {
+                "id": item_id_from_link(item.link),
+                "title": item.title,
+                "link": item.link,
+                "publisher": item.publisher,
+                "feed_id": item.feed_id,
+                "published": item.published.isoformat() if item.published else None,
+                "summary": item.summary,
+                "image_url": item.image_url,
+                "tags": list(item.tags),
+            }
+            for item in items
+        ],
+    }
+    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Harvest allowlisted vendor RSS into markdown corpus")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
@@ -217,6 +299,12 @@ def main() -> int:
         type=Path,
         default=None,
         help="Output markdown path (default: content/source-corpus/YYYY-MM-DD.md)",
+    )
+    parser.add_argument(
+        "--json-out",
+        type=Path,
+        default=None,
+        help="Optional JSON export for news ingest (one object per feed item)",
     )
     args = parser.parse_args()
 
@@ -236,9 +324,10 @@ def main() -> int:
         url = feed.get("url")
         if not url:
             continue
+        feed_tags = tuple(feed.get("tags") or [])
         try:
             xml_bytes = fetch_feed(url)
-            for item in parse_rss(xml_bytes, feed_id, publisher):
+            for item in parse_rss(xml_bytes, feed_id, publisher, allowed_hosts, feed_tags):
                 if not host_allowed(item.link, allowed_hosts):
                     continue
                 if item.published and item.published < cutoff:
@@ -264,6 +353,9 @@ def main() -> int:
             errors.append(f"{page_id}: {exc}")
 
     write_corpus(out_path, collected, config, args.days, keywords)
+    if args.json_out:
+        write_harvest_json(args.json_out, collected, args.days)
+        print(f"Wrote JSON harvest to {args.json_out}")
 
     latest = DEFAULT_OUT_DIR / "latest.md"
     latest.write_text(out_path.read_text(encoding="utf-8"), encoding="utf-8")

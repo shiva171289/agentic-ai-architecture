@@ -40,7 +40,7 @@ AWS Bedrock, Azure AI Foundry, Azure OpenAI, OpenAI Platform, Anthropic docs, **
 
 ## Daily brief selection
 
-**SourceHarvester** writes all feeds into the corpus. **DailyAIBrief** should prefer entries whose feed tags include `agents`, `enterprise`, `mcp`, or `cloud`. Cap at **two items per publisher** in the 5–10 item digest. Down-rank `aws-main-blog` unless the title matches agent/LLM keywords.
+**SourceHarvester** writes all feeds into the corpus. **News Inshorts** ingest ([`news_ingest.py`](../tools/news_ingest.py)) prefers feeds tagged `agents`, `enterprise`, `mcp`, or `cloud`. Cap at **two items per publisher** per ingest run. Down-rank `aws-main-blog` unless the title matches agent/LLM keywords.
 
 ## Allowlist maintenance
 
@@ -59,6 +59,6 @@ AWS Bedrock, Azure AI Foundry, Azure OpenAI, OpenAI Platform, Anthropic docs, **
 ## Related skills
 
 - [`../skills/source-harvester/SKILL.md`](../skills/source-harvester/SKILL.md)
-- [`../skills/daily-ai-brief/SKILL.md`](../skills/daily-ai-brief/SKILL.md)
+- [`../skills/news-inshorts/SKILL.md`](../skills/news-inshorts/SKILL.md)
 - [`../skills/research-scout/SKILL.md`](../skills/research-scout/SKILL.md)
 - [`../skills/reviewer-critic/SKILL.md`](../skills/reviewer-critic/SKILL.md)
