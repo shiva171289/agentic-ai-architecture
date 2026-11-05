@@ -21,8 +21,9 @@ OPENROUTER_API_KEY=sk-or-...
 OPENROUTER_NEWS_MODEL=qwen/qwen3-235b-a22b:free
 OPENROUTER_NEWS_MODEL_FALLBACK=google/gemma-2-9b-it:free
 TELEGRAM_BOT_TOKEN=...
-TELEGRAM_CHAT_ID=...
-# Or reuse Hermes gateway vars:
+# News cards go here (group/channel id from @getidsbot or Bot API), not your DM:
+TELEGRAM_CHAT_ID=-5144603731
+# Hermes gateway (DM / home) — keep your user id here:
 # TELEGRAM_HOME_CHANNEL=your_numeric_user_id
 # TELEGRAM_ALLOWED_USERS=your_numeric_user_id
 ```
@@ -30,8 +31,9 @@ TELEGRAM_CHAT_ID=...
 1. Run `chmod 600 ~/.hermes/.env`.
 2. Refresh `:free` model slugs monthly on [OpenRouter](https://openrouter.ai/models).
 3. News scripts **never** auto-escalate to paid models.
+4. Add the bot to the target group and allow it to post messages.
 
-`TELEGRAM_CHAT_ID` is your numeric user id from @userinfobot. You can use **`TELEGRAM_HOME_CHANNEL`** or the first id in **`TELEGRAM_ALLOWED_USERS`** instead (same as the Hermes gateway).
+**Routing:** `news_pulse_send.py` reads env in this order: `TELEGRAM_CHAT_ID`, then `TELEGRAM_HOME_CHANNEL`, then `TELEGRAM_ALLOWED_USERS`. Set **`TELEGRAM_CHAT_ID`** to the **group or channel** id (often negative, e.g. `-5144603731` for group `5144603731`). Do not point news at your personal user id unless you want DMs.
 
 ## 3. Cron
 
