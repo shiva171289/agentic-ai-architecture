@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import random
 import sys
 import urllib.error
@@ -30,6 +29,8 @@ from news_queue import (  # noqa: E402
     load_queue,
     queue_lock,
     save_queue,
+    telegram_bot_token,
+    telegram_chat_id,
     utc_now_iso,
 )
 
@@ -105,10 +106,14 @@ def main() -> int:
     _ = args.force
 
     load_env_file()
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+    token = telegram_bot_token()
+    chat_id = telegram_chat_id()
     if not args.dry_run and (not token or not chat_id):
-        print("Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in ~/.hermes/.env", file=sys.stderr)
+        print(
+            "Set TELEGRAM_BOT_TOKEN and a chat id in ~/.hermes/.env "
+            "(TELEGRAM_CHAT_ID, TELEGRAM_HOME_CHANNEL, or TELEGRAM_ALLOWED_USERS)",
+            file=sys.stderr,
+        )
         return 1
 
     with queue_lock():

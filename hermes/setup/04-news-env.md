@@ -22,13 +22,16 @@ OPENROUTER_NEWS_MODEL=qwen/qwen3-235b-a22b:free
 OPENROUTER_NEWS_MODEL_FALLBACK=google/gemma-2-9b-it:free
 TELEGRAM_BOT_TOKEN=...
 TELEGRAM_CHAT_ID=...
+# Or reuse Hermes gateway vars:
+# TELEGRAM_HOME_CHANNEL=your_numeric_user_id
+# TELEGRAM_ALLOWED_USERS=your_numeric_user_id
 ```
 
 1. Run `chmod 600 ~/.hermes/.env`.
 2. Refresh `:free` model slugs monthly on [OpenRouter](https://openrouter.ai/models).
 3. News scripts **never** auto-escalate to paid models.
 
-`TELEGRAM_CHAT_ID` is your numeric user id from @userinfobot (same allowlist as the Hermes gateway).
+`TELEGRAM_CHAT_ID` is your numeric user id from @userinfobot. You can use **`TELEGRAM_HOME_CHANNEL`** or the first id in **`TELEGRAM_ALLOWED_USERS`** instead (same as the Hermes gateway).
 
 ## 3. Cron
 

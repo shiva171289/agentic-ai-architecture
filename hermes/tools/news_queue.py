@@ -101,7 +101,7 @@ def find_by_id(items: list[dict[str, Any]], item_id: str) -> dict[str, Any] | No
 
 
 def load_env_file(path: Path | None = None) -> None:
-    """Load KEY=VALUE lines from ~/.hermes/.env into os.environ (no override)."""
+    """Load KEY=VALUE lines from ~/.hermes/.env into os.environ."""
     env_path = path or Path(os.path.expanduser("~/.hermes/.env"))
     if not env_path.is_file():
         return
@@ -112,5 +112,34 @@ def load_env_file(path: Path | None = None) -> None:
         key, _, value = line.partition("=")
         key = key.strip()
         value = value.strip().strip('"').strip("'")
-        if key and key not in os.environ:
+        if not key:
+            continue
+        existing = os.environ.get(key, "")
+        if key not in os.environ or not str(existing).strip():
             os.environ[key] = value
+
+
+def telegram_chat_id() -> str:
+    """Resolve destination chat/user id (Hermes gateway names supported)."""
+    for key in (
+        "TELEGRAM_CHAT_ID",
+        "TELEGRAM_HOME_CHANNEL",
+        "TELEGRAM_DEFAULT_CHAT_ID",
+    ):
+        val = (os.environ.get(key) or "").strip()
+        if val:
+            return val
+    allowed = (os.environ.get("TELEGRAM_ALLOWED_USERS") or "").strip()
+    if allowed:
+        first = allowed.split(",")[0].strip()
+        if first:
+            return first
+    return ""
+
+
+def telegram_bot_token() -> str:
+    for key in ("TELEGRAM_BOT_TOKEN", "TELEGRAM_TOKEN", "BOT_TOKEN"):
+        val = (os.environ.get(key) or "").strip()
+        if val:
+            return val
+    return ""
