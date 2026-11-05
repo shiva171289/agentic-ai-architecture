@@ -40,7 +40,9 @@ brief - Research brief for a pattern week
 pack - Generate full weekly draft pack
 status - Agent and repo health
 cost - OpenRouter spend summary
-news - Daily AI brief (today)
+news - Inshorts card now (news_pulse_send)
+status - Agent and repo health
+cost - OpenRouter spend summary
 digest - Latest scout digest
 approve - Publish approved draft to main (Pages)
 ```
