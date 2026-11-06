@@ -44,10 +44,14 @@ Never fetch or cite URLs outside `allowed_link_hosts` and `doc_roots` unless the
 
 3. If a feed fails, log the error, **do not substitute** random web search results. Update `verified-sources.json` in a human-reviewed commit if RSS URLs moved.
 
-   Known-good Karpathy sources (verified 2026-11-04):
+   Known-good Karpathy source (verified 2026-11-04, YouTube dropped 2026-11-06):
    - Blog RSS: `https://karpathy.github.io/feed.xml` (Jekyll, low cadence).
-   - YouTube: `https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ`.
-   - A wrong channel ID returns HTTP 404 with an empty body. Confirm `200` and a non-empty `<title>` before you trust a feed.
+   - **YouTube: removed.** `youtube.com/feeds/videos.xml` now fails from the VPS for
+     both the correct channel ID (`UCXUPKJO5MZQN11PqgIvyuvQ`) and the old one — first
+     404, then 500, with a Google error page for any User-Agent. Treat the endpoint as
+     blocked from this host; do not re-add it without re-testing.
+   - When a feed returns 404 or 500, confirm the failure is the endpoint and not your
+     config: test the URL directly with two different channel IDs before editing config.
    - X/Twitter (`@karpathy`) has **no official RSS feed**. Do not scrape X in v1. Use the X API only if a human approves credentials.
 
    The harvest script rewrites `latest.md` on **every** run, including `--out` runs. To probe a wide window without clobbering the shared corpus, pass `--days N --out` to a scratch path first, then re-run the intended window to restore `latest.md`.

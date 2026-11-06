@@ -39,8 +39,16 @@ TELEGRAM_CHAT_ID=-5144603731
 
 Install blocks from [../cron.md](../cron.md):
 
-1. Daily **06:45 IST** — harvest (`--days 3 --json-out`), ingest, summarize, cleanup.
+1. Daily **06:45 UTC** (12:15 IST) — harvest (`--days 3 --json-out`), ingest, summarize, cleanup.
 2. Hourly **:05** — `news_pulse_send.py` (one random unsent card).
+
+The host runs `Etc/UTC` and its cron ignores `CRON_TZ`, so every time in [../cron.md](../cron.md)
+is UTC. Convert before you copy.
+
+Ingest runs with **`--max-per-publisher 4`**. The default of 2 supplied only ~17 items/day
+against 24 hourly pulse slots, so the queue drained about 4 hours before the next refill
+and the pulse silently logged `No summarized unsent items in queue`. Raise the cap (or add
+a second daily run) if you want a deeper buffer; lower it if cards feel repetitive.
 
 Remove the old `hermes run skill daily-ai-brief` line if it is still present.
 
