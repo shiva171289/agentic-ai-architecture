@@ -62,7 +62,9 @@ Setup: [hermes/setup/04-news-env.md](../../setup/04-news-env.md).
 
 ## Schedule
 
-See [cron.md](../../cron.md): daily 06:45 IST harvest+summarize; hourly :05 pulse.
+See [cron.md](../../cron.md): daily 06:45 **UTC** (12:15 IST) harvest+summarize, ingest
+with `--max-per-publisher 4`; hourly :05 pulse. Times in that file are UTC — the host
+runs `Etc/UTC` and its cron ignores `CRON_TZ`.
 
 ## Model tier
 

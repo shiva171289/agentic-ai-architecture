@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-04",
+  "updated": "2026-11-06",
   "notes": "RSS URLs change occasionally. Re-verify monthly. Agents must not cite URLs outside this allowlist unless fetched same-session from an official doc link listed under doc_roots.",
   "allowed_link_hosts": [
     "aws.amazon.com",
@@ -100,12 +100,6 @@
       "id": "karpathy-blog",
       "publisher": "Andrej Karpathy",
       "url": "https://karpathy.github.io/feed.xml",
-      "tags": ["karpathy"]
-    },
-    {
-      "id": "karpathy-youtube",
-      "publisher": "Andrej Karpathy (YouTube)",
-      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ",
       "tags": ["karpathy"]
     },
     {
