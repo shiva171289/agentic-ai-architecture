@@ -69,9 +69,13 @@ yield only ~15-20 qualifying items/day. Times in that file are UTC — the host 
 
 ## Model tier
 
-**Tier 0 API only** in `news_summarize.py`. Default `OPENROUTER_NEWS_MODEL=qwen/qwen3-235b-a22b:free`. Fallback `google/gemma-2-9b-it:free` on 429.
+**One completion per item** in `news_summarize.py`. Default
+`OPENROUTER_NEWS_MODEL=qwen/qwen3-235b-a22b-2507`, fallback `google/gemma-2-27b-it`.
 
-Target: one completion per **new** queue item per day (not per hour).
+Do **not** switch these to `:free` slugs. OpenRouter has retired every free qwen
+variant — `qwen/qwen3-235b-a22b:free` returns HTTP 404 — and the paid slugs are a
+few cents per day at this volume. Verify a slug against
+`https://openrouter.ai/api/v1/models` before changing it.
 
 ## Outputs
 

@@ -103,23 +103,23 @@ def main() -> int:
         return 1
 
     harvested = load_harvest(harvest_path)
-    to_add = [row for row in harvested if should_ingest(row)]
-    to_add = cap_per_publisher(to_add, args.max_per_publisher)
+    candidates = [row for row in harvested if should_ingest(row)]
 
     added = 0
-    skipped = 0
     with queue_lock():
         items = load_queue()
-        for row in to_add:
-            item_id = row.get("id")
-            if not item_id:
-                continue
-            if find_by_id(items, item_id):
-                skipped += 1
-                continue
+        # De-duplicate BEFORE capping. Capping first lets items that are already in the
+        # queue consume each publisher's budget (30 of 36 slots in a real 7-day run),
+        # which starves the genuinely new items and makes the feed look empty.
+        fresh = [
+            row for row in candidates
+            if row.get("id") and not find_by_id(items, row["id"])
+        ]
+        skipped = len(candidates) - len(fresh)
+        for row in cap_per_publisher(fresh, args.max_per_publisher):
             items.append(
                 {
-                    "id": item_id,
+                    "id": row.get("id"),
                     "title": row.get("title"),
                     "link": row.get("link"),
                     "publisher": row.get("publisher"),
