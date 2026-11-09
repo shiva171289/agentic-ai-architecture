@@ -39,13 +39,15 @@ TELEGRAM_CHAT_ID=-5144603731
 
 Install blocks from [../cron.md](../cron.md):
 
-1. Daily **06:45 UTC** (12:15 IST) — harvest (`--days 3 --json-out`), ingest, summarize, cleanup.
+1. Daily **06:45 UTC** (12:15 IST) — harvest (`--days 7 --json-out`), ingest, summarize, cleanup.
 2. Every **2 hours** at :05 — `news_pulse_send.py` (one random unsent card) = 12/day.
 
-**Cadence must stay below the feed supply.** The allowlisted feeds produce only ~15–20
-qualifying new items per day; an hourly pulse consumes 24 and drains the queue long before
-the next refill. With hourly sending the log showed 61 sent and 34 dry runs. Measure before
-you change it: count qualifying items per publication day from a 7-day harvest.
+**Supply is the binding constraint.** `news_ingest.py` de-duplicates **before** applying
+`--max-per-publisher`; doing it the other way round lets already-queued items eat each
+publisher's budget and starves new ones (a 7-day run added 6 items instead of 26). Use a
+**7-day** harvest window and leave the cap at 4. The pulse must stay below the resulting
+supply — at 24/day (hourly) the log showed 61 sent and 34 dry runs. Cards can therefore be
+up to a week old; lower the window if you prefer fresher cards and a shallower buffer.
 
 The host runs `Etc/UTC` and its cron ignores `CRON_TZ`, so every time in [../cron.md](../cron.md)
 is UTC. Convert before you copy.

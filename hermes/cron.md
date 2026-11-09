@@ -27,11 +27,11 @@ PATH=/home/hermes/.local/bin:/usr/local/bin:/usr/bin:/bin
 0 8 * * 1 cd ~/work/agentic-ai-architecture && hermes chat -q "Run the growth-analyst skill: produce this week's KPI nudge and topic steering." -s growth-analyst --oneshot >> ~/logs/growth.log 2>&1
 
 # News Inshorts — harvest + summarize daily 06:45 UTC (12:15 IST)
-# --max-per-publisher 4 (was 2): cap 2 let only ~17 items/day through.
-# Pulse every 2 hours, NOT hourly: the allowlisted feeds yield only ~15-20
-# qualifying new items/day, so an hourly pulse (24/day) outran the supply and
+# --days 7 (was 3): the 3-day window plus cap-before-dedupe left only ~1-6 new
+# items/day. Wider window + dedupe-then-cap gives ~26 new items per run.
+# Pulse every 2 hours, NOT hourly: an hourly pulse (24/day) outran the supply and
 # went dry 34 times out of 95 runs. 12/day is sustainable.
-45 6 * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/harvest_sources.py --days 3 --json-out ~/.hermes/news-queue/harvest-latest.json >> ~/logs/news-harvest.log 2>&1 && python3 hermes/tools/news_ingest.py --max-per-publisher 4 >> ~/logs/news-ingest.log 2>&1 && python3 hermes/tools/news_summarize.py >> ~/logs/news-summarize.log 2>&1 && python3 hermes/tools/news_cleanup.py >> ~/logs/news-cleanup.log 2>&1
+45 6 * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/harvest_sources.py --days 7 --json-out ~/.hermes/news-queue/harvest-latest.json >> ~/logs/news-harvest.log 2>&1 && python3 hermes/tools/news_ingest.py --max-per-publisher 4 >> ~/logs/news-ingest.log 2>&1 && python3 hermes/tools/news_summarize.py >> ~/logs/news-summarize.log 2>&1 && python3 hermes/tools/news_cleanup.py >> ~/logs/news-cleanup.log 2>&1
 
 5 */2 * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/news_pulse_send.py >> ~/logs/news-pulse.log 2>&1
 ```

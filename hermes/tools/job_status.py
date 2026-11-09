@@ -32,7 +32,10 @@ from pathlib import Path
 HERMES_HOME = Path(os.environ.get("HERMES_HOME") or Path.home() / ".hermes")
 ENV_FILE = HERMES_HOME / ".env"
 QUEUE_FILE = HERMES_HOME / "news-queue" / "queue.json"
-DEFAULT_STATUS_MODEL = "qwen/qwen3-235b-a22b:free"
+# Paid qwen on purpose: OpenRouter has retired every free qwen slug, so `:free`
+# resolves to 404. This mirrors OPENROUTER_NEWS_MODEL unless OPENROUTER_STATUS_MODEL
+# overrides it.
+DEFAULT_STATUS_MODEL = "qwen/qwen3-235b-a22b-2507"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 LOG_RE = re.compile(r">>\s*(\S+\.log)")
@@ -58,7 +61,16 @@ def cron_lines() -> list[str]:
         return [f"# crontab unavailable: {exc}"]
     if out.returncode != 0:
         return [f"# crontab -l failed: {out.stderr.strip() or out.returncode}"]
-    return [ln for ln in out.stdout.splitlines() if ln.strip() and not ln.lstrip().startswith("#")]
+    lines = []
+    for ln in out.stdout.splitlines():
+        stripped = ln.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        # Skip env assignments such as PATH=... — they are not jobs.
+        if re.match(r"^[A-Za-z_][A-Za-z0-9_]*\s*=", stripped):
+            continue
+        lines.append(ln)
+    return lines
 
 
 def describe_job(line: str, now: datetime.datetime) -> dict:
@@ -194,8 +206,12 @@ def main() -> int:
 
     env = load_env()
     api_key = env.get("OPENROUTER_API_KEY") or os.environ.get("OPENROUTER_API_KEY")
-    model = env.get("OPENROUTER_STATUS_MODEL") or os.environ.get(
-        "OPENROUTER_STATUS_MODEL", DEFAULT_STATUS_MODEL
+    model = (
+        env.get("OPENROUTER_STATUS_MODEL")
+        or os.environ.get("OPENROUTER_STATUS_MODEL")
+        or env.get("OPENROUTER_NEWS_MODEL")
+        or os.environ.get("OPENROUTER_NEWS_MODEL")
+        or DEFAULT_STATUS_MODEL
     )
     if not api_key:
         print("\n--qwen needs OPENROUTER_API_KEY in ~/.hermes/.env", file=sys.stderr)
@@ -203,7 +219,7 @@ def main() -> int:
     try:
         summary = ask_qwen(render(report), model, api_key)
     except (urllib.error.URLError, KeyError, ValueError) as exc:
-        print(f"\nqwen summary failed ({model}): {exc}", file=sys.stderr)
+        print(f"\nsummary failed ({model}): {exc}", file=sys.stderr)
         return 1
     print(f"\n--- {model} ---")
     print(summary)

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-Summarize pending queue items via OpenRouter (free model). One completion per item.
+Summarize pending queue items via OpenRouter. One completion per item.
+The model is whatever OPENROUTER_NEWS_MODEL names; `:free` slugs are avoided
+because OpenRouter has retired the free qwen variants (they now 404).
 
 Usage:
   python3 hermes/tools/news_summarize.py
@@ -32,8 +34,8 @@ from news_queue import (  # noqa: E402
 )
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_MODEL = "qwen/qwen3-235b-a22b:free"
-FALLBACK_MODEL = "google/gemma-2-9b-it:free"
+DEFAULT_MODEL = "qwen/qwen3-235b-a22b-2507"
+FALLBACK_MODEL = "google/gemma-2-27b-it"
 
 SYSTEM_PROMPT = """You write Inshorts-style news cards for enterprise AI readers.
 Use ASD-STE100: short sentences, simple words, no hype.
