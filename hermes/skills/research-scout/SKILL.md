@@ -9,7 +9,7 @@ Read `_shared/ground-rules.md` constraints.
 
 ## Inputs
 
-- Week id (e.g. `w05`) and slug from [content/calendar.md](../../../content/calendar.md)
+- Week id (e.g. `w05`) and slug from [content/calendar.md](../../../content/calendar.md). If the human omits the week, run `python3 hermes/tools/calendar_week.py --json` and use the **publishing week** row (not “next week”).
 - Prior patterns in `patterns/` to avoid duplication
 - **SourceHarvester corpus:** [content/source-corpus/latest.md](../../../content/source-corpus/latest.md) (must be ≤7 days old; if stale, run **SourceHarvester** first)
 
@@ -18,7 +18,7 @@ Read `_shared/ground-rules.md` constraints.
 1. Read `content/source-corpus/latest.md`. Prefer corpus entries for AWS, Azure, Anthropic, OpenAI, and Google Cloud claims.
 2. Add arXiv papers and major OSS releases (GitHub releases/changelogs) when relevant — cite primary links only.
 3. Do **not** invent vendor features. If the corpus and official docs do not support a claim, omit it or label **Open question** in the brief.
-4. Write `patterns/{week}-{slug}/brief.md` using [templates/brief.md](../../templates/brief.md).
+4. Write `patterns/{week}-{slug}/brief.md` using [templates/brief.md](../../templates/brief.md). Path must match the calendar row for that `week` id.
 5. Include **3 contrarian angles** (when NOT to use hype).
 6. Cite URLs with access date. Every vendor blog claim must use a URL from the corpus or [verified-sources.json](../../sources/verified-sources.json) doc roots.
 
@@ -28,7 +28,7 @@ Read `_shared/ground-rules.md` constraints.
 
 ## Schedule
 
-Friday 07:00 IST (see [cron.md](../../cron.md)).
+Friday 07:00 UTC (12:30 IST). Cron body comes from `hermes/tools/calendar_week.py --brief-prompt` (see [cron.md](../../cron.md)).
 
 ## Pattern Radar (first Friday of month)
 

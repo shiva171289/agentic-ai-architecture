@@ -42,6 +42,9 @@ All skills follow [hermes/CONSTITUTION.md](../../hermes/CONSTITUTION.md) (ASD-ST
 | `post w05 A` | LinkedIn Post A text |
 | `cost` | OpenRouter spend |
 | `status` | Health check |
+| (VPS) `python3 hermes/tools/job_status.py` | Cron log ages, news queue — no LLM |
+| (VPS) `python3 hermes/tools/calendar_week.py` | Current publishing `wNN` + slug |
+| (VPS) `python3 hermes/tools/weekly_reminder.py` | Monday nudge text for brief/pack |
 | `news today` | Send next Inshorts card → `news_pulse_send.py --force` |
 | `news status` | Queue counts → `news_status.py` |
 | `news karpathy` | Karpathy-tagged items in queue (manual filter) |
@@ -75,6 +78,16 @@ Separate from **weekly-pack**. Skill: [hermes/skills/news-inshorts/SKILL.md](../
 4. Enable cron **after** Week 1 pilot spend is under ~$3/week.
 5. Retention: 3 days on VPS queue + dated corpus files.
 6. You pick 1–2 sent cards for LinkedIn; Hermes does not auto-post.
+
+## Cron vs weekly pack
+
+**Medium automation:** Friday `weekly_pipeline.py friday-adr` (brief + ADR + Telegram card). ADR **Approve** runs pack; publish **Approve** runs `trigger_publish.py`. See [weekly-automation.md](../setup/weekly-automation.md) and [model-tiers-qwen.md](../setup/model-tiers-qwen.md).
+
+Next pack week comes from [content/publish-progress.json](../../content/publish-progress.json) (`calendar_week.py --next`), not the calendar date alone.
+
+## Cron vs weekly pack (manual fallback)
+
+You can still send `pack wNN` by hand. See [cron-enable.md](../setup/cron-enable.md).
 
 ## Git workflow on VPS
 

@@ -22,6 +22,7 @@ Under `patterns/{week}-{slug}/code/`:
 - `tests/` — pytest, runs without API keys
 - `pyproject.toml` — uv compatible
 - `README.md` — run instructions
+- `scenario-ladder.md` — from [templates/scenario-ladder.md](../../templates/scenario-ladder.md) when the pattern has multiple variants
 
 Use **mock LLM** implementing a small protocol in `core/llm.py`.
 
@@ -33,7 +34,8 @@ Also apply the same pattern to **`projects/acme-support/`** per [docs/roadmap/07
 2. Increment the existing codebase (do not rewrite from scratch).
 3. Append one line to `projects/acme-support/STAGES.md` (`wNN — summary`).
 4. Keep diff ~50–150 LOC; synthetic Acme data only.
-5. Ensure `uv run pytest` passes in `projects/acme-support/`.
+5. Put retrieval increments in `projects/acme-support/core/retrieval/` (protocol + implementations per [content/topics/retrieval-ladder.md](../../../content/topics/retrieval-ladder.md)).
+6. Ensure `uv run pytest` passes in `projects/acme-support/`.
 
 Week w09 (agent-or-workflow) may be docs-only in Acme (ADR + notebook, no code spike).
 

@@ -1,0 +1,17 @@
+PATH=/home/hermes/.local/bin:/usr/local/bin:/usr/bin:/bin
+
+0 6 * * * cd ~/work/agentic-ai-architecture && git pull --ff-only origin main >> ~/logs/git-pull.log 2>&1
+
+30 6 * * 4 cd ~/work/agentic-ai-architecture && python3 hermes/tools/harvest_sources.py --days 14 >> ~/logs/harvest.log 2>&1
+
+5 7 * * 5 cd ~/work/agentic-ai-architecture && python3 hermes/tools/weekly_pipeline.py friday-adr >> ~/logs/weekly-pipeline.log 2>&1
+
+*/2 * * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/telegram_poll_approvals.py --once >> ~/logs/telegram-approvals.log 2>&1
+
+0 8 * * 1 cd ~/work/agentic-ai-architecture && hermes chat -q "Run the growth-analyst skill: produce this week's KPI nudge and topic steering." -s growth-analyst --oneshot >> ~/logs/growth.log 2>&1
+
+15 8 * * 1 cd ~/work/agentic-ai-architecture && python3 hermes/tools/weekly_reminder.py >> ~/logs/weekly-reminder.log 2>&1
+
+45 6 * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/harvest_sources.py --days 7 --json-out ~/.hermes/news-queue/harvest-latest.json >> ~/logs/news-harvest.log 2>&1 && python3 hermes/tools/news_ingest.py --max-per-publisher 4 >> ~/logs/news-ingest.log 2>&1 && python3 hermes/tools/news_summarize.py >> ~/logs/news-summarize.log 2>&1 && python3 hermes/tools/news_cleanup.py >> ~/logs/news-cleanup.log 2>&1
+
+5 */2 * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/news_pulse_send.py >> ~/logs/news-pulse.log 2>&1

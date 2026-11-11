@@ -35,6 +35,18 @@ Apply these rules to all **procedural** and **instructional** output (runbooks, 
 
 **Exceptions:** LinkedIn Post B and narrative blog sections may use the voice guide tone. Any **Procedure**, **Setup**, or **Runbook** section inside a blog must still use ASD-STE100.
 
+## 4b. Scenario-first teaching
+
+- Each architecture week may list **all variants** of a pattern (see [content/topics/](../content/topics/) and `patterns/{week}/scenario-ladder.md`).
+- **Implement only** the increment on [content/calendar.md](../content/calendar.md). Mark other variants with their future week.
+- Pedagogy may cite [sample-repo/awesome-generative-ai-guide/](../sample-repo/awesome-generative-ai-guide/). Vendor facts still come from the source corpus and verified-sources only.
+
+## 4c. Automation boundary
+
+- Cron may harvest corpus, run ResearchScout, send reminders, and run news jobs.
+- **`pack wNN`** requires human ADR approval on Telegram (inline button or `adr approve wNN`) unless the human explicitly enables unattended pack later.
+- **Publish** requires `publish approve wNN` or inline publish gate after CI checks ([weekly-automation.md](../docs/setup/weekly-automation.md)).
+
 ## 5. Skill hierarchy (Hermes)
 
 | Role | Skill folder | Notes |

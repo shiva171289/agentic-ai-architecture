@@ -16,6 +16,8 @@ Write `patterns/{week}-{slug}/blog.md`:
 - **Apply it to Acme** — increment in `projects/acme-support/` (see [07-running-use-case.md](../../../docs/roadmap/07-running-use-case.md))
 - **Architect's notebook** — table: decision, rejected alternative, top failure mode, cost per 1k runs hint, NFRs
 - **Prerequisites** — links to prior weeks from [content/calendar.md](../../../content/calendar.md)
+- **Scenario ladder** — table of variants; mark not-yet-shipped rows with target week
+- **Spine layers** — which of the [five-layer spine](../../../framework/five-layer-spine.md) this week teaches (e.g. “Layer 2 — wrapping”)
 - No employer references
 
 Frontmatter for site sync (at top):

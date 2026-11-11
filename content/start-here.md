@@ -32,6 +32,8 @@ Imagine Acme’s support desk maturing over a year:
 
 Start reading with [Week 1 — Augmented LLM](/blog/w01-augmented-llm/). That pattern is “search docs, then answer”—the gentlest on-ramp before full agents.
 
+**Browse by topic:** [Retrieval ladder](topics/retrieval-ladder.md) · [All topics](topics/README.md) · [Build journey](journeys/build.md) · [Five-layer spine](../framework/five-layer-spine.md) · [52-week calendar](calendar.md).
+
 Want to run the code? Open the [Acme Support repo folder](https://github.com/shiva171289/agentic-ai-architecture/tree/main/projects/acme-support) and follow the steps in **What to do next** below.
 
 Optional: deploy the **Hermes** agent stack on a VPS (Telegram gateway) using the [Week 1 operating guide](https://github.com/shiva171289/agentic-ai-architecture/blob/main/docs/setup/week1-operating-guide.md) and [agent stack overview](https://github.com/shiva171289/agentic-ai-architecture/blob/main/docs/setup/agent-stack.md).
