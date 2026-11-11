@@ -1,0 +1,9 @@
+flowchart TB
+  q[Question]
+  chain[Classify + retrieve]
+  route{Complex?}
+  fast[Fast model]
+  cap[Capable model]
+  q --> chain --> route
+  route -->|no| fast
+  route -->|yes| cap

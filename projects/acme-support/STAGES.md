@@ -25,3 +25,6 @@ Future rows append here as each `stage-wNN` is tagged.
 | Week | Summary |
 |------|---------|
 | w01 | Augmented LLM: keyword retrieval over synthetic policy docs + prompt contract for FAQ answers |
+| w02 | Prompt chaining: classify intent (billing vs product) then specialized answer prompt |
+| w03 | Routing: fast vs capable mock model paths based on complexity heuristics |
+| w04 | Parallelization: concurrent policy retrieval + order snippet before synthesis |

@@ -19,12 +19,20 @@ PATH=/home/hermes/.local/bin:/usr/local/bin:/usr/bin:/bin
 # SourceHarvester — Thursday 06:30 UTC = 12:00 IST (RSS corpus before scout)
 30 6 * * 4 cd ~/work/agentic-ai-architecture && python3 hermes/tools/harvest_sources.py --days 14 >> ~/logs/harvest.log 2>&1
 
-# ResearchScout — Friday 07:00 UTC = 12:30 IST (next week brief)
-# NOTE: `hermes run skill X` does not exist (v0.22.6 rejects `run`). Use chat -q with -s.
-0 7 * * 5 cd ~/work/agentic-ai-architecture && hermes chat -q "Run the research-scout skill: write the weekly research brief for the next pattern week per content/calendar.md." -s research-scout --oneshot >> ~/logs/scout.log 2>&1
+# Friday weekly pipeline — 07:05 UTC: scout + ADR + Telegram ADR card (--next from publish-progress)
+5 7 * * 5 cd ~/work/agentic-ai-architecture && python3 hermes/tools/weekly_pipeline.py friday-adr >> ~/logs/weekly-pipeline.log 2>&1
+
+# Legacy single scout only (optional if not using weekly_pipeline):
+# 0 7 * * 5 ... hermes chat ... calendar_week.py --next --brief-prompt ...
+
+# Telegram inline approvals — every 2 min (skip if Hermes owns getUpdates; use text adr approve wNN)
+*/2 * * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/telegram_poll_approvals.py --once >> ~/logs/telegram-approvals.log 2>&1
 
 # GrowthAnalyst — Monday 08:00 UTC = 13:30 IST
 0 8 * * 1 cd ~/work/agentic-ai-architecture && hermes chat -q "Run the growth-analyst skill: produce this week's KPI nudge and topic steering." -s growth-analyst --oneshot >> ~/logs/growth.log 2>&1
+
+# Weekly reminder — Monday 08:15 UTC = 13:45 IST (no LLM; nudges brief/pack on Telegram path)
+15 8 * * 1 cd ~/work/agentic-ai-architecture && python3 hermes/tools/weekly_reminder.py >> ~/logs/weekly-reminder.log 2>&1
 
 # News Inshorts — harvest + summarize daily 06:45 UTC (12:15 IST)
 # --days 7 (was 3): the 3-day window plus cap-before-dedupe left only ~1-6 new

@@ -1,0 +1,5 @@
+{
+  "last_published_week": "w04",
+  "last_merged_to_main_week": "w04",
+  "notes": "Update last_merged_to_main_week after each publish-gate merge. Automation targets the week after last_published_week (w05 next)."
+}

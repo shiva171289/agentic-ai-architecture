@@ -1,0 +1,9 @@
+flowchart LR
+  user[User question]
+  classify[Classify intent]
+  retrieve[Retrieve context]
+  answer[Answer prompt]
+  user --> classify
+  classify --> retrieve
+  retrieve --> answer
+  answer --> user

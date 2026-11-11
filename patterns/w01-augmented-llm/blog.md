@@ -28,6 +28,10 @@ Follow this recipe (fixed order):
 
 Add ReAct loops or multi-agent setups only when metrics show this single pass is not enough.
 
+## Scenario ladder (retrieval)
+
+Week 1 implements **keyword** retrieval only. See the full [retrieval ladder](../../content/topics/retrieval-ladder.md): dense, BM25, hybrid, and agentic variants ship in later weeks (w12+). Code lives in `projects/acme-support/core/retrieval/`.
+
 ## When not to use
 
 Skip this as the main product when:

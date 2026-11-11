@@ -20,6 +20,10 @@ Link earlier weeks from [content/calendar.md](/calendar/) (or "None" for w01).
 
 ## Pattern
 
+## Scenario ladder
+
+Table of variants for this pattern family. Mark rows not implemented this week with target week (see [content/topics/](../../content/topics/)).
+
 ## When not to use
 
 ## Apply it to Acme
