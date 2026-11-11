@@ -9,6 +9,10 @@ for skill in "$REPO"/hermes/skills/*/; do
   mkdir -p "${HOME}/.hermes/skills"
   ln -sfn "$skill" "${HOME}/.hermes/skills/${name}"
 done
-echo "Skills symlinked. Install cron from hermes/cron.md (crontab -e)."
+if [ -f "$REPO/hermes/setup/crontab.hermes" ]; then
+  crontab "$REPO/hermes/setup/crontab.hermes"
+  echo "Crontab installed from hermes/setup/crontab.hermes"
+fi
+echo "Skills symlinked."
 python3 "$REPO/hermes/tools/calendar_week.py" --next --json
 python3 "$REPO/hermes/tools/job_status.py" || true
