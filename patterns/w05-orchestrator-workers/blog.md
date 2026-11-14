@@ -8,50 +8,66 @@ acmeStage: w05
 spineLayers: "2"
 ---
 
+Every pattern so far fixes the shape of the work at design time. Orchestrator-workers is the first where a model chooses it: a lead agent splits the request, delegates to workers, and merges the results.
+
 ## Prerequisites
 
 [w01 augmented LLM](/blog/w01-augmented-llm/) · [w02 prompt chaining](/blog/w02-prompt-chaining/) · [w03 routing](/blog/w03-routing/) · [w04 parallelization](/blog/w04-parallelization/).
 
-## The problem
+## Context
 
-Every pattern so far decides the *shape* of the work at design time. Code picks the steps; the model fills them in. Parallelization (w04) is the sharpest example: it fans out a fixed set of calls — policy retrieval and order snippet — for every request, and merges them.
+Parallelization (w04) fans out a fixed set of calls — policy retrieval and order snippet — for every request. That fails on *"where is my order, and what is the return window?"*: two independent parts, a count that varies per request. A fixed chain over-fetches or under-fetches; the missing piece is a step that decides *what* to do at runtime. **Layer 2** — wrapping.
 
-That is wrong for a request like *"where is my order, and what is the return window for that item?"* It has two independent parts, and the number of parts varies per request. A fixed chain either over-fetches (runs every step for every request) or under-fetches (misses a part). The missing piece is a step that decides *what* to do at runtime.
+## Pattern
 
-## The pattern
+A lead agent owns decomposition, so the fan-out width is a runtime decision:
 
-Orchestrator-workers puts a lead agent in charge of decomposition:
-
-- The **orchestrator** reads the request and produces a short plan: which parts to delegate and what each worker must return.
+- The **orchestrator** reads the request and plans which parts to delegate and what each worker returns.
 - Each **worker** does one bounded job — a retrieval or a tool call — and returns a structured result.
-- The orchestrator **merges** the attributable results and hands the merged context to the existing answer chain.
+- The orchestrator **merges** the attributable results for the existing answer chain.
 
-The fan-out width is a runtime decision. That is the whole difference from w04: w04 fans out a fixed set of calls known at design time; w05 lets the orchestrator choose how many workers to spawn and with what instructions.
+Two design rules:
 
-Two design rules keep it honest:
+- **Deterministic spine, model on the edges.** AWS exposes a Step Functions state machine as MCP tools so the agent "can't skip or reorder" them; Microsoft's Durable Extension gives "deterministic multi-agent orchestrations" that checkpoint and replay.
+- **Do not hard-code worker identity into the planner prompt.** DeOrch separates planning from selection: the planner emits a *capability*, a registry resolves it.
 
-- **Keep the deterministic spine; put the model only on the edges.** Run the steps that must happen in order in a workflow engine, and let the model drive only the steps that vary. AWS exposes a Step Functions state machine to an agent as MCP tools so the agent "can't skip or reorder" the fixed steps; Microsoft's Durable Extension gives "deterministic multi-agent orchestrations" that checkpoint and replay.
-- **Do not hard-code worker identity into the planner prompt.** DeOrch separates worker-agnostic planning from worker selection, so new workers can be added without retraining the planner. The planner emits a *capability*; a registry resolves it.
+VMAO adds an orchestration-level LLM verifier; completeness rises 3.1→4.2 (1–5).
 
-Add an orchestration-level check too. VMAO raises answer completeness from 3.1 to 4.2 (1–5) by adding an LLM verifier as an *orchestration* signal, not a per-agent one — it checks that every planned part came back.
+## Scenario ladder
 
-## When NOT to use it
+| Variant | Need | This week | Ships |
+|---------|------|-----------|-------|
+| Fixed fan-out | Steps fixed at design time | No | w04 |
+| Orchestrator + workers | Fan-out width varies per request | **Yes** | w05 |
+| Nested agent teams | A worker is an orchestrator | No | w16 |
+| Long-running workers | Work outlives the request | No | w19 |
+| Cross-boundary (A2A) | Agents cross an org boundary | No | w20 |
 
-- A single augmented call with retrieval already meets the quality bar. Add a worker only when the task genuinely branches into parts that run independently and merge.
-- The steps are known and fixed. Use a workflow engine, not a model-driven orchestrator.
-- The latency budget is tight. Every worker adds a model call plus a merge hop.
-- No per-path evaluation exists. A golden set assumes a fixed pipeline; a variable-width fan-out needs the orchestration-level check first.
-- It is a single lookup with no merge. That is a tool call, not orchestration.
+Only the middle row ships this week.
+
+## When not to use
+
+- A single augmented call with retrieval already clears the bar; add a worker only when the task branches into independent parts.
+- Steps known and fixed? Use a workflow engine, not a model-driven orchestrator.
+- Tight latency budget: every worker adds a model call plus a merge hop.
+- No per-path evaluation exists; a variable-width fan-out needs the orchestration-level check first.
+- A single lookup with no merge is a tool call, not orchestration.
 
 ## Apply it to Acme
 
 The w05 increment adds `core/orchestrator.py`:
 
-- `decompose(question)` returns the runtime plan. In production a model emits it; here a small deterministic rule stands in so replay is stable.
-- Workers are `policy_lookup` and `order_lookup`, addressed by capability, with a `MAX_WORKERS` fan-out cap.
-- `answer_with_orchestrator()` plans → delegates → merges → answers via the existing intent chain. `core/tests` covers multi-part decomposition, the fan-out cap, and the tool-blocking rule.
+- `decompose(question)` returns the runtime plan; a model emits it in production, a deterministic rule here so replay is stable.
+- Workers are `policy_lookup` and `order_lookup`, addressed by capability, capped by `MAX_WORKERS`.
+- `answer_with_orchestrator()` plans → delegates → merges → answers via the existing intent chain; `tests/test_orchestrator.py` covers decomposition, the cap, and tool blocking.
 
-Try `"where is order ORD-1001 and the return window?"` — both workers run. Ask `"how do I reset my widget?"` — one worker runs. The request chose the fan-out.
+Try `"where is order ORD-1001 and the return window?"` — both workers run; `"how do I reset my widget?"` — one. The request chose the fan-out.
+
+```bash
+cd projects/acme-support && uv sync --extra dev && uv run pytest
+```
+
+Check out the frozen snapshot: `git fetch --tags && git checkout stage-w05`.
 
 ## Architect's notebook
 
@@ -63,10 +79,43 @@ Try `"where is order ORD-1001 and the return window?"` — both workers run. Ask
 | Cost hint | One plan + one call per worker + one merge; cap the width |
 | NFRs | Latency (slowest worker + merge), cost (worker count) |
 
-## AWS vs Azure notes
+## Reference implementation
 
-Both vendors now offer the same shape: a durable, replayable orchestration engine plus an agent runtime. AWS — Step Functions (spine) + AgentCore (orchestrator) + Lambda workers. Azure — Durable Functions (spine) + Foundry Agent Service (orchestrator) + Functions workers. Which engine is better for agent workers is an **open question**: no primary head-to-head comparison exists, so treat any "X is better" claim as unresolved until one does.
+- **Pattern sample:** [`patterns/w05-orchestrator-workers/code/`](https://github.com/shiva171289/agentic-ai-architecture/tree/main/patterns/w05-orchestrator-workers/code)
+- **Acme spine:** [`projects/acme-support/`](https://github.com/shiva171289/agentic-ai-architecture/tree/main/projects/acme-support)
+
+Tests run without cloud API keys.
+
+## AWS mapping
+
+Typical services (verify current names):
+
+- **Step Functions** as the deterministic spine, exposed to the agent as MCP tools
+- **Amazon Bedrock AgentCore** as the orchestrator runtime
+- **Lambda** workers, one per capability
+
+Whether one engine is better for agent workers is an **open question**: no head-to-head comparison exists, so treat any "X is better" claim as unresolved.
+
+## Azure mapping
+
+Typical services (verify current names):
+
+- **Durable Functions** (Microsoft Agent Framework Durable Extension) as the spine
+- **Microsoft Foundry Agent Service** as the orchestrator runtime
+- **Azure Functions** workers, one activity per capability
+
+The same open question holds — nothing ranks Durable Functions against Step Functions — so do not assert a winner.
+
+## Production checklist
+
+Before production, walk the [Production Readiness Checklist](/production-readiness-checklist/) — golden tests, tool permissions, tracing, cost caps, rollback.
+
+## Further reading
+
+- Verified Multi-Agent Orchestration (VMAO): https://arxiv.org/abs/2603.11445
+- DeOrch — decoupled multi-agent orchestration: https://arxiv.org/abs/2610.07556
+- Microsoft — Durable Extension (Agent Framework): https://learn.microsoft.com/en-us/agent-framework/integrations/azure-functions
 
 ## Disclaimer
 
-Learning material only.
+Views and examples are my own, for learning purposes, and do not represent my employer.
