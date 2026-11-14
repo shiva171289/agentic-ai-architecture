@@ -52,9 +52,44 @@ def week_info(week: str | None) -> dict:
     return json.loads(proc.stdout)
 
 
+def ensure_branch(week: str) -> None:
+    """Make sure drafts/wNN exists and is checked out before the LLM steps write files."""
+    branch = f"drafts/{week}"
+    exists = subprocess.run(
+        ["git", "rev-parse", "--verify", "--quiet", branch],
+        cwd=ROOT,
+        capture_output=True,
+    ).returncode == 0
+    run(["git", "checkout", branch] if exists else ["git", "checkout", "-b", branch], cwd=ROOT)
+
+
+def commit_and_push_pack(week: str, slug: str) -> int:
+    """Commit the generated ADR/brief and push drafts/wNN.
+
+    The Telegram gate card links to `drafts/wNN` on GitHub, so the branch and the
+    ADR must exist on origin BEFORE approval_notify runs. Skipping this is why the
+    w05 card pointed at a branch that did not exist and an uncommitted ADR.
+    """
+    pattern_dir = f"patterns/{week}-{slug}"
+    run(["git", "add", pattern_dir], cwd=ROOT)
+    staged = subprocess.run(
+        ["git", "diff", "--cached", "--quiet"], cwd=ROOT, capture_output=True
+    ).returncode != 0
+    if staged and run(["git", "commit", "-m", f"{week}: ADR for {slug}"], cwd=ROOT) != 0:
+        return 1
+    if run(["git", "push", "-u", "origin", f"drafts/{week}"], cwd=ROOT) != 0:
+        print(
+            f"push of drafts/{week} failed — not sending a gate card with dead links",
+            file=sys.stderr,
+        )
+        return 1
+    return 0
+
+
 def friday_adr(week: str | None) -> int:
     info = week_info(week)
     w, slug = info["week"], info["slug"]
+    ensure_branch(w)
     scout_prompt = (
         f"Run research-scout for {w} {slug}. "
         f"Write patterns/{w}-{slug}/brief.md. Use Tier 0 / Qwen where configured."
@@ -66,6 +101,8 @@ def friday_adr(week: str | None) -> int:
         f"Write patterns/{w}-{slug}/adr.md only. Stop before code/blog."
     )
     if hermes_oneshot(arch_prompt, "pattern-architect") != 0:
+        return 1
+    if commit_and_push_pack(w, slug) != 0:
         return 1
     return run(
         [

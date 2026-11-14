@@ -7,7 +7,14 @@ Two human taps per week: **ADR approve** → **publish approve**.
 Add to [hermes/cron.md](../../hermes/cron.md) on the VPS:
 
 1. **Friday 07:05** — `weekly_pipeline.py friday-adr --next` (scout + ADR + Telegram card).
-2. **Every 2 minutes** — `telegram_poll_approvals.py --once` (inline buttons), **or** use text commands via Hermes only.
+2. Do **not** schedule `telegram_poll_approvals.py` while the Hermes gateway owns this bot.
+   Only one client may call `getUpdates`, so the poller gets HTTP 409 on every tick (981
+   conflicts logged) and races the gateway for inbound messages. Approve with **text**
+   commands through Hermes: `adr approve w05` / `publish approve w05`.
+
+`weekly_pipeline.py friday-adr` commits `patterns/wNN-slug/` and pushes `drafts/wNN`
+**before** it sends the card, so the links in that message always resolve. If the push
+fails it does not send the card.
 
 ## Flow
 
