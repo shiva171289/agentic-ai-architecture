@@ -1,6 +1,6 @@
 # ADR — Orchestrator-workers
 
-**Status:** proposed
+**Status:** accepted
 **Week:** w05
 
 ## Context
