@@ -1,0 +1,40 @@
+flowchart TB
+  q[Request]
+  orc[Orchestrator plan<br/>decides WHAT at runtime]
+  plan[(Plan artifact<br/>inspectable)]
+  cap[Fan-out cap + budget]
+  w1[PolicyLookupWorker]
+  w2[OrderLookupWorker]
+  merge[Merge attributable results]
+  verify[Orchestration-level verifier]
+  ans[Answer chain]
+
+  q --> orc
+  orc --> plan
+  orc --> cap
+  cap --> w1
+  cap --> w2
+  w1 --> merge
+  w2 --> merge
+  merge --> verify
+  verify --> ans
+  plan -.-> merge
+
+%% ===== AWS deployment view (comment) =====
+%% API/channel -> AgentCore runtime (orchestrator agent)
+%%   -> Step Functions state machine, exposed to the agent as MCP tools
+%%      so the agent cannot skip or reorder the fixed steps
+%%   -> Map/Parallel state fans out to Lambda workers (policy, order)
+%%   -> DynamoDB + execution history store the plan and worker results
+%%      (checkpoints for deterministic replay)
+%%   -> Bedrock merge + synthesize the final answer
+%%   -> CloudWatch / X-Ray trace the plan, each handover and the merge
+
+%% ===== Azure deployment view (comment) =====
+%% Channel -> Microsoft Foundry Agent Service (orchestrator agent)
+%%   -> Durable Functions orchestrator: deterministic multi-agent
+%%      orchestration that checkpoints and replays on resume
+%%   -> activity functions act as workers (policy, order)
+%%   -> Durable orchestrator/entity state + Cosmos DB hold checkpoints
+%%   -> Foundry models merge + synthesize the final answer
+%%   -> Application Insights traces plan -> workers -> merge

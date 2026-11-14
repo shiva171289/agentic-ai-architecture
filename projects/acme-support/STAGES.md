@@ -28,3 +28,4 @@ Future rows append here as each `stage-wNN` is tagged.
 | w02 | Prompt chaining: classify intent (billing vs product) then specialized answer prompt |
 | w03 | Routing: fast vs capable mock model paths based on complexity heuristics |
 | w04 | Parallelization: concurrent policy retrieval + order snippet before synthesis |
+| w05 | Orchestrator-workers: orchestrator decomposes the request into policy + order lookup workers at runtime, merges attributable results before synthesis |
