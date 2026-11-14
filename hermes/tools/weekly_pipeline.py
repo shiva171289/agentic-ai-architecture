@@ -144,16 +144,38 @@ def on_adr_approved(week: str, slug: str) -> int:
     )
 
 
+def record_publish(week: str) -> int:
+    """Record the publish on the drafts branch so the merge carries it to main.
+
+    `main` is ruleset-protected, so the VPS cannot push this file after the merge.
+    Writing it only in the working tree leaves main on the old week, and
+    publish_progress.next_pack_week() then re-targets a week that already
+    published. Commit it to drafts/wNN BEFORE trigger_publish runs.
+    """
+    data = load()
+    data["last_merged_to_main_week"] = week
+    data["last_published_week"] = week
+    save(data)
+    run(["git", "add", "content/publish-progress.json"], cwd=ROOT)
+    subprocess.run(
+        ["git", "commit", "-m", f"{week}: record publish in publish-progress.json"],
+        cwd=ROOT,
+        capture_output=True,
+    )  # rc 1 == nothing to commit, which is fine
+    return run(["git", "push", "-u", "origin", f"drafts/{week}"], cwd=ROOT)
+
+
 def on_publish_approved(week: str, slug: str) -> int:
     pattern_dir = f"{week}-{slug}"
+    ensure_branch(week)
+    if record_publish(week) != 0:
+        return 1
     rc = run([sys.executable, str(_TOOLS / "trigger_publish.py"), week, pattern_dir])
     if rc == 0:
-        data = load()
-        data["last_merged_to_main_week"] = week
-        data["last_published_week"] = week
-        save(data)
         clear_pending(week)
-        run([sys.executable, str(_TOOLS / "tag_stage.py"), week, "--no-push"])
+        # --push: the stage tag is part of publishing. tag_stage now targets origin/main
+        # explicitly instead of HEAD, which after this flow is still the drafts branch.
+        run([sys.executable, str(_TOOLS / "tag_stage.py"), week, "--push"])
     return rc
 
 
