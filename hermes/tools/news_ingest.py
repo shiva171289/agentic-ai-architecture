@@ -36,6 +36,18 @@ AGENT_KEYWORDS = re.compile(
     re.I,
 )
 HTML_INDEX_MARKER = "HTML index entry"
+AWS_PUBLISHER = "AWS"
+# News Inshorts ingests all AWS RSS items. Other publishers stay keyword/tag filtered.
+AWS_MAX_PER_FEED = 2
+AWS_MAX_TOTAL_PER_RUN = 80
+PUBLISHER_MAX_OVERRIDES: dict[str, int] = {}
+
+
+def is_aws_row(row: dict) -> bool:
+    if (row.get("publisher") or "") == AWS_PUBLISHER:
+        return True
+    feed_id = row.get("feed_id") or ""
+    return feed_id.startswith("aws-")
 
 
 def load_harvest(path: Path) -> list[dict]:
@@ -52,14 +64,13 @@ def should_ingest(row: dict) -> bool:
     summary = row.get("summary") or ""
     title = row.get("title") or ""
     tags = set(row.get("tags") or [])
-    feed_id = row.get("feed_id") or ""
+
+    if is_aws_row(row):
+        return True
 
     if HTML_INDEX_MARKER in summary:
         if not AGENT_KEYWORDS.search(title):
             return False
-
-    if feed_id == "aws-main-blog" and not AGENT_KEYWORDS.search(f"{title} {summary}"):
-        return False
 
     if tags & PREFERRED_TAGS:
         return True
@@ -70,7 +81,16 @@ def should_ingest(row: dict) -> bool:
     return False
 
 
-def cap_per_publisher(candidates: list[dict], max_per: int = 2) -> list[dict]:
+def max_for_publisher(publisher: str, default: int, overrides: dict[str, int]) -> int:
+    return overrides.get(publisher, default)
+
+
+def cap_per_publisher(
+    candidates: list[dict],
+    max_per: int = 2,
+    overrides: dict[str, int] | None = None,
+) -> list[dict]:
+    caps = overrides if overrides is not None else PUBLISHER_MAX_OVERRIDES
     counts: dict[str, int] = defaultdict(int)
     kept: list[dict] = []
     for row in sorted(
@@ -79,11 +99,46 @@ def cap_per_publisher(candidates: list[dict], max_per: int = 2) -> list[dict]:
         reverse=True,
     ):
         pub = row.get("publisher") or "Unknown"
-        if counts[pub] >= max_per:
+        limit = max_for_publisher(pub, max_per, caps)
+        if counts[pub] >= limit:
             continue
         counts[pub] += 1
         kept.append(row)
     return kept
+
+
+def cap_aws_per_feed(
+    candidates: list[dict],
+    max_per_feed: int = AWS_MAX_PER_FEED,
+    max_total: int = AWS_MAX_TOTAL_PER_RUN,
+) -> list[dict]:
+    counts: dict[str, int] = defaultdict(int)
+    kept: list[dict] = []
+    for row in sorted(
+        candidates,
+        key=lambda r: r.get("published") or "",
+        reverse=True,
+    ):
+        feed_id = row.get("feed_id") or "aws-unknown"
+        if counts[feed_id] >= max_per_feed:
+            continue
+        counts[feed_id] += 1
+        kept.append(row)
+        if len(kept) >= max_total:
+            break
+    return kept
+
+
+def apply_ingest_caps(
+    candidates: list[dict],
+    max_per_publisher: int,
+    overrides: dict[str, int] | None = None,
+) -> list[dict]:
+    aws_rows = [r for r in candidates if is_aws_row(r)]
+    other_rows = [r for r in candidates if not is_aws_row(r)]
+    return cap_aws_per_feed(aws_rows) + cap_per_publisher(
+        other_rows, max_per_publisher, overrides
+    )
 
 
 def main() -> int:
@@ -116,7 +171,7 @@ def main() -> int:
             if row.get("id") and not find_by_id(items, row["id"])
         ]
         skipped = len(candidates) - len(fresh)
-        for row in cap_per_publisher(fresh, args.max_per_publisher):
+        for row in apply_ingest_caps(fresh, args.max_per_publisher):
             items.append(
                 {
                     "id": row.get("id"),

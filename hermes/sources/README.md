@@ -11,7 +11,7 @@ Hermes agents **must not invent** vendor features, pricing, or service names. Th
 
 | Publisher | Feed id | Tags (optional) |
 |-----------|---------|-----------------|
-| AWS | `aws-ml-blog`, `aws-main-blog` | cloud, enterprise |
+| AWS | All official blog RSS under `aws.amazon.com/blogs/*` plus `aws-whats-new` (see `verified-sources.json`) | cloud, enterprise |
 | Microsoft Azure | `azure-blog` | cloud, enterprise |
 | Microsoft | `microsoft-devblogs`, `microsoft-foundry-devblog` | agents, cloud |
 | OpenAI | `openai-blog` → `openai.com/news/rss.xml` | models, openai, agents |
@@ -40,7 +40,7 @@ AWS Bedrock, Azure AI Foundry, Azure OpenAI, OpenAI Platform, Anthropic docs, **
 
 ## Daily brief selection
 
-**SourceHarvester** writes all feeds into the corpus. **News Inshorts** ingest ([`news_ingest.py`](../tools/news_ingest.py)) prefers feeds tagged `agents`, `enterprise`, `mcp`, or `cloud`. Cap at **two items per publisher** per ingest run. Down-rank `aws-main-blog` unless the title matches agent/LLM keywords.
+**SourceHarvester** writes all feeds into the corpus. **News Inshorts** ingest ([`news_ingest.py`](../tools/news_ingest.py)) prefers feeds tagged `agents`, `enterprise`, `mcp`, or `cloud`. Cap at **four items per publisher** per ingest run for non-AWS feeds. Ingest **all** AWS RSS rows with **two items per AWS feed id** per run (hard ceiling **80** AWS items per run). Other publishers still use keyword/tag filters.
 
 ## Allowlist maintenance
 

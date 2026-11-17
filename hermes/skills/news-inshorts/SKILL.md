@@ -27,9 +27,9 @@ State: `~/.hermes/news-queue/queue.json` (VPS only).
 ## Selection (ingest)
 
 1. Prefer feeds tagged `agents`, `enterprise`, `mcp`, `cloud`, or `karpathy`.
-2. Cap **two** new items per publisher per ingest run.
-3. Down-rank `aws-main-blog` unless title or excerpt matches agent/LLM keywords.
-4. Skip thin HTML-index rows unless title matches agent keywords.
+2. Cap **four** new items per non-AWS publisher per ingest run.
+3. Ingest **all** AWS RSS items (every feed in `verified-sources.json` with publisher AWS) with no keyword filter; cap **two per feed id**, **80** AWS items max per run.
+4. Skip thin HTML-index rows unless title matches agent keywords (non-AWS publishers only).
 
 ## Telegram card format
 
@@ -43,7 +43,8 @@ State: `~/.hermes/news-queue/queue.json` (VPS only).
 
 1. Send `sendPhoto` when `image_url` exists in the RSS item (allowlisted host).
 2. Otherwise send `sendMessage`.
-3. Pick **one random** unsent summarized item per run.
+3. Pick **one random** unsent summarized item per run when the queue fits the daily budget.
+4. When `ready` count exceeds `HERMES_NEWS_RUNS_PER_DAY` (default 12), send `ceil(ready/12)` cards per pulse (cap `HERMES_NEWS_MAX_PER_RUN`, default 10).
 
 ## Grounding
 
