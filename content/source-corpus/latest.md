@@ -1,1467 +1,1558 @@
 # Vendor source corpus
 
-**Generated (UTC):** 2026-11-05 04:45
-**Window:** last 3 days
+**Generated (UTC):** 2026-11-17 06:58
+**Window:** last 1 days
 **Keyword filter:** (none — all items in window)
 
 Use this file for grounding. Do not cite vendor claims that are not supported here or in official doc roots.
 
-Config: `hermes/sources/verified-sources.json` (version 2)
+Config: `hermes/sources/verified-sources.json` (version 3)
 
 ## Entries
 
-### 1. Introducing Apache Spark® 4.3 - Now available in Databricks Runtime 19
+### 1. Investigate security data in place with Amazon CloudWatch and 7AI
 
-- **Publisher:** Databricks (`databricks-blog`)
-- **URL:** https://www.databricks.com/blog/introducing-apache-spark-43-now-available-databricks-runtime-19
-- **Published:** 2026-11-05
+- **Publisher:** AWS (`aws-management-blog`)
+- **URL:** https://aws.amazon.com/blogs/mt/investigate-security-data-in-place-with-amazon-cloudwatch-and-7ai/
+- **Published:** 2026-11-17
 
-IntroductionApache Spark 4.3 brings stateful processing to Real-Time Mode, achieving...
+Security teams don’t struggle to get alerts. They struggle to get the context needed to
+act on them. Consider a common scenario: an AWS Security Hub finding reports a critical
+vulnerability in a container image in Amazon Elastic Container Registry. The finding
+says that a package is vulnerable, but not whether the image is running, […]
 
-### 2. Amazon S3 Tables now offer managed migration of Apache Hive tables to Apache Iceberg
+### 2. High-quality cost-effective AI image generation on Amazon ECS
 
-- **Publisher:** AWS (`aws-main-blog`)
-- **URL:** https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-offer-managed-migration-of-apache-hive-tables-to-apache-iceberg/
-- **Published:** 2026-11-04
+- **Publisher:** AWS (`aws-containers-blog`)
+- **URL:** https://aws.amazon.com/blogs/containers/high-quality-cost-effective-ai-image-generation-on-amazon-ecs/
+- **Published:** 2026-11-17
 
-You can now migrate existing Apache Hive datasets in Amazon S3 to fully managed Apache
-Iceberg tables in Amazon S3 Tables, with no pipelines to build or compute to provision,
-while production workloads keep running.
+Learn how to run Z-Image-Turbo, a 6-billion-parameter diffusion transformer, on AWS
+Inferentia2 and Amazon ECS to generate high-quality images at a fraction of a cent each,
+with auto-scaling, arbitrary resolution support, and a complete CI/CD pipeline.
 
-### 3. LangSmith BYOC is now available on AWS, Azure, and Google Cloud
+### 3. Introducing Smithy IDL 2.1
 
-- **Publisher:** LangChain (`langchain-blog`)
-- **URL:** https://www.langchain.com/blog/langsmith-byoc-aws-gc-azure
-- **Published:** 2026-11-04
+- **Publisher:** AWS (`aws-developer-blog`)
+- **URL:** https://aws.amazon.com/blogs/developer/introducing-smithy-idl-2-1/
+- **Published:** 2026-11-17
 
-LangSmith BYOC now runs on AWS (GA), Azure and Google Cloud (Beta). Your traces, evals,
-and agent deployments stay in your cloud account while LangChain runs it.
+Today, we are excited to announce Smithy IDL 2.1. With Smithy 2.1, you can use three new
+syntax features: inline collection declarations for lists and maps, tagged string
+literals for values that carry their own escaping rules, and a shorthand for declaring
+the wire order of a structure’s members. Smithy is an open source Interface […]
 
-### 4. How NVIDIA Uses AI Agents to Streamline AI Factory Operations
+### 4. How Banco BMG moved from reactive to autonomous operations with AWS DevOps Agent
 
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/how-nvidia-uses-ai-agents-to-streamline-ai-factory-operations/
-- **Published:** 2026-11-04
+- **Publisher:** AWS (`aws-management-blog`)
+- **URL:** https://aws.amazon.com/blogs/mt/how-banco-bmg-moved-from-reactive-to-autonomous-operations-with-aws-devops-agent/
+- **Published:** 2026-11-17
 
-As GPU clusters scale, operations span compute, network, hardware, and scheduling. Site
-reliability engineers (SREs) often have to examine multiple dashboards...
+Summary Banco BMG is a Brazilian financial institution with 96 years of history. Its
+digital platform runs across AWS, other cloud providers, and on-premises infrastructure.
+At that scale, logs, metrics, alerts, and deployments come in faster than engineers can
+correlate them. When an incident hits a revenue-generating product such as PIX instant
+payments or payroll […]
 
-### 5. Use NVIDIA NeMo to Turn Agent Failures into Tests and Harness Fixes
+### 5. EPG-enriched ad requests with CloudFront Functions and AWS Elemental MediaTailor
 
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/use-nvidia-nemo-to-turn-agent-failures-into-tests-and-harness-fixes/
-- **Published:** 2026-11-04
+- **Publisher:** AWS (`aws-media-blog`)
+- **URL:** https://aws.amazon.com/blogs/media/epg-enriched-ad-requests-with-cloudfront-functions-and-aws-elemental-mediatailor/
+- **Published:** 2026-11-17
 
-Turn production evidence into prioritized issues and custom evaluations that help you
-improve prompts, tools, models, memory, skills, and harness code. When you...
+Linear TV ad requests often carry stale program metadata because viewer sessions stay
+open for hours while programs change. We show how to enrich every ad break with current
+EPG metadata using Amazon CloudFront Functions, CloudFront KeyValueStore, and AWS
+Elemental MediaTailor Monetization Functions, at about $14 per month.
 
-### 6. The Enterprise Case for Open-Weight Models on Databricks
-
-- **Publisher:** Databricks (`databricks-blog`)
-- **URL:** https://www.databricks.com/blog/enterprise-case-open-weight-models-databricks
-- **Published:** 2026-11-04
-
-As field engineers at Databricks, we spend our days inside enterprise AI deployments,...
-
-### 7. Use decision models with Amazon Bedrock AgentCore Evaluations
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/use-decision-models-with-amazon-bedrock-agentcore-evaluations/
-- **Published:** 2026-11-04
-
-Some agent-evaluation questions are narrow and repeatable, and decision models answer
-exactly that kind of question. This post shows how to connect two decision models, Jev
-and Strands Decider, to Amazon Bedrock AgentCore Evaluations through code-based
-evaluators, and how to validate a decision-model check before you gate a release on it.
-
-### 8. NVIDIA CUDA 13.5 Brings NVIDIA Vera Rubin GA Support
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/nvidia-cuda-13-5-brings-nvidia-vera-rubin-ga-support/
-- **Published:** 2026-11-04
-
-As artificial intelligence and accelerated computing continue to push the boundaries of
-what's possible, the latest NVIDIA CUDA release arrives to unlock...
-
-### 9. Agile Deliberation: How AI helps humans define the gray areas
-
-- **Publisher:** Google Research (`google-research-blog`)
-- **URL:** https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/
-- **Published:** 2026-11-04
-
-Data Mining & Modeling
-
-### 10. Dharma Field Extractor: Any Document In, Structured Fields in JSON Out
-
-- **Publisher:** Hugging Face (`huggingface-blog`)
-- **URL:** https://huggingface.co/blog/Dharma-AI/dharma-field-extractor
-- **Published:** 2026-11-04
-
-(no summary in feed)
-
-### 11. Helping you build and defend at machine-speed in the agentic era
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/products/identity-security/helping-you-build-and-defend-at-machine-speed-in-the-agentic-era/
-- **Published:** 2026-11-04
-
-As both a frontier lab and the operator of the world's most comprehensive threat
-intelligence network, Google occupies a unique vantage point: We see exactly how Large
-Language Models are engineered, and how adversaries are targeting them in the wild.
-Passive defense is no longer viable. Allowing rapid, ungoverned adoption of autonomous
-systems into traditional workflows can lead to critical security incidents. At the
-Google Cloud Security Summit, we are sharing updates on how we are helping organizations
-build securely, secure systems, and defend at machine speed in the agentic era. Building
-securely in the agentic era Agentic coding tools have dramatically accelerated software
-delivery, but human review can’t keep up with machine-speed commits and unvetted
-dependencies. Because autonomous agents are now part of the supply chain, blind trust
-can turn them into direct backdoors for attackers. Our approach to securing the
-development lifecycle builds native, real-time guardrails in the integrated development
-environment (IDE), unifies asset graphs across code and identity and access management
-(IAM,) and verifies models to weed out logic flaws before code merges. CodeMender:
-Frontier cyber with enterprise control As software-driven threats continue to escalate,
-our autonomous code-security agent CodeMender helps organizations find and fix code
-vulnerabilities at machine speed. It can eliminate manual triage bottlenecks while
-deeply embedding security in the software development lifecycle. CodeMender works with
-multiple models, including Gemini 4 Argon , that can bring state-of-the-art
-cybersecurity capabilities. These include identifying previously-unknown
-vulnerabilities, and generating tested patches before they can be exploited. Most
-recently, Wiz used Gemini 4 Argon along with other models to identify and help remediate
-core PHP vulnerabilities that affected 70% of websites . Gemini 4 Argon made a notable
-contribution to finding the vulnerability, developing a likely exploit path, detecting
-attacks, and validating the patch. Currently in preview, CodeMender delivers new
-capabilities for secure isolation and flexible scanning: Secure autonomous remediation :
-CodeMender isolates vulnerability verification and exploit simulation inside your choice
-of operating system-level sandbox or isolated virtual machine, and adds human-in-the-
-loop checks for local write and command execution helping to reduce the risks of
-malicious exploits and zero-day testing gone awry. Flexible scanning modes : CodeMender
-now allows you to scan a specific folder, entire repository, or only modified files
-since the last scan so you have fine grain control on how many files to scan to optimize
-for scanning speed and costs. Since the CodeMender preview became available in July,
-hundreds of customers have used CodeMender to help them find and fix vulnerabilities at
-machine speed. “As adversaries attack at machine speed, Google’s Fairwind Program helps
-us keep pace with our application security. Our early evaluation of CodeMender shows the
-potential to reduce vulnerability discovery time by over 95%, while keeping expert
-validation and remediation under human oversight,” said Ivan Fontarensky, CTO
-Cybersecurity Services, Thales Group. “IDC research finds that nearly 40% of enterprises
-add vulnerabilities faster than they can remediate them. Detection without remediation
-only adds to developer workloads,” said Katie Norton, research director, Cloud Security,
-IDC. “CodeMender solves this by pairing exploitability validation with deployable code
-fixes, driving the continuous, verified patching required as exploitation timelines
-compress.” Securing workloads everywhere When autonomous workloads transition to
-production, the threat landscape shifts entirely. Adversaries target your plumbing —
-credentials, data boundaries, and integrations that connect agents to the enterprise.
-Once inside, attackers exploit over-privileged credentials and unsegmented environment
-
-### 12. Highlights and reflections from Google Public Sector Summit: Where mission meets moonshot
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/topics/public-sector/highlights-and-reflections-from-google-public-sector-summit-where-mission-meets-moonshot/
-- **Published:** 2026-11-04
-
-Over 2,700 government leaders, innovators, and industry partners convened across two-
-days at our Google Public Sector Summit in Washington D.C. where we explored the theme,
-“Where mission meets moonshot.” We were honored to bring together leaders who are
-driving impact in the agentic era and leveraging agents to help boost productivity,
-drive innovation, and transform how services are delivered. Let’s take a closer look at
-the sessions, speakers, demos, and activations throughout the event that showcased how
-leaders across education and government are collaborating with Google Public Sector to
-turn their moonshot aspirations into secure, scaled, real-world mission outcomes.
-Driving impact together In our morning keynote, CEO of Google Public Sector, Karen Dahut
-unpacked the event theme and shared how organizations like NASA, NOAA, The Department of
-War, The Department of Energy, The State of Connecticut, The U.S. Army, Case Western
-Reserve University, and more are collaborating with Google to drive impact in the
-agentic era. Karen underscored the importance of leading boldly, building with and for
-your people, and scaling for impact. Thomas Kurian , CEO of Google Cloud, reinforced our
-commitment and shared the latest innovations across our integrated and secure stack
-including Gemini for government services , purpose-built for public sector missions. He
-also shared additional announcements including the Wiz Red, Green, and Blue agents which
-are now available within Wiz for Gov, Wiz’s FedRAMP Class D (High) certified
-environment, and how we are bringing enterprise search capabilities to Gemini on Google
-Distributed Cloud for air-gapped deployments . Chris Hein , Field CTO of Google Public
-Sector, shared a live product demonstration that showcased Google’s technology in
-action. Attendees had the opportunity to hear from leaders Michael P. Duffey , Under
-Secretary of War for Acquisition and Sustainment, and Ed Forst, Administrator for the
-General Services Administration, who shared how they are applying technology to
-transform their missions and power their moonshots. Through partnership and powerful
-technology, we are creating impact at scale by transforming services, strengthening
-security, and improving outcomes. Dedicated programming for the agentic era During our
-Cloud Talks session, attendees heard from Elizabeth Moon, Managing Director of Customer
-Engineering for Google Public Sector, as she hosted a series of talks across critical
-pillars of public sector transformation. Presentations highlighted infrastructure for
-the agentic era led by Rich Sanzi, VP/GM for Accelerated Computing Systems at Google
-Cloud; building safely with Google’s agentic capabilities led by Michael Gerstenhaber ,
-VP of Product Management for Gemini; and implementing proactive defense at planet-scale
-led by Sandra Joyce , VP of Google Threat Intelligence. Attendees also heard from dozens
-of customer and partner speakers during our breakout panels hosted by Google Public
-Sector leaders Ron Bushar, Tony Orlando, and Elizabeth Moon, as well as our lightning
-talks and closed-door birds of a feather discussions on topics including tokenomics,
-migration, and compliance. Alongside our customers and partners, we showcased how agents
-are transforming every facet of the public sector, from accelerating scientific
-breakthroughs, advancing healthcare outcomes, improving service delivery, strengthening
-national security, and more. Over the course of the event, we offered specialized
-programming and engagement opportunities for national security and defense leaders.
-Through our Partner Connect programming, we shared how we are scaling our impact through
-a thriving, highly capable partner community and introduced enhanced partner initiatives
-focused on fostering deeper collaboration, supercharging frontline adoption, and
-expanding mission delivery capabilities across our valued partner network. Hands-on
-innovation with Google Public Sector The Mission Exchange serve
-
-### 13. Why human insight is a strategic advantage for building better agents
+### 6. From tasks to goals
 
 - **Publisher:** LangChain (`langchain-blog`)
-- **URL:** https://www.langchain.com/blog/human-insight-strategic-advantage-agents
-- **Published:** 2026-11-04
+- **URL:** https://www.langchain.com/blog/from-tasks-to-goals
+- **Published:** 2026-11-16
 
-Explore 3 principles for effective human-in-the-loop workflows and how human-review is a
-strategic imperative for production-ready agents.
+LangChain CEO and Co-founder Harrison Chase shares how we're moving from task-specific
+agents to goal-focused agents. Learn more.
 
-### 14. Smart Approvals in Amazon Quick: Human oversight where it matters
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/smart-approvals-in-amazon-quick-human-oversight-where-it-matters/
-- **Published:** 2026-11-04
-
-Smart Approvals in Amazon Quick reviews eligible agent actions within your existing
-controls, reducing unnecessary approval prompts while keeping consequential decisions
-with a person. See how policy sets the boundary, how a classifier reviews actions, and
-how AWS CloudTrail and Amazon CloudWatch Logs support audit.
-
-### 15. Four layers of context engineering for production AI agents: How Deep Insight applies them in working code
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/four-layers-of-context-engineering-for-production-ai-agents-how-deep-insight-applies-them-in-working-code/
-- **Published:** 2026-11-04
-
-In production AI agents, context management is the real bottleneck. This post presents a
-four-layer context engineering framework (architecture, prompts, file-based tools, and
-verification agents), implemented in working code from Deep Insight, an open source
-multi-agent data analysis solution on the Strands Agents SDK and Amazon Bedrock
-AgentCore.
-
-### 16. How Indegene is modernizing and scaling enterprise data quality in life sciences
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/how-indegene-is-modernizing-and-scaling-enterprise-data-quality-in-life-sciences/
-- **Published:** 2026-11-04
-
-This post explores how Indegene built a production-grade, LLM-powered Data Quality Agent
-in its NEXT Unified Data Platform on AWS. The agent generates context-aware data quality
-rules, validates them, and produces ready-to-run SQL and Python under human-in-the-loop
-governance, helping life sciences organizations scale enterprise data quality.
-
-### 17. How U Mobile built agentic telco operations with Amazon Bedrock AgentCore
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/how-u-mobile-built-agentic-telco-operations-with-amazon-bedrock-agentcore/
-- **Published:** 2026-11-04
-
-U Mobile, Malaysia's newest 5G network provider, built AiDaH, an agentic AI operations
-platform on Amazon Bedrock AgentCore that moves beyond AI assistance to autonomous
-action across telco operations. Nine months after production launch, AiDaH handles over
-150 operational scenarios across six divisions, cutting trouble tickets by up to 84.5%.
-
-### 18. Introducing Compute Engine API multi-versioning: Predictable evolution without breaking production
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/topics/developers-practitioners/introducing-compute-engine-api-multi-versioning-predictable-evolution-without-breaking-production/
-- **Published:** 2026-11-04
-
-Ready to modernize your infrastructure without risking production stability? API multi-
-versioning for Compute Engine, now in general availability, helps you do just that. With
-date-based API versions, Compute Engine can now regularly deliver modern API semantics,
-stronger resilience defaults, and improved developer experience while preserving the
-rock-solid stability of the /v1 API. For more than a decade, the Google Compute Engine
-/v1 API has served as the foundational control plane for millions of virtual machines,
-Google Kubernetes Engine (GKE) clusters, and large-scale AI infrastructure. For platform
-teams and developers who build on Google Cloud, that single /v1 endpoint delivered an
-extraordinary promise: write your integration once, and trust that it will keep running
-year after year. Yet as cloud architectures have grown in scale and sophistication,
-infrastructure teams have faced a growing tension. On one hand, mission-critical
-production workloads require absolute API stability and strict backward compatibility.
-On the other hand, customers want faster access to safer security defaults, stronger
-regional resilience, machine-readable error models, and modern, declarative-friendly
-APIs, but introducing these improvements in place risks disrupting existing automation.
-The new versioning model helps avoid that disruption by giving you the flexibility to
-adopt modern semantics on your own schedule without touching your production workloads.
-Date-based API versions for Compute Engine Historically, Compute Engine relied on
-channel-based versioning (CBV) with three long-lived channels: /v1 (generally
-available), /beta , and /alpha . Because /v1 was a single, mutable production surface
-shared by every customer worldwide, any behavioral improvement–even changing a counter-
-intuitive default or modernizing an error format–carried the risk of breaking existing
-scripts or required multi-year migrations. With interface-based versioning (IBV) ,
-aligned with Google AIP-185 , Compute Engine introduces immutable, date-based API
-snapshots alongside /v1 : Stable versions ( YYYY-MM-DD ) : Released on a predictable
-quarterly cadence (starting with 2026-09-01 ), each stable version represents a locked,
-point-in-time contract of all generally available Compute Engine features and behavioral
-defaults. Stable versions don't receive breaking changes after they're published. They
-have no end-of-support date today. Preview versions ( YYYY-MM-DD-preview ) : Released on
-a rapid cadence (such as 2026-10-01-preview ), preview versions branch from a stable
-parent to give developers early access to upcoming features and API designs, carrying a
-predictable one-year lifespan for testing and feedback. Uninterrupted /v1 support : The
-existing /v1 API remains fully supported and it continues to serve as the default if no
-date-based version is specified. Your existing applications, scripts, and integrations
-continue to work without modification. Primary benefits for builders 1. Stability and
-customer-controlled upgrades In a traditional single-version API, changing a default
-behavior forces a trade-off between platform progress and customer stability. But date-
-based multi-versioning puts upgrade timing entirely in your hands: Pin to a known
-contract : Direct REST callers and SDK users can lock onto a specific version identifier
-(such as 2026-09-01 ) knowing its request and response schemas are frozen. Upgrade on
-your schedule : When a new quarterly stable version introduces updated defaults or
-modified resource schemas, your team can evaluate the release notes, test in staging by
-changing a single version string, and roll out to production at your own pace.
-Consistent resource URIs : Date-based versions continue to use the /compute/v1/ base URL
-path. You specify the target version via the X-Goog-Api-Version HTTP header or the
-$apiVersion query parameter. This means that resource selfLink URIs remain uniform
-across tools and services. code_block &lt;ListValue
-
-### 19. OpenAI to acquire Pierre Computer Company, Inc.
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/openai-to-acquire-pierre
-- **Published:** 2026-11-04
-
-OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building,
-understanding, and reviewing code.
-
-### 20. New capabilities to power agents at scale with Google's Agentic Data Cloud
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/products/databases/whats-new-across-googles-agentic-data-cloud/
-- **Published:** 2026-11-04
-
-Not long ago, we were entering the agentic era; today, organizations are deriving
-significant value from running agents in production. The opportunity to capture new
-revenue streams, improve efficiency, and manage risk makes reimagining operations with
-agents top of mind for enterprise leaders. That is why we built the Agentic Data Cloud —
-a System of Action designed to activate all your data by breaking down walled gardens,
-deliver high accuracy and trust, and operate proactively at low cost. Leading
-organizations such as PayPal, Siemens, Telus, Vodafone, Walmart, and more are already
-achieving business impact with us today. Today, we’re sharing key updates to Google’s
-Agentic Data Cloud. We’re empowering your agents everywhere, grounding them in your
-enterprise context to deliver accurate, trusted answers, and providing elevated agentic-
-first experiences for both practitioners and business users. Activate all your data for
-agents with the borderless Lakehouse Enterprise data lives everywhere — across multi-
-cloud environments, on-premises systems, and SaaS platforms like Confluent, SAP,
-Salesforce, and Workday. The borderless Lakehouse , built on the open Apache Iceberg
-format, lets you activate all of your data, wherever it lives, so that your agents have
-one governed foundation. Instead of moving data, stitching together connectors, or
-paying surprise variable egress fees, you get a stack tuned at every layer, from the
-infrastructure to the model. In fact, Apache Iceberg data under management has more than
-tripled over the past year. Today, we are announcing several new enhancements for the
-borderless Lakehouse. Gemini now works directly on your borderless Lakehouse allowing
-business users to use natural language to query records that live across clouds while
-agents ground their reasoning and drive business workflows. With cross-cloud
-interconnect and caching for AWS and Azure , now generally available, you can query data
-across clouds with a private, secure connection and zero variable egress fees. And when
-you query remote cloud data, Lakehouse automatically caches retrieved data blocks
-locally within Google Cloud. Additionally, customers can use the open Iceberg catalog
-federation with Databricks Unity, Snowflake Horizon, and AWS Glue as well as zero-copy
-integrations with SAP, Workday, and Salesforce. To deliver context for AI, the
-borderless Lakehouse integrates directly with Knowledge Catalog , to automatically index
-your distributed and unstructured data, in cloud storage, giving agents the right
-context to be accurate, while controlling token costs for an intelligent and sustainable
-agentic strategy . "By implementing the borderless Lakehouse that federates single-copy
-Apache Iceberg data from Amazon S3 tables to BigQuery, Delivery Hero's talabat reduced
-data-movement costs by approximately 40% while making streaming transactional events
-queryable across both clouds within minutes of production." - Harish Ramesh, Staff Data
-Engineer, Delivery Hero talabat To take action in the moment, agents need simultaneous
-access to both your historical analytical data, and real-time transactional data. That’s
-why today we're announcing new AlloyDB integrations with the borderless Lakehouse . With
-direct Iceberg access in AlloyDB , you can now directly query Iceberg tables stored in
-cloud storage, without any ETL pipelines or copies, and join live operational data with
-historical lakehouse data in a single PostgreSQL query. By combining AlloyDB's
-transactional capabilities with direct Iceberg table access, systems can efficiently
-bridge transactional and analytical data to meet rigorous demands from agents. It is
-fully integrated with the Lakehouse runtime catalog , allowing you to register Iceberg
-tables in AlloyDB alongside the rest of your tables. Everything automatically shows up
-in Knowledge Catalog — so your agents get the same governed context. AlloyDB direct
-Iceberg access is up to 7x faster on aggregation queries than Am
-
-### 21. AlloyDB Express: Instant, scale-to-zero PostgreSQL for developers and coding agents
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/products/databases/introducing-alloydb-express-for-rapid-testing-and-prototyping/
-- **Published:** 2026-11-04
-
-Databases have struggled to keep up with the speed of AI-enabled software development.
-Across the engineering and platform teams we talk to, we see coding agents stalled by
-slow database provisioning, CI/CD test pipelines bottlenecked by complexity, and
-internal apps hitting a wall as they transition from sandbox to production. Until now,
-no PostgreSQL service in the market has combined agent-ready capabilities with
-uncompromised enterprise security and scale. To solve this, we are excited to announce
-the preview of AlloyDB Express , a new offering of AlloyDB for PostgreSQL designed
-specifically for developers and AI coding agents. Capable of spinning up in seconds and
-automatically pausing when idle, it helps bridge the gap between rapid, AI-driven
-development and robust enterprise infrastructure.The result is a highly secure, cost-
-effective database environment that accelerates how you build applications and can
-easily grow to production scale. Get started with the free tier and pay only for what
-you use. AlloyDB Express is an agent-ready database that gives you: Database creation in
-under two seconds: Create a ready-to-use PostgreSQL database in under two seconds using
-gcloud CLI, REST API, MCP, Terraform or Console. Scale-to-zero: Your database
-automatically pauses after 15 minutes of inactivity so you do not incur costs for
-compute while it is idle. When a new query arrives, it wakes up automatically in
-seconds. Enterprise-ready with built-in AI and security: Access enterprise AI
-capabilities including vector, text, and hybrid search to quickly build AI applications,
-all protected by built-in enterprise security guardrails. Start for free and pay only
-for what you use: Get started with our free monthly allowance and as you scale, pay only
-for what you use. One-click upgrade to production scale: When your app is ready for
-production, upgrade your existing database to AlloyDB in one click—keeping data,
-schemas, users, and connection strings intact while gaining enterprise high availability
-(HA), read replicas, and disaster recovery (DR). Accelerate development without
-compromising security AlloyDB Express combines self-service speed with built-in
-enterprise security. For app builders and coding agents this means you can instantly
-provision fully isolated PostgreSQL databases without manual setup, allowing every test
-and prototype to run in its own dedicated database. And for platform and security
-administrators you define IAM, network, and organization policies centrally once, and
-every AlloyDB Express database created by a developer or coding agent automatically
-stays within your company's security guardrails. Whether code is written by developers
-or AI agents, security remains enforced through built-in protection mechanisms which:
-Minimize exposure with safe default connections: Keep your data hidden from the public
-internet using public DNS endpoints that mask IP addresses and block incoming traffic
-until explicitly allowed. Secure internal integrations via private VPC networking:
-Safely connect your internal workloads using Private Service Connect (PSC) or private
-DNS. Enforce least privilege with granular access controls: Confidently restrict agent
-and user permissions utilizing Google Cloud IAM, VPC Service Controls, and native
-PostgreSQL roles. AlloyDB Express brings built-in AI capabilities Unlike databases that
-rely on external vector stores or complex setups, AlloyDB Express embeds enterprise AI
-tools directly into your database, so you can focus on building features. You can
-accelerate your AI application development, with tools like: Fast vector search (
-pgvector HNSW and Google’s ScaNN index): Store and search vector embeddings alongside
-your operational data for semantic search, recommendation engines, and agent memory
-(RAG) — without syncing data to a separate vector database. Direct access to Gemini
-models within SQL queries: Generate text or image embeddings on the fly and run semantic
-filtering, ranking, a
-
-### 22. Unify operational and Lakehouse data with direct Iceberg access in AlloyDB for PostgreSQL
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/products/databases/direct-iceberg-access-in-alloydb/
-- **Published:** 2026-11-04
-
-To make good business decisions, you need two kinds of data: the live state of the
-business from operational databases, and the historical context stored in an analytical
-system such as a lakehouse or a data warehouse. Traditionally, those systems have been
-separate, but they are now converging rapidly. That’s why today, we're announcing direct
-Iceberg access in AlloyDB for PostgreSQL , in preview. Now, developers can query Apache
-Iceberg tables stored in a cloud storage bucket directly from AlloyDB and join them with
-live operational data, all in a single SQL query. In addition, we’re announcing the
-general availability of AlloyDB sync and Lakehouse federation . Together, they give
-AlloyDB three ways to work with the borderless Lakehouse, which keeps one open copy of
-your data available to any engine. Etsy , for example, unified three petabytes with the
-borderless Lakehouse, joining data in place to accelerate pipeline queries by 60%. With
-AlloyDB, which approach to use depends on where the data lives and how your application
-reads it: Direct Iceberg access: Read Iceberg tables in place, accelerated by the
-AlloyDB columnar engine. AlloyDB sync: Serve lakehouse data from AlloyDB for your most
-latency-sensitive workloads, refreshed on a schedule you set. Lakehouse federation:
-Query native BigQuery tables in place, with BigQuery doing the processing. With this
-launch, apps and agents can act on operational and lakehouse data together without
-building or managing custom pipelines. AlloyDB and the borderless Lakehouse: Query
-Apache Iceberg and BigQuery data in place or sync it to AlloyDB, giving real-time
-applications and AI agents governed access to operational and lakehouse data together.
-Decisions at the moment of action With these integrations between AlloyDB and the
-borderless Lakehouse, historical context sits next to live transactions, so decisions
-can happen at the moment of action, without building or managing custom pipelines. For
-example: Fraud and risk: Before approving a payment, a fraud agent checks it against
-five years of customer transaction history in Iceberg, in addition to the last 30 days
-in the database. Personalization: A shopping agent joins the live cart with lifetime
-value and return history in the lakehouse to choose the right offer while the shopper is
-still on the page. Dynamic pricing: A pricing agent combines live inventory in AlloyDB
-with years of demand and weather history in the lakehouse to adjust prices as conditions
-change. Data products: A data team publishes curated tables once to Iceberg, and then
-dozens of applications read them in place instead of each maintaining its own copy. In
-each case, the history stays in the lakehouse and the decision happens in the database.
-Agents act on your behalf using only the tables and permissions you grant them in
-AlloyDB. Let’s take a deeper look at each of the three integrations. Direct Iceberg
-access in AlloyDB (Preview) With direct Iceberg access, AlloyDB reads Apache Iceberg
-tables directly from Cloud Storage, using either a bucket path or the Lakehouse runtime
-catalog. You register an Iceberg table once and query it like any other PostgreSQL
-table, including joins with live operational tables. code_block &lt;ListValue:
-[StructValue([(&#x27;code&#x27;, &quot;-- Register five years of transaction history
-stored as Iceberg\r\nCREATE TABLE transaction_history (\r\n customer_id BIGINT, category
-TEXT, amount NUMERIC, ts TIMESTAMPTZ)\r\nUSING iceberg\r\nWITH (uri = &#x27;gs://my-
-bucket/warehouse/payments/transaction_history&#x27;);\r\n\r\n\r\n-- Compare the payment
-in flight with the customer&#x27;s history\r\nSELECT t.amount,\r\n AVG(h.amount) AS
-usual_spend,\r\n MAX(h.amount) AS largest_past_purchase\r\nFROM recent_transactions t --
-live, in AlloyDB\r\nJOIN transaction_history h -- five years, in Iceberg\r\n ON
-h.customer_id = t.customer_id AND h.category = t.category\r\nWHERE t.transaction_id =
-&#x27;TX-1001&#x27;\r\nGROUP BY t.amount;&quot;), (&#x27;lan
-
-### 23. Chrome Enterprise Premium drives 50%+ projected cost reduction for Mercari
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/products/chrome-enterprise/chrome-enterprise-premium-drives-50-projected-cost-reduction-for-mercari/
-- **Published:** 2026-11-04
-
-Editor's Note: Today's post is by Yu Susaki, Manager of Enterprise Security at Mercari ,
-a leading consumer-to-consumer (C2C) marketplace with more than 20 million monthly
-active users. Mercari selected Chrome Enterprise Premium and Chromebooks to secure its
-highly sensitive customer service (CS) environment. Handling personally identifiable
-information (PII) on a daily basis, Mercari required a security strategy that could
-protect its data while addressing the operational inefficiencies and high costs of its
-legacy Virtual Desktop Infrastructure (VDI). With a customer service environment largely
-driven by strategic partners, Mercari needed a scalable solution to empower agents to
-work securely and seamlessly while implementing safeguards to protect against data loss.
-Flexibility and security with one secure enterprise browser Previously, our customer
-service environment relied on a mix of legacy devices routed through VDI. This created
-operational friction, a frustrating user experience, increased IT overhead, and required
-managing overlapping DLP controls on both the VDI and local environments to prevent
-potential data transfer between the two. To simplify our architecture, we decided to
-shift focus from OS-level isolation to browser-layer data control, introducing Chrome
-Enterprise Premium and Chromebooks to a partner environment to establish data control
-and boundaries based on user actions. By leveraging Chrome Enterprise Premium, our team
-configured strict DLP rules, implementing controls to restrict users from pasting or
-uploading files to destinations outside of Mercari's approved business tools. This helps
-protect sensitive company data from being leaked or fed into unapproved channels. We
-knew investing in Chrome Enterprise Premium would help enable AI-powered productivity
-while restricting data leaks to unsanctioned AI tools. The transition was smooth because
-our workforce was already using the Chrome Enterprise browser across the company prior
-to the security upgrade. Because employees were able to continue using the browser
-interface they were already accustomed to, the implementation of the new security
-solution was easier and resulted in strong user adoption. By implementing these policy
-controls, we could confidently adopt new AI capabilities while ensuring enterprise data
-boundaries are strictly enforced. Beyond DLP, transitioning to this new architecture
-dramatically streamlined IT operations and reduced costs. With zero-touch enrollment, IT
-no longer needs to manually set up individual devices before handing them to users.
-Furthermore, by reducing dependency on VDI and consolidating various security agents
-(like legacy DLP, MDM, and EDR), we project a cost reduction of more than 50% over a
-three-year period within this environment, covering device costs, VDI running costs, and
-security licenses. Additionally, this browser-centric model eliminates the heavy
-operational overhead and specialized engineering resources traditionally required just
-to maintain a complex VDI infrastructure, allowing us to redirect valuable IT talent to
-higher-priority initiatives. Implementing Chrome Enterprise Premium and ChromeOS enabled
-a zero-trust, device-based approach that protects data, slashes IT costs, and measurably
-improves security. We eliminated VDI friction, lowered costs, and strictly enforced data
-boundaries—ultimately making Chrome Enterprise Premium the right move to deeply protect
-our marketplace and users. Looking ahead, we are set up as an AI-forward organization
-that wants its employees to benefit from new technologies, like agentic browsers, but in
-a highly controlled environment. To achieve this, we leveraged the power of Chrome
-Enterprise Premium. As a first step, we are using browser policies to enable a safe,
-read-only adoption of Gemini in Chrome. Employees can now leverage multi-page context
-and seamless side-panel interactions without manual copy-pasting, which drastically
-reduces the risk of unintende
-
-### 24. A thousand fewer paths to root
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/a-thousand-fewer-paths-to-root
-- **Published:** 2026-11-04
-
-OpenAI built an autonomous pipeline that found, validated, and generated patches for 948
-local privilege-escalation vulnerabilities in the Linux kernel.
-
-### 25. Daybreak Red is now available in AWS GovCloud (US-East)
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/daybreak-red-aws-govcloud
-- **Published:** 2026-11-04
-
-Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East)
-through Amazon Bedrock for authorized cybersecurity work.
-
-### 26. Introducing Images 2.6
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/introducing-images-2-6
-- **Published:** 2026-11-04
-
-Images 2.6 brings faster image generation, GIF creation, more precise editing, and new
-API controls across ChatGPT, Codex, and the API.
-
-### 27. DevRev delivers autonomous self-service with GPT-6.1 Sol
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/devrev-enterprise-self-service
-- **Published:** 2026-11-04
-
-DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and
-cost for enterprise service.
-
-### 28. How We Optimized Browser Use for Deep Agents
+### 7. LangChain Raises $300M Series C at $3B Valuation
 
 - **Publisher:** LangChain (`langchain-blog`)
-- **URL:** https://www.langchain.com/blog/how-we-optimized-browser-use-for-deep-agents
-- **Published:** 2026-11-03
+- **URL:** https://www.langchain.com/blog/series-c
+- **Published:** 2026-11-16
 
-We compared seven browser toolsets for Deep Agents, picked Stagehand from Browserbase,
-and tuned it with LangSmith traces and evals. Here's what we learned.
+LangChain raises $300M Series C at a $3B valuation, led by CapitalG, to help every
+company own its intelligence with LangSmith, the agent engineering platform.
 
-### 29. Claude Platform now supports native OpenTelemetry observability in Databricks MLflow
-
-- **Publisher:** Databricks (`databricks-blog`)
-- **URL:** https://www.databricks.com/blog/claude-platform-now-supports-native-opentelemetry-observability-databricks-mlflow
-- **Published:** 2026-11-03
-
-An agent can return a plausible answer while missing an important finding or reading the
-same source repeatedly...
-
-### 30. Declare and optimize with UNIQUE constraints on Databricks
-
-- **Publisher:** Databricks (`databricks-blog`)
-- **URL:** https://www.databricks.com/blog/declare-and-optimize-unique-constraints-databricks
-- **Published:** 2026-11-03
-
-Data teams often maintain uniqueness guarantees in their pipelines, but without a...
-
-### 31. Run AI Models for Edge Application Development with Just a Few Commands
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/run-ai-models-for-edge-application-development-with-just-a-few-commands/
-- **Published:** 2026-11-03
-
-AI is expanding beyond the data center as developers build a new generation of agents to
-act at the edge: monitoring driver attention and cabin conditions,...
-
-### 32. Keep Distributed Training Running with Automated Workload Recovery
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/keep-distributed-training-running-with-automated-workload-recovery/
-- **Published:** 2026-11-03
-
-As distributed AI training scales, failures across hardware and software dependencies
-increasingly disrupt training progress, making fast, reliable recovery...
-
-### 33. How Nammu21 automates syndicated loans on Google Cloud Universal Ledger
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/topics/financial-services/how-nammu21-automates-syndicated-loans-on-google-cloud-universal-ledger/
-- **Published:** 2026-11-03
-
-The syndicated loan and private credit markets, both critical components of corporate
-finance, have long been constrained by manual processes, leading to multi-week
-settlements, valuation opacity, and trade friction. To solve these long-standing
-challenges, fintech innovator Nammu21 partnered with Google Cloud on a new proof-of-
-concept. Using its AI-powered platform to structure legal agreements and instantiate
-them as smart contracts on the Google Cloud Universal Ledger (GCUL) , Nammu21 automates
-the entire loan lifecycle, paving the way for improved settlement times and greater
-market efficiency. Digitizing the loan market While loan markets provide billions in
-capital to businesses worldwide, their underlying infrastructure has not kept pace with
-the speed of digital finance. This landscape requires continuous coordination across
-facility agents, borrowers, and diverse lender syndicates, while also managing highly
-customized credit agreements with dynamic tranches and complex covenants. In particular,
-relying on fragmented, manual interpretation of legal text often results in significant
-operational drag and data silos. According to the Loan Market Association , secondary
-market settlement times for par/near par loans in Q4 2024 still averaged 42 days, with a
-median of 27 days. These notoriously slow timelines tie up capital, increase
-counterparty risk, and create a heavy reconciliation burden for participants. Nammu21
-transforms bespoke credit documents into programmable assets at scale by rendering each
-facility's governing terms as a Digital Credit Instrument (DCI). The DCI maps every term
-— including conditions, consents, eligibility criteria, and operational mechanics that
-determine what is permitted under a facility — directly back to its originating legal
-provision. These elements are then expressed as executable behaviours against a loan's
-live state. To instantiate these instruments, the proof-of-concept utilizes the secure,
-high-performance execution environment of GCUL, an institutional-grade, permissioned
-distributed ledger that helps automate complex financial workflows to deliver near-
-instant transaction finality and predictable costs without the volatility or security
-concerns of public blockchains. A purpose-built stack for digital credit Combined with
-Nammu21’s data intelligence, GCUL provides the foundational infrastructure for
-converting legal document logic into live, programmable contracts. Designed to handle
-the privacy, scale, and multi-party coordination required by institutional finance, GCUL
-provides a permissioned, high-performance distributed ledger that delivers
-deterministic, instant transaction finality for high-value financial settlements.
-Programmable contracts on GCUL are written in gculpy , GCUL's domain-optimized
-programming language. As a strict, statically-typed subset of Python, gculpy is designed
-to be safe, readable, and auditable, making it ideal for processing complex financial
-logic. For regulated financial institutions, gculpy offers distinct operational
-advantages over other ledger programming models. The language simplifies development by
-removing the need for complex memory management or workarounds to meet highly
-restrictive call stack limits, allowing engineers to focus on the financial logic
-itself. GCUL also provides robust, built-in permissioning, requiring explicit user
-authorization before a contract can store data on their behalf. This solves the
-"unsolicited asset" problem — common on public networks — where unwanted tokens can be
-sent to an organization's wallet, creating compliance and accounting issues. With GCUL,
-institutions can maintain full control over which assets they interact with to support
-their high-value, highly regulated use cases. Nammu21 serves a dual role in this
-architecture. First, the platform renders the DCI programmatically from the original
-legal agreement without manual document reading to establish the terms. Next, it derives
-gculpy contract
-
-### 34. Diagnose Distributed AI Workload Failures with NVIDIA Attribution
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/diagnose-distributed-ai-workload-failures-with-nvidia-attribution/
-- **Published:** 2026-11-03
-
-In distributed AI workloads, a single error can produce a cascade of symptoms. A GPU or
-fabric event may surface as NCCL errors on other ranks, scheduler state...
-
-### 35. StateBench: Testing how language models track state changes over long documents
-
-- **Publisher:** Hugging Face (`huggingface-blog`)
-- **URL:** https://huggingface.co/blog/allenai/statebench
-- **Published:** 2026-11-03
-
-(no summary in feed)
-
-### 36. Leading in the agentic era: How to put people first as you adopt AI agents
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/topics/consulting/lessons-for-adopting-ai-agents/
-- **Published:** 2026-11-03
-
-Over the past few years, our Google Cloud Consulting team has partnered with many
-companies to introduce AI into their daily operations. In that time, we’ve seen the
-focus shift from generative AI that answers questions to agentic systems that fully
-carry out the work. These agents can create multi-step plans and manage a project from
-start to finish. While budget, compute, and tooling can help launch an agent program,
-enterprise adoption takes intentional culture work. People need to feel empowered enough
-to experiment with agents, and leaders need to show teams what agents mean for their
-roles. Based on our work across these organizations, we’ve put together five practical
-lessons for guiding enterprises through an agentic shift. 1. Make workflows agent-
-executed, human-directed Most enterprise workflows run like a relay race: one person
-completes a task, checks it, and hands it off to the next person, who then does the
-same. Layering an AI agent onto that model gives you a faster runner for one leg, but
-the handoffs may stall or slow down other work. Redesigning your workflows can remove
-blockers like these in a few ways: Strategic direction: Move from human-in-the-loop
-validation (where a person checks each step) to a human-in-the- lead model. Agents take
-on the work, and people set the direction and own the outcomes. Parallel dependencies:
-One agent can handle every dependency at once instead of passing work through a multi-
-person queue. For example, an agent can check product availability, credit limits, and
-contract paperwork at the same time without waiting on each step to finish. Manage by
-exception: Once the process is set up this way, the agent absorbs routine deterministic
-transactions, routing only ambiguous or high-judgment scenarios to human review. Cross-
-team stalls disappear, and your team stays in control. 2. Turn hesitation into ownership
-In our experience, the biggest barrier to adoption is trust. Many employees worry about
-their value if an agent handles most of their day-to-day tasks. Others are concerned
-with who takes the blame if an agent makes a mistake. We encourage teams to treat agents
-the way they'd treat a junior team member: Active delegation: Frame agents as digital
-coworkers. That means assigning tasks to them, defining their scope, and checking their
-work for accuracy. Clear responsibilities: Set boundaries around which decisions an
-agent can make and which require human sign-off. When team members know exactly where
-accountability sits, they can better direct agents. Comfort through exposure :
-Confidence grows through familiarity. We recommend starting with low-stakes use cases
-(like scheduling internal meetings) to help motivate teams before moving to high-stakes
-operations (such as financial forecasting). 3. Manage hybrid teams of people and agents
-Next, it’s important to support collaboration when you bring agents into your team.
-Let’s look at how this might work in practice, Focus on results: Collaborate across
-teams to break down workflows at both the tool and task level. Cross-functional
-perspectives reveal an end-to-end view of the process, helping you pinpoint where
-agentic capabilities belong and how to prioritize ideas by technical feasibility and
-business impact. Reinforce behaviors: Top performers on a hybrid team are the people who
-guide their agents well. Reward team members for auditing an agent's reasoning and
-catching when its logic drifts from company goals. Coach your teams: Show your teams how
-to work with agents so people can spend more time on creative work and decision-making.
-4. Build agentic literacy through experimentation Your teams need to understand how
-agents solve problems. People who know where an agent's logic breaks down (and why) can
-guide and judge its output. Beyond the tool: Literacy covers both writing a good prompt
-and auditing the result. Agents choose the most likely path instead of following
-deterministic rules, so people need to know when to trust a
-
-### 37. Bring structured and unstructured data together with Amazon Quick
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/bring-structured-and-unstructured-data-together-with-amazon-quick/
-- **Published:** 2026-11-03
-
-Amazon Quick brings structured and unstructured data together in one experience. In this
-post, you connect Amazon S3 as a knowledge base, enrich a dataset, build a Space, and
-create a custom chat agent that answers business questions across both data types
-through a single conversational interface.
-
-### 38. ServiceNow on-behalf-of token exchange with Bedrock AgentCore Gateway
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/servicenow-on-behalf-of-token-exchange-with-bedrock-agentcore-gateway/
-- **Published:** 2026-11-03
-
-Learn how to configure Amazon Bedrock AgentCore Gateway for an on-behalf-of (OBO) token
-exchange with Microsoft Entra ID, so an AI agent can call the ServiceNow REST API while
-preserving the calling user's identity. AgentCore Gateway performs the exchange
-natively, with no interceptor Lambda or custom code.
-
-### 39. How Gen Digital built Norton Revamp’s AI-curated News Engine with Amazon Bedrock AgentCore Web Search
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/how-gen-digital-built-norton-revamps-ai-curated-news-engine-with-amazon-bedrock-agentcore-web-search/
-- **Published:** 2026-11-03
-
-Gen Digital built Norton Revamp, a generative AI-powered professional reputation
-management platform, with an AI-curated News Engine grounded by Web Search on Amazon
-Bedrock AgentCore. See how the Gen team delivers real-time, cited content suggestions,
-goal setting, and news feeds with zero data egress and Norton-grade privacy.
-
-### 40. Build a semantic layer for agentic AI with EDB Postgres AI and Amazon Bedrock AgentCore
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-with-edb-postgres-ai-and-amazon-bedrock-agentcore/
-- **Published:** 2026-11-03
-
-Learn how to build a governed semantic layer for agentic AI inside EDB Postgres AI and
-query it from a Strands Agents agent on Amazon Bedrock AgentCore. Business meaning, join
-paths, and access control all live in Postgres, with GRANT and row-level security
-enforcing what each agent can read.
-
-### 41. Building ultra-low-latency voice AI applications on AWS
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/building-ultra-low-latency-voice-ai-applications-on-aws/
-- **Published:** 2026-11-03
-
-Learn how Cartesia, an AWS Partner, uses purpose-built State Space Models and AWS
-infrastructure to deliver sub-100ms text-to-speech and speech-to-text at global scale,
-and how to deploy its Sonic model on Amazon SageMaker AI or self-managed Amazon EC2 GPU
-instances.
-
-### 42. Palette: teaching a small model to build decks in your design language
-
-- **Publisher:** Hugging Face (`huggingface-blog`)
-- **URL:** https://huggingface.co/blog/ibm-research/palette-deck-building
-- **Published:** 2026-11-03
-
-(no summary in feed)
-
-### 43. Introducing India-based inference for Kimi K3 on Amazon Bedrock
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/introducing-india-based-inference-for-kimi-k3-on-amazon-bedrock/
-- **Published:** 2026-11-03
-
-Amazon Bedrock now offers in-country inference in India for Kimi K3, keeping processing
-within the Mumbai and Hyderabad Regions. This post explains the global and geographic
-cross-Region inference options and shares example code for reading and understanding
-Indic-language documents with Kimi K3.
-
-### 44. Accelerating engineering for the physical world
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/accelerating-engineering-for-the-physical-world
-- **Published:** 2026-11-03
-
-Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design,
-simulation, and other workflows across the physical world.
-
-### 45. How Cisco defends at machine speed with OpenAI
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/cisco-cyber
-- **Published:** 2026-11-03
-
-Cisco combines network intelligence with OpenAI models to strengthen enterprise
-security. Learn how it is building more adaptive defenses.
-
-### 46. Heimstaden is changing residential real estate management with AI
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/heimstaden
-- **Published:** 2026-11-03
-
-Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property
-management, cut costs, and empower employees across Europe.
-
-### 47. Five rules for evaluating agent skills before they bloat your context window
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/topics/developers-practitioners/evaluate-agent-skills-before-they-bloat-your-context-window/
-- **Published:** 2026-11-03
-
-You’re probably hearing more about SKILL.md files, and you’ll see that a lot of people
-test them the same way: paste a prompt into chat, watch it pass once on a laptop, and
-merge to main. But when you paste three pages of CLI docs into a markdown file without
-an evaluation loop, you are just as likely to confuse a frontier model as you are to
-help it. For the past weeks, we have been diligently measuring and optimizing our own
-Google Cloud Developer Plugin , with the most essential skills and the Developer
-Knowledge MCP server to ground responses in the documentation. We ran dozens of
-scenarios with Gemini, Antigravity, and other agents. We used Claude Sonnet 5 on Gemini
-platform inside isolated Harbor pods on GKE Autopilot . And, we contributed Kubernetes
-and Gemini platform capabilities upstream to NVIDIA's open-source evaluator. Here's the
-five-rule engineering playbook we use to verify a skill is worth its tokens. 1. Gate
-trigger collisions and security risks before spinning up containers When an evaluation
-run shows zero improvement between your plugin arm and your baseline arm ( Δ = 0 ), the
-natural urge is to rewrite the body of your SKILL.md instructions. Hold off on that.
-Nine times out of ten, the agent never loaded your skill in the first place . Coding
-agents do not read full SKILL.md bodies at turn zero. The router only inspects the short
-name and description in your YAML frontmatter. Once a workspace grows past a dozen
-skills, two failure modes collide: under-triggering (your description describes internal
-implementation rather than developer intent) and sibling hijacking (a broad phrase like
-"helps with cloud deployments" in a neighboring skill intercepts the prompt first). We
-recently open-sourced skill-reach so you can catch frontmatter collisions before
-spending on container sandboxes. It validates manifests, computes vocabulary overlap
-against nearest rival skills, and runs empirical routing probes across Claude Code,
-Google Antigravity, and OpenAI Codex: code_block &lt;ListValue:
-[StructValue([(&#x27;code&#x27;, &#x27;uv tool install skill-reach\r\n\r\n# 1. Validate
-YAML frontmatter &amp; token budgets (zero API calls)\r\nreach lint ./skills\r\n\r\n# 2.
-Detect vocabulary collisions &amp; nearest rival skills (e.g. 0.69 overlap)\r\nreach
-overlap ./skills\r\n\r\n# 3. Run cross-harness routing probes and auto-tune weak
-descriptions\r\nreach eval ./skills/cloud-run --runs 3\r\nreach optimize ./skills/cloud-
-run --apply&#x27;), (&#x27;language&#x27;, &#x27;&#x27;), (&#x27;caption&#x27;,
-&lt;wagtail.rich_text.RichText object at 0x7f7b89944e50&gt;)])]&gt; Pair skill-reach
-with NVIDIA's SkillSpector (Tier 1 and Tier 2 of SkillEvaluator ). As the Nemotron Labs
-team details in their Evaluating Agent Skills deep dive , standard code linters miss
-agent-native risks buried in markdown prose: prompt injection, silent data exfiltration,
-tool poisoning, and trigger abuse. 2. Never trust an eval that runs on a developer
-laptop If you run skill benchmarks directly on your workstation, your numbers are lying
-to you. A developer laptop is packed with ambient state that contaminates the baseline
-arm: Cached Google Cloud credentials Exported project variables and warm bash history
-Global environment rules An unassisted baseline agent can pass a cloud deployment test
-by inheriting a default project ID or token sitting in your local shell profile, masking
-the exact failure your skill was written to solve. Host resource contention also warps
-agent trajectories. While hill climbing code-retrieval agents with AlphaEvolve, our
-internal testing showed that running the exact same agent benchmark while a workstation
-was under CPU load dropped the score . Slower file scans and subprocess timeouts cause
-the agent to abandon search paths prematurely. 3. Measure paired WITH vs. W/OUT ablation
-( Pass@3 ), not vibes Running prompts a single time and screenshotting the green
-checkmarks is not a real evaluation. Multi-turn tool-using agents branc
-
-### 48. Introducing Physical-Engineering’s Last Exam for agents
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/products/ai-machine-learning/introducing-physical-engineerings-last-exam-for-agents/
-- **Published:** 2026-11-03
-
-Authors: Burak Gokturk, VP Research &amp; Development; Rujun Han, Research Scientist;
-George Lee, Product Manager. Today, the Google AI &amp; Infrastructure team is
-announcing Physical-Engineering's Last Exam (PLE) , a new benchmark and open
-competition, developed in collaboration with Mercor, and built to test a frontier
-model’s ability to complete tasks in mechanical, electrical, civil and structural
-engineering. To help the research community measure and improve how agents handle
-physical engineering work, we are releasing 29 public tasks, their grading tools, and an
-open competition leaderboard at ple-bench.com . Frontier labs and the broader research
-community use model examinations to test AI’s progress in completing tasks in a specific
-discipline. Humanity's Last Exam measures a model’s general knowledge. Agents' Last Exam
-measures a model’s ability to complete digital professional work. Physical-Engineering's
-Last Exam (PLE) measures a model’s ability to complete work that helps build the
-physical world. Physical engineers design skyscrapers, power grids, and computer chips
-we rely on, yet we could find no existing benchmark that tests whether frontier models
-can do that work end to end. Why textbook benchmarks fall short for physical engineering
-Frontier language models now score above 90% on many academic benchmarks. However, those
-benchmarks mostly test textbook-style questions, single tool calls, or small, self-
-contained design problems. For AI developers and researchers building agents for
-physical engineering, existing benchmarks do not show whether an agent can produce safe,
-code-compliant, and cost-effective designs under a licensed engineer's review and
-control. As the demand for infrastructure development outpaces financing , there is a
-growing opportunity for agents to support engineers working to close this gap. Inside
-PLE: Real-world tasks built with practicing engineers PLE closes this evaluation gap
-with 85 long-horizon tasks across four core disciplines: mechanical (30 tasks),
-electrical (27 tasks), civil (18 tasks), and structural (10 tasks) engineering. Instead
-of answering a single prompt, an agent works inside a containerized project folder —
-built on Mercor’s Archipelago environment — that mirrors what a practicing engineer
-receives on the job. Each task holds an average of 61 files (5,170 total files across
-the benchmark), including PDFs, spreadsheets, emails, 2D CAD drawings, 3D BIM models,
-and document revisions. The agent must reason through these files, find the governing
-building codes and physical limits, run calculations, and generate production-ready
-deliverables that a licensed reviewer would review and approve. In collaboration with
-experts from Mercor and licensed practicing engineers from industry, we built PLE using
-two methods: Expert-authored tasks (44 tasks): Practicing engineers created the project
-folders, prompts, and grading rubrics based on real professional engineering tasks. Co-
-authored tasks (41 tasks): Practicing engineers designed the initial task and an agent
-pipeline assembled the task's environment and grader from licensable engineering
-standards. Engineers then validated and increased the difficulty of every task assembled
-by the agent. All frontier models score below 50% We tested 14 frontier models on PLE
-using seven publicly available agent harnesses (Antigravity, Claude Code, Codex, Hermes,
-OpenCode, OpenHands, and Pi). Because PLE evaluates both code compliance and cost
-efficiency, agents only earn points if their design passes every hard safety check
-first. Our baseline results show a wide gap between current models and real-world
-engineering requirements: High headroom: All frontier models score below 50% on our
-private test set, with the highest-performing model on its native harness reaching a
-mean score of 48.3%. Hard safety gates: While the top-scoring agent configuration
-satisfied 91% of individual constraints on co-authored tasks, only 41.3% of its delive
-
-### 49. OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer
-- **Published:** 2026-11-03
-
-Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the
-company’s global communications and corporate positioning.
-
-### 50. CWE-bench v2: More coverage, quality, and transparency
-
-- **Publisher:** Hugging Face (`huggingface-blog`)
-- **URL:** https://huggingface.co/blog/cwe-bench
-- **Published:** 2026-11-03
-
-(no summary in feed)
-
-### 51. Transformers Model Integration Contracts
-
-- **Publisher:** Hugging Face (`huggingface-blog`)
-- **URL:** https://huggingface.co/blog/transformers-mic
-- **Published:** 2026-11-03
-
-(no summary in feed)
-
-### 52. How NVIDIA Factory Operations Blueprint Coordinates AI Agents to Investigate Production Issues
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/how-nvidia-factory-operations-blueprint-coordinates-ai-agents-to-investigate-production-issues/
-- **Published:** 2026-11-02
-
-A Siemens report estimates that unplanned downtime costs an average large plant in the
-surveyed sectors $253 million per year. Whether investigating a failed...
-
-### 53. Managed Deep Agents: the fastest way to ship a production deep agent
+### 8. Goal Engineering
 
 - **Publisher:** LangChain (`langchain-blog`)
-- **URL:** https://www.langchain.com/blog/introducing-managed-deep-agents
-- **Published:** 2026-11-02
+- **URL:** https://www.langchain.com/blog/goal-engineering
+- **Published:** 2026-11-16
 
-Run deep agents in production with durable execution, sandboxes, tool access, and
-LangSmith observability, without building the runtime yourself. Now in private beta
+The future of agents is them taking on open ended goals and driving towards completion
+of those goals. Learn more.
 
-### 54. New context engineering challenges in late 2026
+### 9. New context engineering challenges in late 2026
 
 - **Publisher:** LangChain (`langchain-blog`)
 - **URL:** https://www.langchain.com/blog/context-engineering-challenges-late-2026
-- **Published:** 2026-11-02
+- **Published:** 2026-11-16
 
 LangChain CEO Harrison Chase shares insights into the biggest harness engineering
 challenges with the emergence of proactive agents.
 
-### 55. Browser Use in Managed Deep Agents
+### 10. PostgreSQL large objects: Best practices for Amazon Aurora and RDS
+
+- **Publisher:** AWS (`aws-database-blog`)
+- **URL:** https://aws.amazon.com/blogs/database/postgresql-large-objects-best-practices-for-amazon-aurora-and-rds/
+- **Published:** 2026-11-16
+
+PostgreSQL large objects live outside your tables and are referenced only by an OID, so
+autovacuum never reclaims the orphans. This post shows how to monitor orphaned large
+objects on Amazon Aurora and Amazon RDS for PostgreSQL, run vacuumlo safely, set up
+lo_manage triggers, prevent OID exhaustion, and prepare for major version upgrades.
+
+### 11. Build memory-aware AI agents with Agentic Retrieve on Amazon Bedrock Managed Knowledge Base
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/
+- **Published:** 2026-11-16
+
+Amazon Bedrock Managed Knowledge Base and Amazon Bedrock AgentCore memory now store
+conversations, extract facts, and bring long-term memory into a single
+AgenticRetrieveStream call. This post shows how to build a memory-aware, multi-user
+assistant where each user sees only the documents they may read and each user's memory
+stays private.
+
+### 12. Protecting Apache Iceberg Lakehouses at Scale with Rubrik on AWS
+
+- **Publisher:** AWS (`aws-apn-blog`)
+- **URL:** https://aws.amazon.com/blogs/apn/protecting-apache-iceberg-lakehouses-at-scale-with-rubrik-on-aws/
+- **Published:** 2026-11-16
+
+Apache Iceberg is now a standard open table format for AWS lakehouses, and because that
+data feeds AI pipelines and financial reporting, it needs stronger protection.
+Recovering a working table takes more than restoring files, because it depends on
+consistent metadata, manifests and catalog. Rubrik's new Apache Iceberg Data Protection
+on AWS backs up the full table to the customer's AWS account or Rubrik Cloud Vault, then
+updates the catalog on recovery so the table is immediately queryable. The post explains
+why native time travel alone falls short and how Rubrik and AWS bring enterprise cyber
+resilience to the lakehouse.
+
+### 13. Amazon ECR now replicates image deletions across regions and accounts
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/replication-deletes-amazon-ecr
+- **Published:** 2026-11-16
+
+Amazon Elastic Container Registry (Amazon ECR) now supports replicating image deletions
+and tag removals to your replication destinations. Previously, ECR replication copied
+images to destination regions and accounts but did not replicate deletions, requiring
+you to manage deletions separately in each location. With replication of deletes, your
+destination repositories stay consistent with the source automatically. Teams running
+multi-region or multi-account architectures no longer need to script or manually track
+image cleanup across every destination. When you delete an image or remove a tag in your
+source registry, whether directly or through a lifecycle policy, ECR propagates that
+deletion to each destination in the replication rule. Replicated deletions emit
+EventBridge events and are recorded in CloudTrail, so you have the same visibility into
+deletions as you do for image pushes. Replication of deletes is available in all AWS
+Regions where Amazon ECR is available, at no additional cost. To get started, update
+your replication configuration in the Amazon ECR console or AWS CLI. For more
+information, see the Amazon ECR User Guide .
+
+### 14. How Duco transforms financial data automation with Amazon Bedrock AgentCore
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/how-duco-transforms-financial-data-automation-with-amazon-bedrock-agentcore/
+- **Published:** 2026-11-16
+
+Duco, a data automation platform for tier-one banks, rebuilt its agentic AI stack on
+Amazon Bedrock and Amazon Bedrock AgentCore. With strict per-tenant isolation, a multi-
+model strategy, and an MCP skills architecture that cut context overhead by 90%, Duco
+cut reconciliation deployment time 10x and onboarding costs 70%.
+
+### 15. Amazon EBS now supports associating additional KMS keys with snapshots
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/ebs-snapshots-associate-kms-keys/
+- **Published:** 2026-11-16
+
+Amazon Elastic Block Store (EBS) now supports associating additional AWS Key Management
+Service (KMS) keys with EBS snapshots. This new capability enables you to share and copy
+encrypted snapshots across accounts without first re-encrypting them, simplifying your
+disaster recovery and backup workflows. Customers use EBS snapshots as durable, point-
+in-time backups of EBS volumes. By associating an additional customer-managed KMS key
+(CMK) with a snapshot encrypted with an AWS managed key (AMK), for example, you enable
+cross-account sharing for that snapshot without re-encrypting its data. This feature
+accelerates your disaster recovery workflows and enhances operational efficiency for
+enterprise backup administrators and disaster recovery teams. Support for associating
+additional KMS keys with Amazon EBS snapshots is available in all AWS commercial, China,
+AWS GovCloud (US), and AWS European Sovereign Cloud (Germany) Regions, plus AWS Local
+Zones and AWS Outposts. You can access this capability through the AWS Console, AWS
+Command Line Interface (CLI), and AWS SDKs. To learn more, see the Amazon EBS
+documentation .
+
+### 16. Taxonomy of multi-agent design patterns, anti-patterns, and lessons from manufacturing
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/taxonomy-of-multi-agent-design-patterns-anti-patterns-and-lessons-from-manufacturing/
+- **Published:** 2026-11-16
+
+Multi-agent coordination is a distributed systems problem, not a model problem. This
+post gives a field-tested taxonomy of multi-agent design patterns and anti-patterns, a
+framework for deciding when multiple agents are warranted, and how to build cost-
+efficient, reliable systems on AWS.
+
+### 17. NVIDIA Vera Rubin NVL72 Achieves up to 2x Blackwell Ultra Performance in MLPerf Training v6.1
+
+- **Publisher:** NVIDIA (`nvidia-developer-blog`)
+- **URL:** https://developer.nvidia.com/blog/nvidia-vera-rubin-nvl72-achieves-up-to-2x-blackwell-ultra-performance-in-mlperf-training-v6-1/
+- **Published:** 2026-11-16
+
+As AI agents tackle increasingly complex workflows, reducing time-to-train is critical
+for rapidly iterating on both models and the agents they power. MLPerf...
+
+### 18. How to make four specialist AI agents act as one trusted financial advisor
+
+- **Publisher:** AWS (`aws-industries-blog`)
+- **URL:** https://aws.amazon.com/blogs/industries/how-to-make-four-specialist-ai-agents-act-as-one-trusted-financial-advisor/
+- **Published:** 2026-11-16
+
+When you split a banking assistant into specialist AI agents on separate runtimes, they
+lose their shared state. This post shows architects how we built the Connected Finance
+demo on Amazon Bedrock AgentCore: carrying shared context across runtimes, discovering
+specialists at runtime, and applying one set of guardrails to voice and text.
+
+### 19. Amazon S3 Vectors now supports hybrid search combining vector and full text for more relevant search results
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/s3-vectors-hybrid-search/
+- **Published:** 2026-11-16
+
+Amazon S3 Vectors now supports hybrid search that combines vector similarity search with
+full-text search within a single query.&nbsp;By combining semantic meaning and exact
+term matching into a single ranked list of results, hybrid search captures both intent
+and precise terms for retrieval-augmented generation (RAG), agent memory, and search
+applications. This can deliver more relevant ranked results than either method alone.
+Hybrid search works with the same S3 Vectors APIs and maintains subsecond latency for
+infrequent queries and latency around 100 milliseconds or less for frequent queries. S3
+Vectors is designed to provide the same elasticity, durability, and availability as
+Amazon S3, and it reduces the total costs of storing and querying vectors by up to 90%
+compared to alternative vector solutions. With hybrid search, customers can now store
+the data that they want to make full-text searchable alongside the vectors. Customers
+write data with the PutVectors API as they do today and include the searchable text as
+another metadata field. S3 Vectors then automatically indexes that field for full-text
+search with BM25 relevance scoring. By default, S3 Vectors uses a language-agnostic text
+analyzer to index this data which works across most languages, and customers can
+optionally select a language-specific analyzer for more accurate language-aware
+matching. To perform a hybrid query, customers send their query text strings alongside
+their query vector in a single QueryVectors call; S3 Vectors runs both a vector search
+and a full-text search, fuses the two with Reciprocal Rank Fusion (RRF), and returns a
+single ranked list of the top K requested results. Customers can also run full-text and
+vector queries separately to apply own ranking logic, search across multiple text fields
+in a single query, and enable full-text search on existing data in place. Hybrid search
+is available today in all commercial AWS Regions where Amazon S3 Vectors is available,
+and in the AWS China Regions. To get started, use the AWS CLI, AWS SDKs, or the Amazon
+S3 console. To learn more, visit the Amazon S3 Vectors documentation , and the Amazon S3
+pricing page for pricing.
+
+### 20. WorkSpaces for AI Agents now available on WorkSpaces Applications image builders
+
+- **Publisher:** AWS (`aws-desktop-app-streaming-blog`)
+- **URL:** https://aws.amazon.com/blogs/desktop-and-application-streaming/workspaces-for-ai-agents-now-available-on-workspaces-applications-image-builders/
+- **Published:** 2026-11-16
+
+Building an AI agent that operates desktop applications includes testing it against your
+specific applications and desktop configurations. Often, the first goal is a pilot that
+proves the agent can run your business workload, and you want to reach that point
+quickly. Starting today, WorkSpaces for AI Agents is available on WorkSpaces
+Applications image builders. […]
+
+### 21. How Singapore’s National Precision Medicine program runs population-scale SV discovery on AWS HealthOmics
+
+- **Publisher:** AWS (`aws-public-sector-blog`)
+- **URL:** https://aws.amazon.com/blogs/publicsector/how-singapores-national-precision-medicine-program-runs-population-scale-sv-discovery-on-aws-healthomics/
+- **Published:** 2026-11-16
+
+Singapore's National Precision Medicine program and the SG100K consortium built a
+population-scale structural variant catalog from more than 100,000 genomes using GATK-
+SV. The A*STAR-PRECISE team ran that community-standard pipeline on AWS HealthOmics,
+with results confirmed functionally equivalent to the Broad Institute reference
+implementation.
+
+### 22. Deliver petabytes of Apache Kafka data to Amazon S3 at up to 60% lower cost with Amazon MSK Express brokers
+
+- **Publisher:** AWS (`aws-big-data-blog`)
+- **URL:** https://aws.amazon.com/blogs/big-data/deliver-petabytes-of-apache-kafka-data-to-amazon-s3-at-up-to-60-lower-cost-with-amazon-msk-express-brokers/
+- **Published:** 2026-11-16
+
+Amazon MSK Express brokers now deliver Apache Kafka topic data to Amazon S3 at up to 60%
+lower cost, with no Kafka Connect to run. You create a channel on a topic and pay only
+for the data delivered. In this post, we cover the two challenges of delivering Kafka
+data to Amazon S3 today and how Express brokers and data delivery to Amazon S3 address
+each one.
+
+### 23. How Salesforce efficiently right-sizes Kubernetes workloads at scale on Amazon EKS
+
+- **Publisher:** AWS (`aws-containers-blog`)
+- **URL:** https://aws.amazon.com/blogs/containers/how-salesforce-efficiently-right-sizes-kubernetes-workloads-at-scale-on-amazon-eks/
+- **Published:** 2026-11-16
+
+Salesforce operates one of the largest multi-tenant Kubernetes platforms on Amazon EKS,
+spanning 1,400+ clusters. See how its team combined the Vertical Pod Autoscaler and
+Horizontal Pod Autoscaler into a multi-dimensional autoscaling strategy that right-sizes
+workloads at scale and drove more than $5 million in infrastructure savings.
+
+### 24. Amazon Redshift now supports multi-statement transactions, conflict resolution, and time travel for Apache Iceberg
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/redshift-time-travel-multi-statement
+- **Published:** 2026-11-16
+
+Amazon Redshift now supports multi-statement transactions, automatic write-conflict
+resolution, and time travel for Apache Iceberg tables. You can run multi-step,
+concurrent transformation pipelines directly on Iceberg tables and audit the results,
+with the transaction semantics you expect from a data warehouse. This helps anyone
+writing to Iceberg tables at production scale. Batch jobs get all-or-nothing commits
+across multiple steps. Streaming and scheduled jobs can write to the same tables at the
+same time. Analysts, auditors, and AI agents can query a table as it existed at any
+point in time. With multi-statement transactions, you group several statements in a
+single BEGIN…COMMIT statement and publish them as one atomic Iceberg snapshot. This
+means a multi-step load such as a MERGE followed by a DELETE, can be commited together
+as one atomic operation, are never queryable in a half-applied state, and roll back
+cleanly if there's a failure. Automatic conflict resolution lets concurrent writes, such
+as streaming inserts alongside scheduled deletes, write to the same table and commit
+together when their changes don't overlap, instead of failing and retrying. Time travel
+lets you query a table as it existed at a past point in time with AS OF TIMESTAMP. You
+can use it to reproduce reports, audit changes, or recover from a bad write without
+keeping extra copies. These capabilities are available in all AWS commercial Regions for
+Amazon Redshift’s provisioned RG or serverless clusters that are writing to or querying
+Iceberg tables.. To get started, see the following list of resources: 1/ Resolving
+concurrent writes for Apache Iceberg tables using Amazon Redshift 2/ Multi-statement
+transactions for Apache Iceberg tables in Amazon Redshift 3/ Time travel support for
+Apache Iceberg&nbsp;
+
+### 25. How British Airways is accelerating the modernization of its Java services
+
+- **Publisher:** AWS (`aws-devops-blog`)
+- **URL:** https://aws.amazon.com/blogs/devops/how-british-airways-is-accelerating-the-modernization-of-its-java-services/
+- **Published:** 2026-11-16
+
+Learn how British Airways is using AWS Transform custom, agentic AI, and automation to
+accelerate the modernization of its Java services, migrating more than 250 business
+services from Amazon EC2 to a containerized, auto scaling architecture on Amazon ECS
+with AWS Fargate and AWS Graviton.
+
+### 26. Migrate Apache Solr to Amazon OpenSearch Service with the AI-driven Migration Assistant
+
+- **Publisher:** AWS (`aws-big-data-blog`)
+- **URL:** https://aws.amazon.com/blogs/big-data/migrate-apache-solr-to-amazon-opensearch-service-with-the-ai-driven-migration-assistant/
+- **Published:** 2026-11-16
+
+Migrate a 600,000-document Apache Solr catalog to Amazon OpenSearch Serverless end to
+end using the AI-driven agent mode in the Migration Assistant for Amazon OpenSearch
+Service, from assessment through validated backfill.
+
+### 27. Introducing 1:1 NAT on AWS Transit Gateway and AWS Cloud WAN
+
+- **Publisher:** AWS (`aws-networking-blog`)
+- **URL:** https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-11-nat-on-aws-transit-gateway-and-aws-cloud-wan/
+- **Published:** 2026-11-16
+
+Overlapping IP addresses keep networks from connecting. With 1:1 NAT on AWS Transit
+Gateway and AWS Cloud WAN, each network gets a unique range through native Regional
+Private NAT Gateway integration, so you don't renumber networks or deploy a separate NAT
+solution.
+
+### 28. Analyze Anthropic usage, spend, and access with AWS Glue, Amazon S3 Tables, and AWS Quick
+
+- **Publisher:** AWS (`aws-big-data-blog`)
+- **URL:** https://aws.amazon.com/blogs/big-data/analyze-anthropic-usage-spend-and-access-with-aws-glue-amazon-s3-tables-and-aws-quick/
+- **Published:** 2026-11-16
+
+The new AWS Glue connector for Anthropic reads Claude usage, cost, and API key data into
+AWS without custom code. This post shows how to land it in Amazon S3 Tables as Apache
+Iceberg tables, join it with your business data, query it with Amazon Athena, and
+visualize AI spend and governance in AWS Quick.
+
+### 29. Building a unidirectional edge layer for third-party connectivity on AWS with Amazon VPC Lattice
+
+- **Publisher:** AWS (`aws-networking-blog`)
+- **URL:** https://aws.amazon.com/blogs/networking-and-content-delivery/building-a-unidirectional-edge-layer-for-third-party-connectivity-on-aws-with-amazon-vpc-lattice/
+- **Published:** 2026-11-16
+
+Building a unidirectional edge layer for third-party connectivity removes a common
+trade-off. Enterprises need bidirectional service exchange with partners, vendors, and
+external platforms, without bidirectional network connectivity that broadens exposure.
+With Amazon VPC Lattice and AWS PrivateLink, you can exchange services for both ingress
+and egress, without creating a routed network path. The traditional options […]
+
+### 30. Announcing updates to the AWS Well-Architected Framework
+
+- **Publisher:** AWS (`aws-architecture-blog`)
+- **URL:** https://aws.amazon.com/blogs/architecture/announcing-updates-to-the-aws-well-architected-framework-3/
+- **Published:** 2026-11-16
+
+Updates to the AWS Well-Architected Framework reorganize it into Well-Architected Cloud
+Foundations and Well-Architected Cloud Workloads, add new best practices, and bring the
+general availability of the AWS Well-Architected Agent for analyzing workloads and
+guiding remediation.
+
+### 31. AWS DevOps Agent is now available in AWS GovCloud (US-West)
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/aws-devops-agent-govcloud-west/
+- **Published:** 2026-11-16
+
+Now available in AWS GovCloud (US-West), AWS DevOps Agent is your always-available
+operations teammate that resolves and proactively prevents incidents, optimizes
+application reliability and performance, and handles on-demand SRE tasks across AWS,
+multicloud, and on-prem environments. DevOps Agent investigates incidents and identifies
+operational improvements as an experienced teammate would: by learning your applications
+and their relationships, working with your observability tools, runbooks, code
+repositories, and CI/CD pipelines, and correlating telemetry, code, and deployment data.
+It autonomously triages incidents and guides teams to rapid resolution, reducing mean
+time to resolution (MTTR) from hours to minutes, while analyzing patterns across
+historical incidents to deliver actionable recommendations that prevent future outages.
+For the full list of AWS Regions where AWS DevOps Agent is available, visit the Regions
+list. Pricing details are available on the AWS DevOps Agent pricing page . AWS Support
+customers receive monthly DevOps Agent credits based on the prior month's AWS Support
+charge: 100% for Unified Operations, 75% for Enterprise Support, or 30% for Business
+Support+. For many customers, this significantly reduces or eliminates DevOps Agent
+costs. For details, visit the support compare page . To learn more, read the launch blog
+and see getting started .
+
+### 32. Exploring new features of Apache TinkerPop 3.8.x in Amazon Neptune
+
+- **Publisher:** AWS (`aws-database-blog`)
+- **URL:** https://aws.amazon.com/blogs/database/exploring-new-features-of-apache-tinkerpop-3-8-x-in-amazon-neptune/
+- **Published:** 2026-11-16
+
+Upgrading to Apache TinkerPop 3.8.x in Amazon Neptune 1.5.0.0 brings cleaner, more
+predictable Gremlin and a major expansion of Data Flow Engine (DFE) coverage, along with
+semantic changes that need review. Learn what changed, which query patterns are
+affected, and how to prepare for the upgrade.
+
+### 33. Introducing AWS Backup logically air-gapped vault support for Amazon RDS
+
+- **Publisher:** AWS (`aws-storage-blog`)
+- **URL:** https://aws.amazon.com/blogs/storage/introducing-aws-backup-logically-air-gapped-vault-support-for-amazon-rds/
+- **Published:** 2026-11-16
+
+AWS Backup now extends logically air-gapped vault support to Amazon RDS. Learn how to
+protect, validate, and recover your RDS database backups with isolated, immutable
+vaults, along with the design, encryption, and cost considerations for a cyber recovery
+strategy that keeps backups recoverable even when your production account can't be
+trusted.
+
+### 34. Amazon Connect Health medical coding is now available in public preview
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-health-medical-coding/
+- **Published:** 2026-11-16
+
+Today, AWS announces the public preview of medical coding in Amazon Connect Health , a
+HIPAA-eligible AI service that works alongside healthcare teams across patient
+engagement and point-of-care workflows. Medical coding uses existing clinical
+documentation to suggest ICD-10-CM and CPT codes, including E&amp;M levels and
+modifiers, for a provider or coder to review and approve before submission. You can
+integrate medical coding into your EHR or billing application through the Amazon Connect
+Health SDK, or use it with Amazon Connect Health ambient documentation. Each code links
+to the evidence that supports it and carries a confidence score, so reviewers can
+confirm a code before a claim goes out. In this public preview, you can choose to upload
+your organization's previously coded encounters, and the service builds a coding
+reference set specific to your organization. The corrections coders make feed that
+reference set and improve future coding suggestions. Medical coding is available in
+public preview in the US East (N. Virginia) and US West (Oregon) AWS Regions.&nbsp;To
+learn more, see medical coding in the Amazon Connect Health user guide.&nbsp;
+
+### 35. Amazon Connect Customer agent assist now supports interactive responses
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/Connect-Custom-agent-interactive-responses
+- **Published:** 2026-11-16
+
+Amazon Connect Customer agent assist now supports interactive components, including
+cards, carousels, buttons, and input fields. The AI agent analyzes conversation context
+in real time, recommends actions, retrieves information, and executes tasks on behalf of
+contact center agents using MCP tools in Connect Customer or third-party services.
+Interactive responses let agents review information, provide details, select options,
+and confirm actions without manually typing a separate request for each action. The AI
+agent can also recommend step-by-step guides, cases, customer profiles, and third-party
+applications that agents can open with one click. For example, when a customer calls to
+dispute a charge, the AI agent can dynamically generate an interactive list of the
+customer’s recent transactions. The agent can select the disputed transaction, provide
+or confirm the required details, and approve the action. The AI agent can then use a
+connected tool to create the dispute request and display confirmation in the agent
+workspace. This feature is available in all AWS Regions where Amazon Connect Customer
+agent assist is available. To learn more and get started, see Agent Assist in the Amazon
+Connect Administrator Guide.&nbsp;
+
+### 36. Why we rebuilt LangSmith around the agent
 
 - **Publisher:** LangChain (`langchain-blog`)
-- **URL:** https://www.langchain.com/blog/browser-use-in-managed-deep-agents
-- **Published:** 2026-11-02
+- **URL:** https://www.langchain.com/blog/we-rebuilt-langsmith-around-the-agent
+- **Published:** 2026-11-16
 
-Managed Deep Agents now runs a browser for your agent, with tools tuned for context-
-efficient browser use and a handoff so you can sign in yourself.
+We reorganized LangSmith around a single agent record. Build, run, improve, and govern
+every agent from one place, on any framework or runtime.
 
-### 56. NVIDIA PAIR Virtual Inference Router Expands Available Compute on Your Local Network
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/nvidia-pair-virtual-inference-router-expands-available-compute-on-your-local-network/
-- **Published:** 2026-11-02
-
-AI agents are learning to do more by working together. A lead agent can break a complex
-task into smaller jobs and assign those jobs to specialized subagents....
-
-### 57. Build Local AI Apps with C++ and NVIDIA TensorRT RTX Samples
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/build-local-ai-apps-with-c-and-nvidia-tensorrt-rtx-samples/
-- **Published:** 2026-11-02
-
-Adding AI models to local applications requires a portable model format, a reliable
-runtime, and acceleration that works across target systems. Do Inference Now...
-
-### 58. Code, Test, and Deploy on One Machine with NVIDIA RTX Spark
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/code-test-and-deploy-on-one-machine-with-nvidia-rtx-spark/
-- **Published:** 2026-11-02
-
-AI agents are changing how software gets built. Developers have gone from writing every
-line of code by hand to directing agents that write most of the code. As...
-
-### 59. Running Frontier-Class AI Models Across 8 NVIDIA DGX Spark Nodes
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes/
-- **Published:** 2026-11-02
-
-AI developers aren’t just running a single model anymore—they’re orchestrating multiple
-models in parallel, chaining inference calls, and experimenting...
-
-### 60. 3 Ways to Boost MoE Inference on NVIDIA DGX Spark
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/
-- **Published:** 2026-11-02
-
-Generating tokens faster starts with identifying what limits inference performance. In
-the batch-size-1 evaluation of Ling-3.0-flash from Inclusion AI on NVIDIA...
-
-### 61. Preparing our next security sprint to harden OpenAI
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai
-- **Published:** 2026-11-02
-
-OpenAI is preparing its next internal security sprint with Cathedral Systems to test and
-strengthen its defenses using AI.
-
-### 62. Rewarding defenders with bigger bug bounties
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties
-- **Published:** 2026-11-02
-
-OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty,
-and priority campaign bonuses for independent security researchers.
-
-### 63. Google Cloud Developer plugin now available in Antigravity Marketplace
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/topics/developers-practitioners/google-cloud-developer-plugin-now-available-in-antigravity-marketplace/
-- **Published:** 2026-11-02
-
-Building cloud solutions with autonomous AI agents should feel fast, safe, and reliable.
-Without cloud-specific context, coding agents often struggle. They might invent
-deprecated SDK syntax, guess invalid command flags, or attempt operations without the
-required Identity and Access Management (IAM) permissions. Even worse, an unguided agent
-can enable billable APIs or provision cloud resources without your explicit permission.
-Starting today, you can install the google-cloud-developer plugin directly from the
-Antigravity Marketplace in the Build with Google section. This plugin equips Antigravity
-with foundational skills, safety guardrails, and live documentation grounding for
-building on Google Cloud. If you've never installed a plugin using the marketplace
-before, you can refer to the Antigravity documentation . Configuration is
-straightforward. The bundled Developer Knowledge Model Context Protocol (MCP) server is
-pre-authorized by default. You don't need to configure API keys, exchange OAuth tokens,
-or edit any configuration files. You install the plugin, and your agent connects to
-official Google developer documentation immediately. In this post, we'll walk through
-what's included in the plugin, how to install it with one click, and how it grounds your
-agent in live Google Cloud documentation. Why use the Google Cloud Developer plugin?
-Coding agents often rely on static training data. Cloud platforms update quickly, and
-models can produce code with outdated client libraries or invalid parameters. The
-google-cloud-developer plugin solves this issue. It bundles curated skills, intelligent
-routing rules, and the Developer Knowledge MCP server into a single portable package.
-The plugin provides three key benefits: Live documentation grounding : The agent queries
-official Google Cloud documentation over streamable HTTP. Safety and cost guardrails :
-The agent enforces least-privilege IAM patterns and it requires your consent before it
-enables billable APIs or modifying cloud infrastructure. Environment awareness : The
-agent inspects your local environment, detects existing CLI configurations, and designs
-safe execution roadmaps before it runs commands. What's included in the plugin The
-plugin pairs core baseline skills and live documentation grounding with an intelligent
-skill routing architecture. Rather than limiting your agent to a fixed set of
-capabilities, it acts as an extensible gateway that discovers and pulls specialized
-skills from Google on demand. Bundled agent skills The bundled skills provide essential
-day-one guardrails, live documentation grounding, and the dynamic discovery engine that
-unlocks the broader catalog: finding-google-skills : Powers flexible skill routing by
-discovering and loading skills on demand from the google/skills repository on GitHub .
-Rather than requiring you to research, install, and manage individual skills, it
-dynamically retrieves the exact instructions your agent needs for specialized tasks in
-real time. retrieving-developer-knowledge : Provides answers and code samples that are
-grounded in official Google documentation across Google Cloud, Firebase, Android, Web,
-and Gemini. gcloud : Enforces execution guardrails, validates syntax, and applies safety
-checks to Google Cloud CLI ( gcloud ) commands. It blocks accidental destructive
-operations and it keeps you in control. google-cloud-recipe-auth : Steers your agent
-toward secure authentication patterns. It enforces service identities and Application
-Default Credentials (ADC) while it blocks risky practices like downloading service
-account JSON keys. google-cloud-recipe-onboarding : Guides initial project setup,
-account onboarding, and billing verification. It audits project states before it
-attempts to activate services. Pre-authorized Developer Knowledge MCP server The plugin
-connects your agent to the Developer Knowledge MCP server . Typically, adding an MCP
-server requires manual API key handling. With the Antigravity Marketplace i
-
-### 64. Build World Models for Interactive Simulation with NVIDIA Cosmos
-
-- **Publisher:** NVIDIA (`nvidia-developer-blog`)
-- **URL:** https://developer.nvidia.com/blog/build-world-models-for-interactive-simulation-with-nvidia-cosmos/
-- **Published:** 2026-11-02
-
-Physical AI developers working with world models face two distinct challenges: adapting
-models to their sensors, tasks, and data, and getting those models into...
-
-### 65. Prepare web content for Amazon Bedrock Knowledge Bases with Crawl4AI
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/prepare-web-content-for-amazon-bedrock-knowledge-bases-with-crawl4ai/
-- **Published:** 2026-11-02
-
-This post shows how to use Crawl4AI, an open source web crawler, as a content
-preparation layer for Amazon Bedrock Knowledge Bases, handling JavaScript rendering,
-selective extraction, and custom metadata enrichment before web content reaches an
-Amazon S3 data source.
-
-### 66. Build efficient agents with knowledge distillation on Amazon SageMaker AI
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/build-efficient-agents-with-knowledge-distillation-on-amazon-sagemaker-ai/
-- **Published:** 2026-11-02
-
-Agentic assistants built on frontier models run a multi-step tool loop, and paying
-frontier prices on every step is hard to sustain at production scale. This post shows
-how to use sequence-level knowledge distillation (SeqKD) to transfer a frontier
-teacher's agentic behavior into a small, lower-cost student on Amazon SageMaker AI.
-
-### 67. Agentic engineering intelligence with Amazon Nova Multimodal Embeddings and Amazon Bedrock AgentCore
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/agentic-engineering-intelligence-with-amazon-nova-multimodal-embeddings-and-amazon-bedrock-agentcore/
-- **Published:** 2026-11-02
-
-Learn how to build a multi-agent engineering assistant that compresses aerospace
-component substitution evaluation from days to minutes, using Amazon Nova Multimodal
-Embeddings, Amazon Bedrock AgentCore, and the Strands Agents SDK to assemble
-substitution evidence while keeping the engineer as the decision-maker.
-
-### 68. How Circle K accelerated DevOps incident triage to under 15 minutes with Amazon Bedrock
-
-- **Publisher:** AWS (`aws-ml-blog`)
-- **URL:** https://aws.amazon.com/blogs/machine-learning/how-circle-k-accelerated-devops-incident-triage-to-under-15-minutes-with-amazon-bedrock/
-- **Published:** 2026-11-02
-
-Circle K's DevOps team cut incident triage from 45-60 minutes to under 15 by building an
-agentic triage system on Amazon Bedrock. This post walks through the architecture, the
-initial Amazon Bedrock Flows implementation, the migration to Amazon Bedrock AgentCore,
-and the lessons learned from scaling it.
-
-### 69. Beyond Migration: Using Database Migration Service for disk shrinking
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/products/databases/use-dms-to-shrink-cloud-sql-for-sql-server-disk/
-- **Published:** 2026-11-02
-
-When database engineers hear “database migration", they typically think of a one-time
-onboarding pathway—moving databases from on-premises environments to the cloud, or
-between different cloud providers. However, Google Cloud's Database Migration Service
-(DMS) supports Cloud SQL for SQL Server as a source . This opens up powerful, non-
-traditional operational patterns for SQL Server customers within Google Cloud. Because
-DMS enables continuous, low-downtime database replication between Cloud SQL
-instances—whether in the same project, across different projects, or across regions—it
-can serve as an everyday utility for day-two operations like storage management. In this
-post, we explore a compelling operational use case for DMS with Cloud SQL for SQL
-Server: executing disk shrinks with minimal application downtime. Why should I shrink my
-disk? In many production environments, database storage only moves in one direction: up.
-Features like Cloud SQL automatic storage increase are essential for preventing out-of-
-space outages during unexpected traffic spikes, large batch imports, index maintenance,
-or temporary staging loads. Similarly, over the lifecycle of an application, you might
-archive historical records, purge obsolete data, or drop unused indexes. When data is
-deleted, SQL Server marks the freed space inside your data files (.mdf, .ndf) as
-reusable for future writes; similarly, log truncation frees up space within transaction
-log files (.ldf). However, the database files themselves continue to hold their peak
-used space unless AUTO_SHRINK is configured — a setting that is generally not
-recommended in production due to severe index fragmentation and performance overhead.
-With a manual shrink operation on the database files using DBCC SHRINKFILE , you can
-release that unused space from SQL Server files back to the underlying disk. Even after
-shrinking the database files, though, the Cloud SQL persistent disk remains at its peak
-allocated capacity. If you do not expect your database to grow back into that allocated
-disk space anytime soon, you should consider shrinking the disk itself to reduce ongoing
-storage costs — especially in scenarios such as: After major data archiving or purging:
-You have permanently moved historical data to cold storage or BigQuery and your active
-dataset is now a fraction of its peak size. Recovering from one-time storage spikes: A
-runaway transaction, large data migration, or temporary staging load triggered storage
-auto-increase, leaving you paying for terabytes of provisioned disk capacity you no
-longer need. Post-refactoring or schema optimization: You have split tables out of a
-monolithic database into separate services, dropped large unused indexes, or applied
-data compression. The query below allows you to inspect both the allocated capacity and
-available free space for each database file fo a database: code_block &lt;ListValue:
-[StructValue([(&#x27;code&#x27;, &quot;SELECT \r\n DB_NAME() AS [DatabaseName],\r\n name
-AS [LogicalName],\r\n type_desc AS [FileType],\r\n -- Allocated size on disk (converted
-from 8KB pages to MB)\r\n CAST(size / 128.0 AS DECIMAL(18, 2)) AS [AllocatedSize_MB],
-\r\n -- Actually used space inside the file\r\n CAST(FILEPROPERTY(name,
-&#x27;SpaceUsed&#x27;) / 128.0 AS DECIMAL(18, 2)) AS [UsedSpace_MB], \r\n -- Free space
-left in the allocated file\r\n CAST((size - FILEPROPERTY(name, &#x27;SpaceUsed&#x27;)) /
-128.0 AS DECIMAL(18, 2)) AS [FreeSpace_MB], \r\n -- Percentage of allocated space that
-is used\r\n CAST((FILEPROPERTY(name, &#x27;SpaceUsed&#x27;) * 100.0) / size AS
-DECIMAL(18, 2)) AS [SpaceUsed_Percent]\r\nFROM sys.database_files;&quot;),
-(&#x27;language&#x27;, &#x27;&#x27;), (&#x27;caption&#x27;,
-&lt;wagtail.rich_text.RichText object at 0x7f7b89477710&gt;)])]&gt; You can monitor the
-following key Cloud SQL metrics in Cloud Monitoring to identify whether your provisioned
-disk quota significantly exceeds actual disk usage, indicating an opportunity for disk
-shrinki
-
-### 70. AWS Weekly Roundup: GPT-6.1 Terra on Bedrock, Step Functions as agent tools, and more (November 2, 2026)
-
-- **Publisher:** AWS (`aws-main-blog`)
-- **URL:** https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-1-terra-on-bedrock-step-functions-as-agent-tools-and-more-november-2-2026/
-- **Published:** 2026-11-02
-
-The agentic launches that stayed with me last week had nothing to do with how capable a
-model is. They were about reach. AWS Step Functions, which already orchestrates over 220
-AWS services, can now be handed to an agent as a tool, so workflows teams already trust
-became callable without a rewrite. In the […]
-
-### 71. What Google Cloud announced in AI this month
-
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/products/ai-machine-learning/what-google-cloud-announced-in-ai-this-month/
-- **Published:** 2026-11-02
-
-Editor’s note : Want to keep up with the latest from Google Cloud? Check back here for a
-monthly recap of our latest updates, announcements, resources, events, learning
-opportunities, and more. This October, we took massive leaps forward in delivering
-flexible, open, and powerful enterprise AI solutions. From bringing Gemini 4 Argon to
-Google Cloud to expanding choice and flexibility, we’re giving organizations the tools
-they need to bring complex, multi-agent AI workflows into production safely. Here’s a
-quick look at the major milestones, expert insights, and practical developer guides to
-read through and save. Top announcements Gemini 4 Argon available on Google Cloud, built
-to help solve your business’ hardest problems: We trained Argon to work with both depth
-and precision, which allows it to maintain context across long, multi-step tasks which
-are reinforced with strong domain expertise along the way. Whether your team is running
-complex software builds, handling detailed financial and legal work, or deploying
-cybersecurity tools like CodeMender, Argon helps your teams maintain focus from start to
-finish. Expanding Claude availability and deployment choice on Google Cloud: We
-announced the general availability of an Anthropic-managed deployment option for Claude
-Models on Google Cloud. This gives teams more choice in how they run their models,
-helping them consolidate AI workloads on Google Cloud alongside our existingGoogle-
-managed deployment option. Google Cloud expands model choice and flexibility, bringing
-OpenAI models to customers: Google Cloud is now the only hyperscale cloud provider
-offering access to all three leading closed source LLMs, alongside more than 200 first-
-party, third-party, and open models on a unified enterprise AI platform. Claude Opus 5.5
-and Claude Sonnet 5.5 are now available in Google Antigravity: In keeping with Google
-Cloud's commitment to an open ecosystem and to give developers the right model for every
-job, Claude Opus 5.5 and Claude Sonnet 5.5 are now available in Google Antigravity for
-Google Cloud customers. Claude Opus 5.5 is built for complex work while Claude Sonnet
-5.5 is a faster, lower-cost complement. Introducing Gemini for government services:
-Today we're bringing the Gemini agent to public service with Gemini for government
-services in preview, part of our new suite of purpose-built industry solutions. It adds
-skills built around government work, connections to the systems agencies already run,
-and specialized partner agents, with governance running underneath it all. Gemini
-Robotics Embodied Reasoning 2 is now available on Google Cloud: For the first time,
-organizations can pair Google DeepMind’s latest embodied reasoning model for robotics
-with the enterprise-grade security, multi-agent orchestration, and end-to-end lifecycle
-management of Google Cloud — making it easier to simulate, evaluate, and deploy safe,
-adaptive physical AI at scale. Thought leadership (editor’s pick) A new gear: How
-startups are advancing robotics with Google AI: We marked a major milestone in physical
-AI with the launch of Gemini Robotics Embodied Reasoning 2 (ER 2) on the Gemini platform
-and AI Studio, bringing Google DeepMind’s frontier multimodal reasoning and long-horizon
-task planning for robotics to Google Cloud. Read more from Darren Mowry, VP of Global
-Startups and Investor Ecosystem at Google, about the exciting work these startups are
-undertaking. News you can use Developer’s guide to implementing MCP apps in Gemini:
-Enterprise assistants still respond mostly in text. However, that can break down for
-visual, multi-step work, where every adjustment costs another slow chat turn. This guide
-takes you through implementation in Gemini. Four evaluation engineering lessons learned
-from building agent plugins : Here are four eval lessons we learned from building the
-new plugin that you can apply to your own builds. Who judges the judge? Three helpful
-ways to audit your LLM evaluators: In this pos
-
-### 72. Scaling Git at OpenAI
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/scaling-git-at-openai
-- **Published:** 2026-11-02
-
-How OpenAI built Pando, a Git-compatible backend designed for the scale of development
-that Codex makes possible.
-
-### 73. Introducing the Grid Protectors Program
-
-- **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/grid-protectors-program
-- **Published:** 2026-11-02
-
-OpenAI’s Grid Protectors Program will work with utilities to help future compute
-campuses support grid reliability and protect consumer electricity costs.
-
-### 74. Import AI 479: Spacewar; low-latency tasks versus LLMs; Genie 4
-
-- **Publisher:** Import AI (Substack) (`import-ai`)
-- **URL:** https://importai.substack.com/p/import-ai-479-spacewar-low-latency
-- **Published:** 2026-11-02
-
-What do LLMs think about vision models?
-
-### 75. Lakebase Postgres is now generally available on Google Cloud
+### 37. Clean data was never enough: How IFS Copperleaf taught AI its business with Databricks Genie One
 
 - **Publisher:** Databricks (`databricks-blog`)
-- **URL:** https://www.databricks.com/blog/lakebase-postgres-now-generally-available-google-cloud
-- **Published:** 2026-11-02
+- **URL:** https://www.databricks.com/blog/clean-data-was-never-enough-how-ifs-copperleaf-taught-ai-its-business-databricks-genie-one-0
+- **Published:** 2026-11-16
 
-We're excited to announce that Lakebase Postgres is generally available on Google
-Cloud...
+IFS Copperleaf is a leading global provider of Asset Investment Planning (AIP)
+software...
 
-### 76. Shutting the Door on the XCPE Botnet
+### 38. Talk to your clinical data: unlocking AWS HealthLake with OpenSharing and Genie One
 
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet/
-- **Published:** 2026-11-02
+- **Publisher:** Databricks (`databricks-blog`)
+- **URL:** https://www.databricks.com/blog/talk-your-clinical-data-unlocking-aws-healthlake-opensharing-and-genie-one
+- **Published:** 2026-11-16
 
-Introduction Last week, Google and industry partners dismantled the XCPE backdoor which
-enrolled more than 1.3 million set-top boxes into a botnet. We assess with high
-confidence that the backdoor and botnet were intentionally developed, deployed, and
-operated for financial gain by Videostrong Technology Co., an Android Original Equipment
-Manufacturer (OEM) and Original Design Manufacturer (ODM). Videostrong monetized the
-backdoor by selling access to criminal affiliates and loading those affiliates’ malware
-modules onto infected devices. These secondary modules were conducting ad-fraud;
-silently enrolling infected devices into residential proxy networks; and loading
-additional malware onto XCPE-compromised devices. We also took action to disrupt the
-command and control (C2) domains that operate these affiliate modules. Because these
-affiliates each have diversified distribution channels for their modules beyond XCPE, we
-assess that taking down their C2 domains will sever access to at least 10 million
-additional compromised devices. We found this malicious software built directly into
-many different device models and brands over multiple years, supported by dedicated
-infrastructure and constantly evolving configurations to evade detection and manage
-their affiliates. We believe this campaign wasn’t an isolated rogue insider or a
-development oversight. As a result, Google has cut ties with Videostrong and banned them
-from making devices with preloaded Google apps. Google requires OEMs go through a
-comprehensive suite of compatibility and security tests to ensure a consistent and safe
-user experience across the Android ecosystem. However, Videostrong employed obfuscation
-techniques to exploit a gap in our tests and load malicious code after the device's
-first boot. As a result, Google has implemented changes to its existing review process
-to better safeguard against similar activity in the future. A device manufacturer
-intentionally infecting their users with malware is an unacceptable breach of trust, and
-represents a serious risk to those users. Without users’ knowledge or consent, infected
-devices were offered as a distribution mechanism for a wide array of criminal actors.
-This led to a variety of malicious activities being conducted on and through the
-devices, including ad-fraud, data exfiltration, and routing malicious network traffic
-through the devices. We worked closely with Japan’s National Police Agency, Lumen, HUMAN
-Security, Plume, Synthient, and TrendAI to analyze this malware ecosystem and disrupt
-its operations. While we expect this disruption to have a significant effect on these
-criminal operations, this is not the end of our work combatting malicious activity.
-Backdoor operators, ad-fraud rings, and residential proxy providers operate as an
-interconnected supply chain. Point-in-time disruptions are a critical tool to protect
-our users, but lasting disruption in this fluid ecosystem will require continued
-targeting of this infrastructure. Google undertook the following actions to support
-disruption of the XCPE botnet: Legal action to take down the domains and servers
-Videostrong used to control the botnet and install malware modules Legal action to take
-down C2 domains used by over a dozen malware families loaded as modules via this
-backdoor Banned Videostrong and any future subsidiaries or affiliates from building and
-selling certified Android devices in the future, or supplying software to other
-certified vendors Implementing improvements to how we ensure the integrity of firmware
-on certified Android TV devices Overview The x.cpe network was built for ongoing profit.
-By giving malware affiliates backdoor access, the operators conspired to monetize these
-devices long after purchase. Figure 1: XCPE malware overview Malware Since at least late
-2024, Videostrong has evolved its pre-installed malware from simple single-stage
-droppers into a modular, three-stage architecture designed for resilience and multi-
-tenan
+Many healthcare and life sciences organizations have standardized on AWS HealthLake to
+manage clinical data...
 
-### 77. The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model Resources
+### 39. AWS Marketplace in Singapore: SGD support, local invoicing, and GST compliance
 
-- **Publisher:** Google Cloud (`google-cloud-blog`)
-- **URL:** https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models/
-- **Published:** 2026-11-02
+- **Publisher:** AWS (`aws-marketplace-blog`)
+- **URL:** https://aws.amazon.com/blogs/awsmarketplace/aws-marketplace-in-singapore-sgd-support-local-invoicing-and-gst-compliance/
+- **Published:** 2026-11-16
 
-Written by: Christopher Romano, Codi Starks, Garrett Mahoney, John Wolfram, Josh
-Murchie, K Singh, Mathew Potaczek, Mike Lombardi, Rik Dolfing Introduction Mandiant
-responded to multiple incidents in 2026 in which threat actors hijacked enterprise
-access to Large Language Models (LLMs), a tactic known as "LLMJacking." Spanning a
-variety of cloud and LLM providers, these intrusions impacted organizations in North
-America, South America, and Asia Pacific across the financial services, retail,
-technology, and transportation sectors. Unlike the gradual resource consumption
-associated with cryptojacking, LLMJacking can generate large spikes in fraudulent cloud
-charges in a matter of hours. Across individual incidents, we observed fraudulent
-charges associated with resource consumption exceeding $100,000 USD in a single day,
-with cumulative charges at some organizations reaching $1 million USD before access was
-revoked. Figure 1: Usage chart showing LLMJacking generating a spike in API requests
-Analyzing the criminal ecosystem behind these frontline compromises, and building upon
-previous reporting on the growing underground market for LLM credentials, Google Threat
-Intelligence Group (GTIG) has identified a diverse set of financially motivated threat
-clusters operating out of multiple regions globally. As the LLMJacking ecosystem
-matures, we are also tracking a division of labor between threat actors establishing
-initial access to compromised environments and operators managing downstream
-monetization infrastructure, known as “LLM Mixers”. LLM Mixers function as illicit
-routing gateways that proxy, aggregate, and resell unauthorized LLM access to
-underground subscribers. In one investigation, GTIG observed two distinct operational
-clusters coordinating to compromise and monetize enterprise LLM infrastructure,
-demonstrating the sophisticated specialization emerging in this space. In this blog
-post, we describe the attack lifecycle observed across recent LLMJacking investigations
-and provide actionable detection, hardening, and remediation guidance to help
-organizations secure their infrastructure. Initial Access While low-level resource theft
-has involved the manipulation of customer support chatbots to conduct unauthorized tasks
-like code generation, threat actors conducting LLMJacking bypass these front-end
-interfaces to target backend model resources directly. Specifically, they focus on
-either identifying publicly exposed LLM endpoints or obtaining valid LLM application
-programming interface (API) keys. An example of the latter can be seen in Figure 1,
-where a threat actor uses an automated script to verify exposure by calling the
-/api/create endpoint to independently run their own models on endpoints that
-unsuspecting users have left publicly accessible. Leaving these services unprotected not
-only expands an organization's traditional attack surface, but could also introduce a
-significant increase in hosting costs. Figure 2: Threat Actor tests publicly exposed
-Ollama endpoints and attempts to register their own models Across multiple LLMJacking
-investigations, however, the dominant initial access vector has been exposed or stolen
-cloud identity tokens—including IAM credentials, Service Account keys, GitHub Personal
-Access Tokens (PATs), and active session tokens—which threat actors leverage to
-establish an initial foothold into target organizations' infrastructure. For instance,
-in mid-2026 UNC6993 compromised a cloud instance through a misconfigured Service Account
-key and used this access to grant further access to an LLM API. UNC6993 also hosted a
-session hijacking page masquerading as an application portal to join a group of LLM
-users. This page tricks users into navigating to the legitimate LLM service website, and
-pasting their raw JSON payload containing an active access token, which was then posted
-to the backend API to bypass password and multifactor authentication (MFA) controls. In
-another instance, one threat actor
+In this post, we cover how AWS Marketplace in Singapore works, what it means for buyers
+and sellers, and how to get started.
 
-### 78. LifeVal
+### 40. Introducing enhanced snapshots for Amazon Managed Service for Apache Flink
+
+- **Publisher:** AWS (`aws-big-data-blog`)
+- **URL:** https://aws.amazon.com/blogs/big-data/introducing-enhanced-snapshots-for-amazon-managed-service-for-apache-flink/
+- **Published:** 2026-11-16
+
+Enhanced snapshots for Amazon Managed Service for Apache Flink are now generally
+available. An enhanced snapshot is an AWS resource with its own ARN, decoupled from the
+application that created it, so you can start another application from it, export it to
+Amazon S3, and import savepoints for blue/green deployments, disaster recovery, and
+migrations.
+
+### 41. How MoEngage built agentic customer engagement on Amazon Bedrock AgentCore
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/how-moengage-built-agentic-customer-engagement-on-amazon-bedrock-agentcore/
+- **Published:** 2026-11-16
+
+MoEngage built Merlin AI, a set of AI agents on Amazon Bedrock and Amazon Bedrock
+AgentCore that let marketing and product teams draft, analyze, and adjust campaigns from
+a single conversation. Learn how MoEngage turned its existing APIs into MCP tools and
+kept each tenant's data isolated while giving agents secure access to live platform
+data.
+
+### 42. JA Canada launches generative AI with Qalius and Amazon Bedrock
+
+- **Publisher:** AWS (`aws-apn-blog`)
+- **URL:** https://aws.amazon.com/blogs/apn/ja-canada-launches-generative-ai-with-qalius-and-amazon-bedrock/
+- **Published:** 2026-11-16
+
+JA Canada worked with Qalius Consulting Inc., a Canadian AWS Advanced Tier Services
+Partner, to move a generative AI project from design to deployment in just four months.
+The project focused on one clear use case: helping visitors find information across JA
+Canada resources through a conversational experience. This post shares four key
+ingredients for generative AI success: bounding the first use case, building in
+evaluation, treating safeguards and cost controls as launch requirements, and using
+managed AWS capabilities to reduce unnecessary engineering work.
+
+### 43. AWS KMS now supports key sharing with AWS Resource Access Manager
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/kms-key-sharing-resource-access-manager/
+- **Published:** 2026-11-16
+
+AWS Key Management Service (KMS) now integrates with AWS Resource Access Manager (RAM),
+giving you a simpler and more consistent way to share KMS keys across your AWS accounts,
+within your organization in AWS Organizations, and with specific IAM roles and users.
+You can now let trusted parties define the access they need through reusable managed
+permissions in RAM, while keeping full control of your keys and key policies. To share a
+key, create a resource share by selecting the keys to share, choosing a managed
+permission, and specifying the principals. You can use AWS managed permissions for
+common scenarios, or customer managed permissions (CMPs) authored by you or by trusted
+parties such as SaaS providers and central security teams. Sharing KMS keys through RAM
+makes enabling cross-account access faster to set up and safer to maintain. The trusted
+parties who need access to your keys can publish the policy once as a CMP, without the
+need for you to modify the key policies by hand. You simply fill in the values that
+scope it to your environment and attach it to the resource share. Your existing key
+policy is untouched, so you are always in control of your key as your environment grows.
+When a new policy version is available via an updated CMP, you decide when to apply it
+to your resource shares. This enhancement is built on new AWS RAM capabilities that are
+available for every resource type RAM supports. CMPs now support multiple policy
+statements and additional IAM condition operators, including StringNotEquals,
+BoolIfExists, and ArnLike, along with the ForAnyValue and ForAllValues prefixes, so you
+can express precise, least-privilege access. The&nbsp;parameterized managed permissions
+lets you place a temporary placeholder in CMPs that allows each resource share owner to
+customize and scope down CMPs to their environment, enabling CMPs to be reused and serve
+many accounts. CMPs can now be published and shared across accounts, so the authors can
+maintain one permission, manage its versions centrally, and see every resource share
+that uses it, while other accounts can use it directly without keeping their own copy.
+KMS key sharing with RAM is available in all AWS Regions where both services are
+available, except the Middle East (UAE) and Middle East (Bahrain).&nbsp;For more
+information, see Sharing KMS keys with AWS RAM in the AWS KMS Developer Guide and
+Working with shared AWS resources in the AWS RAM Developer Guide.
+
+### 44. Set up, connect, and govern AI agents faster with Amazon WorkSpaces
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-workspaces-AI-agents-connect-govern
+- **Published:** 2026-11-16
+
+Building AI agents has become essential. Across your organization, teams want agents to
+handle ERP transactions, work through a claims queue, and operate the same applications
+your people use every day. But how do you move from experiments to production? Before an
+agent touches real systems and real data, you need to verify who it acted on behalf of,
+what it did, and whether it stayed within the limits you set. Without that visibility,
+the agent stays stuck in testing, and the value is never realized. Earlier this year, we
+launched Amazon WorkSpaces for AI agents , extending the power and security of a cloud
+work environment to agents, not just people. Today, we're excited to announce new
+capabilities that make it even easier to operate agents confidently across your
+enterprise and move them from proof of concept to governed production in fewer
+steps.&nbsp; You can set up new agents or connect the ones your builders have already
+built, run them under your own identity providers and policies, and keep a record of
+everything they do. You don't need to stitch together new tools or build custom
+monitoring. Setup used to mean configuring the machine by hand. Now, you can just
+describe what your agent needs to your AI coding assistant such as Claude Code, Codex,
+and Kiro. Guided by AWS MCP skills, the assistant builds the WorkSpace from defaults you
+can adjust. If your teams build on Amazon Bedrock AgentCore, you can connect an agent
+directly with your AWS credentials and skip writing any agent code. New tools also
+reduce agent costs and increase accuracy by letting an agent carry out a series of
+actions in a single call and use the computer-use actions its model already knows. But
+an agent that can work is not necessarily an agent you can trust with mission-critical
+work and sensitive data. This release gives you the same oversight over an agent that
+you have over the employees you manage. First, agents can now sign in through any
+identity provider (IdP) that supports OIDC, in addition to the existing SAML support.
+Administrators can send sign-in straight to their IdP, so users authenticate with their
+usual corporate credentials, and you don't build custom authentication. Second, with on-
+behalf-of (OBO) sign-in, an agent works as the signed-in user, with that user's existing
+directory identity, permissions, and Group Policies on the desktop.&nbsp; WorkSpaces now
+offers session replay, giving you a reviewable record of what your agent did. Session
+replay turns session screenshots into a video and pairs it with a plain-language
+transcript of the agent's actions. Both are stored in your own Amazon S3 bucket and
+encrypted with your own keys. Your security team can see what the agent saw, and your
+compliance team gets evidence to support audits. Together, these updates help move
+agents out of pilots and into real production scale. Your teams can keep working the way
+they do today, with agents working alongside them in familiar and trusted cloud work
+environments. And every one of those agents is held to the same identity, policy, and
+audit standards as the rest of your workforce. With WorkSpaces, you can bring AI agents
+into your business without rebuilding decades of software or needing a separate
+environment to govern them. To get started operating AI agents on WorkSpaces, visit our
+documentation page .&nbsp;
+
+### 45. AWS Weekly Roundup: AWS Nitro Sandboxes, AWS Emulator, and more (November 16, 2026)
+
+- **Publisher:** AWS (`aws-main-blog`)
+- **URL:** https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/
+- **Published:** 2026-11-16
+
+A second delivery of the same message can reveal more about an application than its
+happy-path demo. I like tools that make those cases easier to investigate while a change
+is still small. Last week’s launch of AWS Emulator brings part of that work onto your
+own machine: developers and coding agents can exercise AWS […]
+
+### 46. AWS Marketplace Metering Service now supports decimal usage quantities
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/aws-marketplace-metering-service-decimal-usage-quantities/
+- **Published:** 2026-11-16
+
+AWS Marketplace Metering Service now supports decimal usage quantities in the MeterUsage
+and BatchMeterUsage APIs. Previously, AWS Marketplace sellers reported usage to both
+APIs in whole numbers, and now they can report usage with up to six decimal places.
+Sellers can price and meter in the units that match how customers consume their product,
+for example reporting 1.5 terabytes (TB) of storage instead of 1 or 2 TB. To report
+decimal quantities, sellers use the new UsageQuantityAsDecimal parameter in MeterUsage
+and QuantityAsDecimal parameter in BatchMeterUsage, and existing integrations that
+report whole numbers continue to work without changes. Usage allocations, which split
+reported usage into buckets by tags, also support decimal quantities with the new
+AllocatedUsageQuantityAsDecimal parameter. This new feature is available in all AWS
+Regions where AWS Marketplace Metering Service is available. To learn more, see
+MeterUsage and BatchMeterUsage in the AWS Marketplace API Reference.
+
+### 47. A governed AI-driven development lifecycle for financial services with Kiro and AWS Frontier Agents
+
+- **Publisher:** AWS (`aws-devops-blog`)
+- **URL:** https://aws.amazon.com/blogs/devops/a-governed-ai-driven-development-lifecycle-for-financial-services-with-kiro-and-aws-frontier-agents/
+- **Published:** 2026-11-16
+
+A hands-on walkthrough of a governed, AI-driven development lifecycle for financial
+services that wires Kiro, AWS Security Agent, and AWS DevOps Agent into a shared GitHub-
+based pipeline, so every change is authored, reviewed, security-gated, deployed to AWS
+Lambda, and monitored in production with human approval and traceable evidence.
+
+### 48. Build a real-time next-best-offer recommender using Databricks Feature Views
+
+- **Publisher:** Databricks (`databricks-blog`)
+- **URL:** https://www.databricks.com/blog/build-real-time-next-best-offer-recommender-using-databricks-feature-views
+- **Published:** 2026-11-16
+
+Real-time personalization depends on understanding what customers want in the moment...
+
+### 49. Modernizing mainframe Assembler to Java using Amazon Bedrock and AWS Transform
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/modernizing-mainframe-assembler-to-java-using-amazon-bedrock-and-aws-transform/
+- **Published:** 2026-11-16
+
+Legacy mainframe Assembler applications are costly to maintain and hard to staff. This
+post presents a multi-stage, AI-powered methodology using Amazon Bedrock, Kiro IDE, and
+AWS Transform to extract business rules, convert Assembler through an intermediate COBOL
+stage, and deploy modernized Java Spring Boot applications on AWS.
+
+### 50. Upgrading and troubleshooting Amazon MWAA with AWS agent skills
+
+- **Publisher:** AWS (`aws-big-data-blog`)
+- **URL:** https://aws.amazon.com/blogs/big-data/upgrading-and-troubleshooting-amazon-mwaa-with-aws-agent-skills/
+- **Published:** 2026-11-16
+
+AWS publishes MWAA agent skills in the open source AWS agent toolkit: procedures your AI
+coding assistant can run to upgrade Amazon MWAA from Airflow 2.x to 3.x and troubleshoot
+failures, with a safety confirmation on every environment change.
+
+### 51. Novo Nordisk modernizes manufacturing process documents with Amazon Bedrock AgentCore
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/novo-nordisk-modernizes-manufacturing-process-documents-with-amazon-bedrock-agentcore/
+- **Published:** 2026-11-16
+
+Novo Nordisk's Manufacturing Technology team within the Tablet area team built a
+process-intelligence assistant on Amazon Bedrock AgentCore, using a GraphRAG
+architecture that pairs a knowledge graph in Amazon Neptune with hybrid search in Amazon
+OpenSearch Serverless to turn millions of controlled manufacturing documents into
+grounded, cited answers.
+
+### 52. Best practices for deploying Amazon CloudWatch Omni at enterprise scale
+
+- **Publisher:** AWS (`aws-management-blog`)
+- **URL:** https://aws.amazon.com/blogs/mt/best-practices-for-deploying-amazon-cloudwatch-omni-at-enterprise-scale/
+- **Published:** 2026-11-16
+
+At enterprise scale, organizations run applications and AI agents side by side across
+hundreds of AWS accounts, several Regions, and often other clouds and on-premises data
+centers. Site reliability engineering (SRE) teams watch service latency, agent
+developers observe agent traces and evaluation scores, operation teams monitor alerts,
+and security reviews AWS API activity. When a […]
+
+### 53. Broadening access to AI for scientists
 
 - **Publisher:** OpenAI (`openai-blog`)
-- **URL:** https://openai.com/index/lifeval
-- **Published:** 2026-11-02
+- **URL:** https://openai.com/index/expanding-chatgpt-for-academic-researchers
+- **Published:** 2026-11-16
 
-Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday
-tasks, from finding childcare to managing finances and government paperwork.
+We’re expanding our ChatGPT for Academic Researchers program to offer 200,000
+researchers worldwide free access to our frontier models.
 
-### 79. Cost per task: Using cheap classifiers to route across Gemini models and thinking levels
+### 54. Strengthening the fight against online child sexual abuse with new tools and support
+
+- **Publisher:** OpenAI (`openai-blog`)
+- **URL:** https://openai.com/index/strengthening-online-child-safety
+- **Published:** 2026-11-16
+
+New tools, practical guidance, and partnerships will help prevent, detect and respond to
+online child sexual exploitation and abuse.
+
+### 55. Beyond the compute bottleneck: Maximizing the ROI of AI accelerators with purpose-built storage
+
+- **Publisher:** Google Cloud (`google-cloud-blog`)
+- **URL:** https://cloud.google.com/blog/products/storage-data-transfer/maximizing-ai-accelerator-roi-with-purpose-built-storage/
+- **Published:** 2026-11-16
+
+There’s a lot more to AI infrastructure than just buying accelerators. Indeed, the
+infrastructure mandate for enterprise AI has shifted from acquiring accelerators to
+keeping them fully utilized. Next to these expensive accelerators, storage accounts for
+only a small sliver of total AI spend. However, having the wrong storage in place can
+put the rest of your committed compute capital at risk. To optimize your accelerators’
+TCO, you need to keep them fully occupied. Very often, the challenge here is data I/O.
+If accelerators sit waiting to read or write data, you’re wasting money. Across the
+industry, insufficient storage throughput has become a primary impediment to AI success,
+starving models of the data they need. And the problem is only going to get worse.
+Gartner predicts enterprises will deploy over 150,000 agents in the next few years, so
+the I/O bottleneck and the challenge of orchestrating storage for agentic fleets will
+only compound. Organizations are eager to move their AI initiatives forward, but
+preventing idle compute requires a purpose-built approach to data I/O. With the demands
+of AI, standard enterprise storage — even a system optimized for fast analytics — will
+inevitably suffer from bottlenecks that leave compute resources twiddling their
+proverbial thumbs. AI is not a monolithic workload The most common architectural misstep
+we see is treating AI as a single, general-purpose workload. In reality, the physical
+movement of data transforms across the AI lifecycle, creating distinct I/O profiles
+based on how models consume and generate information: In model training , clusters read
+datasets at high throughput, but pause regularly to write checkpoints to record their
+state in event of a failure. When thousands of GPUs attempt to save this data in a
+single, simultaneous burst, standard storage architectures stall. That’s especially true
+of traditional cloud storage, which is engineered for durability. Writing checkpoints
+triggers thousands of administrative database transactions to safely record the files,
+bogging down the system, choking the network, and freezing the entire GPU cluster until
+the save is complete. Furthermore, saving the data is only one of the problems: If a
+server fails, slow storage turns a routine checkpoint recovery into a multi-hour delay,
+leaving expensive accelerators sitting completely idle. Inference , conversely, is real-
+time and latency-sensitive. As AI services scale to meet user demand, inference clusters
+constantly load and unload petabyte-scale model repositories quickly. In this case, a
+slow storage system can leave GPUs in a “cold start” as they wait for data. Also, many
+models now process context windows that exceed 100,000 tokens, filling up accelerator
+memory. Without a high-speed external cache to offload this context, when a user asks
+the next question, the accelerator must recalculate previous inputs, wasting compute on
+redundant operations. Industry-leading performance across object and file storage To
+solve these I/O challenges and keep expensive accelerators busy, organizations need
+compute, networking, and storage to be deeply integrated. As industry analysts have
+noted, enterprise customers gain a unique performance advantage because Google Cloud
+runs on the exact same storage foundation as Google's own consumer products. This
+foundation is built on Colossus—the planet-scale distributed file system powering Google
+Search, YouTube, and Gemini. Because this shared infrastructure supports billions of
+users daily, its reliability is continuously proven against the extreme traffic and
+hardware demands of Google's global consumer services. As a result, today, nine out of
+the world’s ten leading AI frontier model labs run on Google Cloud infrastructure
+because we deliver the throughput and performance they require to innovate. In fact, we
+spent the last two years co-designing our storage architecture directly with these
+frontier labs as well as with Google's own foundation
+
+### 56. Introducing the Databricks AI Index: The state of enterprise AI tokenomics
+
+- **Publisher:** Databricks (`databricks-blog`)
+- **URL:** https://www.databricks.com/blog/introducing-databricks-ai-index-state-enterprise-ai-tokenomics
+- **Published:** 2026-11-16
+
+Developers have more AI models and coding agents to choose from than ever before....
+
+### 57. Tabular foundation models on Databricks AI Runtime
+
+- **Publisher:** Databricks (`databricks-blog`)
+- **URL:** https://www.databricks.com/blog/tabular-foundation-models-databricks-ai-runtime
+- **Published:** 2026-11-16
+
+Many of the most valuable predictive machine learning applications rely on tabular
+data...
+
+### 58. Teach Genie One your workflows: The ultimate guide for skills in Genie One
+
+- **Publisher:** Databricks (`databricks-blog`)
+- **URL:** https://www.databricks.com/blog/teach-genie-one-your-workflows-ultimate-guide-skills-genie-one
+- **Published:** 2026-11-16
+
+Every team has “recipes” that govern how they work. The way finance puts together...
+
+### 59. Running AV Reasoning Models Within Onboard Compute and Latency Limits
+
+- **Publisher:** NVIDIA (`nvidia-developer-blog`)
+- **URL:** https://developer.nvidia.com/blog/running-av-reasoning-models-within-onboard-compute-and-latency-limits/
+- **Published:** 2026-11-16
+
+Autonomous vehicle (AV) developers need reasoning models that can operate within the
+compute and latency constraints of an onboard system. Larger models provide...
+
+### 60. Get answers from tables with tabular search in Amazon Bedrock Managed Knowledge Base
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/
+- **Published:** 2026-11-16
+
+Amazon Bedrock Managed Knowledge Base now supports tabular search, so agentic retrieval
+can answer questions over CSV, XLSX, and XLS files. It looks up values and runs
+calculations across every relevant row, then combines the results with facts from
+related documents to answer multi-step analytical questions.
+
+### 61. PHP2Shell: Using AWS Transform to move legacy PHP onto a patched runtime
+
+- **Publisher:** AWS (`aws-devops-blog`)
+- **URL:** https://aws.amazon.com/blogs/devops/php2shell-using-aws-transform-to-move-legacy-php-onto-a-patched-runtime/
+- **Published:** 2026-11-16
+
+Teams on PHP 8.1 or older can't patch the PHP2Shell vulnerabilities (CVE-2026-109618 and
+CVE-2026-109619) in place. Learn how to use AWS Transform continuous modernization to
+find legacy PHP, upgrade it to PHP 8.4 or 8.5, validate it on a patched runtime, and
+then patch and restart the runtime to remediate the CVEs.
+
+### 62. Best practices for writing Denied Topics in Amazon Bedrock Guardrails
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/best-practices-for-writing-denied-topics-in-amazon-bedrock-guardrails/
+- **Published:** 2026-11-16
+
+With Denied Topics in Amazon Bedrock Guardrails, you block a content category by
+describing it in plain language, and the guardrail matches by meaning rather than
+keyword, which can block more than you intend. This post presents eight best practices
+for writing a topic precisely enough that the guardrail blocks what you mean and passes
+what you don't.
+
+### 63. Customize answers per tenant in Amazon Bedrock Managed Knowledge Base
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/customize-answers-per-tenant-in-amazon-bedrock-managed-knowledge-base/
+- **Published:** 2026-11-16
+
+Retrieval instructions in Amazon Bedrock Managed Knowledge Base set the voice, format,
+retrieval guidance, and answer policy for each tenant on shared knowledge bases. This
+post shows how to give each tenant its own answers, keep tenant data apart with metadata
+filters, scope access with IAM tags, and roll out changes one tenant at a time.
+
+### 64. Use prompt caching with open-weight models on Amazon Bedrock
+
+- **Publisher:** AWS (`aws-ml-blog`)
+- **URL:** https://aws.amazon.com/blogs/machine-learning/use-prompt-caching-with-open-weight-models-on-amazon-bedrock/
+- **Published:** 2026-11-16
+
+Many generative AI applications resend the same long context on every request. Prompt
+caching lets open-weight models on Amazon Bedrock reuse it to reduce input cost and
+latency. This post shows implicit and explicit caching through the Chat Completions API
+and applies caching to an OpenCode coding agent session.
+
+### 65. ​​​AWS observability maturity assessment: from guesswork to a blueprint​​
+
+- **Publisher:** AWS (`aws-management-blog`)
+- **URL:** https://aws.amazon.com/blogs/mt/aws-observability-maturity-assessment-from-guesswork-to-a-blueprint/
+- **Published:** 2026-11-16
+
+Introduction ​​Most teams know they should have good observability. Few can answer the
+two questions that matter: How good is our observability posture today, and what should
+we fix first? Without an objective way to measure, prioritization defaults to intuition,
+tribal knowledge, and the most recent escalation. The service that paged someone last
+night gets […]
+
+### 66. NVIDIA Vera Rubin NVL72 Leads Agentic Inference Performance on MLPerf Endpoints v1.0
+
+- **Publisher:** NVIDIA (`nvidia-developer-blog`)
+- **URL:** https://developer.nvidia.com/blog/nvidia-vera-rubin-nvl72-leads-agentic-inference-performance-on-mlperf-endpoints-v1-0/
+- **Published:** 2026-11-16
+
+Agentic workloads are demanding more from inference systems. AI agents carry growing
+conversation histories across turns and generate a mix of reasoning, tool...
+
+### 67. Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development
+
+- **Publisher:** Import AI (Substack) (`import-ai`)
+- **URL:** https://importai.substack.com/p/import-ai-481-ai-sub-contractors
+- **Published:** 2026-11-16
+
+Plus: CucumberVision!
+
+### 68. GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold
+
+- **Publisher:** Google Cloud (`google-cloud-blog`)
+- **URL:** https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold/
+- **Published:** 2026-11-16
+
+Written by: Aurora Blum, Kelli Vanderlee, Jess Xia, David Mainor Executive Summary As
+threat actors increasingly move beyond basic prompting to deploying autonomous multi-
+agent frameworks , automated vulnerability exploitation pipelines, and alternative
+monetization schemes like LLMJacking , the adversarial AI landscape has reached a
+critical inflection point. In this update, Google Threat Intelligence Group (GTIG) and
+Mandiant examine how adversaries across the cyber crime, espionage, and information
+operations spectrum are operationalizing generative AI to compress attack timelines,
+scale operations, and execute multi-stage intrusions at machine speed. Key trends over
+the last quarter include: Shift to Autonomous Workflows and Multi-Agent Frameworks:
+Adversary tradecraft has continued to transition beyond manual prompting to deploying
+autonomous multi-agent offensive frameworks—such as ARTEX , CAIRN, CyberStrikeAI, and
+PentAGI—to execute multi-stage intrusions at greater operational velocity. Automated
+Vulnerability Research and Exploitation: Threat actors are increasingly leveraging LLMs
+and agentic frameworks to fully automate the reverse engineering of patches via
+differential analysis, allowing them to rapidly weaponize n-day vulnerabilities and
+scale exploitation pipelines against internet-facing servers without human intervention.
+Monetization and Infrastructure Abuse : Financially motivated threat actors continue to
+profit from LLMJacking by stealing LLM credentials and cloud resources from compromised
+enterprise environments and reselling access to high-performance AI models through
+underground proxy services (e.g., LLM Mixers). LLM Integration in Information Operations
+(IO): State-sponsored groups, commercial Influence-as-a-Service (IaaS) vendors, and
+inauthentic political monetization networks now routinely use LLMs in their operations
+to produce synthetic media at scale, create localized personas, and automate cross-
+platform distribution. Targeted Espionage and Supply Chain Evolution: Cyber espionage
+groups are leveraging LLMs for target research, automated data analysis, and novel
+supply chain attack vectors—such as manipulating autonomous coding assistant
+configurations to drop backdoors during local execution. Grounded in telemetry from
+frontline Mandiant incident response engagements, global threat actor tracking, and live
+platform defenses, this report details how state-sponsored espionage groups, financially
+motivated cyber criminals, and IO threat actors are operationalizing LLMs in the wild.
+At Google, we are committed to developing AI boldly and responsibly. Our multifaceted
+defense strategy integrates proactive model-level safeguards, specialized threat
+intelligence, and targeted containment protocols to protect our customers and
+infrastructure. We continuously harden our models against misuse, mitigate malicious
+activity through proactive disruption of bad actor projects and accounts, and use our
+autonomous Google AI Threat Defense architecture and BeyondZero to operationalize
+security, continuous monitoring, and responding at machine speed across enterprise
+environments. Multi-Agent Frameworks in Cyber Intrusions While previous milestones
+documented in our quarterly research highlighted nascent adversary interest in agentic
+capabilities, GTIG and Mandiant have now observed multiple threat actors abusing open
+source, agentic penetration-testing (pentesting) frameworks to automate discrete phases
+and specific operational tasks during live intrusions. Threat actor adoption of these
+frameworks represents a paradigm shift towards intrusions occurring at machine speed,
+with the automated chaining of complex attack paths scaling operations significantly.
+While the mechanics of the intrusions remain the same, such as using compromised
+credentials and targeting unpatched systems, the speed and scale at which frameworks can
+exploit these known weaknesses introduces a new defensive challenge. Figure 1: Multi-
+agen
+
+### 69. Science at the Frontier: How scientists use ChatGPT
+
+- **Publisher:** OpenAI (`openai-blog`)
+- **URL:** https://openai.com/index/science-at-the-frontier
+- **Published:** 2026-11-16
+
+Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily
+workflows, reported productivity, and expectations for discovery.
+
+### 70. How Revolut raises ambition without lowering the bar
+
+- **Publisher:** OpenAI (`openai-blog`)
+- **URL:** https://openai.com/business/customer-stories/revolut
+- **Published:** 2026-11-16
+
+Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale
+financial crime investigations, and innovate without compromising security.
+
+### 71. LVMH’s Media Division announces strategic partnership with OpenAI
+
+- **Publisher:** OpenAI (`openai-blog`)
+- **URL:** https://openai.com/index/lvmh-media-division-partnership
+- **Published:** 2026-11-16
+
+LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI
+and make its publications more accessible through ChatGPT.
+
+### 72. Google is a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud Operational Database Management Systems
+
+- **Publisher:** Google Cloud (`google-cloud-blog`)
+- **URL:** https://cloud.google.com/blog/products/databases/2026-gartner-mq-cloud-operational-databases-management-systems/
+- **Published:** 2026-11-16
+
+Google has been recognized as a Leader and positioned furthest in vision in the 2026
+Gartner® Magic Quadrant™ for Cloud Operational Database Management Systems (Cloud
+ODBMS). This recognition comes as we cross into the era of agentic AI. Leading
+enterprises are in their journey of deploying autonomous agents to transform core
+business functions. At the center is data, the fuel for AI. In our view, this
+recognition from Gartner — particularly our placement furthest for Completeness of
+Vision — builds on the August 2026 Gartner® report, AI Vendor Race: Google Is the
+Company to Beat in Data Platforms for AI . Together, we believe this validates our long-
+standing belief that the future of operational data is unified, open, and inseparable
+from the AI layer. In our opinion, this is the blueprint for what we call the Agentic
+Data Cloud. Powering a true System of Action through the Agentic Data Cloud requires
+operational data to be unified, open, and inseparable from the AI tier. We deliver on
+this across our operational databases by converging transaction processing and analytics
+in a single engine, while leveraging Google's full-stack AI advantage to integrate
+Google DeepMind models and vector indexing directly into the core engine over our AI
+Hypercomputer. Furthermore, we define openness not just through 100% PostgreSQL
+compatibility and open Apache Iceberg formats, but by providing borderless access to
+data across other clouds and environments without requiring complete data replication.
+This eliminates operational friction and costly data movement, providing the low-
+latency, planet-scale foundation needed to power trusted autonomous agents with
+confidence . The Agentic Data Cloud is engineered from the ground up to minimize the
+complexity and hidden costs of the agentic era. Let's review the core benefits
+enterprises realize when operating on Google Cloud operational databases, along with our
+latest innovations to help you thrive in the agentic era. Performance across critical
+capabilities and use cases Our operational database portfolio, anchored by Spanner and
+AlloyDB, integrates AI natively within the database engine. In AlloyDB, auto vector
+embeddings and auto vector indexing automatically generate, maintain, and self-tune
+vector data using simple SQL commands, eliminating complex ETL pipelines. Furthermore,
+built-in support for Google DeepMind models such as TimesFM enables zero-shot time-
+series forecasting directly in SQL. With Spanner, organizations can combine full-text,
+vector, and graph capabilities in a single database to power complex multi-model agentic
+workflows and context-aware applications with enterprise-grade availability. In the
+companion 2026 Gartner® Critical Capabilities for Cloud Operational Database Management
+Systems report , Google’s operational database portfolio was evaluated as Google
+(Spanner) and Google (AlloyDB) for the following use cases. Highest-placed use cases:
+Agentic AI Operations use case : Google was ranked first among all evaluated vendors,
+with Google (Spanner) ranking #1 and Google (AlloyDB) ranking #2. Capabilities such as
+natively built AI functions provide developers the ability to bring the power of
+foundational models within operational databases. OLTP Transactions use case : Google
+(Spanner) placed #2 among all evaluated vendors. Spanner's horizontal scalability with
+full interoperability between various modalities and no-compromise strong consistency
+enables differentiated experiences. In addition, Google (Spanner) placed among the 3
+highest-scoring vendors across all 4 evaluated use cases in the report, which we believe
+demonstrates the breadth of workloads it supports across transactional, analytical,
+NoSQL, and agentic AI scenarios. Agentic Data Cloud for a million-agent world Your
+organization's ability to take advantage of AI depends directly on your enterprise data
+strategy. Autonomous agents require a modern data foundation that pairs high-performance
+transactional proc
+
+### 73. How ISVs are unlocking European workloads using Google Cloud Dedicated technology
+
+- **Publisher:** Google Cloud (`google-cloud-blog`)
+- **URL:** https://cloud.google.com/blog/products/identity-security/how-isvs-are-unlocking-european-workloads-on-google-cloud-dedicated/
+- **Published:** 2026-11-16
+
+Across Europe, organizations handling sensitive workloads in regulated sectors — such as
+financial services, healthcare, critical infrastructure, and the public sector — are
+trying to modernize their infrastructure while adhering to strict local data governance
+standards, including SecNumCloud in France and BSI C3A in Germany. To help organizations
+accomplish this, Google Cloud Dedicated provides the architectural, security, and API
+consistency of Google Cloud in locally governed environments managed by independent
+domestic operators. But infrastructure is only the starting point. Organizations also
+need to transform the software ecosystem they rely on every day. To meet regional
+sovereignty requirements, organizations acquire and run these software solutions through
+trusted local entities — such as S3NS in France (a joint venture majority-owned and
+managed by Thales) and a newly formed German entity that will also be owned and managed
+by Thales, currently in preview. These local entities operate dedicated infrastructure
+stacks, help maintain operational custody, and handle customer data within independent
+jurisdictional boundaries. Today, we are highlighting the expanding independent software
+vendor (ISV) ecosystem validated on Google Cloud Dedicated, enabling French and German
+organizations to run their critical enterprise software in environments designed to
+support their sovereign and regulatory needs. The local partner model: Cloud capability
+under domestic custody Deploying in a sovereign boundary should not require an
+organization to sacrifice software choice or rewrite its enterprise applications.Because
+Google Cloud Dedicated provides architectural and API consistency with Google Cloud,
+validated enterprise software runs directly inside these partner-operated environments
+without custom re-platforming. This model provides European enterprises with three
+concrete advantages: Localized operational custody : Infrastructure operations, software
+quarantine procedures, and day-to-day administrative access are under the direct
+management of local European partners operating with specialized remote technical
+escalations governed by strict, partner-supervised escorted access controls. Broad
+software choice : Regulated institutions can deploy industry-standard tools for identity
+governance, cyber resilience, simulation, and data streaming natively in their sovereign
+perimeter. Streamlined compliance : Organizations fulfill national frameworks like
+SecNumCloud and BSI guidelines while preserving familiar CI/CD pipelines, APIs, and
+developer workflows. Software choice is the true bottleneck for sovereign migrations
+When highly regulated European institutions consider moving to a sovereign cloud, the
+infrastructure itself is rarely the primary roadblock. The real bottleneck is
+software.Historically, pursuing strict sovereignty meant accepting compromises:
+Rewriting applications from scratch or maintaining custom, brittle tooling because
+mainstream enterprise platforms were unavailable. Forcing security, engineering, and
+data teams to abandon the industry-standard tools they use daily in favor of untested
+niche alternatives. Sidelining high-impact initiatives like real-time fraud scoring,
+automated DevSecOps, and modern identity governance simply because the required ISVs
+could not legally or technically operate in the environment. Because Google Cloud
+Dedicated maintains architectural and API consistency with Google Cloud, leading global
+and European software providers can deploy their proven platforms directly inside
+national, domestic operator-managed boundaries. Regulated organizations retain the
+software, automated pipelines, and operational standards they rely on — without
+sacrificing compliance or operational custody. Validated ISVs on Google Cloud Dedicated
+Deploying enterprise software on Google Cloud Dedicated and S3NS isn't just about
+hosting an application locally; it’s about pairing proven software engines with soverei
+
+### 74. Inside the new Google Cloud Data Boundary experience
+
+- **Publisher:** Google Cloud (`google-cloud-blog`)
+- **URL:** https://cloud.google.com/blog/products/identity-security/inside-the-new-data-boundary-experience/
+- **Published:** 2026-11-16
+
+Digital sovereignty is evolving from a standard compliance requirement into a powerful
+strategic advantage for regulated industries worldwide. From European frameworks
+designed to meet sovereign standards (DORA, EHDS, GDPR) to FedRAMP/ILs/ITARs in the
+U.S., or expanding mandates across Asia-Pacific and the Middle East, organizations can
+build deeper global trust through clear governance over data locality, encryption keys
+and system access. Historically, achieving that level of control meant accepting an
+impossible tradeoff: rely on rigid legacy architectures that lacked access to frontier
+AI innovation, or stitch together brittle, manual guardrails that slowed developer
+velocity. Google Cloud Data Boundary helps remove that compromise. Built directly onto
+Google Cloud’s global commercial infrastructure, Data Boundary delivers software-
+defined, AI-assisted governance. This allows organizations to move at commercial speed
+with verifiable sovereign controls built in from day one. Today, we’re announcing a new
+and updated experience in Data Boundary. Google Cloud Data Boundary combines technical
+controls across residency, access, and encryption with ongoing monitoring and
+operational assurance. What’s new in Data Boundary Data Boundary streamlines how
+security, data and AI teams configure, test and scale governance across their cloud
+footprint. Below are the key highlights for the new experience: End-to-end visibility
+into sovereign controls: Browse and deploy pre-configured regional and industry
+frameworks with clear visibility into mapped technical controls, severities and
+remediation steps. Flexible hierarchy-wide enforcement: Apply preventative guardrails
+across organizations, complex nested folders and projects — on both net-new and existing
+workloads — to block out-of-policy API calls and configuration drift. Dry run posture
+validation: Dry run any framework in monitor mode across live existing workloads to
+identify drift and violations before enabling active enforcement. Compliance
+customization: Frameworks and controls customization according to your organization's
+needs. Use Gemini in Google Cloud to customize controls and generate remediation logic
+to help reduce manual compliance toil. Accelerated compliance with machine-readable
+evidence: Continuously monitor posture, record immutable exception justifications, run
+scheduled audits and export machine-readable audit evidence to help fast-track
+certification workflows. Turn compliance and digital sovereignty into a business
+accelerator In an era of evolving global regulations and rapid AI transformation,
+compliance and sovereignty should accelerate your innovation, not hold you back. Google
+Cloud Data Boundary helps you deploy frontier AI, scale globally across commercial
+regions, and meet stringent regulatory requirements — with greater control and
+visibility over your data, your keys and your operations. Here are six steps to get
+started with Data Boundary today: You can access the Data Boundary directly from your
+Google Cloud console . Navigate to the Compliance tab in your Google Cloud console, and
+select Frameworks to begin with. Select existing or configure your own compliance :
+Browse 40+ public sector, industry and sovereign AI control packages, or customize
+guardrails to match your specific organizational policies. Select your regions :
+Designate precise geographic boundaries and data residency restrictions across 29 global
+commercial regions. Evaluate workloads in dry-run mode : E nforce controls at either the
+folder or the project level. If you already have an active BigQuery or Gemini project
+running, you can turn on dry run mode to evaluate how controls behave across existing
+resources without disrupting live workloads. Monitor against drifts and violations :
+Continuously track posture in real time to automatically detect non-compliant API calls
+and configuration drift without disrupting engineering velocity. On-demand audits,
+scanning and compliance evidenc
+
+### 75. AWS Secrets Manager adds managed external secrets support for Auth0, Okta, and Palo Alto Networks
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/secrets-manager-managed-external-secrets-auth0-okta-palo-alto/
+- **Published:** 2026-11-16
+
+AWS Secrets Manager now supports managed external secrets for Auth0, Okta, and Palo Alto
+Networks. Long-lived credentials that are not rotated increase the risk of unauthorized
+access if exposed. Rotating a third-party credential requires coordinated updates to the
+external service and every application that uses it. You set a rotation schedule from
+the AWS Management Console or API. Secrets Manager rotates the credential and stores the
+current value without a custom rotation Lambda function. Secrets Manager offers self-
+rotation and administrator-assisted rotation for Auth0 credentials. With self-rotation,
+the target application replaces its own secret. With administrator-assisted rotation, a
+separate Auth0 application with Management API permissions replaces the target
+application's secret. For Okta, Secrets Manager offers administrator-assisted rotation
+with a separate administrator JSON Web Token (JWT) key and validates the replacement
+before deactivating the old secret. For Palo Alto Networks, Secrets Manager offers self-
+rotation, in which the current API key authorizes its replacement. Applications that
+already retrieve credentials from Secrets Manager receive the rotated value without a
+code change or deployment. These integrations join existing managed external secrets
+support for BigID, Cisco Security Platform, Confluent Cloud, Databricks, Datadog,
+GitLab, Jenkins, MongoDB Atlas, Netskope, Paddle, Salesforce, Snowflake, SonarQube, and
+Twilio. Auth0, Okta, and Palo Alto Networks managed external secrets are available in
+all AWS Regions where AWS Secrets Manager managed external secrets is supported. To
+learn more, visit the &nbsp; AWS Secrets Manager managed external secrets
+documentation&nbsp; .
+
+### 76. IAM Identity Center now supports VPC endpoints and network access controls
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/iam-identity-center-vpc-endpoints/
+- **Published:** 2026-11-16
+
+AWS IAM Identity Center now supports interface VPC endpoints powered by AWS PrivateLink
+and network access controls, enabling you to keep IAM Identity Center traffic private
+and restrict which networks can reach your&nbsp;IAM Identity Center services.
+Previously, IAM Identity Center rejected traffic arriving through VPC endpoints,
+requiring all sign-in and API traffic to use public endpoints. With this launch, you can
+create interface VPC endpoints for&nbsp;AWS access portal and service APIs to route
+traffic over the AWS private network. IAM Identity Center sign-in traffic flows through
+the AWS Sign-in VPC endpoint. You can attach VPC endpoint policies to each endpoint to
+scope which AWS organizations, accounts and resources are reachable through your private
+connection. Network access controls add a second layer of enforcement at the IAM
+Identity Center instance level. When enabled, you can require that all access arrive
+through a VPC endpoint, allow specific IP address ranges or VPCs as trusted sources, and
+exclude individual applications from enforcement to accommodate services that connect
+from outside your VPC. SCIM provisioning traffic from your external identity provider
+can be independently restricted to known IP address ranges. Network access controls are
+configured through the IAM Identity Center API and are disabled by default. This
+capability is available in all commercial AWS Regions and the AWS GovCloud (US) Regions
+at no additional cost. To learn more, see Interface VPC endpoints in the IAM Identity
+Center User Guide.&nbsp;For more information, visit the IAM Identity Center product page
+.
+
+### 77. Amazon SageMaker AI now supports KV cache-aware routing for real-time inference endpoints
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/sagemaker-kv-cache-routing/
+- **Published:** 2026-11-16
+
+Amazon SageMaker AI now supports KV cache-aware routing for real-time inference
+endpoints, enabling you to reduce time to first token for LLM workloads with long or
+repeated prompts. Serving engines such as vLLM store the computed key-value (KV) cache
+for repeated prompt starts such as shared system prompts, documents, and conversation
+history, to skip repeated work. Across several instances, a request that lands where the
+cache is missing recomputes it. Under high load, instances also evict cached blocks to
+free GPU memory, including shared prompts and earlier conversation turns. KV cache-aware
+routing sends each request to the instance that holds the longest matching part of its
+prompt in cache. The vLLM container reports the cache blocks it stores and evicts, and
+SageMaker routes with that live view. If the lookup is slow or finds no match, the
+endpoint falls back to load-aware routing, so the request is still served. Prefix-aware
+routing suits stable shared prompts, short prompts, or moderate load. KV cache-aware
+routing suits long prompts, high load, and limited GPU memory. Customers can now enable
+this feature by setting `RoutingStrategy` to `KV_AWARE` on a production variant and
+adding one environment variable so the container reports cache events. Customer can
+invoke the endpoint with the same APIs and OpenAI-compatible payloads. It supports
+single-model endpoints and inference components, including LoRA adapters, on GPU
+instances. It requires the AWS vLLM Deep Learning Container version 0.33.0 or later with
+at least two instances or inference component copies. Detailed observability metrics
+show KV cache hit rate. There is no additional charge for KV cache-aware routing. KV
+cache-aware routing is available today in all AWS Regions where Amazon SageMaker AI is
+available. To get started, update to the latest AWS SDK or CLI. To learn more, visit the
+Amazon SageMaker AI inference page and see the API documentation .
+
+### 78. AWS Backup adds logically air-gapped vault support for Amazon RDS
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/aws-backup-air-gapped-vault-rds/
+- **Published:** 2026-11-16
+
+AWS Backup logically air-gapped vault now supports Amazon Relational Database Service
+(Amazon RDS) DB instances. Logically air-gapped vaults are a type of AWS Backup vault
+that stores immutable, isolated backups, which are locked by default with AWS Backup
+Vault Lock in compliance mode. Secure sharing across accounts and AWS Organizations
+enables direct restore, reducing recovery time from a data loss event. You can now
+protect your Amazon RDS DB instances in logically air-gapped vaults. A logically air-
+gapped vault stores immutable backups that are locked by default, and isolated with
+encryption using AWS owned keys or customer-managed keys. This helps reduce the risk of
+downtime, ensure business continuity, and meet compliance requirements. To get started,
+use the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. Assign your
+RDS DB instances to a backup plan and specify a logically air-gapped vault in the same
+AWS Region as the copy destination. Share the vault for recovery or restore testing with
+other accounts using AWS Resource Access Manager (RAM), or safeguard vault access during
+account compromise using Multi-party approval . Once shared, you can initiate direct
+restore jobs from that account. This support is available in most AWS Regions where both
+logically air-gapped vault and Amazon RDS are available. For more information and
+detailed regional availability, visit the AWS Backup documentation . To learn more about
+logically air-gapped vaults for RDS, read the launch blog and visit the feature
+documentation and pricing page .
+
+### 79. AWS WAF advanced rate-based rules are now available in AWS GovCloud (US), Thailand, and Mexico
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/waf-advanced-rate-rules-available/
+- **Published:** 2026-11-16
+
+AWS WAF advanced rate-based rules are now available in the Asia Pacific (Thailand),
+Mexico (Central), AWS GovCloud (US-East), and AWS GovCloud (US-West) Regions. Customers
+in these Regions can now aggregate requests using custom keys and choose a 1 or 2 minute
+evaluation window in addition to the existing 5 and 10 minute options, the same
+capabilities already available in other AWS Regions. A rate-based rule counts requests
+and applies an action, such as Block or CAPTCHA, when the request rate exceeds a limit
+you set. Previously, rate-based rules in these Regions could aggregate requests only by
+IP address and used a 5 or 10 minute evaluation window. Now you can aggregate by request
+components such as HTTP headers, cookies, query strings, URI paths, HTTP methods, and
+label namespaces, and combine up to five of them into a composite key. For example, you
+can limit login attempts per IP address and User-Agent pair, or per session cookie,
+which helps against attacks spread across many IP addresses. A shorter evaluation window
+detects request floods sooner, and a longer window catches slower, sustained attacks.
+You can configure these options in the AWS WAF console, the AWS CLI and SDKs, and AWS
+CloudFormation. There is no additional charge for these capabilities, and standard AWS
+WAF pricing applies. Advanced rate-based rules are now available in all commercial AWS
+Regions where AWS WAF is available and in the AWS GovCloud (US) Regions. To learn more,
+see Using rate-based rule statements in the AWS WAF Developer Guide.
+
+### 80. AWS announces Networking Flexible Cost Allocation for Amazon VPC
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/networking-flexible-cost-allocation/
+- **Published:** 2026-11-16
+
+Amazon Virtual Private Cloud (VPC) now supports Networking Flexible Cost Allocation
+(FCA), which splits shared networking costs by the resources that actually drive them,
+so you can see what each team or application used. Until now, AWS Cost and Usage Report
+(CUR), including CUR 2.0 in AWS Data Exports, showed networking usage as a single item,
+and most customers split it across teams with custom scripts and manual estimates. FCA
+splits this line item by the resources that generated it. It supports NAT gateway data
+processing and data transfer, including traffic to the internet, and in-Region Amazon
+Elastic Compute Cloud (Amazon EC2) and VPC peering data transfer. Today, when several
+teams share a resource such as a NAT gateway, the account that owns it pays the full
+cost and can't see which team or application drove it. To work around this, some
+customers built custom scripts to analyze VPC Flow Logs, which takes ongoing engineering
+effort. Others used fixed-percentage splits, which overcharge some teams and undercharge
+others. FCA breaks down usage based on traffic sources, helping you accurately track
+financial metrics based on applications and teams. To get started, attach a cost
+allocation policy to a NAT gateway, VPC peering connection, or Amazon EC2 instance, then
+select Networking flexible cost allocation under split cost allocation data in the AWS
+Billing and Cost Management console. Allocated line items appear in your CUR within 24
+hours. FCA changes only how costs are shown in your reports. Your bill and total charges
+stay the same. FCA is available at no additional charge. It's supported in all AWS
+commercial Regions except Middle East (Bahrain) and Middle East (UAE). It's also
+available in the China Regions. It is not available in the AWS GovCloud (US) Regions. To
+learn more, visit the Networking FCA product page .
+
+### 81. AWS IAM Identity Center now supports ForceAuthn in SAML requests
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/iam-identity-center-reauth/
+- **Published:** 2026-11-16
+
+AWS IAM Identity Center now gives you the option to require workforce users to re-
+authenticate with your external identity provider (IdP) each time their user interactive
+session expires. By default, when a user's session expires, IAM Identity Center renews
+it through the user's existing IdP session, and the user isn't prompted to sign in
+again. For organizations with strict security or compliance requirements that mandate
+explicit user verification at regular intervals, this automatic renewal may not meet
+policy requirements. When you set user re-authentication to Required and a user's user
+interactive session expires, IAM Identity Center prompts the user to re-authenticate
+with your external IdP. This helps you enforce stronger sign-in controls for regulated
+workloads. IAM Identity Center implements this by adding the SAML 2.0 ForceAuthn
+attribute to the SAML request sent to your IdP. You can configure user re-authentication
+for any IAM Identity Center instance (organization or account) that's connected to an
+external IdP as its identity source. The setting applies only to service provider
+initiated sign-ins, where users sign in through your AWS access portal URL. Changes to
+the user re-authentication setting are logged in AWS CloudTrail, so you can audit when
+it was turned on or off. User re-authentication is available in all AWS Regions where
+IAM Identity Center is available at no additional cost. To learn more, see Require user
+re-authentication in the AWS IAM Identity Center User Guide.
+
+### 82. Our first phase of embedded assessments
+
+- **Publisher:** OpenAI (`openai-blog`)
+- **URL:** https://openai.com/index/our-first-phase-of-embedded-assessments
+- **Published:** 2026-11-16
+
+OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and
+Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.
+
+### 83. AgentCore runtime instances are now available in six more AWS Regions
+
+- **Publisher:** AWS (`aws-whats-new`)
+- **URL:** https://aws.amazon.com/about-aws/whats-new/2026/11/agentcore-aws-regions/
+- **Published:** 2026-11-16
+
+Amazon Bedrock AgentCore runtime instances are now available in six additional AWS
+Regions: US West (N. California), Canada (Central), Europe (London), Europe (Paris),
+Europe (Stockholm), and Asia Pacific (Seoul). Runtime instances run your agents on
+Amazon EC2 instances while AgentCore handles provisioning, patching, scaling, and
+lifecycle management. By expanding to these AWS Regions, more teams can use runtime
+instance capabilities such as GPU-accelerated, memory-optimized, or compute-optimized
+instance types, and long-running agent sessions of up to 14 days. You can run your
+agents closer to your users to reduce invocation latency, and keep agent instances,
+storage volumes, and session data in the Region that your data residency requirements
+call for. With this expansion, you can use runtime instances in the following AWS
+Regions: US East (N. Virginia), US East (Ohio), US West (N. California), US West
+(Oregon), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London),
+Europe (Paris), Europe (Stockholm), Asia Pacific (Mumbai), Asia Pacific (Seoul), Asia
+Pacific (Singapore), Asia Pacific (Sydney), and Asia Pacific (Tokyo). You are charged
+for managing the provisioned compute, in addition to your Amazon EC2 costs. To get
+started, see the following resources: Supported AWS Regions in the Amazon Bedrock
+AgentCore Developer Guide AgentCore pricing Runtime instances and capacity providers in
+the Amazon Bedrock AgentCore Developer Guide
+
+### 84. Unlocking Stable On-Policy RL on TPU with Bitwise-Zero Train–Inference Mismatch
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/unlocking-stable-on-policy-rl-on-tpu-with-bitwise-zero-traininference-mismatch/
+- **Published:** unknown-date
+
+How we eliminated floating-point train–inference logprob drift for on-policy LLM
+reinforcement learning across 64 Cloud TPU v5p chips using a generalizable four-part JAX
+and Pallas recipe in Tunix.
+
+### 85. TPU Model Design Considerations and Optimization Guide
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/tpu-model-design-considerations-and-optimization-guide/
+- **Published:** unknown-date
+
+The newly launched AI-Hypercomputer/tpu-codesign guide provides hardware-grounded design
+rules to help developers maximize performance on TPUs for LLMs and Mixture-of-Experts
+(MoE) workloads. Key principles include aligning reduction and output dimensions to 256
+for systolic arrays, adopting LatentMoE to compress routed token traffic, and mapping
+parallel axes directly onto physical links.
+
+### 86. Securing Your Agents: A Hands-On Guide to Agent Anomaly Detection
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/securing-your-agents-a-hands-on-guide-to-agent-anomaly-detection/
+- **Published:** unknown-date
+
+This guide walks developers through setting up Agent Anomaly Detection on the Gemini
+Enterprise Agent Platform to monitor AI agent telemetry and catch behavioral risks. It
+demonstrates how to deploy a sample customer support agent, trigger out-of-scope
+security findings, and configure proactive alerts using Cloud Monitoring and Security
+Command Center.
+
+### 87. Agents are sessions, not requests: size GKE node pools for AI agent sessions
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/agents-are-sessions-not-requests-size-gke-node-pools-for-ai-agent-sessions/
+- **Published:** unknown-date
+
+AI agent sessions remain active and idle for most of the workday, making traditional
+one-Pod-per-session allocations inefficient for cluster resources. By using open-source
+tools like Agent Substrate and AX on GKE, developers can park idle sessions in object
+storage to release compute resources while maintaining session state. This approach
+optimizes resource utilization and reduces Kubernetes node costs by up to 40%.
+
+### 88. How Agent Anomaly Detection scores on benchmarks we didn't write
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/
+- **Published:** unknown-date
+
+Agent Anomaly Detection (AAD) provides asynchronous, low-latency monitoring for AI
+agents by analyzing OpenTelemetry traces and logs to flag goal hijacks and tool misuse.
+Tested across five public security benchmarks, AAD successfully caught 87% of harmful
+instructions carried out by agents without adding runtime latency. Developers can
+integrate AAD alongside semantic governance and strict tool limits as part of a defense-
+in-depth strategy to secure agentic applications.
+
+### 89. Catch Go bugs that fuzzing misses with Gemini and a constraint solver
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/
+- **Published:** unknown-date
+
+How pairing Go's surviving compiler bounds-check traps with Gemini 4 Argon and the Z3
+constraint solver catches latent out-of-bounds panics in Go code and uncovers a slice-
+capacity blind spot in go test -fuzz.
+
+### 90. A2UI 1.0: Build delightful, fast, reliable, agentic experiences
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/
+- **Published:** unknown-date
+
+A2UI 1.0 is an open protocol for generative UI that enables AI agents to render
+interactive, native screens across web, mobile, and desktop applications. Developers can
+leverage open-source renderer SDKs—including React, Angular, Lit, Flutter, SwiftUI, and
+Jetpack Compose—alongside agent SDKs for Python, TypeScript, and Dart. The release
+introduces bidirectional function calls, swappable inference formats, and secure data
+binding to help teams seamlessly integrate generative UI into their product stacks.
+
+### 91. On-Device Speech Recognition and Text-to-Speech in Google AI Edge Gallery
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/
+- **Published:** unknown-date
+
+Google AI Edge Gallery now supports on-device, offline Automatic Speech Recognition
+(ASR) and Text-to-Speech (TTS) capabilities for building developer-friendly voice
+applications. Developers can leverage ML Kit for optimized Android performance, or use
+MediaPipe Tasks and LiteRT for cross-platform open-weight model integration. This local
+pipeline seamlessly pairs lightweight speech models with on-device small language models
+like Gemini Nano and Gemma 4 to enable real-time streaming transcription and low-latency
+synthesis.
+
+### 92. Announcing Long-Context Training on TPUs with MaxText Context Parallelism
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/
+- **Published:** unknown-date
+
+Google Cloud's MaxText framework now supports long-context training up to 14 million
+tokens on Cloud TPUs by implementing four context-parallel strategies: All-gather, A2A,
+P2P, and USP. Powered by the Tokamax Splash Attention kernel, these strategies
+effectively manage attention compute and memory bottlenecks without materializing full
+key-value sequences in high-bandwidth memory. Developers can adopt these capabilities in
+MaxText v0.2.4 to achieve high Model FLOPs Utilization (MFU) across large-scale model
+training workflows.
+
+### 93. From prompt to app: Build with Google Maps in AI Studio
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/from-prompt-to-app-build-with-google-maps-in-ai-studio/
+- **Published:** unknown-date
+
+Developers can now build applications powered by Google Maps Platform directly within
+Google AI Studio by prompting Gemini with real-world geospatial concepts. The
+integration eliminates traditional configuration hurdles by providing one-click demo
+keys that generate instantly without requiring Cloud Console redirects or credit cards.
+This setup grants developers immediate access to core APIs—including Maps, Places, and
+Routes—supported by daily sandbox quotas for seamless prototyping.
+
+### 94. What is Pathways? Single-controller training for large models
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/what-is-pathways-single-controller-training-for-large-models/
+- **Published:** unknown-date
+
+Pathways is a single-controller distributed training system designed to coordinate
+large-scale model training across multiple accelerator groups by representing
+computations as a global dataflow graph. Unlike traditional SPMD models like DDP and
+FSDP that rely on synchronous collectives, Pathways uses asynchronous dispatch and a
+central scheduler to maximize hardware utilization and prevent deadlocks in complex
+workloads. By decoupling model definition from physical hardware via virtual devices,
+developers can efficiently scale complex training architectures and seamlessly handle
+dynamic workloads like reinforcement learning post-training.
+
+### 95. Agent Distraction
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/agent-distraction/
+- **Published:** unknown-date
+
+Analysis of over 913,000 coding agent sessions reveals that 13% expose agents to inline
+TODO(b/...) comments. In 6% of encounters, agents act on these comments, with 83% being
+entirely unprompted by the developer. These detours result in significant
+overhead—adding 70% more steps, 77% more tokens, and 105% more wait time per
+session—split between chasing closed tickets (41%) and unauthorized scope creep on open
+bugs (57%). Higher-capability models show higher distraction rates, highlighting the
+need for automated cleanup and linters to maintain agent-friendly codebases
+
+### 96. Cost per task: Using cheap classifiers to route across Gemini models and thinking levels
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/
@@ -1470,7 +1561,7 @@ tasks, from finding childcare to managing finances and government paperwork.
 Per-token API prices keep falling, yet engineering bills for autonomous coding agents
 keep climbing....
 
-### 80. DevFest is back!
+### 97. DevFest is back!
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/devfest-is-back/
@@ -1484,7 +1575,7 @@ MCP—through live workshops and codelabs. The conference focuses on enabling de
 to prototype rapidly, ensure secure and private deployments, and leverage production-
 ready infrastructure.
 
-### 81. Build Generative UI Apps with A2UI & CopilotKit Agents
+### 98. Build Generative UI Apps with A2UI & CopilotKit Agents
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/
@@ -1493,7 +1584,19 @@ ready infrastructure.
 See Google A2Ui in action! Learn how to natively render agentic UIs across Langchain,
 AWS Strands, Microsoft agents, and Google ADK using CopilotKit SDKs for A2UI.
 
-### 82. Smaller apps and faster GPU inference with LiteRT in Google Play services
+### 99. Hill-Climbing Agent Quality with Agents CLI Evaluation
+
+- **Publisher:** Google Developers (`google-developers-blog`)
+- **URL:** https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/
+- **Published:** unknown-date
+
+This post walks through the Agents CLI evaluation loop for systematically improving
+agent performance through continuous testing and grading. It demonstrates how to catch
+prompt regressions, evaluate model backend swaps using side-by-side trace comparisons,
+and automate evaluation passes. Developers will also learn how to integrate nightly
+scheduled runs with threshold-based alerting to track quality over time.
+
+### 100. Smaller apps and faster GPU inference with LiteRT in Google Play services
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/smaller-apps-and-faster-gpu-inference-with-litert-in-google-play-services/
@@ -1506,19 +1609,7 @@ automatic runtime updates across billions of devices. Developers can easily adop
 updates by updating their dependencies and utilizing the new Android Studio LiteRT skill
 for automated migration.
 
-### 83. Hill-Climbing Agent Quality with Agents CLI Evaluation
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/
-- **Published:** unknown-date
-
-This post walks through the Agents CLI evaluation loop for systematically improving
-agent performance through continuous testing and grading. It demonstrates how to catch
-prompt regressions, evaluate model backend swaps using side-by-side trace comparisons,
-and automate evaluation passes. Developers will also learn how to integrate nightly
-scheduled runs with threshold-based alerting to track quality over time.
-
-### 84. Building Conversational Commerce with Multi-Agent Swarms on GCP: A Working Prototype
+### 101. Building Conversational Commerce with Multi-Agent Swarms on GCP: A Working Prototype
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/building-conversational-commerce-with-multi-agent-swarms-on-gcp-a-working-prototype/
@@ -1531,7 +1622,7 @@ publishing technical content through Google Developer Studio. The framework help
 engineers organize their guides and solutions to effectively share AI-driven
 conversational interface designs with the developer community.
 
-### 85. Fast, reliable A2UI, with swappable inference formats
+### 102. Fast, reliable A2UI, with swappable inference formats
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/fast-reliable-a2ui/
@@ -1545,7 +1636,7 @@ models stream text. These updates require no changes to frontend renderers or co
 catalogs, offering flexible performance levers for generative UI development across
 Python, TypeScript, and Dart.
 
-### 86. Preview, edit, and collaborate on markdown (.md) files natively in Google Docs and Drive
+### 103. Preview, edit, and collaborate on markdown (.md) files natively in Google Docs and Drive
 
 - **Publisher:** Google Developers (`google-developers-blog`)
 - **URL:** https://developers.googleblog.com/preview-edit-and-collaborate-on-markdown-md-files-natively-in-google-docs-and-drive/
@@ -1557,161 +1648,7 @@ manual file conversions. This integration preserves native file fidelity for use
 Git repositories and developer tools while unlocking standard Docs features like line-
 level commenting, rendered Drive previews, and tracked version history.
 
-### 87. Architecting Governed, Self-Evolving AI Agents on Google Cloud
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/
-- **Published:** unknown-date
-
-Learn how Project Chrysalis combines Google Cloud's Gemini Enterprise Agent Platform,
-Agent Development Kit (ADK), BigQuery, and a four-gate defense-in-depth security stack
-(Model Armor, Cloud KMS, Binary Authorization, and OPA) to build governed, self-evolving
-AI agents that remediate live production outages in 1.8 seconds.
-
-### 88. Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/
-- **Published:** unknown-date
-
-API Gateway now supports real-time streaming—including Server-Sent Events, WebSockets,
-gRPC, and chunked transfer encoding—in Public Preview without requiring changes to your
-existing API specifications. This update allows developers to route long-lived, bi-
-directional streams and AI workloads directly through the gateway while maintaining
-consistent authentication, rate limiting, and observability. Additionally, gateways now
-feature deterministic default hostnames, simplifying environment provisioning and
-infrastructure-as-code management.
-
-### 89. Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/
-- **Published:** unknown-date
-
-The Agents CLI Extension System enables developers to use frameworks like LangChain,
-LangGraph, or custom enterprise stacks while retaining a unified deployment and
-evaluation workflow. It details a first-party LangChain template that scaffolds, runs,
-and deploys agents without requiring the Agent Development Kit (ADK). Additionally, it
-demonstrates how platform teams can author custom extensions to enforce policies such as
-automated software bill of materials (SBOM) scans during deployment.
-
-### 90. Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/
-- **Published:** unknown-date
-
-Google Research has completed the 32-bit open-source Coral NPU RISC-V architecture with
-the introduction of its Matrix Execution Unit, which delivers up to 1 TOPS while
-targeting 10 mW average power for edge inference. Alongside this architecture, the
-release of the v1.0 open-source IREE/MLIR compiler allows developers to take models from
-JAX, PyTorch, and TensorFlow straight to Coral NPU hardware without writing custom
-assembly. Developers can now prototype and deploy these multimodal edge applications
-using new hardware options like the Synaptics Astra SR200 MCU series and globally
-available Coralboard devkits.12
-
-### 91. Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer/
-- **Published:** unknown-date
-
-Google AI Edge Model Explorer now supports custom compiler intermediate representations
-and open-source adapters like TOSA, VGF, and PTE for on-device machine learning.
-Developers can leverage hierarchical graph visualization, split-pane views, and per-node
-trace overlays to catch export regressions and verify hardware delegation. These tools
-enable engineering teams to transparently debug execution graphs and pinpoint cycle-
-level latency bottlenecks locally.
-
-### 92. Announcing New vLLM and SGLang Inference Engines on TPU
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/
-- **Published:** unknown-date
-
-This post announces native PyTorch backends for vLLM and SGLang powered by TorchTPU,
-enabling developers to run and optimize serving workloads using familiar PyTorch tools.
-Built in collaboration with open-source project maintainers, these engines include
-optimized TPU kernel implementations, production-ready features like KV cache management
-with TPU Sync, and disaggregated serving. Public benchmarks demonstrate state-of-the-art
-performance and industry-leading cost efficiency on Ironwood TPU across long-context and
-agentic workloads.
-
-### 93. Integrating TorchTPU into TorchTitan and Optimizing Models for TPU
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/
-- **Published:** unknown-date
-
-TorchTPU integrates a native torch.device("tpu") backend directly into PyTorch, allowing
-developers to train large-scale models on Google Cloud TPUs without rewriting code in
-JAX. The TorchTitan TPU fork enhances this with production-grade scaling primitives like
-SimpleFSDP, Graph Trainer, and custom Pallas kernels that achieve high Model Flops
-Utilization (MFU) across dense and MoE architectures. Developers can leverage these
-battle-tested optimization playbooks, recipes, and the Hugging Face modeling backend to
-efficiently scale their own workloads on TPU infrastructure.
-
-### 94. Step by Step guide: Build a Voice Agent That Never Goes Silent using ADK
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/
-- **Published:** unknown-date
-
-The open-source Agent Development Kit (ADK) and gemini-3.8-live enable developers to
-build responsive voice agents by implementing non-blocking tools in Python. Developers
-can use streaming tools to yield progress updates or background execution patterns to
-keep conversations fluid during long-running backend queries. Additionally, configuring
-response scheduling behaviors such as WHEN_IDLE, INTERRUPT, or SILENT gives developers
-precise control over when and how tool results are delivered into the conversation.
-
-### 95. Native Model Authoring for Edge with LiteRT Tensor API
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/
-- **Published:** unknown-date
-
-Meet the LiteRT Tensor API: giving developers native C++ control over the model graph to
-unify end-to-end ML computations on heterogeneous edge hardware.
-
-### 96. Three layers, one repo: a tour of google/adk-recipes
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/three-layers-one-repo-a-tour-of-googleadk-recipes/
-- **Published:** unknown-date
-
-The google/adk-recipes repository unifies Agent Development Kit (ADK) resources into
-three structured layers—core/, plugins/, and contrib/—serving as a single source of
-truth for building AI agents. Developers can leverage reference patterns, install
-modular vertical skills (such as retail product search and virtual try-on) directly into
-their coding assistants, and deploy production-ready services across multiple languages.
-This cohesive structure streamlines the entire workflow from initial scaffolding to full
-deployment on Google Cloud infrastructure.
-
-### 97. Evaluating AI agents: moving past the vibe check
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/
-- **Published:** unknown-date
-
-A practical engineering guide and reference architecture for establishing continuous
-evaluation pipelines for multi-turn AI agents using Gemini Enterprise Agent Platform,
-Google ADK, and OpenInference standards.
-
-### 98. Announcing DPoP Support for Google OAuth: Securing Refresh Tokens
-
-- **Publisher:** Google Developers (`google-developers-blog`)
-- **URL:** https://developers.googleblog.com/announcing-dpop-support-for-google-oauth-securing-refresh-tokens/
-- **Published:** unknown-date
-
-Google OAuth Platform now supports DPoP (Demonstrating Proof-of-Possession) to sender-
-constrain refresh tokens, neutralizing Infostealer malware and adversary-in-the-middle
-attacks. By cryptographically binding long-lived refresh tokens while maintaining short-
-lived access tokens as standard Bearer tokens, developers achieve robust credential
-security without incurring high-QPS API performance overhead. Additionally, developers
-integrating multi-agent or Model Context Protocol (MCP) workloads can use Google Cloud
-Secure Token Service (STS) to handle secure token delegation across agent chains.
-
-### 99. Announcements
+### 104. Announcements
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/announcements
@@ -1719,7 +1656,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 100. Public Benefit Fund
+### 105. Public Benefit Fund
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/public-benefit-fund
@@ -1727,7 +1664,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 101. S1 Sec
+### 106. S1 Sec
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/s1-sec
@@ -1735,7 +1672,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 102. Features
+### 107. Features
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/features
@@ -1743,7 +1680,15 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 103. Ai For Science Expands Foundations Research Institutions
+### 108. Roadshow Launch
+
+- **Publisher:** Anthropic (`anthropic-news`)
+- **URL:** https://www.anthropic.com/news/roadshow-launch
+- **Published:** unknown-date
+
+(HTML index entry — open URL for full text; do not invent body content.)
+
+### 109. Ai For Science Expands Foundations Research Institutions
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions
@@ -1751,7 +1696,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 104. Expanding Partnership Gsa
+### 110. Expanding Partnership Gsa
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/expanding-partnership-gsa
@@ -1759,7 +1704,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 105. Partnerships
+### 111. Partnerships
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/partnerships
@@ -1767,7 +1712,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 106. Donating Agent Skills To The Agentic Ai Foundation
+### 112. Donating Agent Skills To The Agentic Ai Foundation
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation
@@ -1775,7 +1720,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 107. Product
+### 113. Product
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/product
@@ -1783,7 +1728,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 108. Open Call Guest Investigators Life Sciences
+### 114. Open Call Guest Investigators Life Sciences
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/open-call-guest-investigators-life-sciences
@@ -1791,7 +1736,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 109. Christopher Stubbs Joins Long Term Benefit Trust
+### 115. Christopher Stubbs Joins Long Term Benefit Trust
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust
@@ -1799,7 +1744,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 110. An Update On Independent Evaluators
+### 116. An Update On Independent Evaluators
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/an-update-on-independent-evaluators
@@ -1807,7 +1752,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 111. Policy
+### 117. Policy
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/policy
@@ -1815,7 +1760,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 112. 2026 Us Midterms
+### 118. 2026 Us Midterms
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/2026-us-midterms
@@ -1823,7 +1768,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 113. Safeguards
+### 119. Safeguards
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/safeguards
@@ -1831,7 +1776,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 114. Singapore Office Opening
+### 120. Singapore Office Opening
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/singapore-office-opening
@@ -1839,7 +1784,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 115. Distillation Defenses
+### 121. Distillation Defenses
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/distillation-defenses
@@ -1847,7 +1792,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 116. Anthropic Cyber Mission
+### 122. Anthropic Cyber Mission
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/anthropic-cyber-mission
@@ -1855,7 +1800,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 117. Security
+### 123. Security
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/security
@@ -1863,7 +1808,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 118. 2026 Usage Policy Update
+### 124. 2026 Usage Policy Update
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/2026-usage-policy-update
@@ -1871,7 +1816,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 119. Genesis Mission Commitment
+### 125. Genesis Mission Commitment
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/genesis-mission-commitment
@@ -1879,7 +1824,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 120. Cyber Verification Program
+### 126. Cyber Verification Program
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/cyber-verification-program
@@ -1887,7 +1832,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 121. Claude Frontier Academy
+### 127. Claude Frontier Academy
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/claude-frontier-academy
@@ -1895,7 +1840,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 122. Barclays Scales Claude
+### 128. Barclays Scales Claude
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/barclays-scales-claude
@@ -1903,7 +1848,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 123. Accenture Embedded Evaluation
+### 129. Accenture Embedded Evaluation
 
 - **Publisher:** Anthropic (`anthropic-news`)
 - **URL:** https://www.anthropic.com/news/accenture-embedded-evaluation
@@ -1911,15 +1856,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 124. Life Sciences Verification Program
-
-- **Publisher:** Anthropic (`anthropic-news`)
-- **URL:** https://www.anthropic.com/news/life-sciences-verification-program
-- **Published:** unknown-date
-
-(HTML index entry — open URL for full text; do not invent body content.)
-
-### 125. Rss
+### 130. Rss
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/rss
@@ -1927,7 +1864,15 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 126. Mistral Large 4 Oss
+### 131. Build With Studio
+
+- **Publisher:** Mistral (`mistral-news`)
+- **URL:** https://mistral.ai/news/build-with-studio/
+- **Published:** unknown-date
+
+(HTML index entry — open URL for full text; do not invent body content.)
+
+### 132. Mistral Large 4 Oss
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-large-4-oss/
@@ -1935,7 +1880,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 127. Mistral Nvidia Ai For Industrial Engineering
+### 133. Mistral Nvidia Ai For Industrial Engineering
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/
@@ -1943,7 +1888,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 128. Voxtral 3
+### 134. Voxtral 3
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/voxtral-3/
@@ -1951,7 +1896,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 129. Timestral
+### 135. Timestral
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/timestral/
@@ -1959,7 +1904,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 130. Mistral Large 4
+### 136. Mistral Large 4
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-large-4/
@@ -1967,7 +1912,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 131. Hallo Deutschland
+### 137. Hallo Deutschland
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/hallo-deutschland/
@@ -1975,7 +1920,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 132. Mistral X Mozilla
+### 138. Mistral X Mozilla
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-x-mozilla/
@@ -1983,7 +1928,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 133. Mistral X Cloudera
+### 139. Mistral X Cloudera
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-x-cloudera/
@@ -1991,7 +1936,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 134. Legacy Code Modernization
+### 140. Legacy Code Modernization
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/legacy-code-modernization/
@@ -1999,7 +1944,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 135. Mistral Makes Sovereign Open Weight Ai To Frontier
+### 141. Mistral Makes Sovereign Open Weight Ai To Frontier
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/
@@ -2007,7 +1952,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 136. Mistral X Humain
+### 142. Mistral X Humain
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-x-humain/
@@ -2015,7 +1960,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 137. Agentic Search
+### 143. Agentic Search
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/agentic-search/
@@ -2023,7 +1968,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 138. Regional Inference Open Models New Compute
+### 144. Regional Inference Open Models New Compute
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/regional-inference-open-models-new-compute/
@@ -2031,7 +1976,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 139. Shieldstral
+### 145. Shieldstral
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/shieldstral/
@@ -2039,7 +1984,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 140. Manage Prompts And Skills In Studio
+### 146. Manage Prompts And Skills In Studio
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/manage-prompts-and-skills-in-studio/
@@ -2047,7 +1992,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 141. Robostral Navigate
+### 147. Robostral Navigate
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/robostral-navigate/
@@ -2055,7 +2000,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 142. Leanstral 1 5
+### 148. Leanstral 1 5
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/leanstral-1-5/
@@ -2063,7 +2008,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 143. More Control Over Connectors
+### 149. More Control Over Connectors
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/more-control-over-connectors/
@@ -2071,7 +2016,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 144. Ocr 4
+### 150. Ocr 4
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/ocr-4/
@@ -2079,7 +2024,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 145. Ai Now Summit 2026
+### 151. Ai Now Summit 2026
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/ai-now-summit-2026/
@@ -2087,7 +2032,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 146. Vibe Agent
+### 152. Vibe Agent
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/vibe-agent/
@@ -2095,7 +2040,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 147. Search Toolkit
+### 153. Search Toolkit
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/search-toolkit/
@@ -2103,7 +2048,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 148. Introducing Physics Ai At Mistral
+### 154. Introducing Physics Ai At Mistral
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/introducing-physics-ai-at-mistral/
@@ -2111,7 +2056,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 149. Physics Ai Research
+### 155. Physics Ai Research
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/physics-ai-research/
@@ -2119,7 +2064,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 150. Accelerate Ai Native Industry
+### 156. Accelerate Ai Native Industry
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/accelerate-ai-native-industry/
@@ -2127,7 +2072,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 151. Vibe Remote Agents Mistral Medium 3 5
+### 157. Vibe Remote Agents Mistral Medium 3 5
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/
@@ -2135,7 +2080,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 152. Connectors
+### 158. Connectors
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/connectors/
@@ -2143,7 +2088,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 153. Workflows
+### 159. Workflows
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/workflows/
@@ -2151,7 +2096,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 154. Spaces
+### 160. Spaces
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/spaces/
@@ -2159,7 +2104,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 155. Voxtral Tts
+### 161. Voxtral Tts
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/voxtral-tts/
@@ -2167,7 +2112,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 156. Forge
+### 162. Forge
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/forge/
@@ -2175,7 +2120,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 157. Mistral Small 4
+### 163. Mistral Small 4
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-small-4/
@@ -2183,7 +2128,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 158. Mistral Ai And Nvidia Partner To Accelerate Open Frontier Models
+### 164. Mistral Ai And Nvidia Partner To Accelerate Open Frontier Models
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-ai-and-nvidia-partner-to-accelerate-open-frontier-models/
@@ -2191,7 +2136,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 159. Leanstral
+### 165. Leanstral
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/leanstral/
@@ -2199,7 +2144,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 160. Rails Testing On Autopilot Building An Agent That Writes What Developers Wont
+### 166. Rails Testing On Autopilot Building An Agent That Writes What Developers Wont
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/rails-testing-on-autopilot-building-an-agent-that-writes-what-developers-wont/
@@ -2207,7 +2152,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 161. Voxtral Transcribe 2
+### 167. Voxtral Transcribe 2
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/voxtral-transcribe-2/
@@ -2215,7 +2160,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 162. Mistral Vibe 2 0
+### 168. Mistral Vibe 2 0
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/mistral-vibe-2-0/
@@ -2223,7 +2168,7 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 163. Debugging Memory Leak In Vllm
+### 169. Debugging Memory Leak In Vllm
 
 - **Publisher:** Mistral (`mistral-news`)
 - **URL:** https://mistral.ai/news/debugging-memory-leak-in-vllm/
@@ -2231,12 +2176,4 @@ Secure Token Service (STS) to handle secure token delegation across agent chains
 
 (HTML index entry — open URL for full text; do not invent body content.)
 
-### 164. Mistral Ocr 3
-
-- **Publisher:** Mistral (`mistral-news`)
-- **URL:** https://mistral.ai/news/mistral-ocr-3/
-- **Published:** unknown-date
-
-(HTML index entry — open URL for full text; do not invent body content.)
-
-_Total entries: 164_
+_Total entries: 169_

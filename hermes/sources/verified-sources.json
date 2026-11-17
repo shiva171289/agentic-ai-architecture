@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "updated": "2026-11-06",
+  "version": 3,
+  "updated": "2026-11-17",
   "notes": "RSS URLs change occasionally. Re-verify monthly. Agents must not cite URLs outside this allowlist unless fetched same-session from an official doc link listed under doc_roots.",
   "allowed_link_hosts": [
     "aws.amazon.com",
@@ -44,16 +44,226 @@
   ],
   "feeds": [
     {
+      "id": "aws-main-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/aws/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-whats-new",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-architecture-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/architecture/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-big-data-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/big-data/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-business-productivity-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/business-productivity/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-compute-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/compute/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-contact-center-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/contact-center/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-containers-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/containers/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-database-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/database/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-desktop-app-streaming-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/desktop-and-application-streaming/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-developer-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/developer/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-devops-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/devops/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-enterprise-strategy-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/enterprise-strategy/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-mobile-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/mobile/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-gametech-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/gametech/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-hpc-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/hpc/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-infrastructure-automation-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/infrastructure-and-automation/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-industries-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/industries/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-iot-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/iot/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
       "id": "aws-ml-blog",
       "publisher": "AWS",
       "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
       "tags": ["cloud", "enterprise"]
     },
     {
-      "id": "aws-main-blog",
+      "id": "aws-management-blog",
       "publisher": "AWS",
-      "url": "https://aws.amazon.com/blogs/aws/feed/",
-      "tags": ["cloud"]
+      "url": "https://aws.amazon.com/blogs/mt/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-media-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/media/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-messaging-targeting-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/messaging-and-targeting/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-networking-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/networking-and-content-delivery/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-opensource-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/opensource/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-public-sector-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/publicsector/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-quantum-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/quantum-computing/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-robotics-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/robotics/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-sap-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/awsforsap/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-security-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/security/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-startups-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/startups/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-storage-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/storage/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-training-cert-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/training-and-certification/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-modernizing-windows-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/modernizing-with-aws/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-cloud-financial-management-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-apn-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/apn/feed/",
+      "tags": ["cloud", "enterprise"]
+    },
+    {
+      "id": "aws-marketplace-blog",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/awsmarketplace/feed/",
+      "tags": ["cloud", "enterprise"]
     },
     {
       "id": "azure-blog",
