@@ -37,11 +37,11 @@ PATH=/home/hermes/.local/bin:/usr/local/bin:/usr/bin:/bin
 # News Inshorts — harvest + summarize daily 06:45 UTC (12:15 IST)
 # --days 7 (was 3): the 3-day window plus cap-before-dedupe left only ~1-6 new
 # items/day. Wider window + dedupe-then-cap gives ~26 new items per run.
-# Pulse every 2 hours, NOT hourly: an hourly pulse (24/day) outran the supply and
-# went dry 34 times out of 95 runs. 12/day is sustainable.
+# Pulse hourly at :05. Adaptive batch in news_pulse_send.py sends more than one card
+# only when the ready queue exceeds HERMES_NEWS_RUNS_PER_DAY (default 24).
 45 6 * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/harvest_sources.py --days 7 --json-out ~/.hermes/news-queue/harvest-latest.json >> ~/logs/news-harvest.log 2>&1 && python3 hermes/tools/news_ingest.py --max-per-publisher 4 >> ~/logs/news-ingest.log 2>&1 && python3 hermes/tools/news_summarize.py >> ~/logs/news-summarize.log 2>&1 && python3 hermes/tools/news_cleanup.py >> ~/logs/news-cleanup.log 2>&1
 
-5 */2 * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/news_pulse_send.py >> ~/logs/news-pulse.log 2>&1
+5 * * * * cd ~/work/agentic-ai-architecture && python3 hermes/tools/news_pulse_send.py >> ~/logs/news-pulse.log 2>&1
 ```
 
 Exact `hermes run` syntax depends on Hermes version — replace with documented CLI or Telegram-triggered jobs if cron integration differs.

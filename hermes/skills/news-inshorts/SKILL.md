@@ -44,7 +44,7 @@ State: `~/.hermes/news-queue/queue.json` (VPS only).
 1. Send `sendPhoto` when `image_url` exists in the RSS item (allowlisted host).
 2. Otherwise send `sendMessage`.
 3. Pick **one random** unsent summarized item per run when the queue fits the daily budget.
-4. When `ready` count exceeds `HERMES_NEWS_RUNS_PER_DAY` (default 12), send `ceil(ready/12)` cards per pulse (cap `HERMES_NEWS_MAX_PER_RUN`, default 10).
+4. When `ready` count exceeds `HERMES_NEWS_RUNS_PER_DAY` (default 24), send `ceil(ready/24)` cards per pulse (cap `HERMES_NEWS_MAX_PER_RUN`, default 10).
 
 ## Grounding
 
@@ -64,8 +64,8 @@ Setup: [hermes/setup/04-news-env.md](../../setup/04-news-env.md).
 ## Schedule
 
 See [cron.md](../../cron.md): daily 06:45 **UTC** (12:15 IST) harvest+summarize, ingest
-with `--max-per-publisher 4`; pulse **every 2 hours** at :05 (12/day), because the feeds
-yield only ~15-20 qualifying items/day. Times in that file are UTC — the host runs
+with `--max-per-publisher 4`; pulse **hourly** at :05 (24/day). Adaptive batch clears backlog
+when `ready` exceeds 24. Times in that file are UTC — the host runs
 `Etc/UTC` and its cron ignores `CRON_TZ`.
 
 ## Model tier

@@ -40,7 +40,7 @@ TELEGRAM_CHAT_ID=-5144603731
 Install blocks from [../cron.md](../cron.md):
 
 1. Daily **06:45 UTC** (12:15 IST) — harvest (`--days 7 --json-out`), ingest, summarize, cleanup.
-2. Every **2 hours** at :05 — `news_pulse_send.py` (one card when the queue is small; more per run when `ready` exceeds 12) = up to **12–72** cards/day depending on backlog.
+2. **Every hour** at :05 — `news_pulse_send.py` (one card when the queue is small; more per run when `ready` exceeds 24) = up to **24–240** cards/day depending on backlog.
 
 **Supply is the binding constraint.** `news_ingest.py` de-duplicates **before** applying
 `--max-per-publisher`; doing it the other way round lets already-queued items eat each
@@ -54,7 +54,7 @@ is UTC. Convert before you copy.
 
 Ingest runs with **`--max-per-publisher 4`** (non-AWS publishers). **AWS** feeds are all listed in `verified-sources.json` (every official `blogs/*` channel plus **What's New**). Ingest accepts every harvested AWS row — **two per feed id**, **80** max per daily run — with no agent/LLM keyword gate.
 
-When the summarized backlog grows (for example after opening AWS main-blog), pulse send scales batch size: `ceil(ready / HERMES_NEWS_RUNS_PER_DAY)` capping at `HERMES_NEWS_MAX_PER_RUN` (defaults **12** and **10**). Override those env vars on the VPS if you change cron interval.
+When the summarized backlog grows (for example after opening AWS main-blog), pulse send scales batch size: `ceil(ready / HERMES_NEWS_RUNS_PER_DAY)` capping at `HERMES_NEWS_MAX_PER_RUN` (defaults **24** and **10**). Override those env vars on the VPS if you change cron interval.
 
 Remove the old `hermes run skill daily-ai-brief` line if it is still present.
 
