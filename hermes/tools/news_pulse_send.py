@@ -41,7 +41,7 @@ from news_queue import (  # noqa: E402
 
 TELEGRAM_API = "https://api.telegram.org/bot{token}/{method}"
 CAPTION_MAX = 1024
-DEFAULT_RUNS_PER_DAY = 12
+DEFAULT_RUNS_PER_DAY = 24
 DEFAULT_MAX_PER_RUN = 10
 SEND_GAP_SEC = 1.0
 

@@ -31,7 +31,7 @@ Paste the full block from [hermes/cron.md](../../hermes/cron.md).
 | GrowthAnalyst | `0 8 * * 1` | Mon 13:30 | KPI nudge |
 | Weekly reminder | `15 8 * * 1` | Mon 13:45 | Deterministic pack nudge (no LLM) |
 | News pipeline | `45 6 * * *` | 12:15 | Harvest, ingest, summarize |
-| News pulse | `5 */2 * * *` | Every 2h | 1+ Inshorts cards (scales with queue) |
+| News pulse | `5 * * * *` | Every hour | 1+ Inshorts cards (scales with queue) |
 
 ResearchScout uses [calendar_week.py](../../hermes/tools/calendar_week.py) so the target week matches [content/calendar.md](../../content/calendar.md).
 
