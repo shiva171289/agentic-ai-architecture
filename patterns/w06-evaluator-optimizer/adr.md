@@ -1,6 +1,6 @@
 # ADR — Evaluator-optimizer
 
-**Status:** proposed
+**Status:** accepted
 **Week:** w06
 
 ## Context

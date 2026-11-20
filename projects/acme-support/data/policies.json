@@ -7,12 +7,14 @@
   {
     "id": "warranty",
     "keywords": ["warranty", "guarantee", "coverage"],
-    "text": "Acme Widget includes a 12-month limited warranty from the date of purchase. Keep your receipt."
+    "text": "Acme Widget includes a 12-month limited warranty from the date of purchase. Keep your receipt.",
+    "facts": { "warranty_months": 12 }
   },
   {
     "id": "returns",
     "keywords": ["return", "refund", "exchange"],
-    "text": "Unopened items may be returned within 30 days. Opened items require manager review for refund eligibility."
+    "text": "Unopened items may be returned within 30 days. Opened items require manager review for refund eligibility.",
+    "facts": { "return_window_days": 30, "opened_requires_review": true }
   },
   {
     "id": "shipping",
