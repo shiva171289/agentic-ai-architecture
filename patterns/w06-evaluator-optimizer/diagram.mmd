@@ -1,0 +1,46 @@
+flowchart TB
+  req[Support request]
+  ctx[Context from w05 spine<br/>policy rows + order]
+  gen[Generator<br/>draft attempt]
+  crit[Critic<br/>grades against criteria]
+  store[(Policy store<br/>criteria as data)]
+  verdict{Verdict}
+  rewrite[Optimizer<br/>bounded rewrite]
+  cap{Cycles left?}
+  ship[Ship reply]
+  tele[[Verdict as telemetry<br/>score beside the trace]]
+
+  req --> gen
+  ctx --> gen
+  gen --> crit
+  crit --> store
+  store --> crit
+  crit --> verdict
+  crit --> tele
+  verdict -->|pass| ship
+  verdict -->|fail| cap
+  cap -->|yes, max 1| rewrite
+  rewrite --> crit
+  cap -->|no| ship
+
+%% ===== AWS deployment view (comment) =====
+%% Channel -> AgentCore-hosted generator (Bedrock invoke, draft)
+%%   -> Step Functions state machine owns the loop and the cap
+%%   -> critic path: Lambda reads the policy row from DynamoDB, then a
+%%      second Bedrock invoke returns the JSON verdict
+%%   -> Choice state: pass -> ship; fail and under cap -> one rewrite;
+%%      at cap -> ship with the violation recorded
+%%   -> each verdict written to CloudWatch Omni as an evaluation score
+%%      next to the agent trace
+%%   -> Bedrock Guardrails filter the final text; they do not grade policy
+
+%% ===== Azure deployment view (comment) =====
+%% Channel -> Microsoft Foundry Agent Service (generator agent)
+%%   -> Durable Functions orchestrator: deterministic loop, verdict and
+%%      iteration count checkpointed in orchestrator history
+%%   -> critique activity reads the policy row (Cosmos DB / AI Search),
+%%      then a second Foundry model call returns the JSON verdict
+%%   -> at the cap the orchestrator ships the rewrite and records the
+%%      violation instead of looping
+%%   -> verdict emitted as a custom event/metric in Application Insights,
+%%      correlated by operation id

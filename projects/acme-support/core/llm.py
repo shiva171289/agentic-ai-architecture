@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+import json
 
 
 @dataclass
@@ -20,6 +21,34 @@ class MockLLM(LLM):
 
 
 def _default_complete(system: str, user: str) -> LLMResponse:
+    # w06 — evaluator-optimizer. The mock critic calls the same deterministic
+    # policy checker a real critic would be given evidence for, so the loop can
+    # be tested without API keys. A deployed critic sends this payload to a
+    # model and parses the same JSON verdict back.
+    if "TASK:CRITIQUE" in system:
+        from core.critic import check_policy
+
+        payload = json.loads(user)
+        verdict = check_policy(payload["draft"], payload["policies"])
+        return LLMResponse(
+            text=json.dumps(
+                {
+                    "passed": verdict.passed,
+                    "score": verdict.score,
+                    "violations": [
+                        {"rule": v.rule, "detail": v.detail}
+                        for v in verdict.violations
+                    ],
+                }
+            )
+        )
+    if "TASK:REWRITE" in system:
+        from core.critic import revise_draft
+
+        payload = json.loads(user)
+        return LLMResponse(
+            text=revise_draft(payload["draft"], payload["violations"], payload["policies"])
+        )
     if "CREATE_TICKET" in user.upper():
         return LLMResponse(text="Ticket created.", tool_call="create_ticket")
     has_order_ctx = "order:" in user.lower() and "status" in user.lower()
