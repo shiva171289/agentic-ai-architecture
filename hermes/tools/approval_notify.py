@@ -57,15 +57,41 @@ def approval_chat_id() -> str:
     return ""
 
 
-def _read_excerpt(path: Path, words: int = 80) -> str:
-    if not path.is_file():
-        return "(file not on disk yet — check drafts branch)"
-    body = path.read_text(encoding="utf-8")
+def _read_excerpt(path: Path, words: int, ref: str | None = None) -> str | None:
+    """Read an excerpt, preferring a git ref over the working tree.
+
+    The pipeline sends gate cards after the pack agent has left the repo checked
+    out on drafts/wNN, and it invokes this file as a subprocess — so the tools
+    that run are whatever that branch contains. Looking the content up through a
+    ref keeps the excerpt correct no matter which branch is checked out.
+    """
+    body = ""
+    if ref:
+        rel = path.relative_to(ROOT).as_posix()
+        proc = subprocess.run(
+            ["git", "show", f"{ref}:{rel}"], cwd=ROOT, capture_output=True, text=True
+        )
+        if proc.returncode == 0:
+            body = proc.stdout
+    if not body and path.is_file():
+        body = path.read_text(encoding="utf-8")
+    if not body:
+        return None
     if body.startswith("---"):
         parts = body.split("---", 2)
         body = parts[2] if len(parts) > 2 else body
     tokens = body.split()
     return " ".join(tokens[:words]) + ("…" if len(tokens) > words else "")
+
+
+def _pack_excerpt(week: str, slug: str, filenames: tuple[str, ...], words: int) -> str:
+    """Excerpt for wNN, read from drafts/wNN so it does not depend on the checkout."""
+    ref = f"origin/drafts/{week}"
+    for name in filenames:
+        text = _read_excerpt(ROOT / "patterns" / f"{week}-{slug}" / name, words, ref=ref)
+        if text:
+            return text
+    return f"(no pack files found for {week}-{slug} — check drafts/{week})"
 
 
 def _run_calendar_next() -> tuple[str, str]:
@@ -88,7 +114,7 @@ def build_adr_message(week: str, slug: str) -> str:
     lines = [
         f"Weekly ADR gate — {week} {slug}",
         "",
-        _read_excerpt(adr, 100) if adr.is_file() else _read_excerpt(brief, 100),
+        _pack_excerpt(week, slug, ("adr.md", "brief.md"), 100),
         "",
         f"ADR: https://github.com/{REPO}/blob/{branch}/patterns/{week}-{slug}/adr.md",
         f"Branch: https://github.com/{REPO}/tree/{branch}",
@@ -106,7 +132,7 @@ def build_publish_message(week: str, slug: str) -> str:
     lines = [
         f"Publish gate — {week} {slug}",
         "",
-        _read_excerpt(blog, 120),
+        _pack_excerpt(week, slug, ("blog.md",), 120),
         "",
         f"Pack: https://github.com/{REPO}/tree/drafts/{week}",
         "Approving runs CI, merges the PR, and deploys GitHub Pages.",
