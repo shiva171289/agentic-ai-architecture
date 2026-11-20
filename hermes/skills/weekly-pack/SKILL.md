@@ -27,7 +27,7 @@ Enforce `_shared/ground-rules.md` across subagents.
    - `git checkout -B drafts/wNN`
    - Commit all files under `patterns/wNN-slug/` **and** changes under `projects/acme-support/` (if any)
    - `git push -u origin drafts/wNN`
-9. Telegram checklist with branch link and file list
+9. Telegram checklist (branch link + file list) — send it to the owner's **DM** with `python3 hermes/tools/notify_dm.py`, never by calling `send_message` yourself with a chat id you picked.
 
 ## Model policy
 
@@ -46,6 +46,6 @@ The session appends a `session_id:` line — strip it before saving the artifact
 - The ground-rules block is `hermes/skills/_shared/ground-rules.md`, not `_shared/ground-rules.md` inside each skill directory.
 - The pattern-sample suite and the Acme suite use different `pythonpath` roots: run them from their own directories (`cd patterns/wNN-slug/code && pytest`, `cd projects/acme-support && pytest`). A single root invocation fails collection.
 - Where no `uv` is on PATH, run the bundled interpreter: `"$(dirname "$(readlink -f "$(which python)")")/python" -m pytest -q`.
-- Send the step-9 checklist with `hermes/tools/telegram_api.send_message`, sourcing `~/.hermes/.env` first (terminal sessions do not inherit it).
+- Send the step-9 checklist with `python3 hermes/tools/notify_dm.py --file <path>`. It sources `~/.hermes/.env` itself (terminal sessions do not inherit it) and resolves the owner's DM internally: `TELEGRAM_APPROVAL_CHAT_ID` → `TELEGRAM_HOME_CHANNEL` → first `TELEGRAM_ALLOWED_USERS` entry. Do **not** build a chat id from `TELEGRAM_CHAT_ID` — that is the news group, and a checklist landing there is the exact bug this helper exists to prevent.
 
 Never commit secrets. Never push to `main`.
