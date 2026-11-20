@@ -154,6 +154,14 @@ def on_adr_approved(week: str, slug: str) -> int:
         return rc
     clear_pending(week)
     set_pending(week, "publish", slug)
+    # The pack agent leaves the repo checked out on drafts/wNN. These helpers are
+    # invoked as a subprocess, so that branch decides which version of the tool
+    # runs — and a branch cut before a tool fix silently reverts it. That is
+    # exactly how the w06 publish card went to the news group with dead buttons.
+    # Return to main first; the card reads its excerpt from the drafts ref, so it
+    # does not need the working tree.
+    reset_generated_paths()
+    run(["git", "checkout", "main"], cwd=ROOT)
     return run(
         [
             sys.executable,
