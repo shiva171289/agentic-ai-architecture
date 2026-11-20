@@ -40,7 +40,7 @@ Three research anchors shape the design:
 
 So the critic must be able to check something outside the draft: a policy row with `return_window_days: 30`, an order lookup, a schema. A critic that grades "does this sound policy-compliant" is a second opinion from the same witness.
 
-The cap belongs in code, not in a prompt. In the sample it is `MAX_REWRITES = 1`, a constructor argument; on both clouds it is a state-machine or orchestrator constant. A cap the model can talk itself past is not a cap.
+The cap belongs in code, not in a prompt. In the sample it is `DEFAULT_MAX_REWRITES = 1`, the default for the `max_rewrites` constructor argument; in the Acme spine it is `MAX_REWRITES = 1`; on both clouds it is a state-machine or orchestrator constant. A cap the model can talk itself past is not a cap.
 
 And the judge is a new failure surface, not a safety net. LLM-as-a-judge (arXiv 2306.05685) documents position, verbosity and self-enhancement biases. A 2026 study of fourteen non-generative System-1 judges (arXiv 2611.00505) finds instruction injection flips 17–49% of correct verdicts for nine of them. In a support flow the draft contains customer-supplied text, so the critic inherits the prompt-injection problem one step earlier than w28 addresses it.
 
