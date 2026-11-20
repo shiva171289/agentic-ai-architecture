@@ -1,5 +1,5 @@
 {
-  "last_published_week": "w05",
-  "last_merged_to_main_week": "w05",
-  "notes": "Automation targets the week AFTER last_published_week. Read that field, not this note — the note goes stale on every publish."
+  "last_published_week": "w06",
+  "last_merged_to_main_week": "w06",
+  "notes": "Automation targets the week AFTER last_published_week. Read that field, not this note \u2014 the note goes stale on every publish."
 }
