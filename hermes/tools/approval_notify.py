@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
 """
-Send Telegram approval cards with inline buttons for weekly gates.
+Send Telegram approval cards for the weekly gates.
+
+Cards are text-only and name the exact reply command. They deliberately carry NO
+inline buttons: the gateway's CallbackQueryHandler dispatches on known
+callback_data prefixes (ea:, sc:, cl:, mp:, ...) and silently drops anything
+else, and the separate telegram_poll_approvals.py poller cannot work beside the
+gateway because Telegram allows one getUpdates consumer per bot. Buttons on these
+cards were a dead control — 1,464 consecutive HTTP 409s in the poller log and not
+one callback ever handled.
 
 Usage:
-  python3 hermes/tools/approval_notify.py --gate adr --week w05 --slug orchestrator-workers
-  python3 hermes/tools/approval_notify.py --gate publish --week w05 --slug orchestrator-workers
+  python3 hermes/tools/approval_notify.py --gate adr --week w06 --slug evaluator-optimizer
+  python3 hermes/tools/approval_notify.py --gate publish --week w06 --slug evaluator-optimizer
   python3 hermes/tools/approval_notify.py --gate adr --next
 """
 
 from __future__ import annotations
 
 import argparse
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -20,12 +29,32 @@ if str(_TOOLS) not in sys.path:
     sys.path.insert(0, str(_TOOLS))
 
 from approval_store import set_pending  # noqa: E402
-from news_queue import load_env_file, telegram_bot_token, telegram_chat_id  # noqa: E402
+from news_queue import load_env_file, telegram_bot_token  # noqa: E402
 from telegram_api import send_message  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 REPO = "shiva171289/agentic-ai-architecture"
 DEFAULT_PAGES = "https://shiva171289.github.io/agentic-ai-architecture"
+
+
+def approval_chat_id() -> str:
+    """Resolve where gate cards go: the owner's DM, never the news chat.
+
+    news_queue.telegram_chat_id() prefers TELEGRAM_CHAT_ID, and that is set to the
+    news GROUP — which is exactly why gate cards were arriving in the group. Gate
+    approvals are owner-only, so resolve an explicit DM target and skip
+    TELEGRAM_CHAT_ID entirely.
+    """
+    for key in ("TELEGRAM_APPROVAL_CHAT_ID", "TELEGRAM_HOME_CHANNEL"):
+        val = (os.environ.get(key) or "").strip()
+        if val:
+            return val
+    allowed = (os.environ.get("TELEGRAM_ALLOWED_USERS") or "").strip()
+    if allowed:
+        first = allowed.split(",")[0].strip()
+        if first:
+            return first
+    return ""
 
 
 def _read_excerpt(path: Path, words: int = 80) -> str:
@@ -64,9 +93,10 @@ def build_adr_message(week: str, slug: str) -> str:
         f"ADR: https://github.com/{REPO}/blob/{branch}/patterns/{week}-{slug}/adr.md",
         f"Branch: https://github.com/{REPO}/tree/{branch}",
         "",
-        "Approve to run full pack (Qwen-heavy draft steps). Reject to revise.",
+        "To APPROVE and run the full pack, reply:",
+        f"adr approve {week}",
         "",
-        "Or via Hermes: adr approve " + week,
+        f"To REJECT and revise, reply: adr reject {week}: <your notes>",
     ]
     return "\n".join(lines)
 
@@ -79,24 +109,13 @@ def build_publish_message(week: str, slug: str) -> str:
         _read_excerpt(blog, 120),
         "",
         f"Pack: https://github.com/{REPO}/tree/drafts/{week}",
-        f"Approve runs CI + PR merge → GitHub Pages.",
+        "Approving runs CI, merges the PR, and deploys GitHub Pages.",
         f"Preview after merge: {DEFAULT_PAGES}/blog/{week}-{slug}/",
         "",
-        "Or via Hermes: publish approve " + week,
+        "To PUBLISH, reply:",
+        f"publish approve {week}",
     ]
     return "\n".join(lines)
-
-
-def keyboard(gate: str, week: str) -> dict:
-    prefix = "adr" if gate == "adr" else "pub"
-    return {
-        "inline_keyboard": [
-            [
-                {"text": "Approve", "callback_data": f"{prefix}:ok:{week}"},
-                {"text": "Reject", "callback_data": f"{prefix}:no:{week}"},
-            ]
-        ]
-    }
 
 
 def main() -> int:
@@ -116,9 +135,13 @@ def main() -> int:
 
     load_env_file()
     token = telegram_bot_token()
-    chat_id = telegram_chat_id()
+    chat_id = approval_chat_id()
     if not token or not chat_id:
-        print("Set TELEGRAM_BOT_TOKEN and chat id in ~/.hermes/.env", file=sys.stderr)
+        print(
+            "Set TELEGRAM_BOT_TOKEN and a DM target in ~/.hermes/.env "
+            "(TELEGRAM_APPROVAL_CHAT_ID or TELEGRAM_HOME_CHANNEL)",
+            file=sys.stderr,
+        )
         return 1
 
     if args.gate == "adr":
@@ -126,9 +149,9 @@ def main() -> int:
     else:
         text = build_publish_message(week, slug)
 
-    send_message(token, chat_id, text, reply_markup=keyboard(args.gate, week))
+    send_message(token, chat_id, text)
     set_pending(week, args.gate, slug)
-    print(f"Sent {args.gate} approval for {week} {slug}")
+    print(f"Sent {args.gate} approval for {week} {slug} to {chat_id}")
     return 0
 
 
