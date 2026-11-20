@@ -33,4 +33,19 @@ Enforce `_shared/ground-rules.md` across subagents.
 
 SourceHarvester script: no LLM. Scout, Diagram, Blog draft, LinkedIn: Tier 0. Architect, CloudMapper, Critic: Tier 1.
 
+For Tier 0 drafts, run the sub-skill in a one-shot session and keep the output:
+
+```bash
+hermes chat --query-file q_blog.txt --oneshot -m "$OPENROUTER_NEWS_MODEL" -Q > blog_raw.txt 2>&1
+```
+
+The session appends a `session_id:` line — strip it before saving the artifact. Never pipe that command to `tail`; the body is lost. Put every fact the writer may use in the query file (`--query-file` preserves quotes and backticks), and state "do not use tools" — the draft comes back as text, then the editor pass fixes table schemas and unsupported claims.
+
+## Notes from runs
+
+- The ground-rules block is `hermes/skills/_shared/ground-rules.md`, not `_shared/ground-rules.md` inside each skill directory.
+- The pattern-sample suite and the Acme suite use different `pythonpath` roots: run them from their own directories (`cd patterns/wNN-slug/code && pytest`, `cd projects/acme-support && pytest`). A single root invocation fails collection.
+- Where no `uv` is on PATH, run the bundled interpreter: `"$(dirname "$(readlink -f "$(which python)")")/python" -m pytest -q`.
+- Send the step-9 checklist with `hermes/tools/telegram_api.send_message`, sourcing `~/.hermes/.env` first (terminal sessions do not inherit it).
+
 Never commit secrets. Never push to `main`.
