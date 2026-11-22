@@ -26,8 +26,28 @@ def allowed_user_ids() -> set[str]:
     return {x.strip() for x in raw.split(",") if x.strip()}
 
 
+def _handle_kids_callback(data: str, user_id: str) -> None:
+    import os
+
+    kids_repo = os.environ.get("KIDS_REPO") or os.path.expanduser("~/work/agentic-ai-kids")
+    poll = os.path.join(kids_repo, "hermes", "tools", "kids_telegram_poll.py")
+    if not os.path.isfile(poll):
+        return
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("kids_telegram_poll", poll)
+    if spec is None or spec.loader is None:
+        return
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    mod.handle_kids_callback(data, user_id, allowed_user_ids())
+
+
 def handle_callback(data: str, user_id: str) -> None:
     parts = data.split(":")
+    if parts and parts[0] == "kids" and len(parts) == 3:
+        _handle_kids_callback(data, user_id)
+        return
     if len(parts) != 3:
         return
     gate, action, week = parts
