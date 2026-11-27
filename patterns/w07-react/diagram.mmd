@@ -1,0 +1,43 @@
+%% Logical view: ReAct loop with pre-execution check and fact-carrying request shortcut
+flowchart TB
+    Request[Support Request]
+    ReActAgent[ReAct Agent<br/>Reason Step]
+    Decision{Need the lookup?}
+    ToolCall[get_order_status<br/>Tool Call]
+    Observation[Observation<br/>Tool Result]
+    LoopBoundary[Loop Boundary<br/>MAX_STEPS=4<br/>Token Budget<br/>Wall-clock Budget]
+    Reply[Reply]
+    PreCheck[Pre-execution Check<br/>Allowlist + Schema]
+
+    Request --> ReActAgent
+    ReActAgent --> Decision
+    Decision -- Facts present --> Reply
+    Decision -- Facts missing --> ToolCall
+    ToolCall --> PreCheck
+    PreCheck -->|Allowed| Observation
+    PreCheck -->|Denied| Reply
+    Observation --> LoopBoundary
+    LoopBoundary --> Decision
+    LoopBoundary -->|Maxed| Reply
+
+    style Request fill:#f9f,stroke:#333
+    style Reply fill:#9f9,stroke:#333
+
+%% ===== AWS deployment view (comment) =====
+%% - Agent: Bedrock Model (typed tool_use)
+%% - Runtime: AgentCore (long-running sessions)
+%% - Tool: get_order_status → Lambda
+%% - Identity: STS GetScopedCredentials (read-only)
+%% - Guardrails: Bedrock Guardrails + inline policy
+%% - Trace: CloudWatch Logs
+%% - Loop enforcement: AgentCore (bounded steps, budgets)
+
+%% ===== Azure deployment view (comment) =====
+%% - Agent: Microsoft Foundry Agent Service
+%% - Model: Foundry deployment (function-call block)
+%% - Tool: get_order_status → Azure Functions
+%% - Identity: Entra ID managed identity (scoped read)
+%% - Tool Aggregation: Foundry Toolbox (MCP endpoint)
+%% - Tool Policy: Enforced at MCP
+%% - Loop Host: Durable Functions (survives restart)
+%% - Trace: Application Insights

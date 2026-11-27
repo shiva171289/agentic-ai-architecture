@@ -19,6 +19,24 @@ def critic_demo() -> None:
     print(f"Reply: {result.answer}\n")
 
 
+def react_demo() -> None:
+    """w07 — the agent decides whether the order lookup is needed."""
+
+    from core.react import react_answer
+
+    print("w07 — ReAct loop")
+    for question in (
+        "What is the status of order ORD-2044?",
+        "Order ORD-1001 status: shipped, item Acme Widget Pro.",
+    ):
+        result = react_answer(MockLLM(), question)
+        print(f"Q: {question}")
+        print(f"  steps={len(result.steps)} stop={result.stop_reason}")
+        for step in result.steps:
+            print(f"  tool={step.tool}{step.arguments} -> {step.observation}")
+        print(f"A: {result.answer}\n")
+
+
 def main() -> None:
     llm = MockLLM()
     questions = [
@@ -29,6 +47,7 @@ def main() -> None:
         print(f"Q: {q}")
         print(f"A: {answer_faq(llm, q).text}\n")
     critic_demo()
+    react_demo()
 
 
 if __name__ == "__main__":

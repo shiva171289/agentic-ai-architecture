@@ -30,3 +30,4 @@ Future rows append here as each `stage-wNN` is tagged.
 | w04 | Parallelization: concurrent policy retrieval + order snippet before synthesis |
 | w05 | Orchestrator-workers: orchestrator decomposes the request into policy + order lookup workers at runtime, merges attributable results before synthesis |
 | w06 | Evaluator-optimizer: draft reply graded against the policy store, one rewrite when the critic cites a violation, verdict emitted per attempt |
+| w07 | ReAct loop: bounded reason → act → observe loop with a single read-only `get_order_status` tool; the agent decides whether the lookup is needed, calls are checked before execution, cap owned by code |
