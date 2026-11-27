@@ -43,6 +43,8 @@ The session appends a `session_id:` line — strip it before saving the artifact
 
 ## Notes from runs
 
+- Tier-0 drafts on Qwen need `export PATH="$HOME/.local/bin:$PATH"` and `set -a; . ~/.hermes/.env; set +a` in the terminal first (sessions do not inherit the env file). Then `hermes chat --query-file q.txt --oneshot -m "$OPENROUTER_NEWS_MODEL" -Q > raw.txt 2>&1`; strip the trailing `session_id:` line. Two defects recur every time: the scenario-ladder table's last two columns come back swapped (values land under `This week` instead of `Ships`), and the LinkedIn Post A hook opens with a voice-guide ban-list phrase (e.g. "changes the game"). The editor pass must fix both — verify with a `grep` for the ban list and a word count of the blog body (floor 1,200).
+- Before staging, `git add` only `patterns/wNN-slug` and `projects/acme-support` — the repo root can hold stray untracked `q_*.txt` / `*_raw.txt` from prior or concurrent runs that must never be committed, alongside the generated `content/source-corpus` and `content/daily-brief`.
 - The ground-rules block is `hermes/skills/_shared/ground-rules.md`, not `_shared/ground-rules.md` inside each skill directory.
 - The pattern-sample suite and the Acme suite use different `pythonpath` roots: run them from their own directories (`cd patterns/wNN-slug/code && pytest`, `cd projects/acme-support && pytest`). A single root invocation fails collection.
 - Where no `uv` is on PATH, run the bundled interpreter: `"$(dirname "$(readlink -f "$(which python)")")/python" -m pytest -q`.
