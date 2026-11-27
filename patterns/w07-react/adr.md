@@ -1,6 +1,6 @@
 # ADR — ReAct loop
 
-**Status:** proposed
+**Status:** accepted
 **Week:** w07
 
 ## Context
